@@ -14,8 +14,8 @@ public class CameraThirdPerson : MonoBehaviour {
 	private float distance = 10.0f;
 	private float currentX = 0.0f;
 	private float currentY = 0.0f;
-	private float sensitivityX = 8.0f;
-	private float sensitivityY = 5.0f;
+	private float sensitivityX = 15.0f;
+	private float sensitivityY = 15.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -32,8 +32,10 @@ public class CameraThirdPerson : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
-		Vector3 dir = new Vector3 (0, 0, -distance);
-		Quaternion rotation = Quaternion.Euler (currentY, currentX, 0);
+		float camDistance = currentY < 10f ? 5f : distance;
+		Vector3 dir = new Vector3 (0, 0, -camDistance);
+		Vector3 camVec = Input.mousePosition;
+		Quaternion rotation = Quaternion.Euler (currentY, camVec.x, 0);
 		camTransform.position = lookAt.position + rotation * dir;
 		camTransform.LookAt (lookAt.position);
 

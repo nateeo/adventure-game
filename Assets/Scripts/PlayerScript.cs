@@ -3,7 +3,6 @@ using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
 	public float speed;
-	public float turnSmoothing = 15f; // A smoothing value for turning the player.
 	private Rigidbody rigidBody;
 	Vector3 movement;
 
