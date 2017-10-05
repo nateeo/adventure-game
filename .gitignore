@@ -28,3 +28,7 @@ obj/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+*.meta
+
+Assets/Models/Campfire Pack.meta
