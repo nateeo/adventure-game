@@ -41,6 +41,7 @@ public class PlayerScript : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		if (dialogFix) {
+			rigidBody.freezeRotation = true;
 			return;
 		}
 		float h = Input.GetAxisRaw ("Horizontal");
