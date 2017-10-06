@@ -22,7 +22,9 @@ public class UIManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		if (VD.isActive) {
+			Camera.main.transform.rotation.Set(0, 0, 0, 0);
+		}
 	}
 
 	public void Begin(VIDE_Assign conversation) {
