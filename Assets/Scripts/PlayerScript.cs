@@ -3,8 +3,10 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Linq;
 using UnityEngine.SceneManagement;
+using VIDE_Data;
 
 public class PlayerScript : MonoBehaviour {
+	public bool dialogFix = false;
 	public float speed;
 
     //Fields for time and score
@@ -19,21 +21,55 @@ public class PlayerScript : MonoBehaviour {
 
     private Rigidbody rigidBody;
 	Vector3 movement;
+	public UIManager diagUI;
 
 	// Use this for initialization
 	void Start () {
         //Code for initializing time and score.
         startTime = Time.time;
-        maxTime = maxPlayTimeInMinutes * 60; 
+        maxTime = maxPlayTimeInMinutes * 60;
 
         rigidBody = GetComponent<Rigidbody> ();
 	}
-	
+
+	void Update() {
+		if (Input.GetKeyDown (KeyCode.F)) {
+			TryInteract ();
+		}
+	}
+
 	// Update is called once per frame
 	void FixedUpdate () {
-		float h = Input.GetAxisRaw("Horizontal");
+		if (dialogFix) {
+			return;
+		}
+		float h = Input.GetAxisRaw ("Horizontal");
 		float v = Input.GetAxisRaw ("Vertical");
 		Move (h, v);
+	}
+
+	void TryInteract()
+	{
+		if (VD.isActive) {
+			VD.Next ();
+			return;
+		}
+
+		Collider[] hits = Physics.OverlapSphere (transform.position, 5);
+		for (int i = 0; i < hits.Length; i++) {
+			Collider rHit = hits [i];
+			VIDE_Assign assigned;
+			if (rHit.GetComponent<Collider>().GetComponent<VIDE_Assign> () != null) {
+				assigned = rHit.GetComponent<Collider>().GetComponent<VIDE_Assign> ();
+				if (!VD.isActive) {
+					//... and use it to begin the conversation
+					Debug.logger.Log ("BEGIN");
+					diagUI.Begin (assigned);
+				}
+				return;
+			}
+		}
+	}
 
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -102,13 +138,13 @@ public class PlayerScript : MonoBehaviour {
         SceneManager.LoadScene(2);
     }
 
-    //private function for updating the time and the slider. 
+    //private function for updating the time and the slider.
     /* TIMER REMOVED (code might be useful some time, so has been left in here!)
-     * 
-     * 
+     *
+     *
     private void updateTimeSlider()
     {
-        // This section is to do with displaying the time. 
+        // This section is to do with displaying the time.
         float timeinSec = Time.time - startTime;
         int minutes = ((int)timeinSec / 60);
         int seconds = (int)(timeinSec % 60);
@@ -132,7 +168,7 @@ public class PlayerScript : MonoBehaviour {
     }
     */
 
- 
+
 
     //Use this method when a bonus object has been picked up
     private void incrementBonus()
