@@ -3,21 +3,37 @@ using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
 	public float speed;
+	public bool isGrounded;
 	private Rigidbody rigidBody;
 	Vector3 movement;
+	public Vector3 jump;
+	private float jumpForce = 25.0f;
 
 	// Use this for initialization
 	void Start () {
 		rigidBody = GetComponent<Rigidbody> ();
+		jump = new Vector3 (0.0f, 0.2f, 0.0f);
 	}
-	
+
+	void OnCollisionStay() {
+		isGrounded = true;
+	}
+
 	// Update is called once per frame
 	void FixedUpdate () {
 		float h = Input.GetAxisRaw("Horizontal");
 		float v = Input.GetAxisRaw ("Vertical");
 
 		Move (h, v);
-	
+
+	}
+
+	void Update() {
+		if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
+
+			rigidBody.AddForce(jump * jumpForce, ForceMode.Impulse);
+			isGrounded = false;
+		}
 	}
 
 
