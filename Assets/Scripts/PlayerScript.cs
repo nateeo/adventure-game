@@ -65,6 +65,7 @@ public class PlayerScript : MonoBehaviour {
         return 0;
     }
 
+    //private function for updating the time and the slider. 
     private void updateTimeSlider()
     {
         // This section is to do with displaying the time. 
