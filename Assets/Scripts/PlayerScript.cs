@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Linq;
 
 public class PlayerScript : MonoBehaviour {
 	public float speed;
@@ -11,6 +12,7 @@ public class PlayerScript : MonoBehaviour {
     public int maxPlayTimeInMinutes;
     private float maxTime;
     public Canvas scoreScreen;
+    public Slider timeSlider;
 
 	private Rigidbody rigidBody;
 	Vector3 movement;
@@ -22,6 +24,7 @@ public class PlayerScript : MonoBehaviour {
         maxTime = maxPlayTimeInMinutes * 60; 
         scoreScreen.enabled = false;
         changeText("Your score is shit!");
+        timeSlider.value = 1;
 
         rigidBody = GetComponent<Rigidbody> ();
 	}
@@ -30,18 +33,9 @@ public class PlayerScript : MonoBehaviour {
 	void FixedUpdate () {
 		float h = Input.GetAxisRaw("Horizontal");
 		float v = Input.GetAxisRaw ("Vertical");
-
 		Move (h, v);
 
-        // This section is to do with displaying the time. 
-        float timeinSec = Time.time - startTime;
-        int minutes = ((int) timeinSec / 60);
-        int seconds = (int)(timeinSec % 60);
-
-        string minToDisplay = minutes.ToString("00");
-        string secToDisplay = seconds.ToString("00");
-
-        timeText.text = minToDisplay + ":" + secToDisplay;
+        updateTimeSlider();
 
         if (Input.GetKeyDown("escape"))
         {
@@ -69,6 +63,31 @@ public class PlayerScript : MonoBehaviour {
             return 1;
         }
         return 0;
+    }
+
+    private void updateTimeSlider()
+    {
+        // This section is to do with displaying the time. 
+        float timeinSec = Time.time - startTime;
+        int minutes = ((int)timeinSec / 60);
+        int seconds = (int)(timeinSec % 60);
+
+        string minToDisplay = minutes.ToString("00");
+        string secToDisplay = seconds.ToString("00");
+
+        timeText.text = minToDisplay + ":" + secToDisplay;
+
+        float proportion = timeinSec / maxTime;
+        if (proportion > 1) { proportion = 1; }
+
+        float proportionRemaining = 1 - proportion;
+        timeSlider.value = proportionRemaining;
+
+        var fill = (timeSlider as UnityEngine.UI.Slider).GetComponentsInChildren<UnityEngine.UI.Image>().FirstOrDefault(t => t.name == "Fill");
+        if (fill != null)
+        {
+            fill.color = Color.Lerp(Color.red, Color.green, proportionRemaining);
+        }
     }
 
     //private helper method for changing text.
