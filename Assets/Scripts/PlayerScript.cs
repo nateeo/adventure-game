@@ -1,23 +1,56 @@
 ﻿using UnityEngine;
 using System.Collections;
+using VIDE_Data;
 
 public class PlayerScript : MonoBehaviour {
+	public bool dialogFix = false;
 	public float speed;
 	private Rigidbody rigidBody;
 	Vector3 movement;
+	public UIManager diagUI;
 
 	// Use this for initialization
 	void Start () {
 		rigidBody = GetComponent<Rigidbody> ();
 	}
+
+	void Update() {
+		if (Input.GetKeyDown (KeyCode.F)) {
+			TryInteract ();
+		}
+	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		float h = Input.GetAxisRaw("Horizontal");
+		if (dialogFix) {
+			return;
+		}
+		float h = Input.GetAxisRaw ("Horizontal");
 		float v = Input.GetAxisRaw ("Vertical");
-
 		Move (h, v);
-	
+	}
+
+	void TryInteract()
+	{
+		if (VD.isActive) {
+			VD.Next ();
+			return;
+		}
+
+		Collider[] hits = Physics.OverlapSphere (transform.position, 5);
+		for (int i = 0; i < hits.Length; i++) {
+			Collider rHit = hits [i];
+			VIDE_Assign assigned;
+			if (rHit.GetComponent<Collider>().GetComponent<VIDE_Assign> () != null) {
+				assigned = rHit.GetComponent<Collider>().GetComponent<VIDE_Assign> ();
+				if (!VD.isActive) {
+					//... and use it to begin the conversation
+					Debug.logger.Log ("BEGIN");
+					diagUI.Begin (assigned);
+				}
+				return;
+			}
+		}
 	}
 
 
