@@ -79,7 +79,7 @@ public class Dialogue : MonoBehaviour
 		_isEndOfDialogue = false;
 		_isDialoguePlaying = false;
 		Debug.Log ("Is this the end of the script? fucking ded");
-		Application.LoadLevel ();
+		Application.LoadLevel ("PlanetOne");
 	}
 
 	private IEnumerator DisplayString(string stringToDisplay)

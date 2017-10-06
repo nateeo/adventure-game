@@ -150,12 +150,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 45897808}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1524.6, y: 0, z: -1518.6}
+  m_LocalPosition: {x: -1524.6, y: -0.16, z: -1518.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &164287546
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,7 +336,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 259385316}
   m_LocalRotation: {x: 0, y: -0.7084846, z: 0, w: 0.70572627}
-  m_LocalPosition: {x: -1497.61, y: 2.72, z: -1497.04}
+  m_LocalPosition: {x: -1497.61, y: 0.9, z: -1497.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: -90.223495, z: 0}
   m_Children: []
@@ -493,7 +493,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 332108599}
   m_LocalRotation: {x: 0.078459114, y: 0, z: 0, w: 0.99691737}
-  m_LocalPosition: {x: -1499.36, y: 3.2, z: -1500.72}
+  m_LocalPosition: {x: -1499.66, y: 3.38, z: -1500.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 9, y: 0, z: 0}
   m_Children: []
@@ -728,10 +728,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 275586793}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -19, y: -92}
-  m_SizeDelta: {x: 500, y: 125}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 232, y: -73}
+  m_SizeDelta: {x: 450, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &908709417
 MonoBehaviour:
@@ -784,18 +784,116 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueStrings:
-  - 'Alice
-
-    What you want nigga? I ain''t that easy you know, gotta at least buy daddy some
-    dinner.'
-  - "James \nyou know ;) samie samie snume"
-  - 'Alice
-
-    I''m the gays. you know ;) samie samie snume you know ;) samie samie snume'
+  - "Udo: \nHello?"
+  - "Revior: \nHi Udo, enjoying your break?"
+  - "Udo: \nYeah, still exhausted after my last mission but feeling much better. What\u2019s
+    up?"
+  - "Revior:\nI\u2019m sorry but we\u2019ll need to cut your holiday short. It\u2019s
+    code red, and you\u2019re the best bounty hunter we have. I need you out there."
+  - "Udo: \nUh\u2026"
+  - "Revior: \nOkay so here\u2019s the situation. Remember the crucial plans the Celestial
+    State had to upgrade our planet?"
+  - "Udo: \nWho were the Celestial State again..?\n"
+  - "Revior: \nOur government! The government you love so much! From our home-planet!"
+  - "Udo: \nOh right. Sorry I had a rough night and it\u2019s way too early in the
+    morning."
+  - "Revior: \nThey\u2019ve been stolen. And we need it back now. If we don\u2019t
+    get these back, we know what will happen to our planet! We\u2019ll be a millennial
+    behind the other galaxies!\n"
+  - "Revior: \nAnyway, I\u2019ll give you a quick run-down. His name is Klepto Darryl,
+    a spy from the planet of Khaloof. I\u2019ll send through documentation of his
+    profile."
+  - "Revoir:\nplease have a good look at it before starting your chase, the information
+    I\u2019ve given you is minimal but crucial."
+  - "Revior:\n He was last spotted on the planet you\u2019re staying! So see if there\u2019s
+    anyone you can talk to to get some more information, because our knowledge is
+    limited at this stage."
+  - "Revior: \nI believe in you Udo, and I know how much you love the Celestial State
+    and our planet. Be the hero again. Remember what your parents did for you. Make
+    them proud."
+  - "Udo: \nThanks, I\u2019ll get him like I do with any other. I\u2019ll get back
+    to you soon don\u2019t worry. "
+  - "Revior: \nI\u2019ll keep you updated. Good luck out there.\n"
   SecondsBetweenCharacters: 0.05
   CharacterRateMultiplier: 0.01
   DialogueInput: 13
   ContinueIcon: {fileID: 1999281588}
+--- !u!1 &969084529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 969084533}
+  - 33: {fileID: 969084532}
+  - 65: {fileID: 969084531}
+  - 23: {fileID: 969084530}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &969084530
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 969084529}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!65 &969084531
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 969084529}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &969084532
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 969084529}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &969084533
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 969084529}
+  m_LocalRotation: {x: 0.078459114, y: 0, z: 0, w: 0.99691737}
+  m_LocalPosition: {x: -1496, y: 3.53, z: -1493.81}
+  m_LocalScale: {x: 7, y: 10, z: 1}
+  m_LocalEulerAnglesHint: {x: 9, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
 --- !u!1 &1408307318
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,7 +1012,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1408307318}
   m_LocalRotation: {x: 0, y: -0.7084846, z: 0, w: 0.70572627}
-  m_LocalPosition: {x: -1501.53, y: 2.72, z: -1497.04}
+  m_LocalPosition: {x: -1501.53, y: 0.93, z: -1497.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: -90.223495, z: 0}
   m_Children: []
