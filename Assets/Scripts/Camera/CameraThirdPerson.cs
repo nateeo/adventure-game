@@ -27,7 +27,6 @@ public class CameraThirdPerson : MonoBehaviour {
 
 	void Update() {
 		if (dialogFix) {
-			transform.position.Set(transform.position.x, transform.position.y, lookAt.position.z - distance);
 			return;
 		}
 		currentX += sensitivityX * Input.GetAxis ("Mouse X");

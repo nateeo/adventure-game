@@ -63,7 +63,7 @@ public class PlayerScript : MonoBehaviour {
 			if (rHit.GetComponent<Collider>().GetComponent<VIDE_Assign> () != null) {
 				assigned = rHit.GetComponent<Collider>().GetComponent<VIDE_Assign> ();
 				if (!VD.isActive) {
-					//... and use it to begin the conversation
+					//... and use it to begin the conversation, look at the target
 					Debug.logger.Log ("BEGIN");
 					diagUI.Begin (assigned);
 				}
