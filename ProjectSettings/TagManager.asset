@@ -3,7 +3,23 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - New Tag
+  - EquipmentSystem
+  - Item
+  - Slots
+  - Slot
+  - ItemIcon
+  - Hotbar
+  - Tooltip
+  - DraggingItem
+  - Panel
+  - ResultSlot
+  - CraftSystem
+  - Canvas
+  - EventSystem
+  - MainInventory
+  - Timer
   layers:
   - Default
   - TransparentFX
