@@ -2,25 +2,16 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Linq;
-using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour {
 	public float speed;
 
     //Fields for time and score
-    public Canvas scoreScreen;
 
     private float startTime;
     public int maxPlayTimeInMinutes;
     private float maxTime;
-
-    public GameObject fullStar0;
-    public GameObject fullStar1;
-    public GameObject fullStar2;
-    public GameObject fullStar3;
-    public GameObject fullStar4;
-    public GameObject fullStar5;
-    private List<GameObject> listOfStars = new List<GameObject>();
 
     public int maxNumberOfBonuses;
     private int numberOfBonuses;
@@ -34,14 +25,6 @@ public class PlayerScript : MonoBehaviour {
         //Code for initializing time and score.
         startTime = Time.time;
         maxTime = maxPlayTimeInMinutes * 60; 
-        scoreScreen.enabled = false;
-
-        listOfStars.Add(fullStar0);
-        listOfStars.Add(fullStar1);
-        listOfStars.Add(fullStar2);
-        listOfStars.Add(fullStar3);
-        listOfStars.Add(fullStar4);
-        listOfStars.Add(fullStar5);
 
         rigidBody = GetComponent<Rigidbody> ();
 	}
@@ -55,13 +38,15 @@ public class PlayerScript : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.P))
         {
             incrementBonus();
-            setScoreScreenVisible(true);
         }
 
         if (Input.GetKeyDown(KeyCode.O))
         {
             decrementBonus();
-            setScoreScreenVisible(false);
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            endSceneAndDisplayScore();
         }
     }
 
@@ -105,12 +90,16 @@ public class PlayerScript : MonoBehaviour {
     }
 
     //Use this method to display the score.
-    private void setScoreScreenVisible(bool visible)
+    //This will switch to scene number 2 (the score screen)
+    private void endSceneAndDisplayScore()
     {
         int timeScore = computeTimeBasedScore();
         int bonusScore = computeBonusBasedScore();
-        changeStar(timeScore, bonusScore);
-        scoreScreen.enabled = visible;
+
+        PlayerPrefs.SetInt("TimeScore", timeScore);
+        PlayerPrefs.SetInt("BonusScore", bonusScore);
+
+        SceneManager.LoadScene(2);
     }
 
     //private function for updating the time and the slider. 
@@ -143,41 +132,7 @@ public class PlayerScript : MonoBehaviour {
     }
     */
 
-    //private helper method for changing number of stars (score).
-    //use only 0-3 stars for both integers.
-    private void changeStar (int firstRow, int secondRow)
-    {
-        if (firstRow < 0 || firstRow > 3 || secondRow < 0 || secondRow > 3)
-        {
-            throw new System.ArgumentException("the number of stars for both rows must be between 0-3.");
-        }
-        else
-        {
-            for (int i = 0; i < 3; i++)
-            {
-                if (i < firstRow)
-                {
-                    listOfStars[i].SetActive(true);
-                }
-                else
-                {
-                    listOfStars[i].SetActive(false);
-                }
-            }
-
-            for (int i = 3; i < 6; i++)
-            {
-                if (i < secondRow + 3)
-                {
-                    listOfStars[i].SetActive(true);
-                }
-                else
-                {
-                    listOfStars[i].SetActive(false);
-                }
-            }
-        }
-    }
+ 
 
     //Use this method when a bonus object has been picked up
     private void incrementBonus()
