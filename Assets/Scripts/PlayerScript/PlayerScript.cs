@@ -42,14 +42,23 @@ public class PlayerScript : MonoBehaviour {
 	void Move(float h, float v) {
 
 		Vector3 movement = new Vector3(h, 0.0f, v);
+
 		movement = Camera.main.transform.TransformDirection(movement);
+
 		//make sure player always moves in same speed no matter what combination of keys
 		//this is called every with every FixedUpdate- dont want it to move 6 units every fixed update
 		//want to change it so that it is per second- multiple it by delta time. delta time is the time between each update call
 		//so if youre updating every 50th of a second, over the course of 50 50th of a second its going to move 6 units
+		if (Input.GetKey (KeyCode.LeftShift)) {
+			speed = 8f;
+		} else {
+			speed = 4f;
+		}
+
 		movement = movement.normalized * speed * Time.deltaTime;
-		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), 0.20F);
+
 		rigidBody.MovePosition (transform.position + movement);
+		rigidBody.transform.rotation = Quaternion.LookRotation (new Vector3(movement.x, 0, movement.z));
 
 	
 
@@ -57,7 +66,18 @@ public class PlayerScript : MonoBehaviour {
 
 	void Animating (float h, float v) {
 		// did we press horizontal axis or vertical axis
-		bool walking = h != 0f || v != 0f;
+		bool walking = false;
+		bool running = false;
+
+		if (speed == 4f) {
+			walking = h != 0f || v != 0f;
+			running = false;
+		} else if (speed == 8f) {
+			running = h != 0f || v != 0f;
+			walking = false;
+		}
+
 		anim.SetBool ("IsWalking", walking);
+		anim.SetBool ("IsRunning", running);
 	}
 }

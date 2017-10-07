@@ -1,0 +1,1111 @@
+fileFormatVersion: 2
+guid: d1ce801f6bdea6944863b69ee8e91a37
+timeCreated: 1430426602
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: geoGP
+    100002: pasted__joint_CapitateLT
+    100004: pasted__joint_CapitateRT
+    100006: pasted__joint_Char
+    100008: pasted__joint_CheekLT
+    100010: pasted__joint_CheekRT
+    100012: pasted__joint_ClavicleLT
+    100014: pasted__joint_ClavicleRT
+    100016: pasted__joint_DimpleLT
+    100018: pasted__joint_DimpleRT
+    100020: pasted__joint_ElbowLT
+    100022: pasted__joint_ElbowRT
+    100024: pasted__joint_EyebrowInnerLT
+    100026: pasted__joint_EyebrowInnerRT
+    100028: pasted__joint_EyebrowOuterLT
+    100030: pasted__joint_EyebrowOuterRT
+    100032: pasted__joint_EyelidsDownLT
+    100034: pasted__joint_EyelidsDownRT
+    100036: pasted__joint_EyelidUpLT
+    100038: pasted__joint_EyelidUpRT
+    100040: pasted__joint_EyeLT
+    100042: pasted__joint_EyeRT
+    100044: pasted__joint_FingersALT
+    100046: pasted__joint_FingersART
+    100048: pasted__joint_FingersBLT
+    100050: pasted__joint_FingersBRT
+    100052: pasted__joint_FingersCLT
+    100054: pasted__joint_FingersCRT
+    100056: pasted__joint_FootLT
+    100058: pasted__joint_FootRT
+    100060: pasted__joint_HandLT
+    100062: pasted__joint_HandRT
+    100064: pasted__joint_Head
+    100066: pasted__joint_HipLT
+    100068: pasted__joint_HipMaster
+    100070: pasted__joint_HipRT
+    100072: pasted__joint_IndexALT
+    100074: pasted__joint_IndexART
+    100076: pasted__joint_IndexBLT
+    100078: pasted__joint_IndexBRT
+    100080: pasted__joint_IndexCLT
+    100082: pasted__joint_IndexCRT
+    100084: pasted__joint_Jaw
+    100086: pasted__joint_KneeLT
+    100088: pasted__joint_KneeRT
+    100090: pasted__joint_LipCornerLT
+    100092: pasted__joint_LipCornerRT
+    100094: pasted__joint_LowerLip
+    100096: pasted__joint_LowerLipLT
+    100098: pasted__joint_LowerLipRT
+    100100: pasted__joint_Neck
+    100102: pasted__joint_NoseMain
+    100104: pasted__joint_NoseSideLT
+    100106: pasted__joint_NoseSideRT
+    100108: pasted__joint_Pelvis
+    100110: pasted__joint_PinkyALT
+    100112: pasted__joint_PinkyART
+    100114: pasted__joint_PinkyBLT
+    100116: pasted__joint_PinkyBRT
+    100118: pasted__joint_PinkyCLT
+    100120: pasted__joint_PinkyCRT
+    100122: pasted__joint_PisiformLT
+    100124: pasted__joint_PisiformRT
+    100126: pasted__joint_RingALT
+    100128: pasted__joint_RingART
+    100130: pasted__joint_RingBLT
+    100132: pasted__joint_RingBRT
+    100134: pasted__joint_RingCLT
+    100136: pasted__joint_RingCRT
+    100138: pasted__joint_ShoulderLT
+    100140: pasted__joint_ShoulderRT
+    100142: pasted__joint_ThumbALT
+    100144: pasted__joint_ThumbART
+    100146: pasted__joint_ThumbBLT
+    100148: pasted__joint_ThumbBRT
+    100150: pasted__joint_ThumbCLT
+    100152: pasted__joint_ThumbCRT
+    100154: pasted__joint_ToeLT
+    100156: pasted__joint_ToeRT
+    100158: pasted__joint_TorsoA
+    100160: pasted__joint_TorsoB
+    100162: pasted__joint_TorsoC
+    100164: pasted__joint_UpperLip
+    100166: pasted__joint_UpperLipLT
+    100168: pasted__joint_UpperLipRT
+    100170: PupilLGeo
+    100172: PupilRGeo
+    100174: //RootNode
+    100176: RaccoonFixd:RaccoonBase
+    100178: Racoon_grp
+    100180: RacoonEyeL
+    100182: RacoonEyeR
+    100184: ROOT
+    100186: shirt
+    100188: Skeleton
+    400000: geoGP
+    400002: pasted__joint_CapitateLT
+    400004: pasted__joint_CapitateRT
+    400006: pasted__joint_Char
+    400008: pasted__joint_CheekLT
+    400010: pasted__joint_CheekRT
+    400012: pasted__joint_ClavicleLT
+    400014: pasted__joint_ClavicleRT
+    400016: pasted__joint_DimpleLT
+    400018: pasted__joint_DimpleRT
+    400020: pasted__joint_ElbowLT
+    400022: pasted__joint_ElbowRT
+    400024: pasted__joint_EyebrowInnerLT
+    400026: pasted__joint_EyebrowInnerRT
+    400028: pasted__joint_EyebrowOuterLT
+    400030: pasted__joint_EyebrowOuterRT
+    400032: pasted__joint_EyelidsDownLT
+    400034: pasted__joint_EyelidsDownRT
+    400036: pasted__joint_EyelidUpLT
+    400038: pasted__joint_EyelidUpRT
+    400040: pasted__joint_EyeLT
+    400042: pasted__joint_EyeRT
+    400044: pasted__joint_FingersALT
+    400046: pasted__joint_FingersART
+    400048: pasted__joint_FingersBLT
+    400050: pasted__joint_FingersBRT
+    400052: pasted__joint_FingersCLT
+    400054: pasted__joint_FingersCRT
+    400056: pasted__joint_FootLT
+    400058: pasted__joint_FootRT
+    400060: pasted__joint_HandLT
+    400062: pasted__joint_HandRT
+    400064: pasted__joint_Head
+    400066: pasted__joint_HipLT
+    400068: pasted__joint_HipMaster
+    400070: pasted__joint_HipRT
+    400072: pasted__joint_IndexALT
+    400074: pasted__joint_IndexART
+    400076: pasted__joint_IndexBLT
+    400078: pasted__joint_IndexBRT
+    400080: pasted__joint_IndexCLT
+    400082: pasted__joint_IndexCRT
+    400084: pasted__joint_Jaw
+    400086: pasted__joint_KneeLT
+    400088: pasted__joint_KneeRT
+    400090: pasted__joint_LipCornerLT
+    400092: pasted__joint_LipCornerRT
+    400094: pasted__joint_LowerLip
+    400096: pasted__joint_LowerLipLT
+    400098: pasted__joint_LowerLipRT
+    400100: pasted__joint_Neck
+    400102: pasted__joint_NoseMain
+    400104: pasted__joint_NoseSideLT
+    400106: pasted__joint_NoseSideRT
+    400108: pasted__joint_Pelvis
+    400110: pasted__joint_PinkyALT
+    400112: pasted__joint_PinkyART
+    400114: pasted__joint_PinkyBLT
+    400116: pasted__joint_PinkyBRT
+    400118: pasted__joint_PinkyCLT
+    400120: pasted__joint_PinkyCRT
+    400122: pasted__joint_PisiformLT
+    400124: pasted__joint_PisiformRT
+    400126: pasted__joint_RingALT
+    400128: pasted__joint_RingART
+    400130: pasted__joint_RingBLT
+    400132: pasted__joint_RingBRT
+    400134: pasted__joint_RingCLT
+    400136: pasted__joint_RingCRT
+    400138: pasted__joint_ShoulderLT
+    400140: pasted__joint_ShoulderRT
+    400142: pasted__joint_ThumbALT
+    400144: pasted__joint_ThumbART
+    400146: pasted__joint_ThumbBLT
+    400148: pasted__joint_ThumbBRT
+    400150: pasted__joint_ThumbCLT
+    400152: pasted__joint_ThumbCRT
+    400154: pasted__joint_ToeLT
+    400156: pasted__joint_ToeRT
+    400158: pasted__joint_TorsoA
+    400160: pasted__joint_TorsoB
+    400162: pasted__joint_TorsoC
+    400164: pasted__joint_UpperLip
+    400166: pasted__joint_UpperLipLT
+    400168: pasted__joint_UpperLipRT
+    400170: PupilLGeo
+    400172: PupilRGeo
+    400174: //RootNode
+    400176: RaccoonFixd:RaccoonBase
+    400178: Racoon_grp
+    400180: RacoonEyeL
+    400182: RacoonEyeR
+    400184: ROOT
+    400186: shirt
+    400188: Skeleton
+    4300000: shirt
+    4300002: RacoonEyeL
+    4300004: RacoonEyeR
+    4300006: RaccoonFixd:RaccoonBase
+    4300008: PupilLGeo
+    4300010: PupilRGeo
+    9500000: //RootNode
+    13700000: PupilLGeo
+    13700002: PupilRGeo
+    13700004: RaccoonFixd:RaccoonBase
+    13700006: RacoonEyeL
+    13700008: RacoonEyeR
+    13700010: shirt
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: pasted__joint_Char
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_HipLT
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_HipRT
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_KneeLT
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_KneeRT
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_FootLT
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_FootRT
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_TorsoA
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_TorsoB
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_ClavicleLT
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_ClavicleRT
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_ShoulderLT
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_ShoulderRT
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_ElbowLT
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_ElbowRT
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_HandLT
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_HandRT
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_ToeLT
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_ToeRT
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_EyeLT
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_EyeRT
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_Jaw
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_ThumbALT
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_ThumbBLT
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_ThumbCLT
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_IndexALT
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_IndexBLT
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_IndexCLT
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_FingersALT
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_FingersBLT
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_FingersCLT
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_RingALT
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_RingBLT
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_ThumbART
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_ThumbBRT
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_ThumbCRT
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_IndexART
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_IndexBRT
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_IndexCRT
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_FingersART
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_FingersBRT
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_FingersCRT
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_PinkyART
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pasted__joint_PinkyBRT
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Raccoon(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: ROOT
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: geoGP
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Racoon_grp
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: PupilLGeo
+      position: {x: .000292465265, y: .000126545827, z: 7.17350413e-05}
+      rotation: {x: -.663995445, y: .0878998786, z: -.106588215, w: .734862328}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: PupilRGeo
+      position: {x: .000220795657, y: .000155943286, z: -5.66933522e-05}
+      rotation: {x: .111197673, y: .732935309, z: .665483713, w: .0870188624}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RaccoonFixd:RaccoonBase
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RacoonEyeL
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RacoonEyeR
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: shirt
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Skeleton
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: .0276469588, y: .0276469588, z: .0276469588}
+      transformModified: 1
+    - name: pasted__joint_Char
+      position: {x: -0, y: 0, z: .065510571}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_Pelvis
+      position: {x: -0, y: .592517674, z: .0124995559}
+      rotation: {x: .00414706022, y: -.707094669, z: -.00414706022, w: .707094669}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_TorsoA
+      position: {x: -.000117294541, y: .00999931153, z: 9.0277473e-17}
+      rotation: {x: 2.52489987e-16, y: 1.51648544e-17, z: -.0359426811, w: .999353886}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_TorsoB
+      position: {x: -.00606906181, y: .179741919, z: 6.80222249e-16}
+      rotation: {x: 4.08700147e-16, y: 4.26137478e-18, z: .0652137771, w: .997871339}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_TorsoC
+      position: {x: .00513912644, y: .221830517, z: 7.45084803e-16}
+      rotation: {x: 2.21800554e-16, y: -1.04077726e-17, z: 2.30844977e-33, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_ClavicleLT
+      position: {x: -.025573561, y: .11283838, z: .09225519}
+      rotation: {x: .00590039557, y: .708494782, z: .705163479, w: .0272915792}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_ShoulderLT
+      position: {x: -.00178108632, y: .152187854, z: -.000234695646}
+      rotation: {x: -.0266764313, y: -.000329562929, z: .0145276962, w: .999538481}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_ElbowLT
+      position: {x: 7.1054272e-17, y: .226996094, z: -3.97903925e-14}
+      rotation: {x: -6.29238857e-05, y: -.00288977101, z: .0235411823, w: .999718726}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_HandLT
+      position: {x: 1.06581408e-16, y: .233139858, z: -8.52651264e-16}
+      rotation: {x: 0, y: -.587054372, z: -0, w: .809547484}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_ThumbALT
+      position: {x: -.0219695568, y: .0299005434, z: -.00275065377}
+      rotation: {x: .106767468, y: .552798271, z: .33419922, w: .755860865}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_ThumbBLT
+      position: {x: -7.1054272e-17, y: .0310117025, z: -1.13686835e-15}
+      rotation: {x: -.00260925223, y: .00142869318, z: -.0373385325, w: .999298334}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_ThumbCLT
+      position: {x: -7.1054272e-17, y: .0335558131, z: 2.84217088e-16}
+      rotation: {x: -.00191680074, y: -6.93910749e-13, z: -.140909731, w: .990020573}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_CapitateLT
+      position: {x: -.0214241017, y: .0697902963, z: -.00247824588}
+      rotation: {x: -.116362028, y: .694367945, z: .0935398489, w: .703962564}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_IndexALT
+      position: {x: .00702470215, y: .0462452024, z: -.00238356669}
+      rotation: {x: .11447528, y: .0561625659, z: -.0964920893, w: .98713243}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_IndexBLT
+      position: {x: 8.52651264e-16, y: .0306836497, z: 1.44328988e-16}
+      rotation: {x: -5.99771593e-05, y: -6.03496892e-06, z: -.0348658189, w: .999392033}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_IndexCLT
+      position: {x: 5.68434176e-16, y: .0211240947, z: -6.661338e-18}
+      rotation: {x: -.000204992961, y: 2.99126145e-06, z: -.118220016, w: .992987394}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_FingersALT
+      position: {x: .00706948992, y: .0423759371, z: .0219826978}
+      rotation: {x: .106829561, y: .0346192047, z: -.100003846, w: .98862946}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_FingersBLT
+      position: {x: 5.68434176e-16, y: .0318870358, z: -2.88657976e-17}
+      rotation: {x: -.00014704463, y: -.00019830461, z: -.0328648016, w: .999459743}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_FingersCLT
+      position: {x: -2.84217088e-16, y: .0243875906, z: 3.99680272e-17}
+      rotation: {x: -.000947497028, y: -1.48463229e-07, z: -.0712294728, w: .997459531}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_PisiformLT
+      position: {x: .0118529517, y: .0635610148, z: -.00282589695}
+      rotation: {x: -.0214963667, y: .00469580805, z: -.0920877904, w: .995507777}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_PinkyALT
+      position: {x: .0081625646, y: .0493969209, z: -.00583261764}
+      rotation: {x: -.220325232, y: .675616026, z: -.134593546, w: .690568209}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_PinkyBLT
+      position: {x: -1.98951967e-15, y: .0288391449, z: -3.55271347e-16}
+      rotation: {x: -.00220284332, y: .00226705917, z: -.118846059, w: .992907703}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_PinkyCLT
+      position: {x: -5.68434176e-16, y: .0179209132, z: 7.1054272e-17}
+      rotation: {x: .00780764082, y: .0049066958, z: -.142585859, w: .989739478}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_RingALT
+      position: {x: -.0118684266, y: .0505720302, z: -.00575232133}
+      rotation: {x: -.160153329, y: .712769687, z: .0178505406, w: .682635903}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_RingBLT
+      position: {x: -1.42108539e-15, y: .0330193862, z: -4.44089183e-17}
+      rotation: {x: -.00305752316, y: .000919103157, z: -.0373690538, w: .999296486}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_RingCLT
+      position: {x: -2.84217088e-16, y: .0187360961, z: -8.881784e-18}
+      rotation: {x: .0108153056, y: .00781798549, z: -.147424504, w: .988983274}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_ClavicleRT
+      position: {x: -.02557371, y: .112838455, z: -.0953929499}
+      rotation: {x: .708495021, y: -.00590071781, z: -.0272912625, w: .70516324}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_ShoulderRT
+      position: {x: .00275007775, y: -.184102297, z: .000362451712}
+      rotation: {x: .00399785535, y: .000116248259, z: .0145305172, w: .999886453}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_ElbowRT
+      position: {x: -8.43769488e-17, y: -.226996049, z: -3.524292e-14}
+      rotation: {x: .0128571028, y: -.00263690832, z: -.0285707433, w: .999505579}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_HandRT
+      position: {x: .0182555616, y: -.202187881, z: .0230580699}
+      rotation: {x: 0, y: -.627052724, z: -0, w: .778976798}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_ThumbART
+      position: {x: .0219695643, y: -.0299005359, z: .00275066285}
+      rotation: {x: .134141758, y: .558376551, z: .314884216, w: .755691528}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_ThumbBRT
+      position: {x: -7.1054272e-17, y: -.0310118403, z: 5.68434176e-16}
+      rotation: {x: -.00261202361, y: .00142891658, z: -.0373378396, w: .999298334}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_ThumbCRT
+      position: {x: -0, y: -.0335557349, z: -2.84217088e-16}
+      rotation: {x: -.00191680097, y: 3.4880343e-12, z: -.140909746, w: .990020573}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_CapitateRT
+      position: {x: .0214241166, y: -.0697903261, z: .00247824565}
+      rotation: {x: -.116362058, y: .694367945, z: .0935398936, w: .703962564}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_IndexART
+      position: {x: -.00702470541, y: -.0462452099, z: .00238355319}
+      rotation: {x: .114476189, y: .0561625883, z: -.0964903682, w: .987132549}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_IndexBRT
+      position: {x: -2.84217088e-16, y: -.0306836311, z: -5.99520444e-16}
+      rotation: {x: -5.88893745e-05, y: -6.15417821e-06, z: -.0348654762, w: .999392033}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_IndexCRT
+      position: {x: 2.84217088e-16, y: -.0211240929, z: -5.55111512e-17}
+      rotation: {x: -.000204992917, y: 2.99126532e-06, z: -.118219994, w: .992987454}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_FingersART
+      position: {x: -.00706947315, y: -.0423760563, z: -.0219827425}
+      rotation: {x: .10682977, y: .034619011, z: -.100005098, w: .988629341}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_FingersBRT
+      position: {x: -0, y: -.0318870358, z: -9.43689531e-17}
+      rotation: {x: -.000150233478, y: -.000198587732, z: -.0328655615, w: .999459743}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_FingersCRT
+      position: {x: -0, y: -.0243876055, z: -7.54951665e-17}
+      rotation: {x: -.00094749697, y: -1.48384544e-07, z: -.0712295175, w: .997459531}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_PisiformRT
+      position: {x: -.0118529387, y: -.0635611564, z: .00282589369}
+      rotation: {x: -.0214963015, y: .00469578709, z: -.0920874998, w: .995507777}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_PinkyART
+      position: {x: -.00816267077, y: -.0493966527, z: .00583263487}
+      rotation: {x: -.154491469, y: .708304465, z: .0139488261, w: .688652933}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_PinkyBRT
+      position: {x: -2.84217088e-16, y: -.0288391318, z: 2.93098864e-16}
+      rotation: {x: -.000695556053, y: .00228184345, z: -.0376366638, w: .999288678}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_PinkyCRT
+      position: {x: 5.68434176e-16, y: -.0179209094, z: -3.5527136e-17}
+      rotation: {x: .00780764548, y: .00490669813, z: -.142585859, w: .989739478}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_RingART
+      position: {x: .0118683828, y: -.0505720228, z: .005752319}
+      rotation: {x: -.256090015, y: .668085873, z: -.155296206, w: .681147754}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_RingBRT
+      position: {x: -2.84217088e-16, y: -.0330195017, z: -5.06261693e-16}
+      rotation: {x: -.00993710104, y: .000912852061, z: -.121443644, w: .992548168}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_RingCRT
+      position: {x: -2.84217088e-16, y: -.018736098, z: 4.44089183e-17}
+      rotation: {x: .0108153047, y: .00781798456, z: -.147424519, w: .988983274}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_Neck
+      position: {x: -.0239469167, y: .305623114, z: 8.81167793e-16}
+      rotation: {x: -3.68758883e-05, y: 4.05020819e-06, z: -.109176964, w: .994022369}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_Head
+      position: {x: -.0167161822, y: .207248911, z: 7.14379485e-06}
+      rotation: {x: 7.2007213e-05, y: -1.9133023e-07, z: .169834137, w: .985472679}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_EyelidsDownLT
+      position: {x: .0751792416, y: .0443090945, z: .0305107497}
+      rotation: {x: -3.59310652e-05, y: 1.69584234e-06, z: .0471446291, w: .998888075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_EyelidsDownRT
+      position: {x: .0751791, y: .0443046466, z: -.0305005573}
+      rotation: {x: -3.59310652e-05, y: 1.69584234e-06, z: .0471446291, w: .998888075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_CheekLT
+      position: {x: .0862072334, y: .0165726934, z: .0404237993}
+      rotation: {x: -3.59310652e-05, y: 1.69584234e-06, z: .0471446291, w: .998888075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_CheekRT
+      position: {x: .0862071216, y: .0165669732, z: -.0404097401}
+      rotation: {x: -3.59310652e-05, y: 1.69584234e-06, z: .0471446291, w: .998888075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_DimpleLT
+      position: {x: .0778698251, y: -.0167298708, z: .0408823341}
+      rotation: {x: -3.59521255e-05, y: 1.72194734e-06, z: .0471446179, w: .998888075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_DimpleRT
+      position: {x: .0778697804, y: -.0167358778, z: -.0408633277}
+      rotation: {x: -3.59391452e-05, y: 1.63850916e-06, z: .0471446179, w: .998888075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_EyeLT
+      position: {x: .0685890764, y: .0461475588, z: .0303725339}
+      rotation: {x: -5.01357281e-05, y: 4.54794281e-05, z: .138000995, w: .990432084}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_EyeRT
+      position: {x: .0685891733, y: .046143163, z: -.0303627048}
+      rotation: {x: -2.11182723e-05, y: -3.5551373e-05, z: .138000995, w: .990432084}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_EyebrowInnerLT
+      position: {x: .101094931, y: .0492969155, z: .0157846194}
+      rotation: {x: -3.58893922e-05, y: 1.68423492e-06, z: .0471446514, w: .998888075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_EyebrowInnerRT
+      position: {x: .10109479, y: .0492946692, z: -.0157752354}
+      rotation: {x: -3.59727383e-05, y: 1.70744829e-06, z: .0471446514, w: .998888075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_EyebrowOuterLT
+      position: {x: .0970998555, y: .0601823069, z: .0352079123}
+      rotation: {x: -3.59310652e-05, y: 1.69584234e-06, z: .0471446291, w: .998888075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_EyebrowOuterRT
+      position: {x: .0970998481, y: .0601771437, z: -.0352001898}
+      rotation: {x: -3.59310652e-05, y: 1.69584234e-06, z: .0471446291, w: .998888075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_EyelidUpLT
+      position: {x: .0753478482, y: .0452947766, z: .030510677}
+      rotation: {x: -3.59310652e-05, y: 1.69584234e-06, z: .0471446291, w: .998888075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_EyelidUpRT
+      position: {x: .075347729, y: .0452903733, z: -.0305006281}
+      rotation: {x: -3.59310652e-05, y: 1.69584234e-06, z: .0471446291, w: .998888075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_Jaw
+      position: {x: .0272927154, y: .00300896959, z: 5.30014404e-06}
+      rotation: {x: .681718111, y: .187728554, z: -.681679606, w: .187966242}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_LipCornerLT
+      position: {x: .0843628272, y: -.0248527117, z: .0283810496}
+      rotation: {x: -3.59659352e-05, y: 1.68455756e-06, z: .0471446179, w: .998888075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_LipCornerRT
+      position: {x: .0843629539, y: -.0248568263, z: -.0283610057}
+      rotation: {x: -3.5921963e-05, y: 1.67496989e-06, z: .0471446179, w: .998888075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_LowerLip
+      position: {x: .0967936814, y: -.0292981118, z: 3.27566013e-05}
+      rotation: {x: -.00226079626, y: -3.10593782e-06, z: .0476396233, w: .998862028}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_LowerLipLT
+      position: {x: .0926311761, y: -.0287226401, z: .0118472325}
+      rotation: {x: -3.58802863e-05, y: 1.66731445e-06, z: .0471446216, w: .998888075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_LowerLipRT
+      position: {x: .0926310346, y: -.0287243314, z: -.0118266391}
+      rotation: {x: -3.60099039e-05, y: 1.69515715e-06, z: .0471446179, w: .998888075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_NoseMain
+      position: {x: .100657381, y: .0038927889, z: 2.32548027e-05}
+      rotation: {x: -3.59489968e-05, y: 1.68896315e-06, z: .0471446738, w: .998888075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_NoseSideLT
+      position: {x: .0988867283, y: -.00368863577, z: .0106858592}
+      rotation: {x: -3.59378901e-05, y: 1.66489758e-06, z: .0471446291, w: .998888075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_NoseSideRT
+      position: {x: .0988865867, y: -.00369028491, z: -.010668858}
+      rotation: {x: -3.59242404e-05, y: 1.72678392e-06, z: .0471446291, w: .998888075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_UpperLip
+      position: {x: .0983407646, y: -.0250738207, z: 3.11115109e-05}
+      rotation: {x: -3.59506121e-05, y: 1.67401686e-06, z: .0471446291, w: .998888075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_UpperLipLT
+      position: {x: .0935366526, y: -.0234514251, z: .0144508015}
+      rotation: {x: -3.5947156e-05, y: 1.6732223e-06, z: .0471446179, w: .998888075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_UpperLipRT
+      position: {x: .0935367346, y: -.0234534387, z: -.0144309541}
+      rotation: {x: -3.59367805e-05, y: 1.69433645e-06, z: .0471446142, w: .998888075}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_HipMaster
+      position: {x: .000117294541, y: -.00999931153, z: -9.0277473e-17}
+      rotation: {x: .707094669, y: .00414706022, z: -.707094669, w: .00414706022}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_HipLT
+      position: {x: -.140471995, y: .075081639, z: .0123760328}
+      rotation: {x: .014793925, y: -.70695436, z: -.0146810114, w: .706952035}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_KneeLT
+      position: {x: .00681912759, y: .272043198, z: 2.66023253e-05}
+      rotation: {x: -.000709471235, y: 1.42422195e-05, z: -.016383836, w: .999865532}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_FootLT
+      position: {x: .0206415839, y: .127734423, z: -.00034833586}
+      rotation: {x: .000628483656, y: 3.06686013e-17, z: .0372194164, w: .999306917}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_ToeLT
+      position: {x: -.130712837, y: .0870534405, z: .00049193576}
+      rotation: {x: -.00941892341, y: -.00651530456, z: .568252087, w: .822774827}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_HipRT
+      position: {x: .138561115, y: .0750816837, z: .0123760402}
+      rotation: {x: -.706952035, y: -.0146810031, z: .70695436, w: .0147939119}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_KneeRT
+      position: {x: -.00697256206, y: -.268364698, z: -2.71899153e-05}
+      rotation: {x: -.000709556916, y: 9.01003568e-06, z: -.0163838509, w: .999865532}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_FootRT
+      position: {x: -.0206415821, y: -.127734467, z: .00034855181}
+      rotation: {x: .000628483482, y: 6.18779869e-17, z: .0372194126, w: .999306917}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: pasted__joint_ToeRT
+      position: {x: .130712882, y: -.0870534107, z: -.000491935585}
+      rotation: {x: -.00941892061, y: -.00651530502, z: .568252265, w: .822774768}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
