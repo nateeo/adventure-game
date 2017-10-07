@@ -76,7 +76,7 @@ public class PlayerScript : MonoBehaviour {
 				if (!VD.isActive) {
 					//... and use it to begin the conversation, look at the target
 					Debug.logger.Log ("BEGIN");
-					diagUI.Begin (assigned);
+					diagUI.Begin (rHit, assigned);
 				}
 				return;
 			}
