@@ -9,6 +9,8 @@ public class PlayerScript : MonoBehaviour {
 	Vector3 movement;
 	public UIManager diagUI;
 
+	public static float NPC_RANGE = 5f;
+
 	// Use this for initialization
 	void Start () {
 		rigidBody = GetComponent<Rigidbody> ();
@@ -17,6 +19,15 @@ public class PlayerScript : MonoBehaviour {
 	void Update() {
 		if (Input.GetKeyDown (KeyCode.F)) {
 			TryInteract ();
+		}
+		diagUI.interactToolTipDisabled();
+		Collider[] hits = Physics.OverlapSphere (transform.position, NPC_RANGE);
+		for (int i = 0; i < hits.Length; i++) {
+			Collider rHit = hits [i];
+			if (rHit.GetComponent<Collider> ().GetComponent<VIDE_Assign> () != null) {
+				diagUI.interactToolTipEnabled();
+				break;
+			}
 		}
 	}
 	
@@ -38,7 +49,7 @@ public class PlayerScript : MonoBehaviour {
 			return;
 		}
 
-		Collider[] hits = Physics.OverlapSphere (transform.position, 5);
+				Collider[] hits = Physics.OverlapSphere (transform.position, NPC_RANGE);
 		for (int i = 0; i < hits.Length; i++) {
 			Collider rHit = hits [i];
 			VIDE_Assign assigned;

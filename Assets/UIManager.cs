@@ -9,8 +9,10 @@ public class UIManager : MonoBehaviour {
 	public CameraThirdPerson playerCamera;
 	public GameObject container_NPC;
 	public GameObject container_PLAYER;
+	public Text interactToolTip;
 	public Text text_NPC;
 	public string previous_text;
+	public bool interactTooltip;
 	public Text[] text_choices;
 
 
@@ -88,6 +90,18 @@ public class UIManager : MonoBehaviour {
 		VD.nodeData.commentIndex = choice;
 		if (Input.GetMouseButtonUp (0)) {
 			VD.Next ();
+		}
+	}
+
+	public void interactToolTipDisabled() {
+		if (interactToolTip.enabled == true) {
+			interactToolTip.enabled = false;
+		}
+	}
+
+	public void interactToolTipEnabled() {
+		if (!VD.isActive && interactToolTip.enabled == false) {
+			interactToolTip.enabled = true;
 		}
 	}
 }
