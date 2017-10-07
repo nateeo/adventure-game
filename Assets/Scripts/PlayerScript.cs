@@ -5,7 +5,7 @@ using VIDE_Data;
 public class PlayerScript : MonoBehaviour {
 	public bool dialogFix = false;
 	public float speed;
-	private Rigidbody rigidBody;
+	public Rigidbody rigidBody;
 	Vector3 movement;
 	public UIManager diagUI;
 
@@ -58,7 +58,7 @@ public class PlayerScript : MonoBehaviour {
 				if (!VD.isActive) {
 					//... and use it to begin the conversation, look at the target
 					Debug.logger.Log ("BEGIN");
-					diagUI.Begin (assigned);
+					diagUI.Begin (rHit, assigned);
 				}
 				return;
 			}

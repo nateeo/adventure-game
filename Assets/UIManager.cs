@@ -15,6 +15,8 @@ public class UIManager : MonoBehaviour {
 	public bool interactTooltip;
 	public Text[] text_choices;
 
+	Vector3 original;
+
 
 	// Use this for initialization
 	void Start () {
@@ -26,13 +28,23 @@ public class UIManager : MonoBehaviour {
 	void Update () {
 	}
 
-	public void Begin(VIDE_Assign conversation) {
-		Debug.Log (conversation);
+	public void Begin(Collider collider, VIDE_Assign conversation) {
+		collider.gameObject.transform.LookAt(new Vector3 (
+			playerController.rigidBody.position.x,
+			collider.transform.position.y,
+			playerController.rigidBody.position.z
+											)
+		);
 		// disable camera rotation and player movement
 		playerController.dialogFix = true;
 		playerCamera.dialogFix = true;
 		VD.OnNodeChange += UpdateUI;
 		VD.OnEnd += End;
+
+		// clean data
+		previous_text = null;
+		text_NPC.text = "";
+
 		VD.BeginDialogue (conversation);
 	}
 
