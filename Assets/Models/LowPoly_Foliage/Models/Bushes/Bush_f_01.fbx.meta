@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 35b82720b152f4933a43e2ec6621407f
-timeCreated: 1507247918
+guid: 298179d0bb65d478fb4e6aa886fc4d8a
+timeCreated: 1507258917
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -30,7 +30,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleCurves: 1
+    resampleRotations: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
@@ -72,7 +72,6 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -83,10 +82,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
-    skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
   humanoidOversampling: 1
