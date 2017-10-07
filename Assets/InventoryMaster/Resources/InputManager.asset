@@ -16,6 +16,6 @@ MonoBehaviour:
   throwGrenade: 103
   SplitItem: 305
   InventoryKeyCode: 105
-  StorageKeyCode: 101
-  CharacterSystemKeyCode: 99
-  CraftSystemKeyCode: 107
+  StorageKeyCode: 0
+  CharacterSystemKeyCode: 0
+  CraftSystemKeyCode: 0

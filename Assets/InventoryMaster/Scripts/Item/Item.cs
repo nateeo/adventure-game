@@ -37,9 +37,7 @@ public class Item
     public Item getCopy()
     {
         return (Item)this.MemberwiseClone();        
-    }   
+    }
     
     
 }
-
-

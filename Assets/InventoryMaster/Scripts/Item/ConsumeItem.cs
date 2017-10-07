@@ -37,6 +37,7 @@ public class ConsumeItem : MonoBehaviour, IPointerDownHandler
 
             if (data.button == PointerEventData.InputButton.Right)
             {
+				Debug.Log ("Right click");
                 //item from craft system to inventory
                 if (transform.parent.GetComponent<CraftResultSlot>() != null)
                 {

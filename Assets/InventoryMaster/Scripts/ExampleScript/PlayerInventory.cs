@@ -37,6 +37,7 @@ public class PlayerInventory : MonoBehaviour
 
     public void OnEnable()
     {
+		
         Inventory.ItemEquip += OnBackpack;
         Inventory.UnEquipItem += UnEquipBackpack;
 
@@ -157,19 +158,6 @@ public class PlayerInventory : MonoBehaviour
 
     void Start()
     {
-        //if (HPMANACanvas != null)
-        //{
-        //    hpText = HPMANACanvas.transform.GetChild(1).GetChild(0).GetComponent<Text>();
-
-        //    manaText = HPMANACanvas.transform.GetChild(2).GetChild(0).GetComponent<Text>();
-
-        //    hpImage = HPMANACanvas.transform.GetChild(1).GetComponent<Image>();
-        //    manaImage = HPMANACanvas.transform.GetChild(1).GetComponent<Image>();
-
-        //    UpdateHPBar();
-        //    UpdateManaBar();
-        //}
-
         if (inputManagerDatabase == null)
             inputManagerDatabase = (InputManager)Resources.Load("InputManager");
 
@@ -186,23 +174,10 @@ public class PlayerInventory : MonoBehaviour
             craftSystemInventory = craftSystem.GetComponent<Inventory>();
     }
 
-    //void UpdateHPBar()
-    //{
-    //    hpText.text = (currentHealth + "/" + maxHealth);
-    //    float fillAmount = currentHealth / maxHealth;
-    //    hpImage.fillAmount = fillAmount;
-    //}
-
-    //void UpdateManaBar()
-    //{
-    //    manaText.text = (currentMana + "/" + maxMana);
-    //    float fillAmount = currentMana / maxMana;
-    //    manaImage.fillAmount = fillAmount;
-    //}
-
 
     public void OnConsumeItem(Item item)
     {
+		
         for (int i = 0; i < item.itemAttributes.Count; i++)
         {
             if (item.itemAttributes[i].attributeName == "Health")
@@ -234,11 +209,6 @@ public class PlayerInventory : MonoBehaviour
                     currentDamage += item.itemAttributes[i].attributeValue;
             }
         }
-        //if (HPMANACanvas != null)
-        //{
-        //    UpdateManaBar();
-        //    UpdateHPBar();
-        //}
     }
 
     public void OnGearItem(Item item)
@@ -254,11 +224,6 @@ public class PlayerInventory : MonoBehaviour
             if (item.itemAttributes[i].attributeName == "Damage")
                 maxDamage += item.itemAttributes[i].attributeValue;
         }
-        //if (HPMANACanvas != null)
-        //{
-        //    UpdateManaBar();
-        //    UpdateHPBar();
-        //}
     }
 
     public void OnUnEquipItem(Item item)
@@ -274,11 +239,6 @@ public class PlayerInventory : MonoBehaviour
             if (item.itemAttributes[i].attributeName == "Damage")
                 maxDamage -= item.itemAttributes[i].attributeValue;
         }
-        //if (HPMANACanvas != null)
-        //{
-        //    UpdateManaBar();
-        //    UpdateHPBar();
-        //}
     }
 
 

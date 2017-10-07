@@ -9,7 +9,6 @@ public class PickUpItem : MonoBehaviour
 
     void Start()
     {
-		System.Diagnostics.Debug.WriteLine ("UPDATE");
         _player = GameObject.FindGameObjectWithTag("Player");
         if (_player != null)
             _inventory = _player.GetComponent<PlayerInventory>().inventory.GetComponent<Inventory>();
@@ -18,23 +17,27 @@ public class PickUpItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		System.Diagnostics.Debug.WriteLine ("PICK ME UP");
-        if (_inventory != null && Input.GetKeyDown(KeyCode.E))
+        if (_inventory != null && Input.GetKeyDown(KeyCode.F))
         {
             float distance = Vector3.Distance(this.gameObject.transform.position, _player.transform.position);
 
             if (distance <= 3)
             {
-                bool check = _inventory.checkIfItemAllreadyExist(item.itemID, item.itemValue);
-                if (check)
-                    Destroy(this.gameObject);
-                else if (_inventory.ItemsInInventory.Count < (_inventory.width * _inventory.height))
-                {
-                    _inventory.addItemToInventory(item.itemID, item.itemValue);
-                    _inventory.updateItemList();
-                    _inventory.stackableSettings();
-                    Destroy(this.gameObject);
-                }
+				if (item.itemType == ItemType.Bonus) {
+					Debug.Log ("Add here for treasure or other things!");
+				} else if (item.itemType == ItemType.Memory) {
+					Debug.Log ("Add here to consume as memory");
+				} else {
+					bool check = _inventory.checkIfItemAllreadyExist (item.itemID, item.itemValue);
+					if (check)
+						Destroy (this.gameObject);
+					else if (_inventory.ItemsInInventory.Count < (_inventory.width * _inventory.height)) {
+						_inventory.addItemToInventory (item.itemID, item.itemValue);
+						_inventory.updateItemList ();
+						_inventory.stackableSettings ();
+						Destroy (this.gameObject);
+					}
+				}
 
             }
         }
