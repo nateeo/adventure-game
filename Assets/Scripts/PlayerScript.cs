@@ -2,19 +2,31 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Linq;
+using System.Collections.Generic;
 
 public class PlayerScript : MonoBehaviour {
 	public float speed;
 
     //Fields for time and score
-    public Text timeText;
+    public Canvas scoreScreen;
+
     private float startTime;
     public int maxPlayTimeInMinutes;
     private float maxTime;
-    public Canvas scoreScreen;
-    public Slider timeSlider;
 
-	private Rigidbody rigidBody;
+    public GameObject fullStar0;
+    public GameObject fullStar1;
+    public GameObject fullStar2;
+    public GameObject fullStar3;
+    public GameObject fullStar4;
+    public GameObject fullStar5;
+    private List<GameObject> listOfStars = new List<GameObject>();
+
+    public int maxNumberOfBonuses;
+    private int numberOfBonuses;
+    //Fields for time and score ends here ===============
+
+    private Rigidbody rigidBody;
 	Vector3 movement;
 
 	// Use this for initialization
@@ -23,8 +35,13 @@ public class PlayerScript : MonoBehaviour {
         startTime = Time.time;
         maxTime = maxPlayTimeInMinutes * 60; 
         scoreScreen.enabled = false;
-        changeText("Your score is shit!");
-        timeSlider.value = 1;
+
+        listOfStars.Add(fullStar0);
+        listOfStars.Add(fullStar1);
+        listOfStars.Add(fullStar2);
+        listOfStars.Add(fullStar3);
+        listOfStars.Add(fullStar4);
+        listOfStars.Add(fullStar5);
 
         rigidBody = GetComponent<Rigidbody> ();
 	}
@@ -35,13 +52,16 @@ public class PlayerScript : MonoBehaviour {
 		float v = Input.GetAxisRaw ("Vertical");
 		Move (h, v);
 
-        updateTimeSlider();
-
-        if (Input.GetKeyDown("escape"))
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            int score = computeTimeBasedScore();
-            changeText("hello, score is: " + score);
-            scoreScreen.enabled = !scoreScreen.enabled;
+            incrementBonus();
+            setScoreScreenVisible(true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            decrementBonus();
+            setScoreScreenVisible(false);
         }
     }
 
@@ -65,7 +85,38 @@ public class PlayerScript : MonoBehaviour {
         return 0;
     }
 
+    //Method for computing the score based on a number of bonuses picked up.
+    //The policy is a 3 section idea: 0/1/2/3 stars.
+    int computeBonusBasedScore()
+    {
+        if (numberOfBonuses >= maxNumberOfBonuses)
+        {
+            return 3;
+        }
+        else if (numberOfBonuses >= maxNumberOfBonuses / 2.0)
+        {
+            return 2;
+        }
+        else if (numberOfBonuses > 0)
+        {
+            return 1;
+        }
+        return 0;
+    }
+
+    //Use this method to display the score.
+    private void setScoreScreenVisible(bool visible)
+    {
+        int timeScore = computeTimeBasedScore();
+        int bonusScore = computeBonusBasedScore();
+        changeStar(timeScore, bonusScore);
+        scoreScreen.enabled = visible;
+    }
+
     //private function for updating the time and the slider. 
+    /* TIMER REMOVED (code might be useful some time, so has been left in here!)
+     * 
+     * 
     private void updateTimeSlider()
     {
         // This section is to do with displaying the time. 
@@ -90,16 +141,56 @@ public class PlayerScript : MonoBehaviour {
             fill.color = Color.Lerp(Color.red, Color.green, proportionRemaining);
         }
     }
+    */
 
-    //private helper method for changing text.
-    private void changeText (string text)
+    //private helper method for changing number of stars (score).
+    //use only 0-3 stars for both integers.
+    private void changeStar (int firstRow, int secondRow)
     {
-        Transform child = scoreScreen.transform.Find("ScoreText");
-        Text t = child.GetComponent<Text>();
-        t.text = text;
+        if (firstRow < 0 || firstRow > 3 || secondRow < 0 || secondRow > 3)
+        {
+            throw new System.ArgumentException("the number of stars for both rows must be between 0-3.");
+        }
+        else
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                if (i < firstRow)
+                {
+                    listOfStars[i].SetActive(true);
+                }
+                else
+                {
+                    listOfStars[i].SetActive(false);
+                }
+            }
+
+            for (int i = 3; i < 6; i++)
+            {
+                if (i < secondRow + 3)
+                {
+                    listOfStars[i].SetActive(true);
+                }
+                else
+                {
+                    listOfStars[i].SetActive(false);
+                }
+            }
+        }
     }
 
-	void Move(float h, float v) {
+    //Use this method when a bonus object has been picked up
+    private void incrementBonus()
+    {
+        numberOfBonuses++;
+    }
+    //Use this method when you want to deduct points
+    private void decrementBonus()
+    {
+        numberOfBonuses--;
+    }
+
+    void Move(float h, float v) {
 		Vector3 movement = new Vector3(h, 0.0f, v);
 		movement = Camera.main.transform.TransformDirection(movement);
 		//make sure player always moves in same speed no matter what combination of keys
