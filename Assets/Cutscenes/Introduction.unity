@@ -814,7 +814,7 @@ MonoBehaviour:
   - "Udo: \nThanks, I\u2019ll get him like I do with any other. I\u2019ll get back
     to you soon don\u2019t worry. "
   - "Revior: \nI\u2019ll keep you updated. Good luck out there.\n"
-  SecondsBetweenCharacters: 0.05
+  SecondsBetweenCharacters: 0.01
   CharacterRateMultiplier: 0.01
   DialogueInput: 13
   ContinueIcon: {fileID: 1999281588}
