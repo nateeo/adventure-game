@@ -28,7 +28,7 @@ public class PlayerScript : MonoBehaviour {
     public int maxPlayTimeInMinutes;
     private float maxTime;
 
-    public int maxNumberOfBonuses;
+	public int maxNumberOfBonuses;
     private int numberOfBonuses;
     //Fields for time and score ends here ===============
 	public UIManager diagUI;
@@ -210,12 +210,13 @@ public class PlayerScript : MonoBehaviour {
 
 
     //Use this method when a bonus object has been picked up
-    private void incrementBonus()
+    public void incrementBonus()
     {
         numberOfBonuses++;
+		Debug.Log ("bonus" + numberOfBonuses);
     }
     //Use this method when you want to deduct points
-    private void decrementBonus()
+    public void decrementBonus()
     {
         numberOfBonuses--;
     }
