@@ -19,6 +19,8 @@ public class PlayerScript : MonoBehaviour {
 	private float verticalVelocity;
 	private float gravity = 14.0f;
 	private float jumpForce = 20.0f;
+	private float walkSpeed = 6.0f;
+	private float runSpeed = 12.0f;
 
 	  //Fields for time and score
 
@@ -230,13 +232,12 @@ public class PlayerScript : MonoBehaviour {
 		//want to change it so that it is per second- multiple it by delta time. delta time is the time between each update call
 		//so if youre updating every 50th of a second, over the course of 50 50th of a second its going to move 6 units
 		if (Input.GetKey (KeyCode.LeftShift)) {
-			speed = 8f;
+			speed = runSpeed;
 		} else {
-			speed = 3f;
+			speed = walkSpeed;
 		}
 
 		movement = movement.normalized * speed * Time.deltaTime;
-
 		rigidBody.MovePosition (transform.position + movement);
 		rigidBody.transform.rotation = Quaternion.LookRotation (new Vector3(movement.x, 0, movement.z));
 
@@ -249,10 +250,10 @@ public class PlayerScript : MonoBehaviour {
 		bool walking = false;
 		bool running = false;
 
-		if (speed == 3f) {
+		if (speed == walkSpeed) {
 			walking = h != 0f || v != 0f;
 			running = false;
-		} else if (speed == 8f) {
+		} else if (speed == runSpeed) {
 			running = h != 0f || v != 0f;
 			walking = false;
 		}
