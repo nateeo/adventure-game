@@ -120,7 +120,7 @@ Terrain:
   m_GameObject: {fileID: 45897808}
   m_Enabled: 1
   serializedVersion: 3
-  m_TerrainData: {fileID: 15600000, guid: 8eb295cd20e824e24a11b1a0c70c0190, type: 2}
+  m_TerrainData: {fileID: 0}
   m_TreeDistance: 2000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
@@ -780,41 +780,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 908709415}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd851fdb395f74386b6626dc3c4ab09b, type: 3}
+  m_Script: {fileID: 11500000, guid: a725abe40bd1a4d968c5ad201914edbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueStrings:
-  - "Udo: \nHello?"
-  - "Revior: \nHi Udo, enjoying your break?"
-  - "Udo: \nYeah, still exhausted after my last mission but feeling much better. What\u2019s
-    up?"
-  - "Revior:\nI\u2019m sorry but we\u2019ll need to cut your holiday short. It\u2019s
-    code red, and you\u2019re the best bounty hunter we have. I need you out there."
-  - "Udo: \nUh\u2026"
-  - "Revior: \nOkay so here\u2019s the situation. Remember the crucial plans the Celestial
-    State had to upgrade our planet?"
-  - "Udo: \nWho were the Celestial State again..?\n"
-  - "Revior: \nOur government! The government you love so much! From our home-planet!"
-  - "Udo: \nOh right. Sorry I had a rough night and it\u2019s way too early in the
-    morning."
-  - "Revior: \nThey\u2019ve been stolen. And we need it back now. If we don\u2019t
-    get these back, we know what will happen to our planet! We\u2019ll be a millennial
-    behind the other galaxies!\n"
-  - "Revior: \nAnyway, I\u2019ll give you a quick run-down. His name is Klepto Darryl,
-    a spy from the planet of Khaloof. I\u2019ll send through documentation of his
-    profile."
-  - "Revoir:\nplease have a good look at it before starting your chase, the information
-    I\u2019ve given you is minimal but crucial."
-  - "Revior:\n He was last spotted on the planet you\u2019re staying! So see if there\u2019s
-    anyone you can talk to to get some more information, because our knowledge is
-    limited at this stage."
-  - "Revior: \nI believe in you Udo, and I know how much you love the Celestial State
-    and our planet. Be the hero again. Remember what your parents did for you. Make
-    them proud."
-  - "Udo: \nThanks, I\u2019ll get him like I do with any other. I\u2019ll get back
-    to you soon don\u2019t worry. "
-  - "Revior: \nI\u2019ll keep you updated. Good luck out there.\n"
-  SecondsBetweenCharacters: 0.01
+  - 'Danny
+
+    Omg Sam you''re so handsome I wish I was you!'
+  - "Sam \nHaha yeah you're so handsome,"
+  - 'Danny
+
+    Omg hehe xD we''re transitioning to the next sceene ooo'
+  SecondsBetweenCharacters: 0.05
   CharacterRateMultiplier: 0.01
   DialogueInput: 13
   ContinueIcon: {fileID: 1999281588}
