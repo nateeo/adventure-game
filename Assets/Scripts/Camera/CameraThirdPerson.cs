@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class CameraThirdPerson : MonoBehaviour {
 
-	private const float Y_ANGLE_MIN = 20;
+	public bool dialogFix = false;
+
+	private const float Y_ANGLE_MIN = 17f;
 	private const float Y_ANGLE_MAX = 40.0f;
 	public Transform lookAt;
 	public Transform camTransform;
 
 	private Camera cam;
 
-	private float distance = 7.0f;
+	private float distance = 6.0f;
 	private float currentX = 0.0f;
 	private float currentY = 0.0f;
 	public float sensitivityX = 5.0f;
@@ -26,6 +28,9 @@ public class CameraThirdPerson : MonoBehaviour {
 	}
 
 	void Update() {
+		if (dialogFix) {
+			return;
+		}
 		currentX += sensitivityX * Input.GetAxis ("Mouse X");
 		currentY += sensitivityY * Input.GetAxis ("Mouse Y");
 
@@ -34,13 +39,14 @@ public class CameraThirdPerson : MonoBehaviour {
 
 	// Update is called once per frame
 	void LateUpdate () {
-		float camDistance = currentY < 20f ? 4f : distance;
+		if (dialogFix) {
+			return;
+		}
+		float camDistance = currentY < 20f ? 5f : distance;
 		Vector3 dir = new Vector3 (0, 0, -camDistance);
 		Vector3 camVec = Input.mousePosition;
 		Quaternion rotation = Quaternion.Euler (currentY, camVec.x, 0);
 		camTransform.position = lookAt.position + rotation * dir;
 		camTransform.LookAt (lookAt.position);
-
 	}
-
 }
