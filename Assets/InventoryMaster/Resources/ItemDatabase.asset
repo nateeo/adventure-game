@@ -54,16 +54,35 @@ MonoBehaviour:
     itemIcon: {fileID: 21300000, guid: 15cb7ee0d765eb343bcf8552125b6ebd, type: 3}
     itemModel: {fileID: 100000, guid: db6f6804c3df5c54bbb2b402c3a72cf1, type: 3}
     itemValue: 1
-    itemType: 14
+    itemType: 0
     itemWeight: 0
     maxStack: 1
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
-  - itemName: New Item
+  - itemName: Document
     itemID: 4
-    itemDesc: 
-    itemIcon: {fileID: 0}
+    itemDesc: 'SECRET DOCUMENT FROM CELESTIAL GOVT:
+
+
+      Name: Klepto Darryl
+
+      Last seen wearing dark cloak
+
+'
+    itemIcon: {fileID: 21300000, guid: fea65bc67ed4da24dadaa3b4b7a218e1, type: 3}
+    itemModel: {fileID: 100000, guid: 888ce82c0af2ab0499d39c93fb0f4ce4, type: 2}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Ship Photo
+    itemID: 5
+    itemDesc: My favourite ship!
+    itemIcon: {fileID: 21300000, guid: 4be4829451c3e5a44a594a19c3d430bb, type: 3}
     itemModel: {fileID: 0}
     itemValue: 1
     itemType: 0

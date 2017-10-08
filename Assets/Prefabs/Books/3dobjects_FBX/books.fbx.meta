@@ -1,21 +1,16 @@
 fileFormatVersion: 2
-guid: d0882da95153541c09fc1451e68b2ec1
-labels:
-- Prop
+guid: 08e091500e68ded43b4abfb1b3f718d0
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: scroll
-    100002: //RootNode
-    400000: scroll
-    400002: //RootNode
-    2300000: scroll
-    3300000: scroll
-    4300000: scroll
+    4300000: buch_0001b
+    4300002: buch_0001a
+    4300004: buch_0001c
+    4300006: buch_0001d
   materials:
     importMaterials: 1
-    materialName: 0
-    materialSearch: 0
+    materialName: 2
+    materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -36,7 +31,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.01
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -52,7 +47,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 0
   tangentSpace:
-    normalSmoothAngle: 60
+    normalSmoothAngle: 41
     normalImportMode: 1
     tangentImportMode: 4
   importAnimation: 1
@@ -70,7 +65,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
