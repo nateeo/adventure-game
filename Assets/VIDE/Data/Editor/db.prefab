@@ -1,0 +1,1077 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &146666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 499132}
+  - 114: {fileID: 11416270}
+  m_Layer: 0
+  m_Name: db
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &499132
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146666}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11416270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 268dc70b105993846a123be43345df63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileIndex: 0
+  loadTag: 
+  startID: 1
+  curFocusID: 0
+  currentID: 79710
+  autosave: 0
+  previewPanning: 0
+  currentDiag: 0
+  S_playerDiags:
+  - commentCount: 2
+    s_comment:
+    - text: 4368696c6c206f75742c206d616e21
+      extraData: 
+      inputSetIndex: 0
+      outputNodeIndex: 12
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    - text: 576861743f2057686174206973207468697320706c6163653f
+      extraData: 
+      inputSetIndex: 0
+      outputNodeIndex: 13
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    ID: 5
+    rect:
+      x: 1240
+      y: -10
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 3
+    s_comment:
+    - text: 596f752073686f756c646e277420626520686572652065697468657209
+      extraData: 
+      inputSetIndex: 1
+      outputNodeIndex: 13
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    - text: 4920737061776e6564206865726521
+      extraData: 
+      inputSetIndex: 1
+      outputNodeIndex: 10
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    - text: 59657320492073686f756c642e
+      extraData: 
+      inputSetIndex: 1
+      outputNodeIndex: 9
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    ID: 6
+    rect:
+      x: 1240
+      y: 240
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 2
+    s_comment:
+    - text: 2848612d2072696768742e2e2e2e29
+      extraData: 
+      inputSetIndex: 2
+      outputNodeIndex: 11
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    - text: 5b4c656176655d
+      extraData: 
+      inputSetIndex: 2
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    ID: 10
+    rect:
+      x: 2160
+      y: 380
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 2
+    s_comment:
+    - text: 4368696969696c6c2e2e2e2e20
+      extraData: 
+      inputSetIndex: 3
+      outputNodeIndex: 15
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    - text: 5567682e2e2e206279652e
+      extraData: 
+      inputSetIndex: 3
+      outputNodeIndex: 8
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    ID: 13
+    rect:
+      x: 2190
+      y: 110
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 3
+    s_comment:
+    - text: 576f616820574f4148
+      extraData: 
+      inputSetIndex: 4
+      outputNodeIndex: 5
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    - text: 4e2d6e6f2e2e207761697421
+      extraData: 
+      inputSetIndex: 4
+      outputNodeIndex: 6
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 281
+        y: 69
+        width: 30
+        height: 18
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    - text: 2e2e2e
+      extraData: 
+      inputSetIndex: 4
+      outputNodeIndex: 7
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 281
+        y: 89
+        width: 30
+        height: 18
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    ID: 0
+    rect:
+      x: 200
+      y: 30
+      width: 316
+      height: 139
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: 596f75277265206e6f742067657474696e67206f7574206f66206865726520616c69766521
+      extraData: 457874726144617461
+      inputSetIndex: 5
+      outputNodeIndex: 0
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    ID: 2
+    rect:
+      x: 770
+      y: 0
+      width: 316
+      height: 246
+    pTag: 436861726c6965
+    expand: 1
+    sprite: {fileID: 0}
+    vars:
+    - 536f6d65537472696e67
+    - 3132333534
+    - 66616c7365
+    - 312e3532
+    varKeys:
+    - 4b657931
+    - 4b657932
+    - 4b657933
+    - 4b657934
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: 4e6f2c20776861743f20596f752073686f756c646e277420626520686572652e
+      extraData: 457874726144617461
+      inputSetIndex: 6
+      outputNodeIndex: 1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    ID: 3
+    rect:
+      x: 720
+      y: 270
+      width: 316
+      height: 99
+    pTag: 436861726c6965
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: 54686174277320697421204b65657020796f757220696e74727573697665206d6f757468207368757421
+      extraData: 457874726144617461
+      inputSetIndex: 7
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    ID: 4
+    rect:
+      x: 680
+      y: 400
+      width: 316
+      height: 110
+    pTag: 436861726c6965
+    expand: 0
+    sprite: {fileID: 21300000, guid: 9e5eefef3b3fdff40a66f9c9db42ac9e, type: 3}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 3
+    s_comment:
+    - text: 596f7520646f207468617421
+      extraData: 457874726144617461
+      inputSetIndex: 8
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    - text: 49276d207369636b206f66207468657365206361707320737061776e696e67207768657265766572207468657920706c656173652e
+      extraData: 457874726144617461
+      inputSetIndex: 8
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    - text: 4265676f6e6521
+      extraData: 457874726144617461
+      inputSetIndex: 8
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    ID: 7
+    rect:
+      x: 2670
+      y: 160
+      width: 300
+      height: 100
+    pTag: 436861726c6965
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: 4e6f2c20796f7520646f6e27742e205468617427732062757420612066696c746879206c69652e20476f20617761792c206b69642e
+      extraData: 457874726144617461
+      inputSetIndex: 9
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    ID: 8
+    rect:
+      x: 1750
+      y: 540
+      width: 300
+      height: 100
+    pTag: 436861726c6965
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: 49206469642061732077656c6c21204275742049206469646e277420676f2061726f756e6420626f74686572696e67206361707321
+      extraData: 457874726144617461
+      inputSetIndex: 10
+      outputNodeIndex: 2
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    ID: 9
+    rect:
+      x: 1770
+      y: 360
+      width: 300
+      height: 100
+    pTag: 436861726c6965
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 5
+    s_comment:
+    - text: 2e2e2e657863757365206d653f
+      extraData: 457874726144617461
+      inputSetIndex: 11
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    - text: 4469642049206a7573742068656172206120776869737065723f
+      extraData: 457874726144617461
+      inputSetIndex: 11
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    - text: 4c6f6f6b2c206b69642e2e2e
+      extraData: 457874726144617461
+      inputSetIndex: 11
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    - text: 474f
+      extraData: 457874726144617461
+      inputSetIndex: 11
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    - text: 415741592e
+      extraData: 457874726144617461
+      inputSetIndex: 11
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    ID: 11
+    rect:
+      x: 2660
+      y: 410
+      width: 300
+      height: 100
+    pTag: 436861726c6965
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: 44696420796f75206a7573742d
+      extraData: 457874726144617461
+      inputSetIndex: 12
+      outputNodeIndex: 3
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    ID: 12
+    rect:
+      x: 1790
+      y: 10
+      width: 300
+      height: 100
+    pTag: 436861726c6965
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: 4875683f
+      extraData: 457874726144617461
+      inputSetIndex: 13
+      outputNodeIndex: 3
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    - text: 49204f574e207468697320706c6163652e
+      extraData: 457874726144617461
+      inputSetIndex: 13
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    ID: 14
+    rect:
+      x: 1770
+      y: 200
+      width: 300
+      height: 100
+    pTag: 436861726c6965
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: 5761646461796177616e743f21
+      extraData: 457874726144617461
+      inputSetIndex: 14
+      outputNodeIndex: 4
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    ID: 1
+    rect:
+      x: -190
+      y: 170
+      width: 316
+      height: 155
+    pTag: 436861726c6965
+    expand: 1
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: 6368696c6c2e2e2e3f
+      extraData: 457874726144617461
+      inputSetIndex: 15
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    - text: 43484949494c4c3f213f213f213f213f3f213f213f
+      extraData: 457874726144617461
+      inputSetIndex: 15
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    ID: 15
+    rect:
+      x: 2660
+      y: -70
+      width: 300
+      height: 100
+    pTag: 436861726c6965
+    expand: 1
+    sprite: {fileID: 21300000, guid: 9e5eefef3b3fdff40a66f9c9db42ac9e, type: 3}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 3
+    s_comment:
+    - text: 57686174206e6f772d
+      extraData: 457874726144617461
+      inputSetIndex: 16
+      outputNodeIndex: -1
+      outActionIndex: 0
+      showmore: 0
+      outRect:
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    - text: 5768617420646f20796f75207468696e6b20796f752061726520646f696e6720776974682074686174205b574541504f4e5d3f21
+      extraData: 457874726144617461
+      inputSetIndex: 16
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    - text: 4765742074686174207468696e6720617761792066726f6d206d6521
+      extraData: 457874726144617461
+      inputSetIndex: 16
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    ID: 16
+    rect:
+      x: -190
+      y: 360
+      width: 316
+      height: 150
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars:
+    - 6e616d654c6f6f6b5570
+    varKeys:
+    - 6e616d654c6f6f6b5570
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: 474f204157415921
+      extraData: 457874726144617461
+      inputSetIndex: 17
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      commentSprite: {fileID: 0}
+      commentAudio: {fileID: 0}
+    ID: 18
+    rect:
+      x: -190
+      y: 540
+      width: 316
+      height: 99
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  S_actionNodes:
+  - pauseHere: 0
+    gameObjectName: 5b4e6f206f626a6563745d
+    methodName: 5b4e6f206d6574686f645d
+    nameIndex: 0
+    methodIndex: 0
+    paramIndex: -1
+    opts:
+    - 5b4e6f206d6574686f645d
+    nameOpts:
+    - 5b4e6f206f626a6563745d
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      x: 300
+      y: 200
+      width: 200
+      height: 133
+    ID: 17
+    outPlayerIndex: -1
+    outActionIndex: -1
+    more: 1
+    ovrStartNode: 18
+    renameDialogue: 
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[0].outRect.x
+      value: 287
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[0].outRect.y
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[0].outRect.width
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[0].outRect.height
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[1].outRect.x
+      value: 287
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[1].outRect.y
+      value: 62
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[1].outRect.width
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[1].outRect.height
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[2].outRect.x
+      value: 287
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[2].outRect.y
+      value: 82
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[2].outRect.width
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[2].outRect.height
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[0].rect.width
+      value: 322
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[0].rect.height
+      value: 104
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[0].outRect.x
+      value: 287
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[0].outRect.y
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[0].outRect.width
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[0].outRect.height
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[1].outRect.x
+      value: 287
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[1].outRect.y
+      value: 62
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[1].outRect.width
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[1].outRect.height
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[1].rect.width
+      value: 322
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[1].rect.height
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[0].outRect.x
+      value: 287
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[0].outRect.y
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[0].outRect.width
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[0].outRect.height
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[1].outRect.x
+      value: 287
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[1].outRect.y
+      value: 62
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[1].outRect.width
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[1].outRect.height
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[2].outRect.x
+      value: 287
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[2].outRect.y
+      value: 82
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[2].outRect.width
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[2].outRect.height
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[2].rect.width
+      value: 322
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[2].rect.height
+      value: 104
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[3].s_comment.Array.data[0].outRect.x
+      value: 287
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[3].s_comment.Array.data[0].outRect.y
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[3].s_comment.Array.data[0].outRect.width
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[3].s_comment.Array.data[0].outRect.height
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[3].s_comment.Array.data[1].outRect.x
+      value: 287
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[3].s_comment.Array.data[1].outRect.y
+      value: 62
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[3].s_comment.Array.data[1].outRect.width
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[3].s_comment.Array.data[1].outRect.height
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[3].rect.width
+      value: 322
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[3].rect.height
+      value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[4].s_comment.Array.data[0].outRect.x
+      value: 287
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[4].s_comment.Array.data[0].outRect.y
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[4].s_comment.Array.data[0].outRect.width
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[4].s_comment.Array.data[0].outRect.height
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[4].rect.width
+      value: 322
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_playerDiags.Array.data[4].rect.height
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_npcDiags.Array.data[0].rect.width
+      value: 304
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_npcDiags.Array.data[0].rect.height
+      value: 82
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_npcDiags.Array.data[1].rect.width
+      value: 304
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_npcDiags.Array.data[1].rect.height
+      value: 82
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_npcDiags.Array.data[2].rect.width
+      value: 304
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_npcDiags.Array.data[2].rect.height
+      value: 82
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_npcDiags.Array.data[3].rect.height
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_npcDiags.Array.data[4].rect.height
+      value: 145
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_npcDiags.Array.data[5].rect.height
+      value: 93
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_npcDiags.Array.data[6].rect.width
+      value: 304
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_npcDiags.Array.data[6].rect.height
+      value: 93
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_npcDiags.Array.data[7].rect.height
+      value: 184
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_npcDiags.Array.data[8].rect.width
+      value: 304
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: S_npcDiags.Array.data[8].rect.height
+      value: 82
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 146666}
+  m_IsPrefabParent: 1
