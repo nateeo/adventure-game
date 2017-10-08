@@ -26,8 +26,8 @@ public class RandomGenItems : MonoBehaviour {
 				Terrain terrain = Terrain.activeTerrain;
 
 				//pick random coodinates within the area
-				float x = Random.Range(-50, -30);
-				float z = Random.Range (5, 25);
+				float x = Random.Range(55, 80);
+				float z = Random.Range (-50, -140);
 
 				Debug.Log ("coord" + x + ", " + z);
 
