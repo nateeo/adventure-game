@@ -40,19 +40,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268dc70b105993846a123be43345df63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileIndex: 8
+  fileIndex: 14
   loadTag: 
   startID: 0
   curFocusID: 0
-  currentID: 14412
+  currentID: 22454
   autosave: 1
   previewPanning: 0
-  currentDiag: 8
+  currentDiag: 14
   locEdit: 0
   S_playerDiags:
   - commentCount: 1
     s_comment:
-    - text: Hey! This is private property!
+    - text: Hi there.
       extraData: ExtraData
       inputSetIndex: 0
       outputNodeIndex: 1
@@ -70,8 +70,8 @@ MonoBehaviour:
     ID: 0
     rect:
       serializedVersion: 2
-      x: 150
-      y: 210
+      x: 30
+      y: 100
       width: 316
       height: 99
     pTag: 
@@ -82,9 +82,99 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: Sorry, I got a bit lost.
+    - text: Can I inspect the ship? I'm looking for someone that recently landed.
       extraData: ExtraData
       inputSetIndex: 1
+      outputNodeIndex: 2
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 1
+    rect:
+      serializedVersion: 2
+      x: 80
+      y: 240
+      width: 316
+      height: 110
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: Sorry, no one is onboard. This ship is under repair for engine troubles.
+      extraData: ExtraData
+      inputSetIndex: 2
+      outputNodeIndex: 3
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 2
+    rect:
+      serializedVersion: 2
+      x: 430
+      y: 120
+      width: 316
+      height: 110
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: Do you know anything about the owner?
+      extraData: ExtraData
+      inputSetIndex: 3
+      outputNodeIndex: 4
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 3
+    rect:
+      serializedVersion: 2
+      x: 390
+      y: 360
+      width: 316
+      height: 110
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: She's a photographer visiting us for the week.
+      extraData: ExtraData
+      inputSetIndex: 4
       outputNodeIndex: -1
       outActionIndex: -1
       showmore: 0
@@ -97,19 +187,19 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    ID: 1
+    ID: 4
     rect:
       serializedVersion: 2
-      x: 400
-      y: 330
+      x: 660
+      y: 360
       width: 316
-      height: 99
+      height: 110
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
-    isPlayer: 1
+    isPlayer: 0
   S_actionNodes: []
 --- !u!1001 &100100000
 Prefab:
