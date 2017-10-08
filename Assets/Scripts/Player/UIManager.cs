@@ -15,12 +15,14 @@ public class UIManager : MonoBehaviour {
 	public string previous_text;
 	public bool interactTooltip;
 	public Text[] text_choices;
+	public bool inventory_open;
 
 	Vector3 original;
 
 
 	// Use this for initialization
 	void Start () {
+		inventory_open = false;
 		container_NPC.SetActive (false);
 		container_PLAYER.SetActive (false);
 	}
@@ -30,7 +32,6 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public void Begin(Collider collider, VIDE_Assign conversation) {
-		Cursor.visible = true;
 		collider.gameObject.transform.LookAt(new Vector3 (
 			rigidBody.position.x,
 			collider.transform.position.y,
@@ -38,8 +39,8 @@ public class UIManager : MonoBehaviour {
 											)
 		);
 		// disable camera rotation and player movement
-		playerCamera.dialogFix = true;
-		//playerController.dialogFix = true;
+		interfaceOpen();
+
 		VD.OnNodeChange += UpdateUI;
 		VD.OnEnd += End;
 
@@ -84,13 +85,12 @@ public class UIManager : MonoBehaviour {
 	}
 
 	void End(VD.NodeData data) {
-		Cursor.visible = false;
 		VD.OnNodeChange -= UpdateUI;
 		VD.OnEnd -= End;
 		VD.EndDialogue ();
-		// re-enable camera movement and player, reset camera
-		//playerController.dialogFix = false;
-		playerCamera.dialogFix = false;
+
+		// re-enable camera and disable cursor
+		interfaceClosed();
 		container_NPC.SetActive (false);
 		container_PLAYER.SetActive (false);
 	}
@@ -120,5 +120,19 @@ public class UIManager : MonoBehaviour {
 		if (!VD.isActive && interactToolTip.enabled == false) {
 			interactToolTip.enabled = true;
 		}
+	}
+
+	public void interfaceOpen() {
+		playerController.dialogFix = true;
+		playerCamera.dialogFix = true;
+		Cursor.visible = true;
+		inventory_open = true;
+	}
+
+	public void interfaceClosed() {
+		playerController.dialogFix = false;
+		playerCamera.dialogFix = false;
+		Cursor.visible = false;
+		inventory_open = false;
 	}
 }

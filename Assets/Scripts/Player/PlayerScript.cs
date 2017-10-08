@@ -66,6 +66,13 @@ public class PlayerScript : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.F)) {
 			TryInteract ();
 		}
+		if (Input.GetKeyDown (KeyCode.I)) {
+			if (diagUI.inventory_open) {
+				diagUI.interfaceClosed();
+			} else {
+				diagUI.interfaceOpen ();
+			}
+		}
 		diagUI.interactToolTipDisabled();
 		Collider[] hits = Physics.OverlapSphere (transform.position, NPC_RANGE);
 		for (int i = 0; i < hits.Length; i++) {
