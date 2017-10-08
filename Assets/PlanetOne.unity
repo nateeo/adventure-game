@@ -2002,9 +2002,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogFix: 0
   speed: 3
-  isGrounded: 1
   rigidBody: {fileID: 709207753}
   jump: {x: 0, y: 0, z: 0}
+  forceConst: 0
   maxPlayTimeInMinutes: 0
   maxNumberOfBonuses: 0
   diagUI: {fileID: 2083324953}
@@ -6078,8 +6078,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34a06394bb078440cba8964a4d49d0c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  rigidBody: {fileID: 0}
+  playerController: {fileID: 709207756}
+  rigidBody: {fileID: 709207753}
   playerCamera: {fileID: 836361855}
   container_NPC: {fileID: 1952057738}
   container_PLAYER: {fileID: 359726255}
@@ -6092,6 +6092,7 @@ MonoBehaviour:
   - {fileID: 1390612373}
   - {fileID: 1613072458}
   - {fileID: 467223612}
+  inventory_open: 0
 --- !u!1001 &2135800433
 Prefab:
   m_ObjectHideFlags: 0
