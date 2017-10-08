@@ -24,8 +24,10 @@ public class PickUpItem : MonoBehaviour
             if (distance <= 3)
             {
 				if (item.itemType == ItemType.Bonus) {
+					//increment the bonus counter
 					PlayerScript ps = _player.GetComponent<PlayerScript> ();
 					ps.incrementBonus ();
+					//destory the object once counter has been incremented
 					Destroy (this.gameObject);
 				} else if (item.itemType == ItemType.Memory) {
 					_memoryScript.foundMemory();

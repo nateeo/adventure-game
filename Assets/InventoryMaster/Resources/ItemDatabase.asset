@@ -42,7 +42,7 @@ MonoBehaviour:
     itemIcon: {fileID: 21300000, guid: c8e5c40abbfc5984c8fc245572dd93a4, type: 3}
     itemModel: {fileID: 100000, guid: 9cb9de2fa58928944a5ced7e6b047238, type: 3}
     itemValue: 1
-    itemType: 14
+    itemType: 0
     itemWeight: 0
     maxStack: 1
     indexItemInList: 999
@@ -60,8 +60,20 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
-  - itemName: New Item
+  - itemName: fugitive
     itemID: 4
+    itemDesc: bonus if you can catch him
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 103924, guid: 82877b4c959bb4fe3a70ad12094a026b, type: 2}
+    itemValue: 1
+    itemType: 15
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: New Item
+    itemID: 5
     itemDesc: 
     itemIcon: {fileID: 0}
     itemModel: {fileID: 0}
