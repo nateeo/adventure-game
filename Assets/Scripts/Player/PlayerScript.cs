@@ -13,8 +13,7 @@ public class PlayerScript : MonoBehaviour {
 	public Vector3 jump;
 	Animator anim;
 	public int forceConst = 10;
-
-	private float distToGround;
+	private bool isGrounded;
 
 	private CharacterController controller;
 
@@ -45,9 +44,6 @@ public class PlayerScript : MonoBehaviour {
 		//Code for initializing time and score.
         startTime = Time.time;
         maxTime = maxPlayTimeInMinutes * 60;
-
-		distToGround = collider.bounds.extents.y;
-
         rigidBody = GetComponent<Rigidbody> ();
 	}
 
@@ -126,10 +122,16 @@ public class PlayerScript : MonoBehaviour {
 		}
 
 		//jumping vector generation
-		if (Input.GetKey (KeyCode.Space) && isGrounded()) {
+		if (Input.GetKey (KeyCode.Space) && isGrounded) {
 			rigidBody.AddForce (0, forceConst, 0, ForceMode.Impulse);
+			isGrounded = false;
 		}
 
+	}
+
+	void OnCollisionStay()
+	{
+		isGrounded = true;
 	}
 
 	void Animating (float h, float v) {
@@ -148,11 +150,6 @@ public class PlayerScript : MonoBehaviour {
 		anim.SetBool ("IsWalking", walking);
 		anim.SetBool ("IsRunning", running);
 	}
-
-	bool IsGrounded() {
-		return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1);
-	}
-
 
 	void TryInteract()
 	{
