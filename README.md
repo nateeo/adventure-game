@@ -1,5 +1,5 @@
 # SOFTENG 306 Project Two
-Company Name: Stardust Studios
+Company Name: Stardust Studios  
 Game Name: Grey Space
 
 ## Git Name Service (GNS)
