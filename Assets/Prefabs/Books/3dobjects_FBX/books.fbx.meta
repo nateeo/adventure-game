@@ -3,10 +3,31 @@ guid: 08e091500e68ded43b4abfb1b3f718d0
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    100002: buch_0001a
+    100004: buch_0001b
+    100006: buch_0001c
+    100008: buch_0001d
+    100010: Camera
+    400000: //RootNode
+    400002: buch_0001a
+    400004: buch_0001b
+    400006: buch_0001c
+    400008: buch_0001d
+    400010: Camera
+    2300000: buch_0001a
+    2300002: buch_0001b
+    2300004: buch_0001c
+    2300006: buch_0001d
+    3300000: buch_0001a
+    3300002: buch_0001b
+    3300004: buch_0001c
+    3300006: buch_0001d
     4300000: buch_0001b
     4300002: buch_0001a
     4300004: buch_0001c
     4300006: buch_0001d
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 2
