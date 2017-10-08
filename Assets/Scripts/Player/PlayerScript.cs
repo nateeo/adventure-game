@@ -8,11 +8,12 @@ using VIDE_Data;
 public class PlayerScript : MonoBehaviour {
 	public bool dialogFix = false;
 	public float speed;
-	public bool isGrounded;
 	public Rigidbody rigidBody;
 	Vector3 movement;
 	public Vector3 jump;
 	Animator anim;
+	public int forceConst = 10;
+	private bool isGrounded;
 
 	private CharacterController controller;
 
@@ -43,7 +44,6 @@ public class PlayerScript : MonoBehaviour {
 		//Code for initializing time and score.
         startTime = Time.time;
         maxTime = maxPlayTimeInMinutes * 60;
-
         rigidBody = GetComponent<Rigidbody> ();
 	}
 
@@ -85,6 +85,70 @@ public class PlayerScript : MonoBehaviour {
 		float v = Input.GetAxisRaw ("Vertical");
 		Animating (h, v);
 		Move (h, v);
+
+//		if (controller.isGrounded) {
+//			verticalVelocity = -gravity * Time.deltaTime;
+//			if (Input.GetKeyDown (KeyCode.Space)) {
+//				verticalVelocity = jumpForce;
+//			}
+//		} else {
+//			verticalVelocity -= gravity * Time.deltaTime;
+//		}
+//		
+//		Vector3 moveVector = new Vector3 (0, verticalVelocity, 0);
+//		controller.Move (moveVector * Time.deltaTime);
+	}
+
+	void Move(float h, float v) {
+
+		Vector3 movement = new Vector3(h, 0.0f, v);
+		movement = Camera.main.transform.TransformDirection(movement);
+
+				
+		//movement = new Vector3 (h, verticalVelocity, v);
+		//controller.Move (moveVector * Time.deltaTime);
+
+		if (Input.GetKey (KeyCode.LeftShift)) {
+			speed = 8f;
+		} else {
+			speed = 3f;
+		}
+
+		movement = movement.normalized * speed * Time.deltaTime;
+
+		rigidBody.MovePosition (transform.position + movement);
+		if (movement != Vector3.zero) {
+			rigidBody.MoveRotation (Quaternion.LookRotation (new Vector3(movement.x, 0.0f, movement.z)));
+		}
+
+		//jumping vector generation
+		if (Input.GetKey (KeyCode.Space) && isGrounded) {
+			rigidBody.AddForce (0, forceConst, 0, ForceMode.Impulse);
+			isGrounded = false;
+		}
+
+	}
+
+	void OnCollisionStay()
+	{
+		isGrounded = true;
+	}
+
+	void Animating (float h, float v) {
+		// did we press horizontal axis or vertical axis
+		bool walking = false;
+		bool running = false;
+
+		if (speed == 3f) {
+			walking = h != 0f || v != 0f;
+			running = false;
+		} else if (speed == 8f) {
+			running = h != 0f || v != 0f;
+			walking = false;
+		}
+
+		anim.SetBool ("IsWalking", walking);
+		anim.SetBool ("IsRunning", running);
 	}
 
 	void TryInteract()
@@ -217,47 +281,5 @@ public class PlayerScript : MonoBehaviour {
     {
         numberOfBonuses--;
     }
-
-
-	void Move(float h, float v) {
-
-		Vector3 movement = new Vector3(h, 0.0f, v);
-
-		movement = Camera.main.transform.TransformDirection(movement);
-
-		//make sure player always moves in same speed no matter what combination of keys
-		//this is called every with every FixedUpdate- dont want it to move 6 units every fixed update
-		//want to change it so that it is per second- multiple it by delta time. delta time is the time between each update call
-		//so if youre updating every 50th of a second, over the course of 50 50th of a second its going to move 6 units
-		if (Input.GetKey (KeyCode.LeftShift)) {
-			speed = 8f;
-		} else {
-			speed = 3f;
-		}
-
-		movement = movement.normalized * speed * Time.deltaTime;
-
-		rigidBody.MovePosition (transform.position + movement);
-		rigidBody.transform.rotation = Quaternion.LookRotation (new Vector3(movement.x, 0, movement.z));
-
-
-
-	}
-
-	void Animating (float h, float v) {
-		// did we press horizontal axis or vertical axis
-		bool walking = false;
-		bool running = false;
-
-		if (speed == 3f) {
-			walking = h != 0f || v != 0f;
-			running = false;
-		} else if (speed == 8f) {
-			running = h != 0f || v != 0f;
-			walking = false;
-		}
-
-		anim.SetBool ("IsWalking", walking);
-		anim.SetBool ("IsRunning", running);
-	}
+		
 }
