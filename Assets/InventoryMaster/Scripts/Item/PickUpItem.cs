@@ -14,15 +14,7 @@ public class PickUpItem : MonoBehaviour
         if (_player != null)
             _inventory = _player.GetComponent<PlayerInventory>().inventory.GetComponent<Inventory>();
     }
-
-	public void setItem(string name, int id, string desc, ItemType type)                 //function to create a instance of the Item
-	{
-		item.itemName = name;
-		item.itemID = id;
-		item.itemDesc = desc;
-		item.itemType = type;
-	}
-
+		
     // Update is called once per frame
     void Update()
     {
