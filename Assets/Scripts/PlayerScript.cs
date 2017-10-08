@@ -19,7 +19,7 @@ public class PlayerScript : MonoBehaviour {
     private int numberOfBonuses;
     //Fields for time and score ends here ===============
 
-    private Rigidbody rigidBody;
+    public Rigidbody rigidBody;
 	Vector3 movement;
 	public UIManager diagUI;
 
@@ -35,6 +35,19 @@ public class PlayerScript : MonoBehaviour {
 	}
 
 	void Update() {
+		if (Input.GetKeyDown(KeyCode.P))
+		{
+			incrementBonus();
+		}
+
+		if (Input.GetKeyDown(KeyCode.O))
+		{
+			decrementBonus();
+		}
+		if (Input.GetKeyDown(KeyCode.L))
+		{
+			endSceneAndDisplayScore();
+		}
 		if (Input.GetKeyDown (KeyCode.F)) {
 			TryInteract ();
 		}
@@ -82,21 +95,6 @@ public class PlayerScript : MonoBehaviour {
 			}
 		}
 	}
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            incrementBonus();
-        }
-
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            decrementBonus();
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            endSceneAndDisplayScore();
-        }
-    }
 
     //Method for computing the score based on a maximum time.
     //The policy is a 3 section idea: 0/1/2/3 stars.
