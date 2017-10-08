@@ -6,6 +6,7 @@ public class PickUpObject : MonoBehaviour {
 	GameObject mainCamera;
 	GameObject playerCharacter;
 	bool carrying;
+	bool inZone;
 	GameObject carriedObject;
 	public float distance;
 	public float smooth;
@@ -22,6 +23,9 @@ public class PickUpObject : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(carrying) {
+			if(!inZone) {
+				dropText.SetActive(true);
+			}
 			carry(carriedObject);
 			checkDrop();
 			//rotateObject();
@@ -38,24 +42,30 @@ public class PickUpObject : MonoBehaviour {
 		o.transform.position = playerCharacter.transform.position + new Vector3(1,0,1);
 		Debug.Log (o.transform.position);
 		o.transform.rotation = Quaternion.identity;
-		dropText.SetActive (true);
 	}
 
 	void OnTriggerStay(Collider pickUpObject) {
-		if(!carrying) {
-		text.SetActive (true);
-		if(Input.GetKeyDown (KeyCode.F)) {
-			Debug.Log("Hi there I don't know what I;m doing");
-			Pickupable p = pickUpObject.GetComponent<Pickupable>();
-			if(p != null) {
-				Debug.Log ("carry that shit?");
-				carrying = true;
-				carriedObject = p.gameObject;
-				//p.gameObject.rigidbody.isKinematic = true;
-				p.gameObject.GetComponent<Rigidbody>().useGravity = false;
-				text.SetActive (false);
+		if(!carrying && (pickUpObject.GetComponent<Log>() != null)) {
+			text.SetActive (true);
+			if(Input.GetKeyDown (KeyCode.F)) {
+				Debug.Log("Hi there I don't know what I;m doing");
+				Pickupable p = pickUpObject.GetComponent<Pickupable>();
+				if(p != null) {
+					Debug.Log ("carry that shit?");
+					carrying = true;
+					carriedObject = p.gameObject;
+					//p.gameObject.rigidbody.isKinematic = true;
+					p.gameObject.GetComponent<Rigidbody>().useGravity = false;
+					text.SetActive (false);
 				}
 			}
+		}
+	}
+
+	void OnTriggerExit(Collider pickUpObject) {
+		Pickupable p = pickUpObject.GetComponent<Pickupable>();
+		if(p != null) {
+			text.SetActive(false);
 		}
 	}
 
@@ -76,5 +86,9 @@ public class PickUpObject : MonoBehaviour {
 
 	public GameObject getCarriedObject() {
 		return carriedObject;
+	}
+
+	public void setZone(bool val) {
+		inZone = val;
 	}
 }
