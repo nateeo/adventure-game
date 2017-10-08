@@ -855,6 +855,14 @@ Prefab:
       propertyPath: m_Name
       value: UDO
       objectReference: {fileID: 0}
+    - target: {fileID: 5466588, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
+      propertyPath: m_Mass
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 11464266, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
+      propertyPath: forceConst
+      value: 70
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
   m_IsPrefabParent: 0
@@ -1192,11 +1200,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be21b42c3ce61241af7d67d6cd6a62c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogFix: 0
   speed: 10
-  isGrounded: 0
+  rigidBody: {fileID: 0}
   jump: {x: 0, y: 0, z: 0}
+  forceConst: 10
   maxPlayTimeInMinutes: 0
   maxNumberOfBonuses: 0
+  diagUI: {fileID: 0}
 --- !u!54 &648016748
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1582,6 +1593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d58c6ec20b53c4e3ba2697303300fbb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogFix: 0
   lookAt: {fileID: 520636164}
   camTransform: {fileID: 520636164}
   sensitivityX: 5

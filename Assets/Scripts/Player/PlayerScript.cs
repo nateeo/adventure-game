@@ -12,7 +12,7 @@ public class PlayerScript : MonoBehaviour {
 	Vector3 movement;
 	public Vector3 jump;
 	Animator anim;
-	public int forceConst = 10;
+	public int forceConst;
 	private bool isGrounded;
 
 	private CharacterController controller;
@@ -21,15 +21,15 @@ public class PlayerScript : MonoBehaviour {
 	private float gravity = 14.0f;
 	private float jumpForce = 20.0f;
 
-	  //Fields for time and score
+	//Fields for time and score
 
-    private float startTime;
-    public int maxPlayTimeInMinutes;
-    private float maxTime;
+	private float startTime;
+	public int maxPlayTimeInMinutes;
+	private float maxTime;
 
-    public int maxNumberOfBonuses;
-    private int numberOfBonuses;
-    //Fields for time and score ends here ===============
+	public int maxNumberOfBonuses;
+	private int numberOfBonuses;
+	//Fields for time and score ends here ===============
 	public UIManager diagUI;
 
 	public static float NPC_RANGE = 5f;
@@ -42,9 +42,9 @@ public class PlayerScript : MonoBehaviour {
 		controller = GetComponent<CharacterController> ();
 
 		//Code for initializing time and score.
-        startTime = Time.time;
-        maxTime = maxPlayTimeInMinutes * 60;
-        rigidBody = GetComponent<Rigidbody> ();
+		startTime = Time.time;
+		maxTime = maxPlayTimeInMinutes * 60;
+		rigidBody = GetComponent<Rigidbody> ();
 	}
 
 	void Update() {
@@ -85,28 +85,12 @@ public class PlayerScript : MonoBehaviour {
 		float v = Input.GetAxisRaw ("Vertical");
 		Animating (h, v);
 		Move (h, v);
-
-//		if (controller.isGrounded) {
-//			verticalVelocity = -gravity * Time.deltaTime;
-//			if (Input.GetKeyDown (KeyCode.Space)) {
-//				verticalVelocity = jumpForce;
-//			}
-//		} else {
-//			verticalVelocity -= gravity * Time.deltaTime;
-//		}
-//		
-//		Vector3 moveVector = new Vector3 (0, verticalVelocity, 0);
-//		controller.Move (moveVector * Time.deltaTime);
 	}
 
 	void Move(float h, float v) {
 
 		Vector3 movement = new Vector3(h, 0.0f, v);
 		movement = Camera.main.transform.TransformDirection(movement);
-
-				
-		//movement = new Vector3 (h, verticalVelocity, v);
-		//controller.Move (moveVector * Time.deltaTime);
 
 		if (Input.GetKey (KeyCode.LeftShift)) {
 			speed = 8f;
@@ -117,6 +101,7 @@ public class PlayerScript : MonoBehaviour {
 		movement = movement.normalized * speed * Time.deltaTime;
 
 		rigidBody.MovePosition (transform.position + movement);
+
 		if (movement != Vector3.zero) {
 			rigidBody.MoveRotation (Quaternion.LookRotation (new Vector3(movement.x, 0.0f, movement.z)));
 		}
@@ -158,7 +143,7 @@ public class PlayerScript : MonoBehaviour {
 			return;
 		}
 
-				Collider[] hits = Physics.OverlapSphere (transform.position, NPC_RANGE);
+		Collider[] hits = Physics.OverlapSphere (transform.position, NPC_RANGE);
 		for (int i = 0; i < hits.Length; i++) {
 			Collider rHit = hits [i];
 			VIDE_Assign assigned;
@@ -174,72 +159,72 @@ public class PlayerScript : MonoBehaviour {
 		}
 	}
 
-//		if (controller.isGrounded) {
-//			verticalVelocity = -gravity * Time.deltaTime;
-//			if (Input.GetKeyDown (KeyCode.Space)) {
-//				verticalVelocity = jumpForce;
-//			}
-//		} else {
-//			verticalVelocity -= gravity * Time.deltaTime;
-//		}
-//
-//		Vector3 moveVector = new Vector3 (0, verticalVelocity, 0);
-//		controller.Move (moveVector * Time.deltaTime);
-//	}
+	//		if (controller.isGrounded) {
+	//			verticalVelocity = -gravity * Time.deltaTime;
+	//			if (Input.GetKeyDown (KeyCode.Space)) {
+	//				verticalVelocity = jumpForce;
+	//			}
+	//		} else {
+	//			verticalVelocity -= gravity * Time.deltaTime;
+	//		}
+	//
+	//		Vector3 moveVector = new Vector3 (0, verticalVelocity, 0);
+	//		controller.Move (moveVector * Time.deltaTime);
+	//	}
 	//Method for computing the score based on a maximum time.
-    //The policy is a 3 section idea: 0/1/2/3 stars.
-    int computeTimeBasedScore()
-    {
-        float timeEllapsed = Time.time - startTime;
-        float division = maxTime / 3;
-        if (timeEllapsed < division)
-        {
-            return 3;
-        }
-        else if (timeEllapsed < division * 2)
-        {
-            return 2;
-        } else if (timeEllapsed < division * 3)
-        {
-            return 1;
-        }
-        return 0;
-    }
+	//The policy is a 3 section idea: 0/1/2/3 stars.
+	int computeTimeBasedScore()
+	{
+		float timeEllapsed = Time.time - startTime;
+		float division = maxTime / 3;
+		if (timeEllapsed < division)
+		{
+			return 3;
+		}
+		else if (timeEllapsed < division * 2)
+		{
+			return 2;
+		} else if (timeEllapsed < division * 3)
+		{
+			return 1;
+		}
+		return 0;
+	}
 
-    //Method for computing the score based on a number of bonuses picked up.
-    //The policy is a 3 section idea: 0/1/2/3 stars.
-    int computeBonusBasedScore()
-    {
-        if (numberOfBonuses >= maxNumberOfBonuses)
-        {
-            return 3;
-        }
-        else if (numberOfBonuses >= maxNumberOfBonuses / 2.0)
-        {
-            return 2;
-        }
-        else if (numberOfBonuses > 0)
-        {
-            return 1;
-        }
-        return 0;
-    }
+	//Method for computing the score based on a number of bonuses picked up.
+	//The policy is a 3 section idea: 0/1/2/3 stars.
+	int computeBonusBasedScore()
+	{
+		if (numberOfBonuses >= maxNumberOfBonuses)
+		{
+			return 3;
+		}
+		else if (numberOfBonuses >= maxNumberOfBonuses / 2.0)
+		{
+			return 2;
+		}
+		else if (numberOfBonuses > 0)
+		{
+			return 1;
+		}
+		return 0;
+	}
 
-    //Use this method to display the score.
-    //This will switch to scene number 2 (the score screen)
-    private void endSceneAndDisplayScore()
-    {
-        int timeScore = computeTimeBasedScore();
-        int bonusScore = computeBonusBasedScore();
+	//Use this method to display the score.
+	//This will switch to scene number 2 (the score screen)
+	private void endSceneAndDisplayScore()
+	{
+		int timeScore = computeTimeBasedScore();
+		int bonusScore = computeBonusBasedScore();
 
-        PlayerPrefs.SetInt("TimeScore", timeScore);
-        PlayerPrefs.SetInt("BonusScore", bonusScore);
+		PlayerPrefs.SetInt("TimeScore", timeScore);
+		PlayerPrefs.SetInt("BonusScore", bonusScore);
 
-        SceneManager.LoadScene(2);
-    }
+		SceneManager.LoadScene(2);
+	}
 
-    //private function for updating the time and the slider.
-    /* TIMER REMOVED (code might be useful some time, so has been left in here!)
+	//private function for updating the time and the slider.
+	/* TIMER REMOVED (code might be useful some time, so has been left in here!)
      *
      *
     private void updateTimeSlider()
@@ -270,15 +255,15 @@ public class PlayerScript : MonoBehaviour {
 
 
 
-    //Use this method when a bonus object has been picked up
-    private void incrementBonus()
-    {
-        numberOfBonuses++;
-    }
-    //Use this method when you want to deduct points
-    private void decrementBonus()
-    {
-        numberOfBonuses--;
-    }
-		
+	//Use this method when a bonus object has been picked up
+	private void incrementBonus()
+	{
+		numberOfBonuses++;
+	}
+	//Use this method when you want to deduct points
+	private void decrementBonus()
+	{
+		numberOfBonuses--;
+	}
+
 }
