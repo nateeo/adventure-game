@@ -16,8 +16,17 @@ _In alphabetical order_
 | Victor Lian   | victorlian      | vlia679 |
 | Zihao Yang    | zihao123yang    | zyan781 |
 
-## Wiki
-Team meeting notes, feature/code documentation, individual contributions and reflections are available on our [Wiki](https://github.com/Nateeo/306-game/wiki).
+## Process documentation
+
+*Wiki, Google Docs, Trello*
+
+Team meeting notes, feature/code documentation, individual contributions and reflections (team work & RUP) are available on our [Wiki](https://github.com/Nateeo/306-game/wiki).
+
+Additional planning and design processes, original meeting notes and document drafts are available on our [Google Docs](https://drive.google.com/open?id=19Pupn_G7t0b8IzJ44taUJIIRL4DU-sP3gTwYo799WTs) (need @aucklanduni.ac.nz domain to access)
+
+Task descriptions, progress and assignees are documented on our [Trello board](https://trello.com/b/Tfs2mPOK/stardust)
+
+Contact us for any access issues!
 
 ## Running the game
 Download the [latest release](https://github.com/Nateeo/306-game/releases) here.
