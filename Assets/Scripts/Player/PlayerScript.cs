@@ -96,6 +96,7 @@ public class PlayerScript : MonoBehaviour {
 
 				Collider[] hits = Physics.OverlapSphere (transform.position, NPC_RANGE);
 		for (int i = 0; i < hits.Length; i++) {
+			Debug.Log ("Nanichan");
 			Collider rHit = hits [i];
 			VIDE_Assign assigned;
 			if (rHit.GetComponent<Collider>().GetComponent<VIDE_Assign> () != null) {
