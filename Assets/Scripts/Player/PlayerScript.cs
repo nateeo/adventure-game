@@ -191,7 +191,7 @@ public class PlayerScript : MonoBehaviour {
 		if (Input.GetKey (KeyCode.LeftShift)) {
 			speed = 8f;
 		} else {
-			speed = 4f;
+			speed = 3f;
 		}
 
 		movement = movement.normalized * speed * Time.deltaTime;
@@ -208,7 +208,7 @@ public class PlayerScript : MonoBehaviour {
 		bool walking = false;
 		bool running = false;
 
-		if (speed == 4f) {
+		if (speed == 3f) {
 			walking = h != 0f || v != 0f;
 			running = false;
 		} else if (speed == 8f) {

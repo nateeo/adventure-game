@@ -211,17 +211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d3ef1a5bbfb4e0a910fbbe5830b1f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterMode: 2
-  disablePixelLights: 1
-  textureSize: 256
-  clipPlaneOffset: 0.07
-  reflectLayers: {}
-  refractLayers: {}
-  m_ReflectionTexture: {fileID: 0}
-  m_RefractionTexture: {fileID: 0}
-  m_HardwareWaterSupport: 2
-  m_OldReflectionTextureSize: 0
-  m_OldRefractionTextureSize: 0
 --- !u!23 &139030602
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -436,10 +425,6 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 24604ce785089a84fac68808959ebd89, type: 3}
   m_PrefabInternal: {fileID: 206392809}
---- !u!4 &262171247 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 434684, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
-  m_PrefabInternal: {fileID: 2021897549}
 --- !u!1001 &336674833
 Prefab:
   m_ObjectHideFlags: 0
@@ -792,17 +777,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d3ef1a5bbfb4e0a910fbbe5830b1f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterMode: 2
-  disablePixelLights: 1
-  textureSize: 256
-  clipPlaneOffset: 0.07
-  reflectLayers: {}
-  refractLayers: {}
-  m_ReflectionTexture: {fileID: 0}
-  m_RefractionTexture: {fileID: 0}
-  m_HardwareWaterSupport: 2
-  m_OldReflectionTextureSize: 256
-  m_OldRefractionTextureSize: 256
 --- !u!23 &508810674
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -838,6 +812,56 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1621640375}
   m_GameObject: {fileID: 508810672}
   m_Mesh: {fileID: 4300006, guid: ba6a41dc489914734857bb5924eb70ad, type: 3}
+--- !u!1001 &520636157
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 435828, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.43450928
+      objectReference: {fileID: 0}
+    - target: {fileID: 435828, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 7.5999937
+      objectReference: {fileID: 0}
+    - target: {fileID: 435828, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 30.416428
+      objectReference: {fileID: 0}
+    - target: {fileID: 435828, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 435828, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 435828, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 435828, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 435828, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 126832, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
+      propertyPath: m_Name
+      value: UDO
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &520636164 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 435828, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
+  m_PrefabInternal: {fileID: 520636157}
 --- !u!1001 &525349303
 Prefab:
   m_ObjectHideFlags: 0
@@ -1294,17 +1318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d3ef1a5bbfb4e0a910fbbe5830b1f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterMode: 2
-  disablePixelLights: 1
-  textureSize: 256
-  clipPlaneOffset: 0.07
-  reflectLayers: {}
-  refractLayers: {}
-  m_ReflectionTexture: {fileID: 0}
-  m_RefractionTexture: {fileID: 0}
-  m_HardwareWaterSupport: 2
-  m_OldReflectionTextureSize: 256
-  m_OldRefractionTextureSize: 256
 --- !u!23 &677532529
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1569,8 +1582,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d58c6ec20b53c4e3ba2697303300fbb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookAt: {fileID: 262171247}
-  camTransform: {fileID: 262171247}
+  lookAt: {fileID: 520636164}
+  camTransform: {fileID: 520636164}
   sensitivityX: 5
   sensitivityY: 3
 --- !u!1 &847946501
@@ -1603,17 +1616,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d3ef1a5bbfb4e0a910fbbe5830b1f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterMode: 2
-  disablePixelLights: 1
-  textureSize: 256
-  clipPlaneOffset: 0.07
-  reflectLayers: {}
-  refractLayers: {}
-  m_ReflectionTexture: {fileID: 0}
-  m_RefractionTexture: {fileID: 0}
-  m_HardwareWaterSupport: 2
-  m_OldReflectionTextureSize: 0
-  m_OldRefractionTextureSize: 0
 --- !u!23 &847946503
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3240,56 +3242,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d095d13af8c6dd24ebd580af92a7285c, type: 3}
   m_IsPrefabParent: 0
---- !u!1001 &2021897549
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 434684, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 17.294418
-      objectReference: {fileID: 0}
-    - target: {fileID: 434684, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 7.3287735
-      objectReference: {fileID: 0}
-    - target: {fileID: 434684, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 23.574265
-      objectReference: {fileID: 0}
-    - target: {fileID: 434684, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 434684, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 434684, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 434684, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 434684, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11495812, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
-      propertyPath: maxPlayTimeInMinutes
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11495812, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
-      propertyPath: maxNumberOfBonuses
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &2028574536 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: adc1527c9aed5f14b8611b3b753c947f, type: 3}
@@ -3474,17 +3426,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d3ef1a5bbfb4e0a910fbbe5830b1f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterMode: 2
-  disablePixelLights: 1
-  textureSize: 256
-  clipPlaneOffset: 0.07
-  reflectLayers: {}
-  refractLayers: {}
-  m_ReflectionTexture: {fileID: 0}
-  m_RefractionTexture: {fileID: 0}
-  m_HardwareWaterSupport: 2
-  m_OldReflectionTextureSize: 0
-  m_OldRefractionTextureSize: 0
 --- !u!23 &2075650179
 MeshRenderer:
   m_ObjectHideFlags: 0
