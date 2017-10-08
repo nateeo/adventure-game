@@ -6,6 +6,7 @@ public class PickUpItem : MonoBehaviour
     private Inventory _inventory;
     private GameObject _player;
     // Use this for initialization
+	public MemoryScript _memoryScript;
 
     void Start()
     {
@@ -26,7 +27,8 @@ public class PickUpItem : MonoBehaviour
 				if (item.itemType == ItemType.Bonus) {
 					Debug.Log ("Add here for treasure or other things!");
 				} else if (item.itemType == ItemType.Memory) {
-					Debug.Log ("Add here to consume as memory");
+					_memoryScript.foundMemory();
+					Destroy (this.gameObject);
 				} else {
 					bool check = _inventory.checkIfItemAllreadyExist (item.itemID, item.itemValue);
 					if (check)

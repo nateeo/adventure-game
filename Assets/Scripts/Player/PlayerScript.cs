@@ -8,18 +8,20 @@ using VIDE_Data;
 public class PlayerScript : MonoBehaviour {
 	public bool dialogFix = false;
 	public float speed;
+	private bool isGrounded;
 	public Rigidbody rigidBody;
 	Vector3 movement;
 	public Vector3 jump;
 	Animator anim;
 	public int forceConst;
-	private bool isGrounded;
 
 	private CharacterController controller;
 
 	private float verticalVelocity;
 	private float gravity = 14.0f;
 	private float jumpForce = 20.0f;
+	private float walkSpeed = 6.0f;
+	private float runSpeed = 12.0f;
 
 	//Fields for time and score
 
@@ -64,6 +66,13 @@ public class PlayerScript : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.F)) {
 			TryInteract ();
 		}
+		if (Input.GetKeyDown (KeyCode.I)) {
+			if (diagUI.inventory_open) {
+				diagUI.interfaceClosed();
+			} else {
+				diagUI.interfaceOpen ();
+			}
+		}
 		diagUI.interactToolTipDisabled();
 		Collider[] hits = Physics.OverlapSphere (transform.position, NPC_RANGE);
 		for (int i = 0; i < hits.Length; i++) {
@@ -85,6 +94,7 @@ public class PlayerScript : MonoBehaviour {
 		float v = Input.GetAxisRaw ("Vertical");
 		Animating (h, v);
 		Move (h, v);
+
 	}
 
 	void Move(float h, float v) {
@@ -145,6 +155,7 @@ public class PlayerScript : MonoBehaviour {
 
 		Collider[] hits = Physics.OverlapSphere (transform.position, NPC_RANGE);
 		for (int i = 0; i < hits.Length; i++) {
+			Debug.Log ("Nanichan");
 			Collider rHit = hits [i];
 			VIDE_Assign assigned;
 			if (rHit.GetComponent<Collider>().GetComponent<VIDE_Assign> () != null) {
@@ -159,20 +170,7 @@ public class PlayerScript : MonoBehaviour {
 		}
 	}
 
-	//		if (controller.isGrounded) {
-	//			verticalVelocity = -gravity * Time.deltaTime;
-	//			if (Input.GetKeyDown (KeyCode.Space)) {
-	//				verticalVelocity = jumpForce;
-	//			}
-	//		} else {
-	//			verticalVelocity -= gravity * Time.deltaTime;
-	//		}
-	//
-	//		Vector3 moveVector = new Vector3 (0, verticalVelocity, 0);
-	//		controller.Move (moveVector * Time.deltaTime);
-	//	}
-	//Method for computing the score based on a maximum time.
-	//The policy is a 3 section idea: 0/1/2/3 stars.
+
 	int computeTimeBasedScore()
 	{
 		float timeEllapsed = Time.time - startTime;
@@ -253,17 +251,16 @@ public class PlayerScript : MonoBehaviour {
     }
     */
 
+    //Use this method when a bonus object has been picked up
+    private void incrementBonus()
+    {
+        numberOfBonuses++;
+    }
+    //Use this method when you want to deduct points
+    private void decrementBonus()
+    {
+        numberOfBonuses--;
+    }
 
-
-	//Use this method when a bonus object has been picked up
-	private void incrementBonus()
-	{
-		numberOfBonuses++;
-	}
-	//Use this method when you want to deduct points
-	private void decrementBonus()
-	{
-		numberOfBonuses--;
-	}
-
+		
 }

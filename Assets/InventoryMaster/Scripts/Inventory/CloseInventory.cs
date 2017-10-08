@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 public class CloseInventory : MonoBehaviour, IPointerDownHandler
 {
 
+	public UIManager uiManager;
+
     Inventory inv;
     void Start()
     {
@@ -16,6 +18,7 @@ public class CloseInventory : MonoBehaviour, IPointerDownHandler
     {
         if (eventData.button == PointerEventData.InputButton.Left)
         {
+			uiManager.interfaceClosed ();
             inv.closeInventory();
         }
     }
