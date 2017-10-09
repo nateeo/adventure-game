@@ -1,0 +1,221 @@
+fileFormatVersion: 2
+guid: 8951e2d588bc9b042a947d8912583112
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Base Human
+    100002: Head
+    100004: LCalf
+    100006: LCollarbone
+    100008: LFoot
+    100010: LForearm
+    100012: LIKTarget
+    100014: LPalm
+    100016: LPlatform
+    100018: LThigh
+    100020: LUpperarm
+    100022: Neck
+    100024: PalmBone001
+    100026: PalmBone001 1
+    100028: PalmBone002
+    100030: PalmBone002 1
+    100032: Pelvis
+    100034: RArmCollarbone
+    100036: RArmForearm
+    100038: RArmIKTarget
+    100040: RArmPalm
+    100042: RArmUpperarm
+    100044: RCalf
+    100046: RFoot
+    100048: Ribcage
+    100050: RPlatform
+    100052: RThigh
+    100054: //RootNode
+    100056: Spine1
+    100058: Spine2
+    400000: Base Human
+    400002: Head
+    400004: LCalf
+    400006: LCollarbone
+    400008: LFoot
+    400010: LForearm
+    400012: LIKTarget
+    400014: LPalm
+    400016: LPlatform
+    400018: LThigh
+    400020: LUpperarm
+    400022: Neck
+    400024: PalmBone001
+    400026: PalmBone001 1
+    400028: PalmBone002
+    400030: PalmBone002 1
+    400032: Pelvis
+    400034: RArmCollarbone
+    400036: RArmForearm
+    400038: RArmIKTarget
+    400040: RArmPalm
+    400042: RArmUpperarm
+    400044: RCalf
+    400046: RFoot
+    400048: Ribcage
+    400050: RPlatform
+    400052: RThigh
+    400054: //RootNode
+    400056: Spine1
+    400058: Spine2
+    7400000: Run_Rifle_Foreward
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Run_Rifle_Foreward
+      takeName: Take 001
+      firstFrame: 700
+      lastFrame: 734
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Base Human
+        weight: 1
+      - path: LIKTarget
+        weight: 1
+      - path: LPlatform
+        weight: 1
+      - path: Pelvis
+        weight: 1
+      - path: Pelvis/LThigh
+        weight: 1
+      - path: Pelvis/LThigh/LCalf
+        weight: 1
+      - path: Pelvis/LThigh/LCalf/LFoot
+        weight: 1
+      - path: Pelvis/RThigh
+        weight: 1
+      - path: Pelvis/RThigh/RCalf
+        weight: 1
+      - path: Pelvis/RThigh/RCalf/RFoot
+        weight: 1
+      - path: Pelvis/Spine1
+        weight: 1
+      - path: Pelvis/Spine1/Spine2
+        weight: 1
+      - path: Pelvis/Spine1/Spine2/Ribcage
+        weight: 1
+      - path: Pelvis/Spine1/Spine2/Ribcage/LCollarbone
+        weight: 1
+      - path: Pelvis/Spine1/Spine2/Ribcage/LCollarbone/LUpperarm
+        weight: 1
+      - path: Pelvis/Spine1/Spine2/Ribcage/LCollarbone/LUpperarm/LForearm
+        weight: 1
+      - path: Pelvis/Spine1/Spine2/Ribcage/LCollarbone/LUpperarm/LForearm/LPalm
+        weight: 1
+      - path: Pelvis/Spine1/Spine2/Ribcage/LCollarbone/LUpperarm/LForearm/LPalm/PalmBone001
+        weight: 1
+      - path: Pelvis/Spine1/Spine2/Ribcage/LCollarbone/LUpperarm/LForearm/LPalm/PalmBone002
+        weight: 1
+      - path: Pelvis/Spine1/Spine2/Ribcage/Neck
+        weight: 1
+      - path: Pelvis/Spine1/Spine2/Ribcage/Neck/Head
+        weight: 1
+      - path: Pelvis/Spine1/Spine2/Ribcage/RArmCollarbone
+        weight: 1
+      - path: Pelvis/Spine1/Spine2/Ribcage/RArmCollarbone/RArmUpperarm
+        weight: 1
+      - path: Pelvis/Spine1/Spine2/Ribcage/RArmCollarbone/RArmUpperarm/RArmForearm
+        weight: 1
+      - path: Pelvis/Spine1/Spine2/Ribcage/RArmCollarbone/RArmUpperarm/RArmForearm/RArmPalm
+        weight: 1
+      - path: Pelvis/Spine1/Spine2/Ribcage/RArmCollarbone/RArmUpperarm/RArmForearm/RArmPalm/PalmBone001
+          1
+        weight: 1
+      - path: Pelvis/Spine1/Spine2/Ribcage/RArmCollarbone/RArmUpperarm/RArmForearm/RArmPalm/PalmBone002
+          1
+        weight: 1
+      - path: RArmIKTarget
+        weight: 1
+      - path: RPlatform
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
