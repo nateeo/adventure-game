@@ -10,9 +10,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b4c29ddb3cf21d4e9b0596a8ba26af7, type: 3}
   m_Name: ItemDatabase
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   itemList:
-  - itemName:
+  - itemName: 
     itemID: 0
     itemDesc: 496620796f75206472696e6b2074686973206e69636520626f74746c6520796f752077696c6c2067657420736f6d65206865616c7468206261636b2e0a0a2b203230204865616c7468
     itemIcon: {fileID: 0}
@@ -54,29 +54,41 @@ MonoBehaviour:
     itemIcon: {fileID: 21300000, guid: 15cb7ee0d765eb343bcf8552125b6ebd, type: 3}
     itemModel: {fileID: 100000, guid: db6f6804c3df5c54bbb2b402c3a72cf1, type: 3}
     itemValue: 1
+    itemType: 14
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: fugitive
+    itemID: 4
+    itemDesc: bonus if you can catch him
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 103924, guid: 82877b4c959bb4fe3a70ad12094a026b, type: 2}
+    itemValue: 1
+    itemType: 15
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: New Item
+    itemID: 5
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 0}
+    itemValue: 1
     itemType: 0
     itemWeight: 0
     maxStack: 1
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
-  - itemName: Document
-    itemID: 4
-    itemDesc: 'SECRET DOCUMENT FROM CELESTIAL GOVT:
-
-
-      Name: Klepto Darryl
-
-      Last seen wearing dark cloak
-
-'
-    itemIcon: {fileID: 21300000, guid: fea65bc67ed4da24dadaa3b4b7a218e1, type: 3}
-    itemModel: {fileID: 100000, guid: 888ce82c0af2ab0499d39c93fb0f4ce4, type: 2}
-  - itemName: Ship Photo
+  - itemName: New Item
     itemID: 5
-    itemDesc: My favourite ship!
-    itemIcon: {fileID: 21300000, guid: 30d60e855dd8f4902a774811ed01799d, type: 3}
-    itemModel: {fileID: 100000, guid: f99df1970d4b71441a320ce6acc52709, type: 2}
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 0}
     itemValue: 1
     itemType: 0
     itemWeight: 0
@@ -96,25 +108,13 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
-  - itemName: Memory
+  - itemName: New Item
     itemID: 7
-    itemDesc: This is a memory
-    itemIcon: {fileID: 21300000, guid: cfe8a9fc810cd9945bf961e98bc1a991, type: 3}
-    itemModel: {fileID: 141734, guid: e6c72eddf31e5704a803b12dc1b20157, type: 2}
-    itemValue: 1
-    itemType: 14
-    itemWeight: 0
-    maxStack: 1
-    indexItemInList: 999
-    rarity: 0
-    itemAttributes: []
-  - itemName: fugitive
-    itemID: 8
-    itemDesc: bonus if you can catch him
+    itemDesc: 
     itemIcon: {fileID: 0}
-    itemModel: {fileID: 103924, guid: 175e8a083e6dbd449affb2c79d7ed4ae, type: 2}
+    itemModel: {fileID: 0}
     itemValue: 1
-    itemType: 15
+    itemType: 0
     itemWeight: 0
     maxStack: 1
     indexItemInList: 999
