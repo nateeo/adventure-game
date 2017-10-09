@@ -37,7 +37,6 @@ public class PickUpObject : MonoBehaviour {
 	}
 
 	void carry(GameObject o) {
-		Debug.Log ("I am carrying");
 		Debug.Log (playerCharacter.transform.position);
 		o.transform.position = playerCharacter.transform.position + new Vector3(1,0,1);
 		Debug.Log (o.transform.position);
@@ -48,10 +47,8 @@ public class PickUpObject : MonoBehaviour {
 		if(!carrying && (pickUpObject.GetComponent<Log>() != null)) {
 			text.SetActive (true);
 			if(Input.GetKeyDown (KeyCode.F)) {
-				Debug.Log("Hi there I don't know what I;m doing");
 				Pickupable p = pickUpObject.GetComponent<Pickupable>();
 				if(p != null) {
-					Debug.Log ("carry that shit?");
 					carrying = true;
 					carriedObject = p.gameObject;
 					//p.gameObject.rigidbody.isKinematic = true;

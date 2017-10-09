@@ -330,6 +330,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11459570, guid: 69d558b04e8cc2742b099850070d2629, type: 2}
+      propertyPath: m_Text
+      value: Level complete!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69d558b04e8cc2742b099850070d2629, type: 2}
   m_IsPrefabParent: 0

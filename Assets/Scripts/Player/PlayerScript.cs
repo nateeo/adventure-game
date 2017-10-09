@@ -20,8 +20,8 @@ public class PlayerScript : MonoBehaviour {
 	private float verticalVelocity;
 	private float gravity = 14.0f;
 	private float jumpForce = 20.0f;
-	private float walkSpeed = 6.0f;
-	private float runSpeed = 12.0f;
+	private float walkSpeed = 10.0f;
+	private float runSpeed = 20.0f;
 
 	//Fields for time and score
 
@@ -31,10 +31,12 @@ public class PlayerScript : MonoBehaviour {
 
 	public int maxNumberOfBonuses;
 	private int numberOfBonuses;
+
+	public Text bountyText;
 	//Fields for time and score ends here ===============
 	public UIManager diagUI;
 
-	public static float NPC_RANGE = 5f;
+	public static float NPC_RANGE = 3f;
 
 	// Use this for initialization
 	void Start () {
@@ -253,14 +255,16 @@ public class PlayerScript : MonoBehaviour {
     */
 
     //Use this method when a bonus object has been picked up
-    private void incrementBonus()
+    public void incrementBonus()
     {
         numberOfBonuses++;
+		bountyText.text = "Bonus fugitives: " + numberOfBonuses;
     }
     //Use this method when you want to deduct points
-    private void decrementBonus()
+    public void decrementBonus()
     {
         numberOfBonuses--;
+		bountyText.text = "Bonus fugitives: " + numberOfBonuses;
     }
 
 		

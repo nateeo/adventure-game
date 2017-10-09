@@ -5,7 +5,6 @@ public class PickUpItem : MonoBehaviour
     public Item item;
     private Inventory _inventory;
     private GameObject _player;
-    // Use this for initialization
 	public MemoryScript _memoryScript;
 
     void Start()

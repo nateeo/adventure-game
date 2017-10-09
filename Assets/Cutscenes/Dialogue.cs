@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Text))]
 public class Dialogue : MonoBehaviour
@@ -35,14 +36,14 @@ public class Dialogue : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.GetKeyDown(KeyCode.F))
-		{
-			if (!_isDialoguePlaying)
-			{
+		if (Input.GetKeyDown (KeyCode.F)) {
+			if (!_isDialoguePlaying) {
 				_isDialoguePlaying = true;
-				StartCoroutine(StartDialogue());
+				StartCoroutine (StartDialogue ());
 			}
 
+		} else if (Input.GetKeyDown (KeyCode.Space)) {
+			SceneManager.LoadScene (1);
 		}
 	}
 
@@ -81,7 +82,7 @@ public class Dialogue : MonoBehaviour
 		_isEndOfDialogue = false;
 		_isDialoguePlaying = false;
 		Debug.Log ("Is this the end of the script? fucking ded");
-		Application.LoadLevel ("PlanetOne");
+		SceneManager.LoadScene (1);
 	}
 
 	private IEnumerator DisplayString(string stringToDisplay)

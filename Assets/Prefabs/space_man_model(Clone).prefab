@@ -1480,6 +1480,7 @@ MonoBehaviour:
     rarity: 0
     itemAttributes: []
   _memoryScript: {fileID: 0}
+  bountyText: {fileID: 0}
 --- !u!137 &13701626
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

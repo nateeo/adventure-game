@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/PlanetOne.unity
   - enabled: 1
     path: Assets/ExitWin.unity
+  - enabled: 1
+    path: Assets/Cutscenes/Introduction.unity

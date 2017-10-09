@@ -26,8 +26,8 @@ public class RandomGenBonus : MonoBehaviour {
 				Terrain terrain = Terrain.activeTerrain;
 
 				//pick random coodinates within the area
-				float x = Random.Range(250, 265);
-				float z = Random.Range (-110, -100);
+				float x = Random.Range(211, 250);
+				float z = Random.Range (-120, -85	);
 
 				Debug.Log ("coord" + x + ", " + z);
 
@@ -35,9 +35,9 @@ public class RandomGenBonus : MonoBehaviour {
 
 				//so that the item will fall and land on the surface of the terrain
 				Rigidbody rb = randomItem.AddComponent<Rigidbody>();
+				rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
 				rb.useGravity = true;
 				rb.detectCollisions = true;
-				BoxCollider bc = randomItem.AddComponent<BoxCollider> ();
 
 				PickUpItem pui = randomItem.AddComponent<PickUpItem> ();
 
