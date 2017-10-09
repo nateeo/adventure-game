@@ -20,19 +20,24 @@ public class RandomGenItems : MonoBehaviour {
 			int rand = Random.Range (1, items.itemList.Count - 1);
 
 			//add to the scene
-			if (items.itemList [rand].itemType == ItemType.Memory) {
+			if (items.itemList [rand].itemType == ItemType.PuzzleOne) {
 				counter++;
 
 				Terrain terrain = Terrain.activeTerrain;
 
 				//pick random coodinates within the area
-				float x = Random.Range(-50, -30);
-				float z = Random.Range (5, 25);
+				float x = Random.Range(55, 80);
+				float z = Random.Range (-50, -140);
 
 				Debug.Log ("coord" + x + ", " + z);
 
 				GameObject randomItem = (GameObject)Instantiate (items.itemList [rand].itemModel);
 
+				randomItem.AddComponent<Log> ();
+				randomItem.AddComponent<Pickupable> ();
+				BoxCollider bc1 = randomItem.AddComponent<BoxCollider> ();
+				bc1.size = new Vector3 (2, 2, 2);
+				bc1.isTrigger = true;
 				//so that the item will fall and land on the surface of the terrain
 				Rigidbody rb = randomItem.AddComponent<Rigidbody>();
 				rb.useGravity = true;

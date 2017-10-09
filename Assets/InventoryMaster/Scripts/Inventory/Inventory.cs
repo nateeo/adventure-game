@@ -81,6 +81,10 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     public int positionNumberY;
 
+	//hook for camera + cursor interaction
+//	public PlayerScript player;
+//	public CameraThirdPerson mainCamera;
+
     InputManager inputManagerDatabase;
 
     //event delegates for consuming, gearing
@@ -148,12 +152,14 @@ public class Inventory : MonoBehaviour
 
     public void closeInventory()
     {
+//		mainCamera.dialogFix = false;
         this.gameObject.SetActive(false);
         checkIfAllInventoryClosed();
     }
 
     public void openInventory()
     {
+//		mainCamera.dialogFix = true;
         this.gameObject.SetActive(true);
         if (InventoryOpen != null)
             InventoryOpen();

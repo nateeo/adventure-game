@@ -56,6 +56,8 @@ public class InventoryEditor : Editor
         positionNumberX = serializedObject.FindProperty("positionNumberX");
         positionNumberY = serializedObject.FindProperty("positionNumberY");
         mainInventory = serializedObject.FindProperty("mainInventory");
+
+
     }
 
     public override void OnInspectorGUI()
