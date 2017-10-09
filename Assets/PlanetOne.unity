@@ -1724,10 +1724,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 532042153}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd3221e4fc69b8e488c44d265f742196, type: 3}
+  m_Script: {fileID: 11500000, guid: a3124db3cda319142b26fa3dadfc9474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noItems: 10
+  noItems: 3
 --- !u!114 &538809600 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11400092, guid: d86a1dabcca8b44a393ee5693e81d759,
@@ -2005,8 +2005,8 @@ MonoBehaviour:
   rigidBody: {fileID: 709207753}
   jump: {x: 0, y: 0, z: 0}
   forceConst: 0
-  maxPlayTimeInMinutes: 0
-  maxNumberOfBonuses: 0
+  maxPlayTimeInMinutes: 2
+  maxNumberOfBonuses: 3
   diagUI: {fileID: 2083324953}
 --- !u!114 &709207757
 MonoBehaviour:

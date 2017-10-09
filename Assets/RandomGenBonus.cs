@@ -37,7 +37,6 @@ public class RandomGenBonus : MonoBehaviour {
 				Rigidbody rb = randomItem.AddComponent<Rigidbody>();
 				rb.useGravity = true;
 				rb.detectCollisions = true;
-				BoxCollider bc = randomItem.AddComponent<BoxCollider> ();
 
 				PickUpItem pui = randomItem.AddComponent<PickUpItem> ();
 

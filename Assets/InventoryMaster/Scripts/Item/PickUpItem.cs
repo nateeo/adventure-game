@@ -30,6 +30,7 @@ public class PickUpItem : MonoBehaviour
 					//destory the object once counter has been incremented
 					Destroy (this.gameObject);
 				} else if (item.itemType == ItemType.Memory) {
+					Debug.Log ("Memory?");
 					_memoryScript.foundMemory();
 					Destroy (this.gameObject);
 				} else {
