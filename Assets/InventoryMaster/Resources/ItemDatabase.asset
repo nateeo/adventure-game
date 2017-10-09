@@ -91,3 +91,39 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
+  - itemName: New Item
+    itemID: 5
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: TreeLog
+    itemID: 6
+    itemDesc: Tree log that is used for the puzzle.
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 124694, guid: 9bfee8f7265d90b40acd05137866b1f3, type: 2}
+    itemValue: 1
+    itemType: 20
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: New Item
+    itemID: 7
+    itemDesc: 
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 0}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []

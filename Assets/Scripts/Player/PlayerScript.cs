@@ -8,11 +8,12 @@ using VIDE_Data;
 public class PlayerScript : MonoBehaviour {
 	public bool dialogFix = false;
 	public float speed;
-	public bool isGrounded;
+	private bool isGrounded;
 	public Rigidbody rigidBody;
 	Vector3 movement;
 	public Vector3 jump;
 	Animator anim;
+	public int forceConst;
 
 	private CharacterController controller;
 
@@ -22,31 +23,31 @@ public class PlayerScript : MonoBehaviour {
 	private float walkSpeed = 6.0f;
 	private float runSpeed = 12.0f;
 
-	  //Fields for time and score
+	//Fields for time and score
 
-    private float startTime;
-    public int maxPlayTimeInMinutes;
-    private float maxTime;
+	private float startTime;
+	public int maxPlayTimeInMinutes;
+	private float maxTime;
 
-    public int maxNumberOfBonuses;
-    private int numberOfBonuses;
-    //Fields for time and score ends here ===============
+	public int maxNumberOfBonuses;
+	private int numberOfBonuses;
+	//Fields for time and score ends here ===============
 	public UIManager diagUI;
 
 	public static float NPC_RANGE = 5f;
 
 	// Use this for initialization
 	void Start () {
+		Screen.lockCursor = true;
 		rigidBody = GetComponent<Rigidbody> ();
 		//jump = new Vector3 (0.0f, 0.2f, 0.0f);
 		anim = GetComponent<Animator> ();
 		controller = GetComponent<CharacterController> ();
 
 		//Code for initializing time and score.
-        startTime = Time.time;
-        maxTime = maxPlayTimeInMinutes * 60;
-
-        rigidBody = GetComponent<Rigidbody> ();
+		startTime = Time.time;
+		maxTime = maxPlayTimeInMinutes * 60;
+		rigidBody = GetComponent<Rigidbody> ();
 	}
 
 	void Update() {
@@ -94,6 +95,56 @@ public class PlayerScript : MonoBehaviour {
 		float v = Input.GetAxisRaw ("Vertical");
 		Animating (h, v);
 		Move (h, v);
+
+	}
+
+	void Move(float h, float v) {
+
+		Vector3 movement = new Vector3(h, 0.0f, v);
+		movement = Camera.main.transform.TransformDirection(movement);
+
+		if (Input.GetKey (KeyCode.LeftShift)) {
+			speed = 8f;
+		} else {
+			speed = 3f;
+		}
+
+		movement = movement.normalized * speed * Time.deltaTime;
+
+		rigidBody.MovePosition (transform.position + movement);
+
+		if (movement != Vector3.zero) {
+			rigidBody.MoveRotation (Quaternion.LookRotation (new Vector3(movement.x, 0.0f, movement.z)));
+		}
+
+		//jumping vector generation
+		if (Input.GetKey (KeyCode.Space) && isGrounded) {
+			rigidBody.AddForce (0, forceConst, 0, ForceMode.Impulse);
+			isGrounded = false;
+		}
+
+	}
+
+	void OnCollisionStay()
+	{
+		isGrounded = true;
+	}
+
+	void Animating (float h, float v) {
+		// did we press horizontal axis or vertical axis
+		bool walking = false;
+		bool running = false;
+
+		if (speed == 3f) {
+			walking = h != 0f || v != 0f;
+			running = false;
+		} else if (speed == 8f) {
+			running = h != 0f || v != 0f;
+			walking = false;
+		}
+
+		anim.SetBool ("IsWalking", walking);
+		anim.SetBool ("IsRunning", running);
 	}
 
 	void TryInteract()
@@ -103,7 +154,7 @@ public class PlayerScript : MonoBehaviour {
 			return;
 		}
 
-				Collider[] hits = Physics.OverlapSphere (transform.position, NPC_RANGE);
+		Collider[] hits = Physics.OverlapSphere (transform.position, NPC_RANGE);
 		for (int i = 0; i < hits.Length; i++) {
 			Debug.Log ("Nanichan");
 			Collider rHit = hits [i];
@@ -120,72 +171,59 @@ public class PlayerScript : MonoBehaviour {
 		}
 	}
 
-//		if (controller.isGrounded) {
-//			verticalVelocity = -gravity * Time.deltaTime;
-//			if (Input.GetKeyDown (KeyCode.Space)) {
-//				verticalVelocity = jumpForce;
-//			}
-//		} else {
-//			verticalVelocity -= gravity * Time.deltaTime;
-//		}
-//
-//		Vector3 moveVector = new Vector3 (0, verticalVelocity, 0);
-//		controller.Move (moveVector * Time.deltaTime);
-//	}
-	//Method for computing the score based on a maximum time.
-    //The policy is a 3 section idea: 0/1/2/3 stars.
-    int computeTimeBasedScore()
-    {
-        float timeEllapsed = Time.time - startTime;
-        float division = maxTime / 3;
-        if (timeEllapsed < division)
-        {
-            return 3;
-        }
-        else if (timeEllapsed < division * 2)
-        {
-            return 2;
-        } else if (timeEllapsed < division * 3)
-        {
-            return 1;
-        }
-        return 0;
-    }
 
-    //Method for computing the score based on a number of bonuses picked up.
-    //The policy is a 3 section idea: 0/1/2/3 stars.
-    int computeBonusBasedScore()
-    {
-        if (numberOfBonuses >= maxNumberOfBonuses)
-        {
-            return 3;
-        }
-        else if (numberOfBonuses >= maxNumberOfBonuses / 2.0)
-        {
-            return 2;
-        }
-        else if (numberOfBonuses > 0)
-        {
-            return 1;
-        }
-        return 0;
-    }
+	int computeTimeBasedScore()
+	{
+		float timeEllapsed = Time.time - startTime;
+		float division = maxTime / 3;
+		if (timeEllapsed < division)
+		{
+			return 3;
+		}
+		else if (timeEllapsed < division * 2)
+		{
+			return 2;
+		} else if (timeEllapsed < division * 3)
+		{
+			return 1;
+		}
+		return 0;
+	}
 
-    //Use this method to display the score.
-    //This will switch to scene number 2 (the score screen)
-    private void endSceneAndDisplayScore()
-    {
-        int timeScore = computeTimeBasedScore();
-        int bonusScore = computeBonusBasedScore();
+	//Method for computing the score based on a number of bonuses picked up.
+	//The policy is a 3 section idea: 0/1/2/3 stars.
+	int computeBonusBasedScore()
+	{
+		if (numberOfBonuses >= maxNumberOfBonuses)
+		{
+			return 3;
+		}
+		else if (numberOfBonuses >= maxNumberOfBonuses / 2.0)
+		{
+			return 2;
+		}
+		else if (numberOfBonuses > 0)
+		{
+			return 1;
+		}
+		return 0;
+	}
 
-        PlayerPrefs.SetInt("TimeScore", timeScore);
-        PlayerPrefs.SetInt("BonusScore", bonusScore);
+	//Use this method to display the score.
+	//This will switch to scene number 2 (the score screen)
+	private void endSceneAndDisplayScore()
+	{
+		int timeScore = computeTimeBasedScore();
+		int bonusScore = computeBonusBasedScore();
 
-        SceneManager.LoadScene(2);
-    }
+		PlayerPrefs.SetInt("TimeScore", timeScore);
+		PlayerPrefs.SetInt("BonusScore", bonusScore);
 
-    //private function for updating the time and the slider.
-    /* TIMER REMOVED (code might be useful some time, so has been left in here!)
+		SceneManager.LoadScene(2);
+	}
+
+	//private function for updating the time and the slider.
+	/* TIMER REMOVED (code might be useful some time, so has been left in here!)
      *
      *
     private void updateTimeSlider()
@@ -214,8 +252,6 @@ public class PlayerScript : MonoBehaviour {
     }
     */
 
-
-
     //Use this method when a bonus object has been picked up
     private void incrementBonus()
     {
@@ -227,45 +263,5 @@ public class PlayerScript : MonoBehaviour {
         numberOfBonuses--;
     }
 
-
-	void Move(float h, float v) {
-
-		Vector3 movement = new Vector3(h, 0.0f, v);
-
-		movement = Camera.main.transform.TransformDirection(movement);
-
-		//make sure player always moves in same speed no matter what combination of keys
-		//this is called every with every FixedUpdate- dont want it to move 6 units every fixed update
-		//want to change it so that it is per second- multiple it by delta time. delta time is the time between each update call
-		//so if youre updating every 50th of a second, over the course of 50 50th of a second its going to move 6 units
-		if (Input.GetKey (KeyCode.LeftShift)) {
-			speed = runSpeed;
-		} else {
-			speed = walkSpeed;
-		}
-
-		movement = movement.normalized * speed * Time.deltaTime;
-		rigidBody.MovePosition (transform.position + movement);
-		rigidBody.transform.rotation = Quaternion.LookRotation (new Vector3(movement.x, 0, movement.z));
-
-
-
-	}
-
-	void Animating (float h, float v) {
-		// did we press horizontal axis or vertical axis
-		bool walking = false;
-		bool running = false;
-
-		if (speed == walkSpeed) {
-			walking = h != 0f || v != 0f;
-			running = false;
-		} else if (speed == runSpeed) {
-			running = h != 0f || v != 0f;
-			walking = false;
-		}
-
-		anim.SetBool ("IsWalking", walking);
-		anim.SetBool ("IsRunning", running);
-	}
+		
 }

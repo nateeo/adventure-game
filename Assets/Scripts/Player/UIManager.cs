@@ -126,6 +126,7 @@ public class UIManager : MonoBehaviour {
 		playerController.dialogFix = true;
 		playerCamera.dialogFix = true;
 		Cursor.visible = true;
+		Cursor.lockState = CursorLockMode.Confined;
 		inventory_open = true;
 	}
 
@@ -133,6 +134,7 @@ public class UIManager : MonoBehaviour {
 		playerController.dialogFix = false;
 		playerCamera.dialogFix = false;
 		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Locked;
 		inventory_open = false;
 	}
 }
