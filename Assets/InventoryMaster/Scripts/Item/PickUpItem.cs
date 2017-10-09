@@ -27,6 +27,7 @@ public class PickUpItem : MonoBehaviour
 				if (item.itemType == ItemType.Bonus) {
 					Debug.Log ("Add here for treasure or other things!");
 				} else if (item.itemType == ItemType.Memory) {
+					Debug.Log ("Memory?");
 					_memoryScript.foundMemory();
 					Destroy (this.gameObject);
 				} else {

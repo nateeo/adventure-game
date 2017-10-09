@@ -91,18 +91,6 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
-  - itemName: New Item
-    itemID: 5
-    itemDesc: 
-    itemIcon: {fileID: 0}
-    itemModel: {fileID: 0}
-    itemValue: 1
-    itemType: 0
-    itemWeight: 0
-    maxStack: 1
-    indexItemInList: 999
-    rarity: 0
-    itemAttributes: []
   - itemName: TreeLog
     itemID: 6
     itemDesc: Tree log that is used for the puzzle.
@@ -115,13 +103,13 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
-  - itemName: New Item
+  - itemName: Memory
     itemID: 7
-    itemDesc: 
-    itemIcon: {fileID: 0}
-    itemModel: {fileID: 0}
+    itemDesc: This is a memory
+    itemIcon: {fileID: 21300000, guid: cfe8a9fc810cd9945bf961e98bc1a991, type: 3}
+    itemModel: {fileID: 141734, guid: e6c72eddf31e5704a803b12dc1b20157, type: 2}
     itemValue: 1
-    itemType: 0
+    itemType: 14
     itemWeight: 0
     maxStack: 1
     indexItemInList: 999
