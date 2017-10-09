@@ -1300,7 +1300,7 @@ Transform:
   - {fileID: 515895345}
   - {fileID: 901970695}
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 30
 --- !u!1 &305807296
 GameObject:
   m_ObjectHideFlags: 0
@@ -2929,7 +2929,7 @@ MonoBehaviour:
   rigidBody: {fileID: 709207753}
   jump: {x: 0, y: 0, z: 0}
   forceConst: 70
-  maxPlayTimeInMinutes: 0
+  maxPlayTimeInMinutes: 10
   maxNumberOfBonuses: 3
   bountyText: {fileID: 1015905186}
   diagUI: {fileID: 2083324953}
@@ -3478,7 +3478,7 @@ RectTransform:
   m_Children:
   - {fileID: 1394380837}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -8000,7 +8000,7 @@ Transform:
   - {fileID: 769826226}
   - {fileID: 1423186935}
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 28
 --- !u!1 &1914130052 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: eb4fdd308d7e5e6409868e9329ecf8b0, type: 3}

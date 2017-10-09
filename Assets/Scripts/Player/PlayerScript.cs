@@ -218,8 +218,16 @@ public class PlayerScript : MonoBehaviour {
 		int timeScore = computeTimeBasedScore();
 		int bonusScore = computeBonusBasedScore();
 
+		float timeInSec = Time.time - startTime;
+		int bonusPoints = numberOfBonuses;
+		int maxBonusPoints = maxNumberOfBonuses;
+
+		//PlayerPrefs is like a persistence class (database)
+		PlayerPrefs.SetFloat("Time", timeInSec); 
 		PlayerPrefs.SetInt("TimeScore", timeScore);
 		PlayerPrefs.SetInt("BonusScore", bonusScore);
+		PlayerPrefs.SetInt("Bonus", numberOfBonuses);
+		PlayerPrefs.SetInt("MaxBonus", maxNumberOfBonuses);
 
 		SceneManager.LoadScene(2);
 	}
