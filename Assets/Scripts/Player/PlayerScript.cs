@@ -20,8 +20,8 @@ public class PlayerScript : MonoBehaviour {
 	private float verticalVelocity;
 	private float gravity = 14.0f;
 	private float jumpForce = 20.0f;
-	private float walkSpeed = 10.0f;
-	private float runSpeed = 20.0f;
+	private float walkSpeed = 4.0f;
+	private float runSpeed = 10.0f;
 
 	//Fields for time and score
 
@@ -36,7 +36,7 @@ public class PlayerScript : MonoBehaviour {
 	//Fields for time and score ends here ===============
 	public UIManager diagUI;
 
-	public static float NPC_RANGE = 3f;
+	public static float NPC_RANGE = 2f;
 
 	// Use this for initialization
 	void Start () {
@@ -106,9 +106,9 @@ public class PlayerScript : MonoBehaviour {
 		movement = Camera.main.transform.TransformDirection(movement);
 
 		if (Input.GetKey (KeyCode.LeftShift)) {
-			speed = 8f;
+			speed = runSpeed;
 		} else {
-			speed = 3f;
+			speed = walkSpeed;
 		}
 
 		movement = movement.normalized * speed * Time.deltaTime;
@@ -137,10 +137,10 @@ public class PlayerScript : MonoBehaviour {
 		bool walking = false;
 		bool running = false;
 
-		if (speed == 3f) {
+		if (speed == walkSpeed) {
 			walking = h != 0f || v != 0f;
 			running = false;
-		} else if (speed == 8f) {
+		} else if (speed == runSpeed) {
 			running = h != 0f || v != 0f;
 			walking = false;
 		}
@@ -158,14 +158,12 @@ public class PlayerScript : MonoBehaviour {
 
 		Collider[] hits = Physics.OverlapSphere (transform.position, NPC_RANGE);
 		for (int i = 0; i < hits.Length; i++) {
-			Debug.Log ("Nanichan");
 			Collider rHit = hits [i];
 			VIDE_Assign assigned;
 			if (rHit.GetComponent<Collider>().GetComponent<VIDE_Assign> () != null) {
 				assigned = rHit.GetComponent<Collider>().GetComponent<VIDE_Assign> ();
 				if (!VD.isActive) {
 					//... and use it to begin the conversation, look at the target
-					Debug.logger.Log ("BEGIN");
 					diagUI.Begin (rHit, assigned);
 				}
 				return;

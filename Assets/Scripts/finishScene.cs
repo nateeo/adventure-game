@@ -19,7 +19,7 @@ public class finishScene : MonoBehaviour {
 		Debug.Log("hoym iasdnf");
 		if (col == player.GetComponent<Collider> ()) {
 			text.SetActive (true);
-			if(Input.GetKeyDown(KeyCode.Y)) {
+			if(Input.GetKeyDown(KeyCode.F)) {
 				Cursor.lockState = CursorLockMode.Confined;
 				Cursor.visible = true;
 				SceneManager.LoadScene (sceneIndex);

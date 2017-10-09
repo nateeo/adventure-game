@@ -97,9 +97,33 @@ MonoBehaviour:
 
       Last seen wearing: Black cloak'
     itemIcon: {fileID: 21300000, guid: 7974e44204555c448801e67bf4f588d0, type: 3}
-    itemModel: {fileID: 100000, guid: 238b6ece4046048fc97dcebdc5ef3eaf, type: 3}
+    itemModel: {fileID: 100000, guid: f99df1970d4b71441a320ce6acc52709, type: 2}
     itemValue: 1
     itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: ship photo
+    itemID: 7
+    itemDesc: this is my favourite ship!
+    itemIcon: {fileID: 21300000, guid: 8bab5b251c1e54e2598729df180feed7, type: 3}
+    itemModel: {fileID: 100000, guid: 888ce82c0af2ab0499d39c93fb0f4ce4, type: 2}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: memory
+    itemID: 8
+    itemDesc: memory
+    itemIcon: {fileID: 0}
+    itemModel: {fileID: 141734, guid: e6c72eddf31e5704a803b12dc1b20157, type: 2}
+    itemValue: 1
+    itemType: 14
     itemWeight: 0
     maxStack: 1
     indexItemInList: 999
