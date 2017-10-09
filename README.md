@@ -29,7 +29,7 @@ Task descriptions, progress and assignees are documented on our [Trello board](h
 Contact us for any access issues!
 
 ## Running the game
-Download the [latest release](https://github.com/Nateeo/306-game/releases) here.
+Download the [latest release](https://github.com/Nateeo/306-game/releases) here. Tested on UG4 Lab computers (make sure the executable is not run on the Home drive otherwise the game will lag).
 
 ## Third-party assets and packages
 All third-party assets and packages are free for use and used under CC 3.0 licenses
