@@ -24,7 +24,6 @@ public class PlayerScript : MonoBehaviour {
 	private float runSpeed = 12.0f;
 
 	//Fields for time and score
-
 	private float startTime;
 	public int maxPlayTimeInMinutes;
 	private float maxTime;
@@ -215,9 +214,16 @@ public class PlayerScript : MonoBehaviour {
 	{
 		int timeScore = computeTimeBasedScore();
 		int bonusScore = computeBonusBasedScore();
+        float timeInSec = Time.time - startTime;
+        int bonusPoints = numberOfBonuses;
+        int maxBonusPoints = maxNumberOfBonuses;
 
+        //PlayerPrefs is like a persistence class (database)
+        PlayerPrefs.SetFloat("Time", timeInSec); 
 		PlayerPrefs.SetInt("TimeScore", timeScore);
 		PlayerPrefs.SetInt("BonusScore", bonusScore);
+        PlayerPrefs.SetInt("Bonus", numberOfBonuses);
+        PlayerPrefs.SetInt("MaxBonus", maxNumberOfBonuses);
 
 		SceneManager.LoadScene(2);
 	}
@@ -253,12 +259,12 @@ public class PlayerScript : MonoBehaviour {
     */
 
     //Use this method when a bonus object has been picked up
-    private void incrementBonus()
+    public void incrementBonus()
     {
         numberOfBonuses++;
     }
     //Use this method when you want to deduct points
-    private void decrementBonus()
+    public void decrementBonus()
     {
         numberOfBonuses--;
     }
