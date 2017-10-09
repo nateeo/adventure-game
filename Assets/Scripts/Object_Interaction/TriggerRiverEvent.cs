@@ -9,6 +9,7 @@ public class TriggerRiverEvent : MonoBehaviour
 	public GameObject notText;
 	public GameObject log;
 	public GameObject blockMesh;
+	bool logPlaced;
 	PickUpObject pickUpItem;
 	GameObject playerController;
 	Collider playerCollider;
@@ -16,7 +17,7 @@ public class TriggerRiverEvent : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-
+		logPlaced = false;
 		playerController = GameObject.FindWithTag ("Player");
 		pickUpItem = playerController.GetComponent<PickUpObject> ();
 		playerCollider = playerController.GetComponent<Collider> ();
@@ -28,9 +29,7 @@ public class TriggerRiverEvent : MonoBehaviour
 	// Update is called once per frame
 	void OnTriggerStay (Collider player)
 	{
-		Debug.Log ("Debug me please");
-		Debug.Log (player);
-		if (player == playerCollider) {
+		if (player == playerCollider && logPlaced == false) {
 			GameObject go = pickUpItem.getCarriedObject ();
 			if (go != null) {
 				pickUpItem.setZone(true);
@@ -47,6 +46,7 @@ public class TriggerRiverEvent : MonoBehaviour
 						notText.SetActive (false);
 						othertext.SetActive (false);
 						text.SetActive(false);
+						logPlaced = true;
 					}
 				}
 			}
