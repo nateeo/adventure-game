@@ -2,7 +2,9 @@
 Company Name: Stardust Studios  
 Game Name: Grey Space
 
-## Git Name Service (GNS)
+This README covers: **GitHub username mapping**, **process documentation**, **executing instructions**, **third-party assets**
+
+## GitHub username mapping
 _In alphabetical order_  
 
 | Name          | GitHub Username | UPI     |
@@ -20,11 +22,11 @@ _In alphabetical order_
 
 *Wiki, Google Docs, Trello*
 
-Team meeting notes, feature/code documentation, individual contributions and reflections (team work & RUP) are available on our [Wiki](https://github.com/Nateeo/306-game/wiki).
+Team meeting notes, feature/code documentation, individual weekly contributions and reflections (teamwork, RUP, serious game design) are available on our [Wiki](https://github.com/Nateeo/306-game/wiki).
 
-Additional planning and design processes, original meeting notes and document drafts are available on our [Google Docs](https://drive.google.com/open?id=19Pupn_G7t0b8IzJ44taUJIIRL4DU-sP3gTwYo799WTs) (need @aucklanduni.ac.nz domain to access)
+Additional planning and design processes, submissions, original meeting notes and document drafts are available on our [Google Docs](https://drive.google.com/open?id=19Pupn_G7t0b8IzJ44taUJIIRL4DU-sP3gTwYo799WTs) (need @aucklanduni.ac.nz domain to access)
 
-Task descriptions, progress and assignees are documented on our [Trello board](https://trello.com/b/Tfs2mPOK/stardust)
+Task descriptions, progress and assignees are also documented on our [Trello board](https://trello.com/b/Tfs2mPOK/stardust)
 
 Contact us for any access issues!
 
@@ -32,7 +34,7 @@ Contact us for any access issues!
 Download the [latest release](https://github.com/Nateeo/306-game/releases) here.
 
 ## Third-party assets and packages
-All third-party assets and packages are free for use and used under CC 3.0 licenses
+All third-party assets and packages are free for use and sourced from these locations:
 
 *Unity asset store* various 3D models and data (inventory, dialogue) editors
 
