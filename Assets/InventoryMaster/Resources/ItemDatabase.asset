@@ -64,7 +64,7 @@ MonoBehaviour:
     itemID: 4
     itemDesc: bonus if you can catch him
     itemIcon: {fileID: 0}
-    itemModel: {fileID: 103924, guid: 82877b4c959bb4fe3a70ad12094a026b, type: 2}
+    itemModel: {fileID: 103924, guid: 175e8a083e6dbd449affb2c79d7ed4ae, type: 2}
     itemValue: 1
     itemType: 15
     itemWeight: 0
