@@ -7,6 +7,8 @@ public class finishScene : MonoBehaviour {
 	public int sceneIndex;
 	public GameObject text;
 	GameObject player;
+    public PlayerScore ps;
+
 
 	// Use this for initialization
 	void Start () {
@@ -22,7 +24,7 @@ public class finishScene : MonoBehaviour {
 			if(Input.GetKeyDown(KeyCode.F)) {
 				Cursor.lockState = CursorLockMode.Confined;
 				Cursor.visible = true;
-				SceneManager.LoadScene (sceneIndex);
+                ps.endSceneAndDisplayScore();
 			}
 		}
 	}
