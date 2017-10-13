@@ -24,7 +24,7 @@ public class PickUpItem : MonoBehaviour
             {
 				if (item.itemType == ItemType.Bonus) {
 					//increment the bonus counter
-					PlayerScript ps = _player.GetComponent<PlayerScript> ();
+					PlayerScore ps = _player.GetComponent<PlayerScore> ();
 					ps.incrementBonus ();
 					//destory the object once counter has been incremented
 					Destroy (this.gameObject);

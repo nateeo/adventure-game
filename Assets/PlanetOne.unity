@@ -3001,6 +3001,20 @@ MonoBehaviour:
   smooth: 0
   text: {fileID: 1111449411}
   dropText: {fileID: 1789889063}
+--- !u!114 &709207751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 709207748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 395eeab6915bf9848898f6092470cb1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPlayTimeInMinutes: 10
+  maxNumberOfBonuses: 3
+  bountyText: {fileID: 1015905186}
 --- !u!54 &709207753 stripped
 Rigidbody:
   m_PrefabParentObject: {fileID: 5466588, guid: abec118f653e14ec4ae96f1c4a2da43a,
@@ -3034,9 +3048,6 @@ MonoBehaviour:
   rigidBody: {fileID: 709207753}
   jump: {x: 0, y: 0, z: 0}
   forceConst: 70
-  maxPlayTimeInMinutes: 10
-  maxNumberOfBonuses: 3
-  bountyText: {fileID: 1015905186}
   diagUI: {fileID: 2083324953}
 --- !u!114 &709207757
 MonoBehaviour:
@@ -5344,6 +5355,7 @@ MonoBehaviour:
   - orange
   - porta
   - QuestChartDemo
+  - Tutorial
   - Witch
   assignedIndex: 14
   assignedID: 22454
@@ -6801,6 +6813,7 @@ MonoBehaviour:
   - orange
   - porta
   - QuestChartDemo
+  - Tutorial
   - Witch
   assignedIndex: 2
   assignedID: 14412
@@ -8431,6 +8444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneIndex: 2
   text: {fileID: 1942637303}
+  ps: {fileID: 709207751}
 --- !u!1 &1990261815
 GameObject:
   m_ObjectHideFlags: 0
