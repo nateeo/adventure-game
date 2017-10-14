@@ -23,23 +23,7 @@ public class PlayerScore : MonoBehaviour {
         startTime = Time.time;
         maxTime = maxPlayTimeInMinutes * 60;
     }
-	
-	// Update is called once per frame
-	void Update () {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            incrementBonus();
-        }
 
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            decrementBonus();
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            endSceneAndDisplayScore();
-        }
-    }
     int computeTimeBasedScore()
     {
         float timeEllapsed = Time.time - startTime;
