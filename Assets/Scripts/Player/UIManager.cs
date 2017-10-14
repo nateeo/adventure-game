@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using VIDE_Data;
 using UnityEngine.UI;
 
@@ -16,6 +19,10 @@ public class UIManager : MonoBehaviour {
 	public bool interactTooltip;
 	public Text[] text_choices;
 	public bool inventory_open;
+
+	// for animating npc text
+	IEnumerator npcTextAnimator;
+	private bool animatingText;
 
 	Vector3 original;
 
@@ -53,6 +60,10 @@ public class UIManager : MonoBehaviour {
 
 	public void CallNext() {
 		if (VD.isActive) {
+			if (animatingText) {
+				CutTextAnim ();
+				return;
+			}
 			VD.Next ();
 		}
 	}
@@ -67,8 +78,6 @@ public class UIManager : MonoBehaviour {
 			}
 			container_PLAYER.SetActive (true);
 			for (int i = 0; i < text_choices.Length; i++) {
-				Debug.Log (text_choices.Length);
-				Debug.Log (data.comments.Length);
 				if (i < data.comments.Length) {
 					text_choices [i].transform.parent.gameObject.SetActive (true);
 					text_choices [i].text = data.comments [i];
@@ -79,8 +88,8 @@ public class UIManager : MonoBehaviour {
 			text_choices [0].transform.parent.GetComponent<Button> ().Select ();
 		} else {
 			container_NPC.SetActive (true);
-			text_NPC.text = data.comments [data.commentIndex];
-			previous_text = data.comments [data.commentIndex];
+			npcTextAnimator = AnimateText(data);
+			StartCoroutine(npcTextAnimator);
 		}
 	}
 
@@ -102,10 +111,8 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public void SetPlayerChoice(int choice) {
-		Debug.Log ("choose " + choice);
 		VD.nodeData.commentIndex = choice;
 		if (Input.GetMouseButtonUp (0)) {
-			Debug.Log ("HELLO");
 			VD.Next ();
 		}
 	}
@@ -136,5 +143,33 @@ public class UIManager : MonoBehaviour {
 		Cursor.visible = false;
 		Cursor.lockState = CursorLockMode.Locked;
 		inventory_open = false;
+	}
+
+	// animating text functions:
+
+	public IEnumerator AnimateText(VD.NodeData data) {
+		string text = data.comments [data.commentIndex];
+		animatingText = true;
+
+		if (!data.isPlayer) {
+			StringBuilder builder = new StringBuilder ();
+			int charIndex = 0;
+			while (text_NPC.text != text) {
+				builder.Append (text [charIndex]);
+				charIndex++;
+				text_NPC.text = builder.ToString ();
+				yield return new WaitForSeconds (0.02f);
+			}
+		}
+
+		text_NPC.text = data.comments[data.commentIndex]; //Now just copy full text		
+		animatingText = false;
+	}
+
+	void CutTextAnim()
+	{
+		StopCoroutine(npcTextAnimator);
+		text_NPC.text = VD.nodeData.comments[VD.nodeData.commentIndex]; //Now just copy full text		
+		animatingText = false;
 	}
 }
