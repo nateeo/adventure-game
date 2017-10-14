@@ -24,6 +24,13 @@ public class PlayerScore : MonoBehaviour {
         maxTime = maxPlayTimeInMinutes * 60;
     }
 
+	void Update() {
+		if (Input.GetKeyDown(KeyCode.L))
+		{
+			endSceneAndDisplayScore();
+		}
+	}
+
     int computeTimeBasedScore()
     {
         float timeEllapsed = Time.time - startTime;

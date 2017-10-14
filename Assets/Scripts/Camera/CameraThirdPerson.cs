@@ -28,6 +28,10 @@ public class CameraThirdPerson : MonoBehaviour {
 
 	}
 
+	void Awake() {
+		DontDestroyOnLoad (transform.gameObject);
+	}
+
 	void Update() {
 		if (dialogFix) {
 			return;

@@ -36,6 +36,10 @@ public class PlayerScript : MonoBehaviour {
 		rigidBody = GetComponent<Rigidbody> ();
 	}
 
+	void Awake() {
+		DontDestroyOnLoad (transform.gameObject);
+	}
+
 	void Update() {
 		
 		if (Input.GetKeyDown (KeyCode.F)) {
