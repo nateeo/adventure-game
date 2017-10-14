@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Linq;
 using VIDE_Data;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour {
 	public bool dialogFix = false;
@@ -36,7 +37,15 @@ public class PlayerScript : MonoBehaviour {
 		rigidBody = GetComponent<Rigidbody> ();
 	}
 
+	void Awake() {
+		DontDestroyOnLoad (transform.gameObject);
+	}
+
 	void Update() {
+
+		if (SceneManager.GetActiveScene ().buildIndex == 0) {
+			Destroy(gameObject);
+		}
 		
 		if (Input.GetKeyDown (KeyCode.F)) {
 			TryInteract ();

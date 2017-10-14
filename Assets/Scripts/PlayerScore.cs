@@ -24,6 +24,13 @@ public class PlayerScore : MonoBehaviour {
         maxTime = maxPlayTimeInMinutes * 60;
     }
 
+	void Update() {
+		if (Input.GetKeyDown(KeyCode.L))
+		{
+			endSceneAndDisplayScore();
+		}
+	}
+
     int computeTimeBasedScore()
     {
         float timeEllapsed = Time.time - startTime;
@@ -81,6 +88,8 @@ public class PlayerScore : MonoBehaviour {
         PlayerPrefs.SetInt("MaxBonus", maxNumberOfBonuses);
 
         SceneManager.LoadScene(2);
+
+		resetScore();
     }
 
     //private function for updating the time and the slider.
@@ -126,5 +135,12 @@ public class PlayerScore : MonoBehaviour {
         bountyText.text = "Bonus fugitives: " + numberOfBonuses;
     }
 
+	public void resetScore()
+	{
+		startTime = Time.time;
+		maxTime = maxPlayTimeInMinutes * 60;
+		numberOfBonuses = 0;
+		bountyText.text = "Bonus fugitives: " + numberOfBonuses;
+	}
 
 }
