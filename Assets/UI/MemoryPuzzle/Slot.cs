@@ -24,8 +24,12 @@ public class Slot : MonoBehaviour, IDropHandler{
     #region IDropHandler implementation
     public void OnDrop(PointerEventData eventData)
     {
-        if (!item)
+        if (!item) //If a slot is empty, accept the item.
         {
+            DragHandler.itemBeingDragged.transform.SetParent(transform);
+        } else //If a slot is occupied, swap item.
+        {
+            item.transform.SetParent(DragHandler.itemBeingDragged.transform.parent);
             DragHandler.itemBeingDragged.transform.SetParent(transform);
         }
     }

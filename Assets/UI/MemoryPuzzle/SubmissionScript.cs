@@ -23,6 +23,7 @@ public class SubmissionScript : MonoBehaviour {
         {
             sequenceCorrect();
         }
+        //statusText.text = sequence; //USE FOR DEBUG ONLY
     }
 
     //This function gets the sequence of letters entered in the slots.
