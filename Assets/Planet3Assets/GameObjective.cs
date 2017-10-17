@@ -3,12 +3,11 @@ using System.Collections;
 
 public class GameObjective : MonoBehaviour {
 	public Transform target;
+	public GameObjectiveController controller;
 	private float damp = 100f;
 
 	// Use this for initialization
-	void Start () {
-
-	}
+	void Start () {}
 
 	// Update is called once per frame
 	void Update () {
@@ -28,10 +27,8 @@ public class GameObjective : MonoBehaviour {
 
 			//Make the marker disappear when you are within a certain distance
 			if (distance <= 10) {
-				gameObject.active = false;
-			} else {
-				gameObject.active = true;
-			}
+				controller.disable (this);
+			} 
 		}
 	}
 }
