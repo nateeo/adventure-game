@@ -15,17 +15,14 @@ public class NPCDropItem : MonoBehaviour
 
 	public void Update()
 	{
-		// Check if F has been pressed
-		if (Input.GetKeyDown(KeyCode.F) == true)
+		// Check if F has been pressed, only if the item hasn't been picked up and is still hidden
+		if (item != null && !item.activeSelf && Input.GetKeyDown(KeyCode.F) == true)
 		{
-			Debug.Log(keyPressed);
 			keyPressed++;
 			// Check if the conversation between the user and NPC is finished
-			if (keyPressed >= keyPressTrigger)
+			if (keyPressed == keyPressTrigger)
 			{
-				// Display the item and reset the keycount
 				showItem();
-				resetKeyCount();
 			}
 		}
 	}
@@ -33,10 +30,5 @@ public class NPCDropItem : MonoBehaviour
 	public void showItem()
 	{
 		item.SetActive(true);
-	}
-
-	private void resetKeyCount()
-	{
-		keyPressed = 0;
 	}
 }
