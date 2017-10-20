@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class SubmitHighScore : MonoBehaviour {
 
 	int score;
 	string name;
+	public Text nameField;
+	public GameObject success;
+	public GameObject submitsection;
+
 
 	// Use this for initialization
 	void Start () {
@@ -31,12 +36,11 @@ public class SubmitHighScore : MonoBehaviour {
 		}
 
 		score = bonusScore + timeScore;
-		name = "james";
 	}
 	
 	// This function is called to submit a score to the high score menu.
 	public void sumbitScore () {
-
+		name = nameField.text;
 		int highScore1 = fetchHighScore("HighScore1");
 		int highScore2 = fetchHighScore("HighScore2");
 		int highScore3 = fetchHighScore("HighScore3");
@@ -65,11 +69,19 @@ public class SubmitHighScore : MonoBehaviour {
 			PlayerPrefs.SetInt ("HighScore3", score);
 			PlayerPrefs.SetString ("HighScoreName3", name);
 		}
+
+		success.SetActive (true);
+		submitsection.SetActive (false);
 	}
 
 	//TODO
 	void clearScores() {
-
+		PlayerPrefs.DeleteKey ("HighScore1");
+		PlayerPrefs.DeleteKey ("HighScore2");
+		PlayerPrefs.DeleteKey ("HighScore3");
+		PlayerPrefs.DeleteKey ("HighScoreName1");
+		PlayerPrefs.DeleteKey ("HighScoreName2");
+		PlayerPrefs.DeleteKey ("HighScoreName3");
 	}
 
 
