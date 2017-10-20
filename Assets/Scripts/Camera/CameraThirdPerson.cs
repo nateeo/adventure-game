@@ -29,14 +29,7 @@ public class CameraThirdPerson : MonoBehaviour {
 
 	}
 
-	void Awake() {
-		DontDestroyOnLoad (transform.gameObject);
-	}
-
 	void Update() {
-		if (SceneManager.GetActiveScene ().buildIndex == 0) {
-			Destroy(gameObject);
-		}
 
 		if (dialogFix) {
 			return;

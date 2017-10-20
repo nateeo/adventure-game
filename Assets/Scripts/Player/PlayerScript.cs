@@ -36,11 +36,7 @@ public class PlayerScript : MonoBehaviour {
 		controller = GetComponent<CharacterController> ();
 		rigidBody = GetComponent<Rigidbody> ();
 	}
-
-	void Awake() {
-		DontDestroyOnLoad (transform.gameObject);
-	}
-
+		
 	void Update() {
 
 		if (SceneManager.GetActiveScene ().buildIndex == 0) {
