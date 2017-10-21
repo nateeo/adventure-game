@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * This class is the Controller for the GameObjectives.
+ * It turns the Objective markers on and off in an order as the player arrives at the objective.
+ */
 public class GameObjectiveController : MonoBehaviour {
 	public GameObjective shack;
 	public GameObjective mine;
@@ -13,9 +17,9 @@ public class GameObjectiveController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		markers [0] = shack;
+		markers [0] = oasis;
 		markers [1] = mine;
-		markers [2] = oasis;
+		markers [2] = shack;
 		markers [3] = tower;
 		markers [4] = ship;
 
