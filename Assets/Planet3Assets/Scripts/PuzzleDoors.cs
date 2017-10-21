@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PuzzleDoors : MonoBehaviour {
-	private static int MOVE_DOWN = 5; //How many times to move down
+	private static int MOVE_DOWN = 8; //How many times to move down
 
 	private Vector3 startingPosition;
 	private Vector3 target;
@@ -16,7 +16,7 @@ public class PuzzleDoors : MonoBehaviour {
 	}
 	
 	void Update() {
-		float step = 1f * Time.deltaTime;
+		float step = 2f * Time.deltaTime;
 
 		if (open) {
 			transform.position = Vector3.MoveTowards (transform.position, target, step);

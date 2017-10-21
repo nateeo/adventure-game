@@ -33,6 +33,11 @@ public class DoorController : MonoBehaviour
     //field for the text displaying the buttons pressed
     public Text indicator;
 
+	//Collision cube to close overlay
+	public KeypadTrigger trigger;
+
+	//Audio
+	public AudioSource audio;
 
     List<int> mappings = new List<int>(new int[] { 1, 2, 3, 4, 5, 6, 7 });
     List<int> pressedList = new List<int>();
@@ -101,6 +106,14 @@ public class DoorController : MonoBehaviour
             {
                 openDoors();
             }
+
+			//Close the keypad overlay
+			trigger.closeOverlay ();
+
+			if (!audio.isPlaying) {
+				audio.Play ();
+			}
+
             return;
         }
         else

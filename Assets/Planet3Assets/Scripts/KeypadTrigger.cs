@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * This class triggers the UI objects when the player enters the collison zone 
+ */
 public class KeypadTrigger : MonoBehaviour {
 	public GameObject canvas;
 	public GameObject canvas2; //Holds the F to interact text
@@ -18,24 +21,17 @@ public class KeypadTrigger : MonoBehaviour {
 		Cursor.lockState = CursorLockMode.Locked;
 	}
 
-	void Update() {
+	public void closeOverlay() {
 		if (overlayDisplayed) {
-			//If the overlay is displayed and the escape key is pressed
-			if (Input.GetKeyDown (KeyCode.Escape)) {
-				closeOverlay ();
-			}
+			overlayDisplayed = false;
+			canvas.SetActive (false);
+
+			Cursor.visible = false;
+			Cursor.lockState = CursorLockMode.Locked;
+
+			player.GetComponent<MouseLook> ().enabled = true;
+			player.GetComponent<FPSInputController> ().enabled = true;
 		}
-	}
-
-	private void closeOverlay() {
-		overlayDisplayed = false;
-		canvas.SetActive (false);
-
-		Cursor.visible = false;
-		Cursor.lockState = CursorLockMode.Locked;
-
-		player.GetComponent<MouseLook> ().enabled = true;
-		player.GetComponent<FPSInputController> ().enabled = true;
 	}
 
 	//The player has entered the keypad zone and pressed F
