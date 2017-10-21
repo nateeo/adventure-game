@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class PlayerScript : MonoBehaviour {
 	public bool dialogFix = false;
 	public float speed;
-	private bool isGrounded;
+	public bool isGrounded;
 	public Rigidbody rigidBody;
 	Vector3 movement;
 	public Vector3 jump;
@@ -22,6 +22,13 @@ public class PlayerScript : MonoBehaviour {
 	private float jumpForce = 20.0f;
 	private float walkSpeed = 4.0f;
 	private float runSpeed = 10.0f;
+	private float leftGround = 0f; // y height of ground before a jump
+	public float maxHeight;
+
+
+	// jump modifiers to reduce low-gravity feel
+	public float fallMultiplier = 2.5f;
+	public float lowJumpMultiplier = 2f;
 
 	// for dialogue management
 	public UIManager diagUI;
@@ -114,14 +121,31 @@ public class PlayerScript : MonoBehaviour {
 			rigidBody.freezeRotation = true;
 			return;
 		}
+
+
+		// handle jumping velocity for more responsive jump
+		if (rigidBody.velocity.y < 0) {
+			rigidBody.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+		} else if (rigidBody.velocity.y > 0 && !Input.GetKey(KeyCode.Space)) {
+			rigidBody.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+		}
 		float h = Input.GetAxisRaw ("Horizontal");
 		float v = Input.GetAxisRaw ("Vertical");
 		Animating (h, v);
 		Move (h, v);
 
+		// clamp max height jump
+		if (!isGrounded && rigidBody.position.y > leftGround + maxHeight && rigidBody.velocity.y > 0) {
+			Debug.Log("MAX REACHED");
+			GetComponent<Rigidbody>().velocity = Vector3.zero;
+			GetComponent<Rigidbody>().angularVelocity = Vector3.zero; 
+			rigidBody.AddForce(0, -3 * forceConst, 0, ForceMode.Impulse);
+		}
 	}
 
 	void Move(float h, float v) {
+
+		// move towards the camera position
 
 		Vector3 movement = new Vector3(h, 0.0f, v);
 		movement = Camera.main.transform.TransformDirection(movement);
@@ -133,7 +157,7 @@ public class PlayerScript : MonoBehaviour {
 		}
 
 		movement = movement.normalized * speed * Time.deltaTime;
-
+			
 		rigidBody.MovePosition (transform.position + movement);
 
 		if (movement != Vector3.zero) {
@@ -143,6 +167,7 @@ public class PlayerScript : MonoBehaviour {
 		//jumping vector generation
 		if (Input.GetKey (KeyCode.Space) && isGrounded) {
 			rigidBody.AddForce (0, forceConst, 0, ForceMode.Impulse);
+			leftGround = rigidBody.position.y;
 			isGrounded = false;
 		}
 
