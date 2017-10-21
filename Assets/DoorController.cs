@@ -10,6 +10,7 @@ using System.Linq;
 public class DoorController : MonoBehaviour
 {
     // fields for door scripts
+    //Possible ways to successfully solve the puzzle include: ABE, CDE, CFG.
     public PuzzleDoors doorA;
     public PuzzleDoors doorB;
     public PuzzleDoors doorC;
@@ -42,6 +43,13 @@ public class DoorController : MonoBehaviour
     {
         indicator.text = "";
         mappings.Shuffle();
+
+        //Make sure that if buttons 1,2,3 being pressed does not open the correct combination. 
+        while (isEasy())
+        {
+            mappings.Shuffle();
+        }
+
         //add to the button list.
         buttons.Add(button1);
         buttons.Add(button2);
@@ -87,6 +95,14 @@ public class DoorController : MonoBehaviour
             buttons.ForEach(b => b.GetComponent<Image>().color = Color.white);
             doors.ForEach(d => d.closeDoor());
         }
+        else if (nameOfButton.Equals("Ok")) //OK button pressed, open doors.
+        {
+            if (pressedList.Count == 3)//If now three buttons are pressed, open the doors.
+            {
+                openDoors();
+            }
+            return;
+        }
         else
         {
             string number = nameOfButton.Substring(nameOfButton.Length - 1);
@@ -107,10 +123,6 @@ public class DoorController : MonoBehaviour
                 buttons[numberPressed-1].GetComponent<Image>().color = Color.red;
                 pressedList.Add(numberPressed);
                 updateText();
-                if (pressedList.Count == 3)//If now three buttons are pressed, open the doors.
-                {
-                    openDoors();
-                } 
             }
         }
     }
@@ -127,7 +139,7 @@ public class DoorController : MonoBehaviour
         indicator.text = sb.ToString();
     }
 
-    //Pirrivate helper method for opening doors.
+    //Private helper method for opening doors.
     //This method should be called when three buttons are pressed.
     private void openDoors()
     {
@@ -135,6 +147,46 @@ public class DoorController : MonoBehaviour
         //Then call open door on each of these indexes.
         List<int> indexesOfDoors = pressedList.Select(p => mappings.IndexOf(p)).ToList();
         indexesOfDoors.ForEach(i => doors[i].openDoor());
+    }
+
+    //private helper function to check if the randomized mapping array gives a simple solution 123.
+    private bool isEasy()
+    {
+        //Possible ways to successfully solve the puzzle include: ABE, CDE, CFG.
+        //Translate to door indexes: 014, 234, 256
+        List<int> index = new List<int>(new int[] { 1, 2, 3 });
+        List<int> indexesOfDoors = index.Select(p => mappings.IndexOf(p)).ToList();
+        List<int> easy1 = new List<int>(new int[] { 0, 1, 4 });
+        List<int> easy2 = new List<int>(new int[] { 2, 3, 4 });
+        List<int> easy3 = new List<int>(new int[] { 2, 5, 6 });
+
+        
+        List<bool> isEasy1 = easy1.Select(e => indexesOfDoors.Contains(e)).ToList();
+        List<bool> isEasy2 = easy2.Select(e => indexesOfDoors.Contains(e)).ToList();
+        List<bool> isEasy3 = easy3.Select(e => indexesOfDoors.Contains(e)).ToList();
+        List<List<bool>> patternsToTest = new List<List<bool>>();
+        patternsToTest.Add(isEasy1);
+        patternsToTest.Add(isEasy2);
+        patternsToTest.Add(isEasy3);
+
+        int patternNumber = 0;
+        foreach (List<bool> pattern in patternsToTest)
+        {
+            bool isEasy = true;
+            foreach (bool contains in patternsToTest[patternNumber])
+            {
+                if (!contains)
+                {
+                    isEasy = false;
+                }
+            }
+            if (isEasy)
+            {
+                return true;
+            }
+            patternNumber++;
+        }
+        return false;
     }
 }
 
