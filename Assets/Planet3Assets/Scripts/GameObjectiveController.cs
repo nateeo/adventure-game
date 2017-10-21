@@ -12,6 +12,8 @@ public class GameObjectiveController : MonoBehaviour {
 	public GameObjective tower;
 	public GameObjective ship;
 
+	public UIManager diagUI;
+
 	private GameObjective[] markers = new GameObjective[5];
 	private int markerValue = 0;
 
@@ -29,6 +31,7 @@ public class GameObjectiveController : MonoBehaviour {
 		}
 	}
 
+	//This is called when the player enters the triggered area
 	public void disable(GameObjective objective) {
 		for (int i = 0; i < 5; i++) {
 			if (objective.Equals(markers[i])) { //Disable the objective and enable the next one
@@ -36,8 +39,21 @@ public class GameObjectiveController : MonoBehaviour {
 				markers [i].gameObject.SetActive (false);
 				markers [i + 1].gameObject.SetActive (true);
 
+				VIDE_Assign assigned = objective.GetComponent<VIDE_Assign> ();
+				diagUI.Begin (objective.GetComponent<Collider>(), assigned);
+
+				if (i == 2) {
+					activateAllWaypoints ();
+				}
+
 				return;
 			}
+		}
+	}
+
+	void activateAllWaypoints() {
+		for (int i = 0; i < 5; i++) {
+			markers [i].gameObject.SetActive (true);
 		}
 	}
 }
