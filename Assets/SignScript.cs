@@ -1,23 +1,30 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class SignScript : MonoBehaviour {
-	MeshRenderer renderer;
+
+	// to display on the user UI
+	public Text signText;
+	public string text;
+	public float signDistance;
 
 	void Start() {
-		renderer = GetComponent<MeshRenderer> ();
-		renderer.enabled = false;
+
 	}
 
 	void Update() {
 		
-		if (Vector3.Distance (renderer.transform.position, Camera.main.transform.position) < 30.0f) {
-			if (renderer.enabled == false) {
-				renderer.enabled = true;
+		if (Vector3.Distance (transform.position, Camera.main.transform.position) < signDistance) {
+			if (!signText.enabled) {
+				signText.enabled = true;
+				signText.text = text;
 			}
 		} else {
-			if (renderer.enabled == true) {
-				renderer.enabled = false;
+			// reset and hide sign text
+			if (signText.enabled) {
+				signText.text = "";
+				signText.enabled = false;
 			}
 		}
 	}
