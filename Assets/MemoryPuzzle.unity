@@ -141,10 +141,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -152,7 +152,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: B. Denial
+  m_Text: B. Three months later the flat piece of ground was no more. It was instead
+    a 300 metre deep hole in the ground with countless slaves working on making it
+    deeper and deeper. Machinery lined the side of the hole ferrying out the dirt
+    and depositing it into the ever growing hill to the side.
 --- !u!222 &137166270
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -617,10 +620,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -628,7 +631,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: D. Shock
+  m_Text: D. The land was unnaturally flat in this part of the planet, it was as if
+    someone had run a roller over this entire square kilometre of dirt. Not a rock
+    or tree blemished the landscape. Three men were looking over this strange piece
+    of land with a lot of paper in hand trying to coordinate what sounded like a large
+    operation.
 --- !u!222 &565449168
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1063,10 +1070,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1074,7 +1081,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: A. Bargin
+  m_Text: A. Suddenly a bright piercing light flashes out from the bottom of the hole
+    accompanied by the shrieks of slaves who were blinded by the intense brightness.
+    The light seemed to glow for hours before finally subsiding allowing a strange
+    hooded figure to get a closer look.
 --- !u!222 &657599409
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1142,19 +1152,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22457944, guid: b6fc370ed4473244e823bc796913b514, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 22.5
       objectReference: {fileID: 0}
     - target: {fileID: 22457944, guid: b6fc370ed4473244e823bc796913b514, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -22.5
       objectReference: {fileID: 0}
     - target: {fileID: 22457944, guid: b6fc370ed4473244e823bc796913b514, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 22457944, guid: b6fc370ed4473244e823bc796913b514, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 22457944, guid: b6fc370ed4473244e823bc796913b514, type: 2}
       propertyPath: m_AnchorMin.x
@@ -1162,7 +1172,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22457944, guid: b6fc370ed4473244e823bc796913b514, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22457944, guid: b6fc370ed4473244e823bc796913b514, type: 2}
       propertyPath: m_AnchorMax.x
@@ -1170,7 +1180,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22457944, guid: b6fc370ed4473244e823bc796913b514, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22457944, guid: b6fc370ed4473244e823bc796913b514, type: 2}
       propertyPath: m_Pivot.x
@@ -1574,19 +1584,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22413956, guid: be6a85f9a298ea5488f1fe7b0306204a, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 22.5
       objectReference: {fileID: 0}
     - target: {fileID: 22413956, guid: be6a85f9a298ea5488f1fe7b0306204a, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -22.5
       objectReference: {fileID: 0}
     - target: {fileID: 22413956, guid: be6a85f9a298ea5488f1fe7b0306204a, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 22413956, guid: be6a85f9a298ea5488f1fe7b0306204a, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 22413956, guid: be6a85f9a298ea5488f1fe7b0306204a, type: 2}
       propertyPath: m_AnchorMin.x
@@ -1594,7 +1604,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22413956, guid: be6a85f9a298ea5488f1fe7b0306204a, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22413956, guid: be6a85f9a298ea5488f1fe7b0306204a, type: 2}
       propertyPath: m_AnchorMax.x
@@ -1602,7 +1612,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22413956, guid: be6a85f9a298ea5488f1fe7b0306204a, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22413956, guid: be6a85f9a298ea5488f1fe7b0306204a, type: 2}
       propertyPath: m_Pivot.x
@@ -1656,19 +1666,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22441954, guid: 722997d9cc3c6cf4a917769ee830ca91, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 22.5
       objectReference: {fileID: 0}
     - target: {fileID: 22441954, guid: 722997d9cc3c6cf4a917769ee830ca91, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -22.5
       objectReference: {fileID: 0}
     - target: {fileID: 22441954, guid: 722997d9cc3c6cf4a917769ee830ca91, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 22441954, guid: 722997d9cc3c6cf4a917769ee830ca91, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 22441954, guid: 722997d9cc3c6cf4a917769ee830ca91, type: 2}
       propertyPath: m_AnchorMin.x
@@ -1676,7 +1686,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22441954, guid: 722997d9cc3c6cf4a917769ee830ca91, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22441954, guid: 722997d9cc3c6cf4a917769ee830ca91, type: 2}
       propertyPath: m_AnchorMax.x
@@ -1684,7 +1694,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22441954, guid: 722997d9cc3c6cf4a917769ee830ca91, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22441954, guid: 722997d9cc3c6cf4a917769ee830ca91, type: 2}
       propertyPath: m_Pivot.x
@@ -1753,10 +1763,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1764,7 +1774,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: E. Acceptance
+  m_Text: "E. Back in his accommodation, the hooded figure removed the gem and compared
+    it to the drawing on an old piece of parchment. It seemed to fit perfectly. The
+    parchment was titled - \u201CThe Celestial State - Plans to advance humanity\u201D."
 --- !u!222 &1031947881
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2055,10 +2067,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2066,7 +2078,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: C. Depression
+  m_Text: C. A gem seemed to have been the source of the light. It was carefully removed
+    by the strange hooded figure before being stowed away in the depths of his robes.
 --- !u!222 &1377836309
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2545,7 +2558,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: What are the 6 stages of memory?...
+  m_Text: Put the following memories in choronogical order!
 --- !u!222 &1478545613
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2593,19 +2606,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22415534, guid: b290142154c521c46a034ae19bdb9f7a, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 22.5
       objectReference: {fileID: 0}
     - target: {fileID: 22415534, guid: b290142154c521c46a034ae19bdb9f7a, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -22.5
       objectReference: {fileID: 0}
     - target: {fileID: 22415534, guid: b290142154c521c46a034ae19bdb9f7a, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 22415534, guid: b290142154c521c46a034ae19bdb9f7a, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 22415534, guid: b290142154c521c46a034ae19bdb9f7a, type: 2}
       propertyPath: m_AnchorMin.x
@@ -2613,7 +2626,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22415534, guid: b290142154c521c46a034ae19bdb9f7a, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22415534, guid: b290142154c521c46a034ae19bdb9f7a, type: 2}
       propertyPath: m_AnchorMax.x
@@ -2621,7 +2634,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22415534, guid: b290142154c521c46a034ae19bdb9f7a, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22415534, guid: b290142154c521c46a034ae19bdb9f7a, type: 2}
       propertyPath: m_Pivot.x
@@ -2815,10 +2828,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2826,7 +2839,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: F. Anger
+  m_Text: F. Over a nearby hill, a camp was being set up for what looked like a small
+    town. The to-be inhabitants were being marched in to help construct the tents
+    and housing. Hordes of slaves chained together were being ordered around putting
+    together their accommodation under the harsh eye of the slave-drivers.
 --- !u!222 &1601221844
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2874,19 +2890,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22434430, guid: b2fd092b2f600494997000538a48f1c2, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 22.5
       objectReference: {fileID: 0}
     - target: {fileID: 22434430, guid: b2fd092b2f600494997000538a48f1c2, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -22.5
       objectReference: {fileID: 0}
     - target: {fileID: 22434430, guid: b2fd092b2f600494997000538a48f1c2, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 22434430, guid: b2fd092b2f600494997000538a48f1c2, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 22434430, guid: b2fd092b2f600494997000538a48f1c2, type: 2}
       propertyPath: m_AnchorMin.x
@@ -2894,7 +2910,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22434430, guid: b2fd092b2f600494997000538a48f1c2, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22434430, guid: b2fd092b2f600494997000538a48f1c2, type: 2}
       propertyPath: m_AnchorMax.x
@@ -2902,7 +2918,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22434430, guid: b2fd092b2f600494997000538a48f1c2, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22434430, guid: b2fd092b2f600494997000538a48f1c2, type: 2}
       propertyPath: m_Pivot.x
