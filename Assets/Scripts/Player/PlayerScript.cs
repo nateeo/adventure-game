@@ -23,28 +23,68 @@ public class PlayerScript : MonoBehaviour {
 	private float walkSpeed = 4.0f;
 	private float runSpeed = 10.0f;
 
+	// for dialogue management
 	public UIManager diagUI;
+
+	// for journal management
+	public GameObject journal;
+	public bool journalEnabled;
+	public InputField input;
+
+	private PlayerInventory inventory;
 
 	public static float NPC_RANGE = 2f;
 
 	// Use this for initialization
 	void Start () {
+		journal.SetActive (false);
+		journalEnabled = false;
+
 		Screen.lockCursor = true;
 		rigidBody = GetComponent<Rigidbody> ();
 		//jump = new Vector3 (0.0f, 0.2f, 0.0f);
 		anim = GetComponent<Animator> ();
 		controller = GetComponent<CharacterController> ();
 		rigidBody = GetComponent<Rigidbody> ();
+		inventory = GetComponent<PlayerInventory> ();
 	}
 
 	void Awake() {
 		DontDestroyOnLoad (transform.gameObject);
 	}
 
+	// force text selection to end so journal is preserved
+	IEnumerator moveEnd()
+	{
+		yield return 0; // Skip the first frame in which this is called.
+		input.MoveTextEnd(false); // Do this during the next frame.
+	}
+
 	void Update() {
 
 		if (SceneManager.GetActiveScene ().buildIndex == 0) {
 			Destroy(gameObject);
+		}
+
+		// handle journal interface, disable the rest if active
+		if (Input.GetKeyDown (KeyCode.Minus)) {
+			toggleJournal ();
+			if (journalEnabled) {
+				input.Select ();
+				input.ActivateInputField ();
+				input.text = input.text.Substring (0, input.text.Length - 1);
+				StartCoroutine (moveEnd ());
+			}
+		}
+		// disable all other interaction if journal is enabled
+		if (journalEnabled && inventory.enabled) {
+			inventory.disable ();
+		} else if (!inventory.enabled) {
+			inventory.enable ();
+		}
+
+		if (journalEnabled) {
+			return;
 		}
 		
 		if (Input.GetKeyDown (KeyCode.F)) {
@@ -130,6 +170,18 @@ public class PlayerScript : MonoBehaviour {
 		anim.SetBool ("IsRunning", running);
 	}
 
+	void toggleJournal() {
+		journalEnabled = !journalEnabled;
+		if (journalEnabled) {
+			diagUI.interfaceOpen ();
+			journal.SetActive (true);
+		} else {
+			diagUI.interfaceClosed ();
+			journal.SetActive (false);
+		}
+	}
+
+	// to talk to NPCs
     void TryInteract()
     {
         if (VD.isActive)
