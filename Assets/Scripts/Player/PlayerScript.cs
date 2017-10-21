@@ -2,13 +2,13 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Linq;
-using UnityEngine.SceneManagement;
 using VIDE_Data;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour {
 	public bool dialogFix = false;
 	public float speed;
-	private bool isGrounded;
+	public bool isGrounded;
 	public Rigidbody rigidBody;
 	Vector3 movement;
 	public Vector3 jump;
@@ -22,50 +22,78 @@ public class PlayerScript : MonoBehaviour {
 	private float jumpForce = 20.0f;
 	private float walkSpeed = 4.0f;
 	private float runSpeed = 10.0f;
+	private float leftGround = 0f; // y height of ground before a jump
+	public float maxHeight;
 
-	//Fields for time and score
 
-	private float startTime;
-	public int maxPlayTimeInMinutes;
-	private float maxTime;
+	// jump modifiers to reduce low-gravity feel
+	public float fallMultiplier = 2.5f;
+	public float lowJumpMultiplier = 2f;
 
-	public int maxNumberOfBonuses;
-	private int numberOfBonuses;
-
-	public Text bountyText;
-	//Fields for time and score ends here ===============
+	// for dialogue management
 	public UIManager diagUI;
+
+	// for journal management
+	public GameObject journal;
+	public bool journalEnabled;
+	public InputField input;
+
+	private PlayerInventory inventory;
 
 	public static float NPC_RANGE = 2f;
 
 	// Use this for initialization
 	void Start () {
+		journal.SetActive (false);
+		journalEnabled = false;
+
 		Screen.lockCursor = true;
 		rigidBody = GetComponent<Rigidbody> ();
 		//jump = new Vector3 (0.0f, 0.2f, 0.0f);
 		anim = GetComponent<Animator> ();
 		controller = GetComponent<CharacterController> ();
-
-		//Code for initializing time and score.
-		startTime = Time.time;
-		maxTime = maxPlayTimeInMinutes * 60;
 		rigidBody = GetComponent<Rigidbody> ();
+		inventory = GetComponent<PlayerInventory> ();
+	}
+
+	void Awake() {
+		DontDestroyOnLoad (transform.gameObject);
+	}
+
+	// force text selection to end so journal is preserved
+	IEnumerator moveEnd()
+	{
+		yield return 0; // Skip the first frame in which this is called.
+		input.MoveTextEnd(false); // Do this during the next frame.
 	}
 
 	void Update() {
-		if (Input.GetKeyDown(KeyCode.P))
-		{
-			incrementBonus();
+
+		if (SceneManager.GetActiveScene ().buildIndex == 0) {
+			Destroy(gameObject);
 		}
 
-		if (Input.GetKeyDown(KeyCode.O))
-		{
-			decrementBonus();
+		// handle journal interface, disable the rest if active
+		if (Input.GetKeyDown (KeyCode.Minus)) {
+			toggleJournal ();
+			if (journalEnabled) {
+				input.Select ();
+				input.ActivateInputField ();
+				input.text = input.text.Substring (0, input.text.Length - 1);
+				StartCoroutine (moveEnd ());
+			}
 		}
-		if (Input.GetKeyDown(KeyCode.L))
-		{
-			endSceneAndDisplayScore();
+		// disable all other interaction if journal is enabled
+		if (journalEnabled && inventory.enabled) {
+			inventory.disable ();
+		} else if (!inventory.enabled) {
+			inventory.enable ();
 		}
+
+		if (journalEnabled) {
+			return;
+		}
+		
 		if (Input.GetKeyDown (KeyCode.F)) {
 			TryInteract ();
 		}
@@ -93,14 +121,31 @@ public class PlayerScript : MonoBehaviour {
 			rigidBody.freezeRotation = true;
 			return;
 		}
+
+
+		// handle jumping velocity for more responsive jump
+		if (rigidBody.velocity.y < 0) {
+			rigidBody.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+		} else if (rigidBody.velocity.y > 0 && !Input.GetKey(KeyCode.Space)) {
+			rigidBody.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+		}
 		float h = Input.GetAxisRaw ("Horizontal");
 		float v = Input.GetAxisRaw ("Vertical");
 		Animating (h, v);
 		Move (h, v);
 
+		// clamp max height jump
+		if (!isGrounded && rigidBody.position.y > leftGround + maxHeight && rigidBody.velocity.y > 0) {
+			Debug.Log("MAX REACHED");
+			GetComponent<Rigidbody>().velocity = Vector3.zero;
+			GetComponent<Rigidbody>().angularVelocity = Vector3.zero; 
+			rigidBody.AddForce(0, -3 * forceConst, 0, ForceMode.Impulse);
+		}
 	}
 
 	void Move(float h, float v) {
+
+		// move towards the camera position
 
 		Vector3 movement = new Vector3(h, 0.0f, v);
 		movement = Camera.main.transform.TransformDirection(movement);
@@ -112,7 +157,7 @@ public class PlayerScript : MonoBehaviour {
 		}
 
 		movement = movement.normalized * speed * Time.deltaTime;
-
+			
 		rigidBody.MovePosition (transform.position + movement);
 
 		if (movement != Vector3.zero) {
@@ -122,6 +167,7 @@ public class PlayerScript : MonoBehaviour {
 		//jumping vector generation
 		if (Input.GetKey (KeyCode.Space) && isGrounded) {
 			rigidBody.AddForce (0, forceConst, 0, ForceMode.Impulse);
+			leftGround = rigidBody.position.y;
 			isGrounded = false;
 		}
 
@@ -149,129 +195,41 @@ public class PlayerScript : MonoBehaviour {
 		anim.SetBool ("IsRunning", running);
 	}
 
-	void TryInteract()
-	{
-		if (VD.isActive) {
-			VD.Next ();
-			return;
-		}
-
-		Collider[] hits = Physics.OverlapSphere (transform.position, NPC_RANGE);
-		for (int i = 0; i < hits.Length; i++) {
-			Collider rHit = hits [i];
-			VIDE_Assign assigned;
-			if (rHit.GetComponent<Collider>().GetComponent<VIDE_Assign> () != null) {
-				assigned = rHit.GetComponent<Collider>().GetComponent<VIDE_Assign> ();
-				if (!VD.isActive) {
-					//... and use it to begin the conversation, look at the target
-					diagUI.Begin (rHit, assigned);
-				}
-				return;
-			}
+	void toggleJournal() {
+		journalEnabled = !journalEnabled;
+		if (journalEnabled) {
+			diagUI.interfaceOpen ();
+			journal.SetActive (true);
+		} else {
+			diagUI.interfaceClosed ();
+			journal.SetActive (false);
 		}
 	}
 
-
-	int computeTimeBasedScore()
-	{
-		float timeEllapsed = Time.time - startTime;
-		float division = maxTime / 3;
-		if (timeEllapsed < division)
-		{
-			return 3;
-		}
-		else if (timeEllapsed < division * 2)
-		{
-			return 2;
-		} else if (timeEllapsed < division * 3)
-		{
-			return 1;
-		}
-		return 0;
-	}
-
-	//Method for computing the score based on a number of bonuses picked up.
-	//The policy is a 3 section idea: 0/1/2/3 stars.
-	int computeBonusBasedScore()
-	{
-		if (numberOfBonuses >= maxNumberOfBonuses)
-		{
-			return 3;
-		}
-		else if (numberOfBonuses >= maxNumberOfBonuses / 2.0)
-		{
-			return 2;
-		}
-		else if (numberOfBonuses > 0)
-		{
-			return 1;
-		}
-		return 0;
-	}
-
-	//Use this method to display the score.
-	//This will switch to scene number 2 (the score screen)
-	private void endSceneAndDisplayScore()
-	{
-		int timeScore = computeTimeBasedScore();
-		int bonusScore = computeBonusBasedScore();
-
-		float timeInSec = Time.time - startTime;
-		int bonusPoints = numberOfBonuses;
-		int maxBonusPoints = maxNumberOfBonuses;
-
-		//PlayerPrefs is like a persistence class (database)
-		PlayerPrefs.SetFloat("Time", timeInSec); 
-		PlayerPrefs.SetInt("TimeScore", timeScore);
-		PlayerPrefs.SetInt("BonusScore", bonusScore);
-		PlayerPrefs.SetInt("Bonus", numberOfBonuses);
-		PlayerPrefs.SetInt("MaxBonus", maxNumberOfBonuses);
-
-		SceneManager.LoadScene(2);
-	}
-
-	//private function for updating the time and the slider.
-	/* TIMER REMOVED (code might be useful some time, so has been left in here!)
-     *
-     *
-    private void updateTimeSlider()
+	// to talk to NPCs
+    void TryInteract()
     {
-        // This section is to do with displaying the time.
-        float timeinSec = Time.time - startTime;
-        int minutes = ((int)timeinSec / 60);
-        int seconds = (int)(timeinSec % 60);
-
-        string minToDisplay = minutes.ToString("00");
-        string secToDisplay = seconds.ToString("00");
-
-        timeText.text = minToDisplay + ":" + secToDisplay;
-
-        float proportion = timeinSec / maxTime;
-        if (proportion > 1) { proportion = 1; }
-
-        float proportionRemaining = 1 - proportion;
-        timeSlider.value = proportionRemaining;
-
-        var fill = (timeSlider as UnityEngine.UI.Slider).GetComponentsInChildren<UnityEngine.UI.Image>().FirstOrDefault(t => t.name == "Fill");
-        if (fill != null)
+        if (VD.isActive)
         {
-            fill.color = Color.Lerp(Color.red, Color.green, proportionRemaining);
+            VD.Next();
+            return;
+        }
+
+        Collider[] hits = Physics.OverlapSphere(transform.position, NPC_RANGE);
+        for (int i = 0; i < hits.Length; i++)
+        {
+            Collider rHit = hits[i];
+            VIDE_Assign assigned;
+            if (rHit.GetComponent<Collider>().GetComponent<VIDE_Assign>() != null)
+            {
+                assigned = rHit.GetComponent<Collider>().GetComponent<VIDE_Assign>();
+                if (!VD.isActive)
+                {
+                    //... and use it to begin the conversation, look at the target
+                    diagUI.Begin(rHit, assigned);
+                }
+                return;
+            }
         }
     }
-    */
-
-    //Use this method when a bonus object has been picked up
-    public void incrementBonus()
-    {
-        numberOfBonuses++;
-		bountyText.text = "Bonus fugitives: " + numberOfBonuses;
-    }
-    //Use this method when you want to deduct points
-    public void decrementBonus()
-    {
-        numberOfBonuses--;
-		bountyText.text = "Bonus fugitives: " + numberOfBonuses;
-    }
-
-		
 }
