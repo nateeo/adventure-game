@@ -27,7 +27,7 @@ public class PickUpItem : MonoBehaviour
 		float distance = Vector3.Distance(this.gameObject.transform.position, _player.transform.position);
 
 		// handle tooltips based on distance
-		if (distance <= 3) {
+		if (distance <= 3 && item.itemType == ItemType.Bonus) {
 			enabled = true;
 			_player.notifyBounty (enabled);
 		} else {

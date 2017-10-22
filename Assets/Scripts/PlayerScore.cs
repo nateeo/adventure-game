@@ -21,6 +21,7 @@ public class PlayerScore : MonoBehaviour {
     void Start () {
         //Code for initializing time and score.
         startTime = Time.time;
+		maxNumberOfBonuses = 3;
         maxTime = maxPlayTimeInMinutes * 60;
     }
 
@@ -128,13 +129,13 @@ public class PlayerScore : MonoBehaviour {
     public void incrementBonus()
     {
         numberOfBonuses++;
-        bountyText.text = "Bonus fugitives: " + numberOfBonuses;
+		setBonusText ();
     }
     //Use this method when you want to deduct points
     public void decrementBonus()
     {
         numberOfBonuses--;
-        bountyText.text = "Bonus fugitives: " + numberOfBonuses;
+		setBonusText ();
     }
 
 	public void resetScore()
@@ -142,7 +143,11 @@ public class PlayerScore : MonoBehaviour {
 		startTime = Time.time;
 		maxTime = maxPlayTimeInMinutes * 60;
 		numberOfBonuses = 0;
-		bountyText.text = "Bonus fugitives: " + numberOfBonuses;
+		setBonusText ();
+	}
+
+	private void setBonusText() {
+		bountyText.text = "Bonus fugitives: " + numberOfBonuses + "/" + maxNumberOfBonuses;
 	}
 
 }
