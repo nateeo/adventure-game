@@ -235,6 +235,8 @@ public class PlayerScript : MonoBehaviour {
         for (int i = 0; i < hits.Length; i++)
         {
             Collider rHit = hits[i];
+			Debug.Log ("HIT SOMETHING");
+			Debug.Log (rHit.GetType ());
             VIDE_Assign assigned;
             if (rHit.GetComponent<Collider>().GetComponent<VIDE_Assign>() != null)
             {
