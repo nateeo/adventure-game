@@ -33,6 +33,8 @@ public class GameObjectiveController : MonoBehaviour {
 		for (int i = 1; i < 5; i++) {
 			markers [i].gameObject.SetActive (false);
 		}
+
+		activateAllWaypoints ();
 	}
 
 	//This is called when the player enters the triggered area
@@ -40,6 +42,11 @@ public class GameObjectiveController : MonoBehaviour {
 		for (int i = 0; i < 5; i++) {
 			if (objective.Equals(markers[i])) { //Disable the objective and enable the next one
 				if (endGame && endGameMarker[i] != 1) {
+					//Trigger ending dialogue
+					if (i == 3) {
+						//Change to ending scene
+					}
+
 					endGameMarker [i] = 1;
 
 					VIDE_Assign wrongPlace = GetComponent<VIDE_Assign> ();
