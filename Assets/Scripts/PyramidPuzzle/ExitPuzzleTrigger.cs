@@ -2,6 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 
+/**
+ * Shows and hides the walls depending on whether or not the player
+ * collides with the trigger associated with the gameobject this script
+ * is attached to
+ */
 public class ExitPuzzleTrigger : MonoBehaviour {
 
     public GameObject roomLabel1;
@@ -12,11 +17,14 @@ public class ExitPuzzleTrigger : MonoBehaviour {
     private List<GameObject> roomText;
     
     void Start () {
-        roomText = initializeWalls();
+        roomText = initializeLabels();
         hideWalls();
 	}
 
-    private List<GameObject> initializeWalls()
+    /**
+     * Creates a temporary list of labels for the walls
+     */
+    private List<GameObject> initializeLabels()
     {
         List<GameObject> roomLabels = new List<GameObject>();
         roomLabels.Add(roomLabel1);

@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * Holds the state of whether the question for a particular room has been
+ * answered correctly or incorrectly.
+ * It is a collection of getters and setters
+ */
 public class ExitGameState : MonoBehaviour {
 
     private bool room1 = false;

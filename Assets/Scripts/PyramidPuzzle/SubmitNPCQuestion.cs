@@ -21,18 +21,26 @@ public class SubmitNPCQuestion : MonoBehaviour {
 
     private void Update()
     {
+        // Checks if the user pressers the enter key to submit
         if (Input.GetKey(KeyCode.Return))
         {
             onAnswerEnter();
         }
     }
 
+    /**
+     * Checks the user input to the answer for the question.
+     * The question and answer text will be dynamically set for the canvas
+     * which is specified by the NPC that calls it
+     */
     public void onAnswerEnter()
     {
         answerInput.text.ToLower();
         string userAnswer = answerInput.text.ToLower();
+        // Check if user input is equal to the answer
         if (userAnswer.Equals(answer.ToLower()))
         {
+            // Open the room number door for the corresponding question
             if (roomNumber == 1)
             {
                 exitPuzzleState.GetComponent<ExitGameState>().setRoom1State(true);

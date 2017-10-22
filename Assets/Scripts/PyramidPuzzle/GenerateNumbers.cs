@@ -22,21 +22,25 @@ public class GenerateNumbers : MonoBehaviour {
 
     private List<GameObject> walls;
     private string passcode;
-
-	// Use this for initialization
+    
 	void Start () {
+        // Set and hide the walls
         walls = initializeWalls();
         hideWalls();
 
+        // Generate the random numbers that will be used as the passcode
         List<int> numbers = generateNumbers(walls.Count);
         int[] isPassCode = chooseNumbers();
-
         passcode = createPasscode(numbers, isPassCode);
-        plotWalls(walls, numbers, isPassCode);
         
+        // Plot the generated numbers to the walls
+        plotWalls(walls, numbers, isPassCode);
         passcodeButton.GetComponent<SubmitPasscode>().setPasscode(passcode);
 	}
 
+    /**
+     * Initialize the walls into a temporary list to work with
+     */
     private List<GameObject> initializeWalls()
     {
         List<GameObject> tempWalls = new List<GameObject>();
@@ -76,6 +80,10 @@ public class GenerateNumbers : MonoBehaviour {
         return passcode;
     }
 
+    /**
+     * Generates a random list of random numbers between 0 and 9.
+     * The amount of walls that are generated depends on the numberOfWalls
+     */
     private List<int> generateNumbers(int numberOfWalls)
     {
         List<int> numbers = new List<int>();
@@ -86,29 +94,16 @@ public class GenerateNumbers : MonoBehaviour {
         return numbers;
     }
 
-    private void plotWalls(List<GameObject> walls, List<int> numbers, int[] isPasscode)
-    {
-        for (int i = 0; i < walls.Count; i++)
-        {
-            GameObject wall = walls[i];
-            TextMesh t = wall.GetComponent<TextMesh>();
-            t.text = numbers[i].ToString();
-
-            if (isPasscode[i] == 1)
-            {
-                t.color = Color.grey;
-            } else
-            {
-                t.color = Color.cyan;
-            }
-        }
-    }
-
+    /**
+     * Choose 4 random numbers from the list of generated numbers. 
+     * A value of 1 indicates that the number has been chosen.
+     */
     private int[] chooseNumbers()
     {
         int[] chosenNumbers = new int[12];
-        
+
         int numbersChosen = 0;
+        // Loop until 4 numbers have been chosen
         while (numbersChosen < 4)
         {
             int number = Random.Range(0, 9);
@@ -122,8 +117,12 @@ public class GenerateNumbers : MonoBehaviour {
         return chosenNumbers;
     }
 
+    /**
+     * Creates a string representation of the chosen passcode numbers
+     */
     private string createPasscode(List<int> numbers, int[] isPassCode)
     {
+        // Temporary list that will sort the 4 passcode numbers
         List<int> unsortedPasscode = new List<int>();
 
         for (int i = 0; i < numbers.Count; i++)
@@ -134,6 +133,7 @@ public class GenerateNumbers : MonoBehaviour {
             }
         }
 
+        // Sort the numbers in ascending order and create a string representation
         unsortedPasscode.Sort();
         string passCode = "";
         for (int i = 0; i < 4; i++)
@@ -142,6 +142,29 @@ public class GenerateNumbers : MonoBehaviour {
         }
 
         return passCode;
+    }
+
+    /**
+     * Plots the number on the wall as text
+     */
+    private void plotWalls(List<GameObject> walls, List<int> numbers, int[] isPasscode)
+    {
+        for (int i = 0; i < walls.Count; i++)
+        {
+            // Get the text component for each wall
+            GameObject wall = walls[i];
+            TextMesh t = wall.GetComponent<TextMesh>();
+            t.text = numbers[i].ToString();
+
+            // Plot the text in grey if the number is in the passcode, white if not
+            if (isPasscode[i] == 1)
+            {
+                t.color = Color.grey;
+            } else
+            {
+                t.color = Color.white;
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)

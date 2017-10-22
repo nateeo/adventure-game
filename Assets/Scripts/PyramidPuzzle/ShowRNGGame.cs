@@ -2,6 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 
+/**
+ * Shows and hides the numbers associated to the walls for the first puzzle game
+ */
 public class ShowRNGGame : MonoBehaviour {
 
     public GameObject number1;
@@ -18,12 +21,14 @@ public class ShowRNGGame : MonoBehaviour {
     public GameObject number12;
 
     private List<GameObject> walls;
-
-    // Use this for initialization
+    
     void Start () {
         walls = initializeWalls();
 	}
 
+    /**
+     * Creates a temporary list of walls that is used to show/hide the numbers
+     */
     private List<GameObject> initializeWalls()
     {
         List<GameObject> tempWalls = new List<GameObject>();

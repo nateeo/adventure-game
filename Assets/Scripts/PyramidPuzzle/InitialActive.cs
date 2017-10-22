@@ -3,7 +3,7 @@ using System.Collections;
 
 public class InitialActive : MonoBehaviour {
 
-	// Use this for initialization
+	// Hides the game object initially
 	void Start () {
         gameObject.SetActive(false);
 	}

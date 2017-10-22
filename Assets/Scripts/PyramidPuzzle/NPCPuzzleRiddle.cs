@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * Script attached to an NPC if it contains a question for the player to answer.
+ * It calls the NPCQuestion canvas to display the relevant contents to the player.
+ */
 public class NPCPuzzleRiddle : MonoBehaviour {
 
     public GameObject door;
@@ -15,17 +19,24 @@ public class NPCPuzzleRiddle : MonoBehaviour {
     private int moveCount = 0;
     private bool hasAnswered = false;
 
+    /**
+     * Sets the question, answer, and the corresponding room number for the canvas
+     */
     private void setCanvasFields()
     {
-        // Set question and answer and roomNo on canvas
+        // Makes a reference to the canvas
         questionButton.GetComponent<SubmitNPCQuestion>().setQuestion(question);
         questionButton.GetComponent<SubmitNPCQuestion>().setAnswer(answer);
         questionButton.GetComponent<SubmitNPCQuestion>().setRoomNumber(roomNumber);
     }
    
+    /**
+     * Triggered if the user approaches an NPC to answer a question
+     */
     private void OnTriggerEnter(Collider other)
     {
         setCanvasFields();
+        // Shows the canvas depending on the room number that corresponds to the NPC
         if (roomNumber == 1)
         {
             if (!exitPuzzleState.GetComponent<ExitGameState>().getRoom1State())
