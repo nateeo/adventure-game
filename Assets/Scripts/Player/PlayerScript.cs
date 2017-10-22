@@ -192,51 +192,52 @@ public class PlayerScript : MonoBehaviour {
 
 		//the mechanics for the puzzle are in this if statement
 		if (icy == true) {
-			Debug.Log ("IT WORKS");
 			//checks direction and restricts movement
 			if (Input.GetKeyDown (KeyCode.A) && rigidBody.isKinematic == true && lastDirection != 1){
 				dialogFix = true;
 				collider.enabled = false;
-				Debug.Log ("left " + collider.enabled);
+				rigidBody.isKinematic = false;
+
+				//direction to go in
 				rigidBody.velocity = new Vector3 (-icyspeed, 0, 0);
 				lastDirection = 1;
-				rigidBody.isKinematic = false;
-			}
 
+			}
 			if (Input.GetKeyDown (KeyCode.D) && rigidBody.isKinematic == true && lastDirection != 2){
 				//restrict movement til collision
 				dialogFix = true;
 				collider.enabled = false;
+				rigidBody.isKinematic = false;
+
+				//direction to go in
 				rigidBody.velocity = new Vector3(icyspeed, 0, 0);
 				lastDirection = 2;
-				rigidBody.isKinematic = false;
 
 			}
-
 			if (Input.GetKeyDown (KeyCode.W) && rigidBody.isKinematic == true && lastDirection != 3){
 				//restrict movement til collision
-
 				dialogFix = true;
 				collider.enabled = false;
-				rigidBody.velocity = new Vector3(0, 0, icyspeed);
-				lastDirection = 3;
 				rigidBody.isKinematic = false;
 
+				//direction to go in
+				rigidBody.velocity = new Vector3(0, 0, icyspeed);
+				lastDirection = 3;
 
 			}
-
 			if (Input.GetKeyDown (KeyCode.S) && rigidBody.isKinematic == true && lastDirection != 4){
 				//restrict movement til collision
 				dialogFix = true;
 				collider.enabled = false;
-				rigidBody.velocity = new Vector3(0, 0, -icyspeed);
-				lastDirection = 4;
 				rigidBody.isKinematic = false;
 
-
+				//direction to go in
+				rigidBody.velocity = new Vector3(0, 0, -icyspeed);
+				lastDirection = 4;
 
 			}
 		}  else if (icy == false) {
+			
 			//normal movement
 			movement = Camera.main.transform.TransformDirection(movement);
 

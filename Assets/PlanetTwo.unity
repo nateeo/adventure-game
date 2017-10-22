@@ -619,7 +619,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 37
 --- !u!23 &178559609
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1189,7 +1189,7 @@ RectTransform:
   - {fileID: 1659537436}
   - {fileID: 750040710}
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 31
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -1900,7 +1900,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 90}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_RootOrder: 36
 --- !u!1001 &706076390
 Prefab:
   m_ObjectHideFlags: 0
@@ -2425,7 +2425,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 39
 --- !u!114 &756215501 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11400092, guid: d86a1dabcca8b44a393ee5693e81d759,
@@ -3687,7 +3687,7 @@ Transform:
   - {fileID: 696122433}
   - {fileID: 1440391601}
   m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_RootOrder: 35
 --- !u!114 &1137965253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5117,11 +5117,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1903108669}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: c2133b120a6c042bd8e1e5fe27674a82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  icyPuzzle: 1
 --- !u!23 &1903108671
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5182,7 +5183,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 40
 --- !u!1001 &1903348067
 Prefab:
   m_ObjectHideFlags: 0
@@ -5426,7 +5427,6 @@ GameObject:
   - 33: {fileID: 1968529498}
   - 65: {fileID: 1968529497}
   - 23: {fileID: 1968529496}
-  - 114: {fileID: 1968529495}
   m_Layer: 0
   m_Name: invisiblewall (1)
   m_TagString: Untagged
@@ -5434,18 +5434,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &1968529495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11451536, guid: 411d1de0fa3cc4df796f772ae558f68d,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1968529494}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1968529496
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5506,7 +5494,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 41
 --- !u!1001 &1997133185
 Prefab:
   m_ObjectHideFlags: 0
@@ -5773,7 +5761,7 @@ Transform:
   m_Children:
   - {fileID: 372923030}
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 34
 --- !u!114 &2087859620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5801,7 +5789,6 @@ GameObject:
   - 33: {fileID: 2091303386}
   - 65: {fileID: 2091303385}
   - 23: {fileID: 2091303384}
-  - 114: {fileID: 2091303383}
   - 114: {fileID: 2091303382}
   m_Layer: 0
   m_Name: triggering (1)
@@ -5826,18 +5813,6 @@ MonoBehaviour:
   puzzle: {fileID: 1137965248}
   player: {fileID: 1484074175}
   icyPuzzle: 1
---- !u!114 &2091303383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11491716, guid: 104d602a39e6446279751b748a26629c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2091303381}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &2091303384
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5898,7 +5873,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 38
 --- !u!1001 &2118082860
 Prefab:
   m_ObjectHideFlags: 0

@@ -13,10 +13,6 @@ public class leavePuzzle : MonoBehaviour {
 
 
 	void Update() {
-		playerCharacter = GameObject.FindWithTag ("Player");
-		player = playerCharacter.GetComponent<PlayerScript> ();
-		rb = playerCharacter.GetComponent<Rigidbody> ();
-		collider = playerCharacter.GetComponent<CapsuleCollider> ();
 
 		if (icyPuzzle == true && icy == false) {
 			icy = true;
@@ -26,22 +22,28 @@ public class leavePuzzle : MonoBehaviour {
 
 	}
 	void OnCollisionEnter ( Collision collision) {
+		//populate fields
+		playerCharacter = GameObject.FindWithTag ("Player");
+		player = playerCharacter.GetComponent<PlayerScript> ();
+		rb = playerCharacter.GetComponent<Rigidbody> ();
+		collider = playerCharacter.GetComponent<CapsuleCollider> ();
 
 		if (icy == false) {
+			//do not do anything if icy is false
 			return;
 		}
 		if (collision.collider.ToString() == "Udo 1 (UnityEngine.BoxCollider)") {
-
-			//player.icyMovement = true;
-			rb.isKinematic = true;
+		
+			//return movement to normal
 			player.dialogFix = false;
-			Debug.Log (rb.isKinematic);
 			collider.enabled = true;
-			Debug.Log ("collider" + collider.enabled);
 
 		}
+
+		//remove this barrier
 		icyPuzzle = false;
 		rb.isKinematic = false;
+		Destroy (this);
 	}
 
 }
