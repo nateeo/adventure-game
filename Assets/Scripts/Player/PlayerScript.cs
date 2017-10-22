@@ -84,7 +84,7 @@ public class PlayerScript : MonoBehaviour {
 		// disable all other interaction if journal is enabled
 		if (journalEnabled && inventory.enabled) {
 			inventory.disable ();
-		} else if (!inventory.enabled) {
+		} else if (inventory.disabled) {
 			inventory.enable ();
 		}
 

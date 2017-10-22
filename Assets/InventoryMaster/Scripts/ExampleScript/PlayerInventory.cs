@@ -13,7 +13,7 @@ public class PlayerInventory : MonoBehaviour
     private Inventory mainInventory;
     private Inventory characterSystemInventory;
     private Tooltip toolTip;
-	private bool disabled;
+	public bool disabled;
 
     private InputManager inputManagerDatabase;
 
