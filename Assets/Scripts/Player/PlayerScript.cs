@@ -58,10 +58,6 @@ public class PlayerScript : MonoBehaviour {
 		controller = GetComponent<CharacterController> ();
 	}
 
-	void Awake() {
-		DontDestroyOnLoad (transform.gameObject);
-	}
-
 	// force text selection to end so journal is preserved
 	IEnumerator moveEnd()
 	{
