@@ -733,6 +733,7 @@ MonoBehaviour:
   oasis: {fileID: 375840745}
   tower: {fileID: 930648767}
   ship: {fileID: 585046926}
+  diagUI: {fileID: 1173730393}
 --- !u!1001 &74135421
 Prefab:
   m_ObjectHideFlags: 0
@@ -1897,7 +1898,7 @@ Transform:
   - {fileID: 466930888}
   - {fileID: 785303175}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!4 &232989314 stripped
 Transform:
   m_PrefabParentObject: {fileID: 457614, guid: 1e44e02e77bb6764c97f423cc75574da, type: 2}
@@ -2687,7 +2688,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!1 &309501023
 GameObject:
   m_ObjectHideFlags: 0
@@ -3082,6 +3083,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 84f29fdd5c376e74c8b74bb1f2648ce0, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &349324044 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11459262, guid: d86a1dabcca8b44a393ee5693e81d759,
+    type: 2}
+  m_PrefabInternal: {fileID: 921707091}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!4 &362032033 stripped
 Transform:
   m_PrefabParentObject: {fileID: 407330, guid: 84f29fdd5c376e74c8b74bb1f2648ce0, type: 2}
@@ -3101,6 +3108,8 @@ GameObject:
   - 222: {fileID: 375840747}
   - 114: {fileID: 375840746}
   - 114: {fileID: 375840745}
+  - 114: {fileID: 375840748}
+  - 65: {fileID: 375840749}
   m_Layer: 8
   m_Name: Oasis
   m_TagString: Untagged
@@ -3172,6 +3181,61 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 375840743}
+--- !u!114 &375840748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 375840743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8b99d8a12e39e4b94d2d7162c7c978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diags:
+  - badclue2
+  - beatenupguy
+  - cameragirl
+  - Charlie
+  - CommentModifier
+  - CrazyCap
+  - DEMO_Condition
+  - dodgydude1
+  - FrogMan
+  - innkeeper
+  - Item_LookUp
+  - Laura
+  - MrCube
+  - NPCOnly
+  - orange
+  - PlanetThree_MineDialogue
+  - PlanetThree_OasisDialogue
+  - PlanetThree_StartDialogue
+  - PlanetThree_TownDialogue
+  - porta
+  - QuestChartDemo
+  - Tutorial
+  - Witch
+  assignedIndex: 16
+  assignedID: 97174
+  assignedDialogue: PlanetThree_OasisDialogue
+  interactionCount: 0
+  alias: 
+  overrideStartNode: -1
+  defaultNPCSprite: {fileID: 0}
+  defaultPlayerSprite: {fileID: 0}
+--- !u!65 &375840749
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 375840743}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &375890085
 Prefab:
   m_ObjectHideFlags: 0
@@ -5124,15 +5188,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 435828, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 105.5
+      value: 818.1
       objectReference: {fileID: 0}
     - target: {fileID: 435828, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 11.3
+      value: 10.11
       objectReference: {fileID: 0}
     - target: {fileID: 435828, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 268.2
+      value: 501
       objectReference: {fileID: 0}
     - target: {fileID: 435828, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -5152,7 +5216,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 435828, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11464266, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
       propertyPath: rigidBody
@@ -7006,8 +7070,10 @@ GameObject:
   - 222: {fileID: 725504461}
   - 114: {fileID: 725504460}
   - 114: {fileID: 725504459}
+  - 65: {fileID: 725504463}
+  - 114: {fileID: 725504462}
   m_Layer: 8
-  m_Name: Shack
+  m_Name: Town
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7077,6 +7143,61 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 725504457}
+--- !u!114 &725504462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 725504457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8b99d8a12e39e4b94d2d7162c7c978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diags:
+  - badclue2
+  - beatenupguy
+  - cameragirl
+  - Charlie
+  - CommentModifier
+  - CrazyCap
+  - DEMO_Condition
+  - dodgydude1
+  - FrogMan
+  - innkeeper
+  - Item_LookUp
+  - Laura
+  - MrCube
+  - NPCOnly
+  - orange
+  - PlanetThree_MineDialogue
+  - PlanetThree_OasisDialogue
+  - PlanetThree_StartDialogue
+  - PlanetThree_TownDialogue
+  - porta
+  - QuestChartDemo
+  - Tutorial
+  - Witch
+  assignedIndex: 18
+  assignedID: 88029
+  assignedDialogue: PlanetThree_TownDialogue
+  interactionCount: 0
+  alias: 
+  overrideStartNode: -1
+  defaultNPCSprite: {fileID: 0}
+  defaultPlayerSprite: {fileID: 0}
+--- !u!65 &725504463
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 725504457}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &725806519 stripped
 Transform:
   m_PrefabParentObject: {fileID: 491020, guid: 196d24effbe950f4fa2133425500f0b2, type: 2}
@@ -8740,6 +8861,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 196d24effbe950f4fa2133425500f0b2, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &906329813 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11454996, guid: d86a1dabcca8b44a393ee5693e81d759,
+    type: 2}
+  m_PrefabInternal: {fileID: 921707091}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!4 &908151096 stripped
 Transform:
   m_PrefabParentObject: {fileID: 453900, guid: 8ed08e323a3d14b458a6f5621c32e7d7, type: 2}
@@ -10726,6 +10853,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ca6538e9b003ee47b40163c958ef559, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1093915100 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11448750, guid: d86a1dabcca8b44a393ee5693e81d759,
+    type: 2}
+  m_PrefabInternal: {fileID: 921707091}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!4 &1094237746 stripped
 Transform:
   m_PrefabParentObject: {fileID: 407330, guid: 84f29fdd5c376e74c8b74bb1f2648ce0, type: 2}
@@ -11536,7 +11669,11 @@ MonoBehaviour:
   text_NPC: {fileID: 1957982745}
   previous_text: 
   interactTooltip: 0
-  text_choices: []
+  text_choices:
+  - {fileID: 1093915100}
+  - {fileID: 1211380767}
+  - {fileID: 906329813}
+  - {fileID: 349324044}
   inventory_open: 0
 --- !u!4 &1173730394
 Transform:
@@ -11550,7 +11687,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!4 &1173999777 stripped
 Transform:
   m_PrefabParentObject: {fileID: 407330, guid: 84f29fdd5c376e74c8b74bb1f2648ce0, type: 2}
@@ -11878,6 +12015,12 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 407330, guid: 84f29fdd5c376e74c8b74bb1f2648ce0, type: 2}
   m_PrefabInternal: {fileID: 1208795018}
+--- !u!114 &1211380767 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11443214, guid: d86a1dabcca8b44a393ee5693e81d759,
+    type: 2}
+  m_PrefabInternal: {fileID: 921707091}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &1213529101
 Prefab:
   m_ObjectHideFlags: 0
@@ -14097,7 +14240,7 @@ RectTransform:
   - {fileID: 585046925}
   - {fileID: 68928045}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 645.5, y: 289.5}
@@ -15422,7 +15565,7 @@ GameObject:
   - 92: {fileID: 1580082853}
   - 114: {fileID: 1580082852}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: Objective_Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15434,12 +15577,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1580082850}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -0.6786571, z: 0, w: 0.7344552}
+  m_LocalPosition: {x: 937.59033, y: 87, z: 205.78275}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -85.4776, z: 0}
   m_Children: []
-  m_Father: {fileID: 1934065166}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!114 &1580082852
 MonoBehaviour:
@@ -15449,14 +15592,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1580082850}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d58c6ec20b53c4e3ba2697303300fbb6, type: 3}
+  m_Script: {fileID: 11500000, guid: 9027f36db310b2a4d9b591333497ee19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogFix: 0
-  lookAt: {fileID: 1997916423}
-  camTransform: {fileID: 1997916423}
-  sensitivityX: 8
-  sensitivityY: 8
+  camera: {fileID: 1934065160}
 --- !u!92 &1580082853
 Behaviour:
   m_ObjectHideFlags: 0
@@ -16661,7 +16800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogFix: 0
-  speed: 3
+  speed: 8
   rigidBody: {fileID: 1997916421}
   jump: {x: 0, y: 0, z: 0}
   forceConst: 0
@@ -16834,7 +16973,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 47.5323, y: -121.2195, z: -140.57199}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1001 &1721228824
 Prefab:
   m_ObjectHideFlags: 0
@@ -17424,6 +17563,8 @@ GameObject:
   - 222: {fileID: 1770134737}
   - 114: {fileID: 1770134736}
   - 114: {fileID: 1770134735}
+  - 114: {fileID: 1770134739}
+  - 65: {fileID: 1770134738}
   m_Layer: 8
   m_Name: Mine
   m_TagString: Untagged
@@ -17495,6 +17636,61 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1770134733}
+--- !u!65 &1770134738
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1770134733}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1770134739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1770134733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8b99d8a12e39e4b94d2d7162c7c978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diags:
+  - badclue2
+  - beatenupguy
+  - cameragirl
+  - Charlie
+  - CommentModifier
+  - CrazyCap
+  - DEMO_Condition
+  - dodgydude1
+  - FrogMan
+  - innkeeper
+  - Item_LookUp
+  - Laura
+  - MrCube
+  - NPCOnly
+  - orange
+  - PlanetThree_MineDialogue
+  - PlanetThree_OasisDialogue
+  - PlanetThree_StartDialogue
+  - PlanetThree_TownDialogue
+  - porta
+  - QuestChartDemo
+  - Tutorial
+  - Witch
+  assignedIndex: 15
+  assignedID: 82071
+  assignedDialogue: PlanetThree_MineDialogue
+  interactionCount: 0
+  alias: 
+  overrideStartNode: -1
+  defaultNPCSprite: {fileID: 0}
+  defaultPlayerSprite: {fileID: 0}
 --- !u!1001 &1771782382
 Prefab:
   m_ObjectHideFlags: 0
@@ -19223,10 +19419,9 @@ Transform:
   m_LocalPosition: {x: 937.59033, y: 87, z: 205.78275}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: -85.4776, z: 0}
-  m_Children:
-  - {fileID: 1580082851}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!82 &1934065167
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19236,7 +19431,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9b040603d2f56124784f1a0a8344d0e6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3eac4547dcf9f4f4fb2bb8566c49573f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
