@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class GenerateNumbers : MonoBehaviour {
 
+    public GameObject passcodeScreen;
+    public GameObject passcodeButton;
     public GameObject number1;
     public GameObject number2;
     public GameObject number3;
@@ -13,21 +15,26 @@ public class GenerateNumbers : MonoBehaviour {
     public GameObject number7;
     public GameObject number8;
     public GameObject number9;
+    public GameObject number10;
+    public GameObject number11;
+    public GameObject number12;
 
     private List<GameObject> walls;
     private string passcode;
-    private bool hasOpened;
 
 	// Use this for initialization
 	void Start () {
         walls = initializeWalls();
-        //hideWalls();
+        hideWalls();
 
         List<int> numbers = generateNumbers(walls.Count);
         int[] isPassCode = chooseNumbers();
 
         passcode = createPasscode(numbers, isPassCode);
         plotWalls(walls, numbers, isPassCode);
+
+        Debug.Log(passcode);
+        passcodeButton.GetComponent<SubmitPasscode>().setPasscode(passcode);
 	}
 
     private List<GameObject> initializeWalls()
@@ -42,6 +49,9 @@ public class GenerateNumbers : MonoBehaviour {
         tempWalls.Add(number7);
         tempWalls.Add(number8);
         tempWalls.Add(number9);
+        tempWalls.Add(number10);
+        tempWalls.Add(number11);
+        tempWalls.Add(number12);
         return tempWalls;
     }
 
@@ -96,7 +106,7 @@ public class GenerateNumbers : MonoBehaviour {
 
     private int[] chooseNumbers()
     {
-        int[] chosenNumbers = new int[9];
+        int[] chosenNumbers = new int[12];
         
         int numbersChosen = 0;
         while (numbersChosen < 4)
@@ -136,17 +146,16 @@ public class GenerateNumbers : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!hasOpened)
+        if (!passcodeButton.GetComponent<SubmitPasscode>().getAnswer())
         {
-            gameObject.transform.Rotate(0, -80, 0);
+            passcodeScreen.SetActive(true);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
-        Debug.Log(other.gameObject.transform.position);
-        Debug.Log(other.gameObject.name);
-        Debug.Log(passcode);
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerExit(Collider other)
     {
-        
+        passcodeScreen.SetActive(false);
     }
 }
