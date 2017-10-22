@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using VIDE_Data;
 
 /**
  * This class is the Controller for the GameObjectives.
@@ -26,9 +27,11 @@ public class GameObjectiveController : MonoBehaviour {
 		markers [4] = ship;
 
 		//Disable all markers except for the first one
-		for (int i = 1; i < 5; i++) {
+		for (int i = 0; i < 5; i++) {
 			markers [i].gameObject.SetActive (false);
 		}
+
+		markers [2].gameObject.SetActive (true);
 	}
 
 	//This is called when the player enters the triggered area
@@ -40,7 +43,9 @@ public class GameObjectiveController : MonoBehaviour {
 				markers [i + 1].gameObject.SetActive (true);
 
 				VIDE_Assign assigned = objective.GetComponent<VIDE_Assign> ();
-				diagUI.Begin (objective.GetComponent<Collider>(), assigned);
+				if (!VD.isActive) {
+					diagUI.Begin (objective.GetComponent<Collider>(), assigned);
+				}
 
 				if (i == 2) {
 					activateAllWaypoints ();
@@ -53,7 +58,9 @@ public class GameObjectiveController : MonoBehaviour {
 
 	void activateAllWaypoints() {
 		for (int i = 0; i < 5; i++) {
-			markers [i].gameObject.SetActive (true);
+			if (i != 2) { //Do not activate the town
+				markers [i].gameObject.SetActive (true);
+			}
 		}
 	}
 }

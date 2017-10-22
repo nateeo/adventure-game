@@ -5188,7 +5188,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 435828, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 818.1
+      value: 165
       objectReference: {fileID: 0}
     - target: {fileID: 435828, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
       propertyPath: m_LocalPosition.y
@@ -5196,7 +5196,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 435828, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 501
+      value: 124
       objectReference: {fileID: 0}
     - target: {fileID: 435828, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -7170,6 +7170,7 @@ MonoBehaviour:
   - MrCube
   - NPCOnly
   - orange
+  - PlanetThree_FinalDialogue
   - PlanetThree_MineDialogue
   - PlanetThree_OasisDialogue
   - PlanetThree_StartDialogue
@@ -7178,7 +7179,7 @@ MonoBehaviour:
   - QuestChartDemo
   - Tutorial
   - Witch
-  assignedIndex: 18
+  assignedIndex: 19
   assignedID: 88029
   assignedDialogue: PlanetThree_TownDialogue
   interactionCount: 0
@@ -14697,6 +14698,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 218.84924
       objectReference: {fileID: 0}
+    - target: {fileID: 2340000, guid: 365e6e4e3f8786649bc664787d355778, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 32cce6bb1f7fe0743bf9219f8d9106a3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 365e6e4e3f8786649bc664787d355778, type: 2}
   m_IsPrefabParent: 0
@@ -16800,7 +16805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogFix: 0
-  speed: 8
+  speed: 100
   rigidBody: {fileID: 1997916421}
   jump: {x: 0, y: 0, z: 0}
   forceConst: 0
@@ -17675,6 +17680,7 @@ MonoBehaviour:
   - MrCube
   - NPCOnly
   - orange
+  - PlanetThree_FinalDialogue
   - PlanetThree_MineDialogue
   - PlanetThree_OasisDialogue
   - PlanetThree_StartDialogue
@@ -17683,7 +17689,7 @@ MonoBehaviour:
   - QuestChartDemo
   - Tutorial
   - Witch
-  assignedIndex: 15
+  assignedIndex: 16
   assignedID: 82071
   assignedDialogue: PlanetThree_MineDialogue
   interactionCount: 0
@@ -19431,7 +19437,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3eac4547dcf9f4f4fb2bb8566c49573f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 28744c23db5baf5498fa29e08728818f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
