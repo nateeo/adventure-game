@@ -20,6 +20,10 @@ public class UIManager : MonoBehaviour {
 	public Text[] text_choices;
 	public bool inventory_open;
 
+	// for npc name, if any
+	public Image nameBackground;
+	public Text npcName;
+
 	// for animating npc text
 	IEnumerator npcTextAnimator;
 	private bool animatingText;
@@ -32,6 +36,7 @@ public class UIManager : MonoBehaviour {
 		inventory_open = false;
 		container_NPC.SetActive (false);
 		container_PLAYER.SetActive (false);
+		nameBackground.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -52,13 +57,19 @@ public class UIManager : MonoBehaviour {
 		VD.OnEnd += End;
 
 		// clean data
+		nameBackground.enabled = false;
+		npcName.text = "";
 		previous_text = null;
 		text_NPC.text = "";
-
+		if (conversation.alias != null && conversation.alias != "") {
+			nameBackground.enabled = true;
+			npcName.text = conversation.alias;
+		}
 		VD.BeginDialogue (conversation);
 	}
 
 	public void CallNext() {
+		// skip animation if they press next
 		if (VD.isActive) {
 			if (animatingText) {
 				CutTextAnim ();
@@ -88,6 +99,7 @@ public class UIManager : MonoBehaviour {
 			text_choices [0].transform.parent.GetComponent<Button> ().Select ();
 		} else {
 			container_NPC.SetActive (true);
+			previous_text = data.comments [0];
 			npcTextAnimator = AnimateText(data);
 			StartCoroutine(npcTextAnimator);
 		}
