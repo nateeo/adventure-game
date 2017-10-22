@@ -7,35 +7,38 @@ public class onCollision : MonoBehaviour {
 	bool icyMovement;
 	private GameObject playerCharacter;
 	PlayerScript player;
+	UIManager uimanage;
+	CapsuleCollider collider;
+
 
 	void Update() {
 		playerCharacter = GameObject.FindWithTag ("Player");
-		PlayerScript player = playerCharacter.AddComponent<PlayerScript> ();
-
+		player = playerCharacter.GetComponent<PlayerScript> ();
+		rb = playerCharacter.GetComponent<Rigidbody> ();
+		collider = playerCharacter.GetComponent<CapsuleCollider> ();
 
 		if (Input.GetKeyDown (KeyCode.P) && icy == false) {
-			Debug.Log ("hi icy");
 			icy = true;
 		} else if (Input.GetKeyDown (KeyCode.P) && icy == true) {
-			Debug.Log ("bye icy");
 			icy = false;
 		}
 			
 	}
 	void OnCollisionEnter ( Collision collision) {
-		Debug.Log ("urgggghhh");
-		Debug.Log (icy);
 
+			if (icy == false) {
+				return;
+			}
+		if (collision.collider.ToString() == "Udo 1 (UnityEngine.BoxCollider)") {
+			
+			//player.icyMovement = true;
+			rb.isKinematic = true;
+			player.dialogFix = false;
+			Debug.Log (rb.isKinematic);
+			collider.enabled = true;
+			Debug.Log ("collider" + collider.enabled);
 
-		if (icy == false) {
-			Debug.Log ("not icy");
-
-			return;
 		}
-		
-		player.icyMovement = true;
-		Debug.Log ("icyyyyy");
-
 	}
 
 }

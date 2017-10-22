@@ -42,10 +42,22 @@ public class PlayerScript : MonoBehaviour {
 
 	public static float NPC_RANGE = 2f;
 
+	//fields for the puzzle planet two
+	public bool icyMovement = true;
+	bool icy = false;
+	int lastDirection;
+	public int icyspeed = 20;
+	float drag;
+	GameObject playerCharacter;
+	PhysicMaterial physics;
+	public CapsuleCollider collider;
+	public SphereCollider colIcy;
+
+
 	// Use this for initialization
 	void Start () {
-		journal.SetActive (false);
-		journalEnabled = false;
+//		journal.SetActive (false);
+//		journalEnabled = false;
 
 		Screen.lockCursor = true;
 		rigidBody = GetComponent<Rigidbody> ();
@@ -54,6 +66,9 @@ public class PlayerScript : MonoBehaviour {
 		controller = GetComponent<CharacterController> ();
 		rigidBody = GetComponent<Rigidbody> ();
 		inventory = GetComponent<PlayerInventory> ();
+		drag = rigidBody.drag;
+
+		colIcy = GetComponent<SphereCollider> ();
 	}
 
 	void Awake() {
@@ -83,17 +98,11 @@ public class PlayerScript : MonoBehaviour {
 				StartCoroutine (moveEnd ());
 			}
 		}
-		// disable all other interaction if journal is enabled
-		if (journalEnabled && inventory.enabled) {
-			inventory.disable ();
-		} else if (!inventory.enabled) {
-			inventory.enable ();
-		}
 
 		if (journalEnabled) {
 			return;
 		}
-		
+
 		if (Input.GetKeyDown (KeyCode.F)) {
 			TryInteract ();
 		}
@@ -104,7 +113,6 @@ public class PlayerScript : MonoBehaviour {
 				diagUI.interfaceOpen ();
 			}
 		}
-		diagUI.interactToolTipDisabled();
 		Collider[] hits = Physics.OverlapSphere (transform.position, NPC_RANGE);
 		for (int i = 0; i < hits.Length; i++) {
 			Collider rHit = hits [i];
@@ -112,6 +120,29 @@ public class PlayerScript : MonoBehaviour {
 				diagUI.interactToolTipEnabled();
 				break;
 			}
+		}
+
+		if (Input.GetKeyDown(KeyCode.P) && icy == false) {
+			icy = true;
+			icyMovement = true;
+			lastDirection = 0;
+			rigidBody.isKinematic = true;
+			//physics = new PhysicMaterial ();
+			//physics.dynamicFriction = 0;
+			//physics.staticFriction = 0;
+
+			//colIcy.material = physics;
+			colIcy.enabled = true;
+			diagUI.playerCamera.dialogFix = true;
+	
+		}  else if (Input.GetKeyDown(KeyCode.P) && icy == true) {
+			colIcy.enabled = false;
+			collider.enabled = true;
+			rigidBody.isKinematic = false;
+			Destroy (colIcy);
+			icy = false;
+			diagUI.playerCamera.dialogFix = false;
+
 		}
 	}
 
@@ -148,7 +179,6 @@ public class PlayerScript : MonoBehaviour {
 		// move towards the camera position
 
 		Vector3 movement = new Vector3(h, 0.0f, v);
-		movement = Camera.main.transform.TransformDirection(movement);
 
 		if (Input.GetKey (KeyCode.LeftShift)) {
 			speed = runSpeed;
@@ -156,9 +186,61 @@ public class PlayerScript : MonoBehaviour {
 			speed = walkSpeed;
 		}
 
-		movement = movement.normalized * speed * Time.deltaTime;
-			
-		rigidBody.MovePosition (transform.position + movement);
+		if (icy == true) {
+
+			if (Input.GetKeyDown (KeyCode.A) && rigidBody.isKinematic == true && lastDirection != 1){
+				dialogFix = true;
+				collider.enabled = false;
+				Debug.Log ("left " + collider.enabled);
+				rigidBody.velocity = new Vector3 (-icyspeed, 0, 0);
+				lastDirection = 1;
+				rigidBody.isKinematic = false;
+			}
+
+			if (Input.GetKeyDown (KeyCode.D) && rigidBody.isKinematic == true && lastDirection != 2){
+				dialogFix = true;
+				collider.enabled = false;
+				Debug.Log ("right" + collider.enabled);
+
+				rigidBody.velocity = new Vector3(icyspeed, 0, 0);
+				lastDirection = 2;
+				rigidBody.isKinematic = false;
+
+			}
+
+			if (Input.GetKeyDown (KeyCode.W) && rigidBody.isKinematic == true && lastDirection != 3){
+				dialogFix = true;
+				collider.enabled = false;
+		
+				Debug.Log ("up" + collider.enabled);
+
+				rigidBody.velocity = new Vector3(0, 0, icyspeed);
+				lastDirection = 3;
+				rigidBody.isKinematic = false;
+
+
+			}
+
+			if (Input.GetKeyDown (KeyCode.S) && rigidBody.isKinematic == true && lastDirection != 4){
+				dialogFix = true;
+				collider.enabled = false;
+				Debug.Log ("down" + collider.enabled);
+
+				rigidBody.velocity = new Vector3(0, 0, -icyspeed);
+				lastDirection = 4;
+				rigidBody.isKinematic = false;
+
+
+
+			}
+		}  else if (icy == false) {
+			movement = Camera.main.transform.TransformDirection(movement);
+
+			movement = movement.normalized * speed * Time.deltaTime;
+
+			rigidBody.MovePosition (transform.position + movement);
+
+		}
 
 		if (movement != Vector3.zero) {
 			rigidBody.MoveRotation (Quaternion.LookRotation (new Vector3(movement.x, 0.0f, movement.z)));
@@ -207,29 +289,29 @@ public class PlayerScript : MonoBehaviour {
 	}
 
 	// to talk to NPCs
-    void TryInteract()
-    {
-        if (VD.isActive)
-        {
-            VD.Next();
-            return;
-        }
+	void TryInteract()
+	{
+		if (VD.isActive)
+		{
+			VD.Next();
+			return;
+		}
 
-        Collider[] hits = Physics.OverlapSphere(transform.position, NPC_RANGE);
-        for (int i = 0; i < hits.Length; i++)
-        {
-            Collider rHit = hits[i];
-            VIDE_Assign assigned;
-            if (rHit.GetComponent<Collider>().GetComponent<VIDE_Assign>() != null)
-            {
-                assigned = rHit.GetComponent<Collider>().GetComponent<VIDE_Assign>();
-                if (!VD.isActive)
-                {
-                    //... and use it to begin the conversation, look at the target
-                    diagUI.Begin(rHit, assigned);
-                }
-                return;
-            }
-        }
-    }
+		Collider[] hits = Physics.OverlapSphere(transform.position, NPC_RANGE);
+		for (int i = 0; i < hits.Length; i++)
+		{
+			Collider rHit = hits[i];
+			VIDE_Assign assigned;
+			if (rHit.GetComponent<Collider>().GetComponent<VIDE_Assign>() != null)
+			{
+				assigned = rHit.GetComponent<Collider>().GetComponent<VIDE_Assign>();
+				if (!VD.isActive)
+				{
+					//... and use it to begin the conversation, look at the target
+					diagUI.Begin(rHit, assigned);
+				}
+				return;
+			}
+		}
+	}
 }
