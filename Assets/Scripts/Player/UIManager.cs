@@ -37,6 +37,7 @@ public class UIManager : MonoBehaviour {
 		container_NPC.SetActive (false);
 		container_PLAYER.SetActive (false);
 		nameBackground.enabled = false;
+		npcName.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -58,14 +59,14 @@ public class UIManager : MonoBehaviour {
 
 		// clean data
 		nameBackground.enabled = false;
-		npcName.text = "";
 		previous_text = null;
 		text_NPC.text = "";
+		VD.BeginDialogue (conversation);
 		if (conversation.alias != null && conversation.alias != "") {
 			nameBackground.enabled = true;
+			npcName.enabled = true;
 			npcName.text = conversation.alias;
 		}
-		VD.BeginDialogue (conversation);
 	}
 
 	public void CallNext() {
@@ -107,6 +108,7 @@ public class UIManager : MonoBehaviour {
 		
 	public void End(VD.NodeData data) {
 		nameBackground.enabled = false;
+		npcName.enabled = false;
 		VD.OnNodeChange -= UpdateUI;
 		VD.OnEnd -= End;
 		VD.EndDialogue ();
