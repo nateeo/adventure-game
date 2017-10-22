@@ -60,17 +60,14 @@ public class PlayerScript : MonoBehaviour {
 		inventory = GetComponent<PlayerInventory> ();
 	}
 
-	void Awake() {
-		DontDestroyOnLoad (transform.gameObject);
-	}
-
-	// force text selection to end so journal is preserved
+		// force text selection to end so journal is preserved
 	IEnumerator moveEnd()
 	{
 		yield return 0; // Skip the first frame in which this is called.
 		input.MoveTextEnd(false); // Do this during the next frame.
 	}
 
+	
 	void Update() {
 
 		if (SceneManager.GetActiveScene ().buildIndex == 0) {
