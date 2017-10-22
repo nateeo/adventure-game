@@ -211,7 +211,9 @@ public class PlayerScript : MonoBehaviour {
 			diagUI.interfaceOpen ();
 			journal.SetActive (true);
 		} else {
-			diagUI.interfaceClosed ();
+			if (!inventory.open) {
+				diagUI.interfaceClosed ();
+			}
 			journal.SetActive (false);
 		}
 	}

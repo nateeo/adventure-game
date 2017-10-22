@@ -14,6 +14,7 @@ public class PlayerInventory : MonoBehaviour
     private Inventory characterSystemInventory;
     private Tooltip toolTip;
 	public bool disabled;
+	public bool open;
 
     private InputManager inputManagerDatabase;
 
@@ -269,12 +270,14 @@ public class PlayerInventory : MonoBehaviour
 			}
             if (!inventory.activeSelf)
             {
+				open = true;
                 mainInventory.openInventory();
             }
             else
             {
                 if (toolTip != null)
                     toolTip.deactivateTooltip();
+				open = false;
                 mainInventory.closeInventory();
             }
         }
