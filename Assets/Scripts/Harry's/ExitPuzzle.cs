@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class ExitPuzzle : MonoBehaviour
 {
     public GameObject canvas;
+    public GameObject UIManager;
     public GameObject room1Clue1;
     public GameObject room1Clue2;
     public GameObject room2Clue1;
@@ -123,5 +124,11 @@ public class ExitPuzzle : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         canvas.SetActive(true);
+        UIManager.GetComponent<UIManager>().interfaceOpen();
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        UIManager.GetComponent<UIManager>().interfaceClosed();
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class GenerateNumbers : MonoBehaviour {
 
+    public GameObject UIManager;
     public GameObject passcodeScreen;
     public GameObject passcodeButton;
     public GameObject number1;
@@ -149,13 +150,13 @@ public class GenerateNumbers : MonoBehaviour {
         if (!passcodeButton.GetComponent<SubmitPasscode>().getAnswer())
         {
             passcodeScreen.SetActive(true);
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            UIManager.GetComponent<UIManager>().interfaceOpen();
         }
     }
-
+    
     private void OnTriggerExit(Collider other)
     {
         passcodeScreen.SetActive(false);
+        UIManager.GetComponent<UIManager>().interfaceClosed();
     }
 }

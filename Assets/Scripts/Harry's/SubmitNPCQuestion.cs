@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class SubmitNPCQuestion : MonoBehaviour {
 
+    public GameObject UIManager;
     public GameObject exitPuzzleState;
     public GameObject passcodeScreen;
     public GameObject canvas;
@@ -52,6 +53,7 @@ public class SubmitNPCQuestion : MonoBehaviour {
                 door4.transform.Rotate(0, -80, 0);
             }
             canvas.SetActive(false);
+            UIManager.GetComponent<UIManager>().interfaceClosed();
         }
         else
         {

@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class SubmitPasscode : MonoBehaviour {
 
+    public GameObject UIManager;
     public GameObject passcodeScreen;
     public GameObject door;
     public Text responseText;
@@ -15,8 +16,12 @@ public class SubmitPasscode : MonoBehaviour {
     private string passcode;
     private bool hasAnswered = false;
 
-    private void Start()
+    private void Update()
     {
+        if (Input.GetKey(KeyCode.Return))
+        {
+            onPassCodeEnter();
+        }
     }
 
     public void onPassCodeEnter()
@@ -31,6 +36,7 @@ public class SubmitPasscode : MonoBehaviour {
             door.transform.Rotate(0, 80, 0);
             passcodeScreen.SetActive(false);
             hasAnswered = true;
+            UIManager.GetComponent<UIManager>().interfaceClosed();
         } else
         {
             responseText.text = "Wrong, try again!";

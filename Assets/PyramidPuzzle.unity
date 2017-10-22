@@ -1841,6 +1841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1025625835}
+  UIManager: {fileID: 284322041}
 --- !u!114 &215160804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2789,6 +2790,57 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 731670d05affd0045a25600d2045889f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &284322041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 284322043}
+  - 114: {fileID: 284322042}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &284322042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 284322041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a06394bb078440cba8964a4d49d0c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 1898595369}
+  rigidBody: {fileID: 1898595375}
+  playerCamera: {fileID: 904726519}
+  container_NPC: {fileID: 586190807}
+  container_PLAYER: {fileID: 1006272085}
+  interactToolTip: {fileID: 0}
+  text_NPC: {fileID: 0}
+  previous_text: 
+  interactTooltip: 0
+  text_choices: []
+  inventory_open: 0
+--- !u!4 &284322043
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 284322041}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 84.78, y: 0.0014176369, z: 169.32245}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
 --- !u!4 &288484691 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 4aa5a7ef56dd26f4d8cdad18e6dd51d2, type: 2}
@@ -3910,6 +3962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 83482165}
   canvas: {fileID: 1025625835}
+  UIManager: {fileID: 0}
   questionButton: {fileID: 833577125}
   exitPuzzleState: {fileID: 1666233683}
   question: A dealer bought an article for $7, sold it for $8, bought it back for
@@ -6252,6 +6305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 397765273}
+  UIManager: {fileID: 0}
   room1Clue1: {fileID: 1699482996}
   room1Clue2: {fileID: 942641334}
   room2Clue1: {fileID: 334681213}
@@ -6952,6 +7006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4afa9e7f698baa49b2cfffc7cd1ab13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UIManager: {fileID: 0}
   exitPuzzleState: {fileID: 1666233683}
   passcodeScreen: {fileID: 1025625835}
   canvas: {fileID: 1025625835}
@@ -8218,6 +8273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 397765273}
+  UIManager: {fileID: 284322041}
 --- !u!4 &954691680 stripped
 Transform:
   m_PrefabParentObject: {fileID: 420012, guid: 01311b99708e82145a709f95952e18b6, type: 2}
@@ -8738,6 +8794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ddafccb4f7d4649bb4acd2477de99e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UIManager: {fileID: 0}
   passcodeScreen: {fileID: 1214476594}
   door: {fileID: 1970145888}
   responseText: {fileID: 2100232676}
@@ -10463,6 +10520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1203796013}
   canvas: {fileID: 1025625835}
+  UIManager: {fileID: 0}
   questionButton: {fileID: 833577125}
   exitPuzzleState: {fileID: 1666233683}
   question: What's your name?
@@ -11785,6 +11843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 1463187484}
   canvas: {fileID: 1025625835}
+  UIManager: {fileID: 0}
   questionButton: {fileID: 833577125}
   exitPuzzleState: {fileID: 1666233683}
   question: How many months have 28 days?
@@ -11943,6 +12002,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 61177116}
   canvas: {fileID: 1025625835}
+  UIManager: {fileID: 0}
   questionButton: {fileID: 833577125}
   exitPuzzleState: {fileID: 1666233683}
   question: "Sam\u2019s dad had five daughters: June, July, August, and September.
@@ -12049,6 +12109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1214476594}
+  UIManager: {fileID: 284322041}
 --- !u!114 &1388980557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14075,6 +14136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 397765273}
+  UIManager: {fileID: 0}
 --- !u!114 &1679035251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15960,6 +16022,17 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
+--- !u!114 &1898595369 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11493192, guid: 5bf084aef213e9947bf7c9cee2bcc0da,
+    type: 2}
+  m_PrefabInternal: {fileID: 1620597538}
+  m_Script: {fileID: 11500000, guid: 8be21b42c3ce61241af7d67d6cd6a62c, type: 3}
+--- !u!54 &1898595375 stripped
+Rigidbody:
+  m_PrefabParentObject: {fileID: 5434454, guid: 5bf084aef213e9947bf7c9cee2bcc0da,
+    type: 2}
+  m_PrefabInternal: {fileID: 1620597538}
 --- !u!4 &1900643558 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ce73a35450ff20d4ab05c1f0c3cec2dc, type: 2}
@@ -16273,6 +16346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63fa488dcb263c64d8bbdd49f1b49a97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UIManager: {fileID: 284322041}
   passcodeScreen: {fileID: 1214476594}
   passcodeButton: {fileID: 997348576}
   number1: {fileID: 592309497}

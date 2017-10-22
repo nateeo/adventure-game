@@ -5,6 +5,7 @@ public class NPCPuzzleRiddle : MonoBehaviour {
 
     public GameObject door;
     public GameObject canvas;
+    public GameObject UIManager;
     public GameObject questionButton;
     public GameObject exitPuzzleState;
     public string question;
@@ -70,10 +71,12 @@ public class NPCPuzzleRiddle : MonoBehaviour {
                 canvas.SetActive(true);
             }
         }
+        UIManager.GetComponent<UIManager>().interfaceOpen();
     }
 
     private void OnTriggerExit(Collider other)
     {
         canvas.SetActive(false);
+        UIManager.GetComponent<UIManager>().interfaceClosed();
     }
 }
