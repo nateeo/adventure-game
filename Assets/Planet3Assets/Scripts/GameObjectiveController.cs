@@ -33,8 +33,6 @@ public class GameObjectiveController : MonoBehaviour {
 		for (int i = 1; i < 5; i++) {
 			markers [i].gameObject.SetActive (false);
 		}
-
-		activateAllWaypoints ();
 	}
 
 	//This is called when the player enters the triggered area
