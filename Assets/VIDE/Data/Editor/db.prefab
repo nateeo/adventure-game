@@ -44,15 +44,15 @@ MonoBehaviour:
   loadTag: 
   startID: 0
   curFocusID: 0
-  currentID: 97802
+  currentID: 25552
   autosave: 1
   previewPanning: 0
   currentDiag: 19
   locEdit: 0
   S_playerDiags:
-  - commentCount: 2
+  - commentCount: 4
     s_comment:
-    - text: Can you tell me about the seasons of this planet?
+    - text: Does the person who wears a red hat and a blue scarf always say the truth?
       extraData: ExtraData
       inputSetIndex: 0
       outputNodeIndex: 1
@@ -67,7 +67,7 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: Can you tell me anything about a base on this planet?
+    - text: Does the racoon always tell the truth?
       extraData: ExtraData
       inputSetIndex: 0
       outputNodeIndex: 2
@@ -76,7 +76,37 @@ MonoBehaviour:
       outRect:
         serializedVersion: 2
         x: 281
-        y: 80
+        y: 93
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Does the person who wears a red hat and a blue scarf always lie?
+      extraData: ExtraData
+      inputSetIndex: 0
+      outputNodeIndex: 3
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 124
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Does the racoon always lie?
+      extraData: ExtraData
+      inputSetIndex: 0
+      outputNodeIndex: 4
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 155
         width: 30
         height: 18
       sprites: {fileID: 0}
@@ -85,10 +115,10 @@ MonoBehaviour:
     ID: 0
     rect:
       serializedVersion: 2
-      x: 120
-      y: 160
+      x: 0
+      y: 120
       width: 316
-      height: 141
+      height: 205
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -97,29 +127,28 @@ MonoBehaviour:
     isPlayer: 1
   - commentCount: 1
     s_comment:
-    - text: At the start of every year, the seasons rotate around. I remember the
-        seasons rotated clockwise twice last year, which was five-seven (57)
+    - text: No
       extraData: ExtraData
       inputSetIndex: 1
-      outputNodeIndex: 3
+      outputNodeIndex: -1
       outActionIndex: -1
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 1
     rect:
       serializedVersion: 2
-      x: 480
-      y: 50
+      x: 400
+      y: -20
       width: 316
-      height: 136
+      height: 99
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -128,7 +157,7 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: Base?? Sorry, doesn't ring any bells..
+    - text: Yes
       extraData: ExtraData
       inputSetIndex: 2
       outputNodeIndex: -1
@@ -146,8 +175,8 @@ MonoBehaviour:
     ID: 2
     rect:
       serializedVersion: 2
-      x: 480
-      y: 280
+      x: 400
+      y: 110
       width: 316
       height: 99
     pTag: 
@@ -158,8 +187,7 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: My mama also told me how the seasons rotated anti-clockwise 3 times in
-        year 30, that was when I was born
+    - text: Yes
       extraData: ExtraData
       inputSetIndex: 3
       outputNodeIndex: -1
@@ -177,10 +205,40 @@ MonoBehaviour:
     ID: 3
     rect:
       serializedVersion: 2
-      x: 840
-      y: 50
+      x: 400
+      y: 230
       width: 316
-      height: 136
+      height: 99
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: Yes
+      extraData: ExtraData
+      inputSetIndex: 4
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 4
+    rect:
+      serializedVersion: 2
+      x: 400
+      y: 360
+      width: 316
+      height: 99
     pTag: 
     expand: 0
     sprite: {fileID: 0}
