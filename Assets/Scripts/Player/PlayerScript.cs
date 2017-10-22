@@ -15,6 +15,9 @@ public class PlayerScript : MonoBehaviour {
 	Animator anim;
 	public int forceConst;
 
+	// tooltip for various notifications
+	public Text toolTip;
+
 	private CharacterController controller;
 
 	private float verticalVelocity;
@@ -44,6 +47,7 @@ public class PlayerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		toolTip.enabled = false;
 		journal.SetActive (false);
 		journalEnabled = false;
 
@@ -140,6 +144,18 @@ public class PlayerScript : MonoBehaviour {
 			GetComponent<Rigidbody>().velocity = Vector3.zero;
 			GetComponent<Rigidbody>().angularVelocity = Vector3.zero; 
 			rigidBody.AddForce(0, -3 * forceConst, 0, ForceMode.Impulse);
+		}
+	}
+
+	// handle bounty notifications
+	public void notifyBounty(bool enabled) {
+		if (toolTip.enabled != enabled) {
+			toolTip.enabled = enabled;
+		}
+		if (enabled) {
+			toolTip.text = "Press 'F' to capture the fugitive!";
+		} else {
+			toolTip.text = "";
 		}
 	}
 
