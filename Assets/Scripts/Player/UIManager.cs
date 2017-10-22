@@ -105,7 +105,7 @@ public class UIManager : MonoBehaviour {
 		}
 	}
 		
-	void End(VD.NodeData data) {
+	public void End(VD.NodeData data) {
 		nameBackground.enabled = false;
 		VD.OnNodeChange -= UpdateUI;
 		VD.OnEnd -= End;

@@ -225,7 +225,7 @@ public class PlayerScript : MonoBehaviour {
     {
         if (VD.isActive)
         {
-            VD.Next();
+			diagUI.CallNext ();
             return;
         }
 
