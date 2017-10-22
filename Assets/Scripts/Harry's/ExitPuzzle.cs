@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class ExitPuzzle : MonoBehaviour
 {
+    public GameObject canvas;
     public GameObject room1Clue1;
     public GameObject room1Clue2;
     public GameObject room2Clue1;
@@ -49,15 +50,15 @@ public class ExitPuzzle : MonoBehaviour
         room4.Add(room4Clue2);
         clues.Add(room4);
 
-        trueClueList.Add("A < B T");
-        trueClueList.Add("B < C T");
-        trueClueList.Add("A < D T");
-        trueClueList.Add("A < C T");
+        trueClueList.Add("Tutankhamen < Takelot");
+        trueClueList.Add("Shebitku < Apepi");
+        trueClueList.Add("Tutankhamen < Shebitku");
+        trueClueList.Add("Takelot < Shebitku");
 
-        falseClueList.Add("B < A F");
-        falseClueList.Add("D < C F");
-        falseClueList.Add("D < A F");
-        falseClueList.Add("C < A F");
+        falseClueList.Add("Takelot < Tutankhamen");
+        falseClueList.Add("Shebitku < Takelot");
+        falseClueList.Add("Apepi < Shebitku");
+        falseClueList.Add("Shebitku < Tutankhamen");
     }
 
     private void hideClues()
@@ -117,5 +118,10 @@ public class ExitPuzzle : MonoBehaviour
             Debug.Log(t1.text + trueRooms[i]);
             Debug.Log(t2.text + trueRooms[i]);
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        canvas.SetActive(true);
     }
 }

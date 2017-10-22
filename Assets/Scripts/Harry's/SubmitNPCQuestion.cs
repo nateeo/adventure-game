@@ -13,6 +13,7 @@ public class SubmitNPCQuestion : MonoBehaviour {
     public GameObject door4;
     public Text answerInput;
     public Text questionText;
+    public Text responseText;
     string answer;
     int roomNumber;
 
@@ -54,6 +55,7 @@ public class SubmitNPCQuestion : MonoBehaviour {
         }
         else
         {
+            responseText.text = "Wrong, try again!";
             Debug.Log("Wrong");
         }
     }

@@ -6,6 +6,7 @@ public class SubmitPasscode : MonoBehaviour {
 
     public GameObject passcodeScreen;
     public GameObject door;
+    public Text responseText;
     public Text passcodeInput1;
     public Text passcodeInput2;
     public Text passcodeInput3;
@@ -30,6 +31,9 @@ public class SubmitPasscode : MonoBehaviour {
             door.transform.Rotate(0, 80, 0);
             passcodeScreen.SetActive(false);
             hasAnswered = true;
+        } else
+        {
+            responseText.text = "Wrong, try again!";
         }
     }
 
