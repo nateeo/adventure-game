@@ -12,7 +12,7 @@ public class PlayerScript : MonoBehaviour {
 	public Rigidbody rigidBody;
 	Vector3 movement;
 	public Vector3 jump;
-	Animator anim;
+	public Animator anim;
 	public int forceConst;
 
 	// tooltip for various notifications
@@ -41,7 +41,7 @@ public class PlayerScript : MonoBehaviour {
 	public bool journalEnabled;
 	public InputField input;
 
-	private PlayerInventory inventory;
+	public PlayerInventory inventory;
 
 	public static float NPC_RANGE = 2f;
 
@@ -56,8 +56,6 @@ public class PlayerScript : MonoBehaviour {
 		//jump = new Vector3 (0.0f, 0.2f, 0.0f);
 		anim = GetComponent<Animator> ();
 		controller = GetComponent<CharacterController> ();
-		rigidBody = GetComponent<Rigidbody> ();
-		inventory = GetComponent<PlayerInventory> ();
 	}
 
 	void Awake() {
@@ -210,63 +208,6 @@ public class PlayerScript : MonoBehaviour {
 		anim.SetBool ("IsWalking", walking);
 		anim.SetBool ("IsRunning", running);
 	}
-  
-	void TryInteract()
-	{
-		if (VD.isActive) {
-			diagUI.CallNext ();
-			return;
-		}
-
-		Collider[] hits = Physics.OverlapSphere (transform.position, NPC_RANGE);
-		for (int i = 0; i < hits.Length; i++) {
-			Collider rHit = hits [i];
-			VIDE_Assign assigned;
-			if (rHit.GetComponent<Collider>().GetComponent<VIDE_Assign> () != null) {
-				assigned = rHit.GetComponent<Collider>().GetComponent<VIDE_Assign> ();
-				if (!VD.isActive) {
-					//... and use it to begin the conversation, look at the target
-					diagUI.Begin (rHit, assigned);
-				}
-				return;
-			}
-		}
-	}
-
-
-	int computeTimeBasedScore()
-	{
-		float timeEllapsed = Time.time - startTime;
-		float division = maxTime / 3;
-		if (timeEllapsed < division)
-		{
-			return 3;
-		}
-		else if (timeEllapsed < division * 2)
-		{
-			return 2;
-		} else if (timeEllapsed < division * 3)
-		{
-			return 1;
-		}
-		return 0;
-	}
-
-	//Method for computing the score based on a number of bonuses picked up.
-	//The policy is a 3 section idea: 0/1/2/3 stars.
-	int computeBonusBasedScore()
-	{
-		if (numberOfBonuses >= maxNumberOfBonuses)
-		{
-			return 3;
-		}
-		else if (numberOfBonuses >= maxNumberOfBonuses / 2.0)
-		{
-			return 2;
-		}
-		else if (numberOfBonuses > 0)
-		{
-			return 1;
 
 	void toggleJournal() {
 		journalEnabled = !journalEnabled;
@@ -292,8 +233,6 @@ public class PlayerScript : MonoBehaviour {
         for (int i = 0; i < hits.Length; i++)
         {
             Collider rHit = hits[i];
-			Debug.Log ("HIT SOMETHING");
-			Debug.Log (rHit.GetType ());
             VIDE_Assign assigned;
             if (rHit.GetComponent<Collider>().GetComponent<VIDE_Assign>() != null)
             {

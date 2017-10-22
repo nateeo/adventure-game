@@ -178,12 +178,12 @@ Material:
         second: {r: 0.67451, g: 0.913725, b: 0.937255, a: 1}
       data:
         first:
-          name: _RefrColor
-        second: {r: 0.34, g: 0.85, b: 0.92, a: 1}
-      data:
-        first:
           name: WaveSpeed
         second: {r: 19, g: 9, b: -16, a: -7}
+      data:
+        first:
+          name: _RefrColor
+        second: {r: 0.34, g: 0.85, b: 0.92, a: 1}
       data:
         first:
           name: _HorizonColor
