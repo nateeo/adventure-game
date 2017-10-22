@@ -156,13 +156,13 @@ public class GenerateNumbers : MonoBehaviour {
             TextMesh t = wall.GetComponent<TextMesh>();
             t.text = numbers[i].ToString();
 
-            // Plot the text in grey if the number is in the passcode, white if not
+            // Plot the text in black if the number is in the passcode, grey if not
             if (isPasscode[i] == 1)
             {
-                t.color = Color.grey;
+                t.color = Color.white;
             } else
             {
-                t.color = Color.white;
+                t.color = Color.grey;
             }
         }
     }

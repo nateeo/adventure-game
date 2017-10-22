@@ -64,7 +64,11 @@ public class SubmitExitPuzzle : MonoBehaviour {
         {
             correct = false;
         }
+        Debug.Log(answer1.text.ToLower());
+        Debug.Log(answer2.text.ToLower());
+        Debug.Log(answer3.text.ToLower());
 
+        Debug.Log(answer4.text.ToLower());
         // If it's clue, open the door for the player to exit the puzzle map
         if (correct)
         {
