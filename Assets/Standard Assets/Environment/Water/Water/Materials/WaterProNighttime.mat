@@ -2,16 +2,14 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: WaterProNighttime
   m_Shader: {fileID: 4800000, guid: 1cac2e0bcc34e4b3cbb4bd85982eba83, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
+  m_ShaderKeywords: []
   m_CustomRenderQueue: -1
-  stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -68,15 +66,15 @@ Material:
       data:
         first:
           name: _WaveScale
-        second: 0.063
+        second: .063000001
       data:
         first:
           name: _ReflDistort
-        second: 0.44
+        second: .439999998
       data:
         first:
           name: _RefrDistort
-        second: 0.4
+        second: .400000006
     m_Colors:
       data:
         first:
@@ -84,7 +82,11 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _MainTex_ST
+          name: _RefrColor
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _Fresnel_ST
         second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
@@ -96,20 +98,12 @@ Material:
         second: {r: 9, g: 4.5, b: -8, a: -3.5}
       data:
         first:
-          name: _RefrColor
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _Fresnel_ST
-        second: {r: 1, g: 1, b: 0, a: 0}
-      data:
-        first:
           name: _ReflectiveColor_ST
         second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
           name: _HorizonColor
-        second: {r: 0.14901961, g: 0.28235295, b: 0.38039216, a: 0}
+        second: {r: .149019614, g: .282352954, b: .380392164, a: 0}
       data:
         first:
           name: _ReflectionTex_ST
@@ -117,6 +111,10 @@ Material:
       data:
         first:
           name: _RefractionTex_ST
+        second: {r: 1, g: 1, b: 0, a: 0}
+      data:
+        first:
+          name: _MainTex_ST
         second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:

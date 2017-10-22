@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Dialogue : MonoBehaviour
 {
 	private Text _textComponent;
+	public int sceneToLoad;
 
 	[TextArea(3, 10)]
 	public string[] DialogueStrings;
@@ -43,7 +44,7 @@ public class Dialogue : MonoBehaviour
 			}
 
 		} else if (Input.GetKeyDown (KeyCode.Space)) {
-			SceneManager.LoadScene (1);
+			SceneManager.LoadScene (sceneToLoad);
 		}
 	}
 
@@ -81,8 +82,7 @@ public class Dialogue : MonoBehaviour
 		HideIcons();
 		_isEndOfDialogue = false;
 		_isDialoguePlaying = false;
-		Debug.Log ("Is this the end of the script? fucking ded");
-		SceneManager.LoadScene (1);
+		SceneManager.LoadScene (sceneToLoad);
 	}
 
 	private IEnumerator DisplayString(string stringToDisplay)

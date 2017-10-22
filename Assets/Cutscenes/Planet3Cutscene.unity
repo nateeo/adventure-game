@@ -41,7 +41,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 6
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_LightmapsMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -482,10 +482,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 363738666}
-  m_LocalRotation: {x: 0.40821794, y: -0.23456973, z: 0.109381676, w: 0.87542605}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.3407187, y: 0.08189961, z: -0.029809026, w: 0.9361168}
+  m_LocalPosition: {x: 102.33, y: 99.36, z: -55}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 40, y: 10, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -779,9 +779,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
       propertyPath: DialogueStrings.Array.data[1]
-      value: "Revior: \nYou just need to get to the markers on time to catch him.
-        He\u2019s just landed on the planet so you shouldn\u2019t be too far behind
-        him.\n"
+      value: "Revior: \nYou just need to get to the blue markers on time to catch
+        him. He\u2019s just landed on the planet so you shouldn\u2019t be too far
+        behind him.\n"
       objectReference: {fileID: 0}
     - target: {fileID: 22461756, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
       propertyPath: m_AnchorMax.x
@@ -799,6 +799,14 @@ Prefab:
       propertyPath: blackOutScreen
       value: 
       objectReference: {fileID: 1122758608}
+    - target: {fileID: 11484596, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
+      propertyPath: sceneToLoad
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
   m_IsPrefabParent: 0
@@ -1374,6 +1382,48 @@ Transform:
   - {fileID: 1524508522}
   m_Father: {fileID: 1061731557}
   m_RootOrder: 2
+--- !u!1001 &1233692432
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 410472, guid: a6c26f85170c74575a96793129c8ff6d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -150
+      objectReference: {fileID: 0}
+    - target: {fileID: 410472, guid: a6c26f85170c74575a96793129c8ff6d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 410472, guid: a6c26f85170c74575a96793129c8ff6d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 410472, guid: a6c26f85170c74575a96793129c8ff6d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410472, guid: a6c26f85170c74575a96793129c8ff6d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410472, guid: a6c26f85170c74575a96793129c8ff6d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410472, guid: a6c26f85170c74575a96793129c8ff6d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 410472, guid: a6c26f85170c74575a96793129c8ff6d, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a6c26f85170c74575a96793129c8ff6d, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1257248212
 GameObject:
   m_ObjectHideFlags: 0
