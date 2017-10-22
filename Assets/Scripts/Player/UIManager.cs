@@ -104,8 +104,9 @@ public class UIManager : MonoBehaviour {
 			StartCoroutine(npcTextAnimator);
 		}
 	}
-
+		
 	void End(VD.NodeData data) {
+		nameBackground.enabled = false;
 		VD.OnNodeChange -= UpdateUI;
 		VD.OnEnd -= End;
 		VD.EndDialogue ();
