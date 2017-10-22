@@ -48,12 +48,9 @@ public class PlayerScript : MonoBehaviour {
 		journalEnabled = false;
 
 		Screen.lockCursor = true;
-		rigidBody = GetComponent<Rigidbody> ();
 		//jump = new Vector3 (0.0f, 0.2f, 0.0f);
 		anim = GetComponent<Animator> ();
 		controller = GetComponent<CharacterController> ();
-		rigidBody = GetComponent<Rigidbody> ();
-		inventory = GetComponent<PlayerInventory> ();
 	}
 
 	void Awake() {
@@ -84,15 +81,6 @@ public class PlayerScript : MonoBehaviour {
 			}
 		}
 		// disable all other interaction if journal is enabled
-		if (journalEnabled && inventory.enabled) {
-			inventory.disable ();
-		} else if (!inventory.enabled) {
-			inventory.enable ();
-		}
-
-		if (journalEnabled) {
-			return;
-		}
 		
 		if (Input.GetKeyDown (KeyCode.F)) {
 			TryInteract ();
@@ -104,7 +92,7 @@ public class PlayerScript : MonoBehaviour {
 				diagUI.interfaceOpen ();
 			}
 		}
-		diagUI.interactToolTipDisabled();
+
 		Collider[] hits = Physics.OverlapSphere (transform.position, NPC_RANGE);
 		for (int i = 0; i < hits.Length; i++) {
 			Collider rHit = hits [i];

@@ -10,7 +10,7 @@ public class onCollision : MonoBehaviour {
 
 	void Update() {
 		playerCharacter = GameObject.FindWithTag ("Player");
-		PlayerScript player = playerCharacter.AddComponent<PlayerScript> ();
+		PlayerScript player = playerCharacter.GetComponent<PlayerScript> ();
 
 
 		if (Input.GetKeyDown (KeyCode.P) && icy == false) {
@@ -33,7 +33,7 @@ public class onCollision : MonoBehaviour {
 			return;
 		}
 		
-		player.icyMovement = true;
+		//player.icyMovement = true;
 		Debug.Log ("icyyyyy");
 
 	}
