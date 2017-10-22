@@ -43,8 +43,11 @@ public class PickUpItem : MonoBehaviour
 					//increment the bonus counter
 					PlayerScore ps = _player.GetComponent<PlayerScore> ();
 					ps.incrementBonus ();
+					// remove tooltip
+					_player.notifyBounty(false);
 					//destory the object once counter has been incremented
 					Destroy (this.gameObject);
+
 				} else if (item.itemType == ItemType.Memory) {
 					_memoryScript.foundMemory ();
 					Destroy (this.gameObject);
