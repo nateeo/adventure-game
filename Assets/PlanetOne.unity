@@ -2694,6 +2694,7 @@ GameObject:
   - 124: {fileID: 836361851}
   - 81: {fileID: 836361850}
   - 114: {fileID: 836361855}
+  - 114: {fileID: 836361856}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2751,7 +2752,7 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 0
+  m_HDR: 1
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
@@ -2785,6 +2786,23 @@ MonoBehaviour:
   camTransform: {fileID: 709207749}
   sensitivityX: 30
   sensitivityY: 30
+--- !u!114 &836361856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 836361849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3309686a9fbbe6e42a182d5e0257704c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intensity: 0.5
+  threshold: 0
+  blurSpread: 1
+  separableBlurShader: {fileID: 4800000, guid: e97c14fbb5ea04c3a902cc533d7fc5d1, type: 3}
+  contrastCompositeShader: {fileID: 4800000, guid: 273404942eede4ea1883ca1fb2942507,
+    type: 3}
 --- !u!1001 &858872264
 Prefab:
   m_ObjectHideFlags: 0
@@ -6987,11 +7005,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22436416, guid: dd091bbc866e54dcc9b82e6ba1f3fd35, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 1000
+      value: 3000
       objectReference: {fileID: 0}
     - target: {fileID: 22436416, guid: dd091bbc866e54dcc9b82e6ba1f3fd35, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 1000
+      value: 3000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd091bbc866e54dcc9b82e6ba1f3fd35, type: 2}
