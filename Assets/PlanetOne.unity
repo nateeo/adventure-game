@@ -2354,6 +2354,17 @@ MonoBehaviour:
   craftSystem: {fileID: 0}
   HPMANACanvas: {fileID: 0}
   currentHealth: 60
+--- !u!114 &709207759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 709207748}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f75cce945e754bfc8708d85284d36ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &727012464 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: eb4fdd308d7e5e6409868e9329ecf8b0, type: 3}
