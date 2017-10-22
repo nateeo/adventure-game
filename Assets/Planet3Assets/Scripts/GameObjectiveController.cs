@@ -18,6 +18,9 @@ public class GameObjectiveController : MonoBehaviour {
 	private GameObjective[] markers = new GameObjective[5];
 	private int markerValue = 0;
 
+	private bool endGame = false;
+	private int[] endGameMarker = new int[5]; //Oasis, Mine, Tower, Ship
+
 	// Use this for initialization
 	void Start () {
 		markers [0] = oasis;
@@ -27,18 +30,28 @@ public class GameObjectiveController : MonoBehaviour {
 		markers [4] = ship;
 
 		//Disable all markers except for the first one
-		for (int i = 0; i < 5; i++) {
+		for (int i = 1; i < 5; i++) {
 			markers [i].gameObject.SetActive (false);
 		}
 
-		markers [2].gameObject.SetActive (true);
+		activateAllWaypoints ();
 	}
 
 	//This is called when the player enters the triggered area
 	public void disable(GameObjective objective) {
 		for (int i = 0; i < 5; i++) {
 			if (objective.Equals(markers[i])) { //Disable the objective and enable the next one
-				Debug.Log ("Disable " + i);
+				if (endGame && endGameMarker[i] != 1) {
+					endGameMarker [i] = 1;
+
+					VIDE_Assign wrongPlace = GetComponent<VIDE_Assign> ();
+					if (!VD.isActive) {
+						diagUI.Begin (GetComponent<Collider>(), wrongPlace);
+					}
+
+					return;
+				}
+					
 				markers [i].gameObject.SetActive (false);
 				markers [i + 1].gameObject.SetActive (true);
 
@@ -56,11 +69,14 @@ public class GameObjectiveController : MonoBehaviour {
 		}
 	}
 
+	//Renable all the waypoints for the endgame
 	void activateAllWaypoints() {
 		for (int i = 0; i < 5; i++) {
 			if (i != 2) { //Do not activate the town
 				markers [i].gameObject.SetActive (true);
 			}
 		}
+
+		endGame = true;
 	}
 }

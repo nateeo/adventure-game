@@ -716,6 +716,8 @@ GameObject:
   m_Component:
   - 224: {fileID: 68928045}
   - 114: {fileID: 68928046}
+  - 114: {fileID: 68928048}
+  - 65: {fileID: 68928047}
   m_Layer: 8
   m_Name: GameObjectiveController
   m_TagString: Untagged
@@ -758,6 +760,71 @@ MonoBehaviour:
   tower: {fileID: 930648767}
   ship: {fileID: 585046926}
   diagUI: {fileID: 1173730393}
+  markers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  markerValue: 0
+  endGame: 0
+--- !u!65 &68928047
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 68928044}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &68928048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 68928044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8b99d8a12e39e4b94d2d7162c7c978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diags:
+  - 626164636c756532
+  - 62656174656e7570677579
+  - 63616d6572616769726c
+  - 436861726c6965
+  - 436f6d6d656e744d6f646966696572
+  - 4372617a79436170
+  - 44454d4f5f436f6e646974696f6e
+  - 646f6467796475646531
+  - 46726f674d616e
+  - 696e6e6b6565706572
+  - 4974656d5f4c6f6f6b5570
+  - 4c61757261
+  - 4d7243756265
+  - 4e50434f6e6c79
+  - 6f72616e6765
+  - 506c616e6574335f57726f6e67506c616365
+  - 506c616e657454687265655f46696e616c4469616c6f677565
+  - 506c616e657454687265655f4d696e654469616c6f677565
+  - 506c616e657454687265655f4f617369734469616c6f677565
+  - 506c616e657454687265655f53746172744469616c6f677565
+  - 506c616e657454687265655f546f776e4469616c6f677565
+  - 706f727461
+  - 5175657374436861727444656d6f
+  - 5475746f7269616c
+  - 5769746368
+  assignedIndex: 15
+  assignedID: 48
+  assignedDialogue: 506c616e6574335f57726f6e67506c616365
+  interactionCount: 0
+  alias: 5265766f6972
+  overrideStartNode: -1
+  defaultNPCSprite: {fileID: 0}
+  defaultPlayerSprite: {fileID: 0}
 --- !u!1001 &74135421
 Prefab:
   m_ObjectHideFlags: 0
@@ -3241,6 +3308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1997916423}
   controller: {fileID: 68928046}
+  damp: 100
 --- !u!114 &375840746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3285,34 +3353,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diags:
-  - badclue2
-  - beatenupguy
-  - cameragirl
-  - Charlie
-  - CommentModifier
-  - CrazyCap
-  - DEMO_Condition
-  - dodgydude1
-  - FrogMan
-  - innkeeper
-  - Item_LookUp
-  - Laura
-  - MrCube
-  - NPCOnly
-  - orange
-  - PlanetThree_MineDialogue
-  - PlanetThree_OasisDialogue
-  - PlanetThree_StartDialogue
-  - PlanetThree_TownDialogue
-  - porta
-  - QuestChartDemo
-  - Tutorial
-  - Witch
-  assignedIndex: 16
+  - 626164636c756532
+  - 62656174656e7570677579
+  - 63616d6572616769726c
+  - 436861726c6965
+  - 436f6d6d656e744d6f646966696572
+  - 4372617a79436170
+  - 44454d4f5f436f6e646974696f6e
+  - 646f6467796475646531
+  - 46726f674d616e
+  - 696e6e6b6565706572
+  - 4974656d5f4c6f6f6b5570
+  - 4c61757261
+  - 4d7243756265
+  - 4e50434f6e6c79
+  - 6f72616e6765
+  - 506c616e6574335f57726f6e67506c616365
+  - 506c616e657454687265655f46696e616c4469616c6f677565
+  - 506c616e657454687265655f4d696e654469616c6f677565
+  - 506c616e657454687265655f4f617369734469616c6f677565
+  - 506c616e657454687265655f53746172744469616c6f677565
+  - 506c616e657454687265655f546f776e4469616c6f677565
+  - 706f727461
+  - 5175657374436861727444656d6f
+  - 5475746f7269616c
+  - 5769746368
+  assignedIndex: 18
   assignedID: 97174
-  assignedDialogue: PlanetThree_OasisDialogue
+  assignedDialogue: 506c616e657454687265655f4f617369734469616c6f677565
   interactionCount: 0
-  alias: 
+  alias: 5265766f6972
   overrideStartNode: -1
   defaultNPCSprite: {fileID: 0}
   defaultPlayerSprite: {fileID: 0}
@@ -5324,15 +5394,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 435828, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 165
+      value: 818.6
       objectReference: {fileID: 0}
     - target: {fileID: 435828, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 10.11
+      value: 10.152
       objectReference: {fileID: 0}
     - target: {fileID: 435828, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 124
+      value: 494
       objectReference: {fileID: 0}
     - target: {fileID: 435828, guid: abec118f653e14ec4ae96f1c4a2da43a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -5756,6 +5826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1997916423}
   controller: {fileID: 68928046}
+  damp: 100
 --- !u!114 &585046927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7295,6 +7366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1997916423}
   controller: {fileID: 68928046}
+  damp: 100
 --- !u!114 &725504460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7339,35 +7411,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diags:
-  - badclue2
-  - beatenupguy
-  - cameragirl
-  - Charlie
-  - CommentModifier
-  - CrazyCap
-  - DEMO_Condition
-  - dodgydude1
-  - FrogMan
-  - innkeeper
-  - Item_LookUp
-  - Laura
-  - MrCube
-  - NPCOnly
-  - orange
-  - PlanetThree_FinalDialogue
-  - PlanetThree_MineDialogue
-  - PlanetThree_OasisDialogue
-  - PlanetThree_StartDialogue
-  - PlanetThree_TownDialogue
-  - porta
-  - QuestChartDemo
-  - Tutorial
-  - Witch
-  assignedIndex: 19
+  - 626164636c756532
+  - 62656174656e7570677579
+  - 63616d6572616769726c
+  - 436861726c6965
+  - 436f6d6d656e744d6f646966696572
+  - 4372617a79436170
+  - 44454d4f5f436f6e646974696f6e
+  - 646f6467796475646531
+  - 46726f674d616e
+  - 696e6e6b6565706572
+  - 4974656d5f4c6f6f6b5570
+  - 4c61757261
+  - 4d7243756265
+  - 4e50434f6e6c79
+  - 6f72616e6765
+  - 506c616e6574335f57726f6e67506c616365
+  - 506c616e657454687265655f46696e616c4469616c6f677565
+  - 506c616e657454687265655f4d696e654469616c6f677565
+  - 506c616e657454687265655f4f617369734469616c6f677565
+  - 506c616e657454687265655f53746172744469616c6f677565
+  - 506c616e657454687265655f546f776e4469616c6f677565
+  - 706f727461
+  - 5175657374436861727444656d6f
+  - 5475746f7269616c
+  - 5769746368
+  assignedIndex: 20
   assignedID: 88029
-  assignedDialogue: PlanetThree_TownDialogue
+  assignedDialogue: 506c616e657454687265655f546f776e4469616c6f677565
   interactionCount: 0
-  alias: 
+  alias: 5265766f6972
   overrideStartNode: -1
   defaultNPCSprite: {fileID: 0}
   defaultPlayerSprite: {fileID: 0}
@@ -9406,6 +9479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1997916423}
   controller: {fileID: 68928046}
+  damp: 100
 --- !u!114 &930648768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11956,6 +12030,7 @@ MonoBehaviour:
   - {fileID: 906329813}
   - {fileID: 349324044}
   inventory_open: 0
+  original: {x: 0, y: 0, z: 0}
 --- !u!4 &1173730394
 Transform:
   m_ObjectHideFlags: 0
@@ -16035,7 +16110,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 768
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -17230,11 +17305,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogFix: 0
   speed: 100
+  isGrounded: 0
   rigidBody: {fileID: 1997916421}
+  movement: {x: 0, y: 0, z: 0}
   jump: {x: 0, y: 0, z: 0}
+  anim: {fileID: 0}
   forceConst: 0
+  controller: {fileID: 0}
+  verticalVelocity: 0
+  gravity: 14
+  jumpForce: 20
+  walkSpeed: 4
+  runSpeed: 10
+  startTime: 0
   maxPlayTimeInMinutes: 0
+  maxTime: 0
   maxNumberOfBonuses: 0
+  numberOfBonuses: 0
   bountyText: {fileID: 0}
   diagUI: {fileID: 1173730393}
 --- !u!1001 &1715227904
@@ -18061,6 +18148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1997916423}
   controller: {fileID: 68928046}
+  damp: 100
 --- !u!114 &1770134736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18117,35 +18205,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diags:
-  - badclue2
-  - beatenupguy
-  - cameragirl
-  - Charlie
-  - CommentModifier
-  - CrazyCap
-  - DEMO_Condition
-  - dodgydude1
-  - FrogMan
-  - innkeeper
-  - Item_LookUp
-  - Laura
-  - MrCube
-  - NPCOnly
-  - orange
-  - PlanetThree_FinalDialogue
-  - PlanetThree_MineDialogue
-  - PlanetThree_OasisDialogue
-  - PlanetThree_StartDialogue
-  - PlanetThree_TownDialogue
-  - porta
-  - QuestChartDemo
-  - Tutorial
-  - Witch
-  assignedIndex: 16
+  - 626164636c756532
+  - 62656174656e7570677579
+  - 63616d6572616769726c
+  - 436861726c6965
+  - 436f6d6d656e744d6f646966696572
+  - 4372617a79436170
+  - 44454d4f5f436f6e646974696f6e
+  - 646f6467796475646531
+  - 46726f674d616e
+  - 696e6e6b6565706572
+  - 4974656d5f4c6f6f6b5570
+  - 4c61757261
+  - 4d7243756265
+  - 4e50434f6e6c79
+  - 6f72616e6765
+  - 506c616e6574335f57726f6e67506c616365
+  - 506c616e657454687265655f46696e616c4469616c6f677565
+  - 506c616e657454687265655f4d696e654469616c6f677565
+  - 506c616e657454687265655f4f617369734469616c6f677565
+  - 506c616e657454687265655f53746172744469616c6f677565
+  - 506c616e657454687265655f546f776e4469616c6f677565
+  - 706f727461
+  - 5175657374436861727444656d6f
+  - 5475746f7269616c
+  - 5769746368
+  assignedIndex: 17
   assignedID: 82071
-  assignedDialogue: PlanetThree_MineDialogue
+  assignedDialogue: 506c616e657454687265655f4d696e654469616c6f677565
   interactionCount: 0
-  alias: 
+  alias: 5265766f6972
   overrideStartNode: -1
   defaultNPCSprite: {fileID: 0}
   defaultPlayerSprite: {fileID: 0}
@@ -19854,6 +19943,10 @@ MonoBehaviour:
   dialogFix: 0
   lookAt: {fileID: 1997916423}
   camTransform: {fileID: 1997916423}
+  cam: {fileID: 0}
+  distance: 6
+  currentX: 0
+  currentY: 0
   sensitivityX: 8
   sensitivityY: 8
 --- !u!81 &1934065162
@@ -19901,7 +19994,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967039
+    m_Bits: 4294966527
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
