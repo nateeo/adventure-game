@@ -4,29 +4,44 @@ using System.Collections.Generic;
 
 public class GenerateNumbers : MonoBehaviour {
 
-    public GameObject numberWall1;
-    public GameObject numberWall2;
-    public GameObject numberWall3;
-    public GameObject numberWall4;
+    public GameObject number1;
+    public GameObject number2;
+    public GameObject number3;
+    public GameObject number4;
+    public GameObject number5;
+    public GameObject number6;
+    public GameObject number7;
+    public GameObject number8;
+    public GameObject number9;
+
     private List<GameObject> walls;
     private string passcode;
+    private bool hasOpened;
 
 	// Use this for initialization
 	void Start () {
         walls = initializeWalls();
+        //hideWalls();
 
         List<int> numbers = generateNumbers(walls.Count);
-        passcode = createPasscode(numbers);
-        plotWalls(walls, numbers);
+        int[] isPassCode = chooseNumbers();
+
+        passcode = createPasscode(numbers, isPassCode);
+        plotWalls(walls, numbers, isPassCode);
 	}
 
     private List<GameObject> initializeWalls()
     {
         List<GameObject> tempWalls = new List<GameObject>();
-        tempWalls.Add(numberWall1);
-        tempWalls.Add(numberWall2);
-        tempWalls.Add(numberWall3);
-        tempWalls.Add(numberWall4);
+        tempWalls.Add(number1);
+        tempWalls.Add(number2);
+        tempWalls.Add(number3);
+        tempWalls.Add(number4);
+        tempWalls.Add(number5);
+        tempWalls.Add(number6);
+        tempWalls.Add(number7);
+        tempWalls.Add(number8);
+        tempWalls.Add(number9);
         return tempWalls;
     }
 
@@ -61,52 +76,77 @@ public class GenerateNumbers : MonoBehaviour {
         return numbers;
     }
 
-    private void plotWalls(List<GameObject> walls, List<int> numbers)
+    private void plotWalls(List<GameObject> walls, List<int> numbers, int[] isPasscode)
     {
-        Debug.Log("HELLOOOO");
-        // Plotting a single wall
         for (int i = 0; i < walls.Count; i++)
         {
             GameObject wall = walls[i];
-            TextMesh t = wall.AddComponent<TextMesh>();
+            TextMesh t = wall.GetComponent<TextMesh>();
             t.text = numbers[i].ToString();
-            //t.fontSize = 150;
 
-            Debug.Log("KMS");
-
-            t.transform.localEulerAngles += new Vector3(0, 90, 0);
-            //t.transform.position = wall.transform.position;
-            //t.transform.position = GameObject.Find("NumberWallRight" + (i + 1)).transform.position;
-            Debug.Log(t.transform.position);
+            if (isPasscode[i] == 1)
+            {
+                t.color = Color.grey;
+            } else
+            {
+                t.color = Color.cyan;
+            }
         }
     }
 
-    private string createPasscode(List<int> numbers)
+    private int[] chooseNumbers()
     {
-        numbers.Sort();
-        string passcode = "";
+        int[] chosenNumbers = new int[9];
+        
+        int numbersChosen = 0;
+        while (numbersChosen < 4)
+        {
+            int number = Random.Range(0, 9);
+            if (chosenNumbers[number] == 0)
+            {
+                chosenNumbers[number] = 1;
+                numbersChosen++;
+            }
+        }
+
+        return chosenNumbers;
+    }
+
+    private string createPasscode(List<int> numbers, int[] isPassCode)
+    {
+        List<int> unsortedPasscode = new List<int>();
+
         for (int i = 0; i < numbers.Count; i++)
         {
-            passcode += numbers[i].ToString();
+            if (isPassCode[i] == 1)
+            {
+                unsortedPasscode.Add(numbers[i]);
+            }
         }
-        return passcode;
+
+        unsortedPasscode.Sort();
+        string passCode = "";
+        for (int i = 0; i < 4; i++)
+        {
+            passCode += unsortedPasscode[i].ToString();
+        }
+
+        return passCode;
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!hasOpened)
+        {
+            gameObject.transform.Rotate(0, -80, 0);
+        }
         Debug.Log(other.gameObject.transform.position);
         Debug.Log(other.gameObject.name);
-        gameObject.transform.Rotate(-180, 0, 0);
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        Debug.Log("Exiting");
-        gameObject.transform.Rotate(180, 0, 0);
+        Debug.Log(passcode);
     }
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("Entered");
+        
     }
 }
