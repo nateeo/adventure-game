@@ -52,6 +52,7 @@ public class PlayerScript : MonoBehaviour {
 	PhysicMaterial physics;
 	public CapsuleCollider collider;
 	public SphereCollider colIcy;
+	public bool icyPuzzle = false;
 
 
 	// Use this for initialization
@@ -122,25 +123,29 @@ public class PlayerScript : MonoBehaviour {
 			}
 		}
 
-		if (Input.GetKeyDown(KeyCode.P) && icy == false) {
+		//if icyPuzzle is true must start puzzle
+		if (icyPuzzle == true && icy == false) {
+
+			//set everything to true and set the corrent mechanics for the puzzle
 			icy = true;
 			icyMovement = true;
 			lastDirection = 0;
-			rigidBody.isKinematic = true;
-			//physics = new PhysicMaterial ();
-			//physics.dynamicFriction = 0;
-			//physics.staticFriction = 0;
 
-			//colIcy.material = physics;
+			rigidBody.isKinematic = true;
+
+			//collider to stop player from falling through the ground
 			colIcy.enabled = true;
 			diagUI.playerCamera.dialogFix = true;
 	
-		}  else if (Input.GetKeyDown(KeyCode.P) && icy == true) {
+		}  else if (icyPuzzle == false && icy == true) {
+			
+			//set all mechanics and settings back to normal
 			colIcy.enabled = false;
 			collider.enabled = true;
 			rigidBody.isKinematic = false;
-			Destroy (colIcy);
 			icy = false;
+
+			//unlock camera
 			diagUI.playerCamera.dialogFix = false;
 
 		}
@@ -186,8 +191,10 @@ public class PlayerScript : MonoBehaviour {
 			speed = walkSpeed;
 		}
 
+		//the mechanics for the puzzle are in this if statement
 		if (icy == true) {
 
+			//checks direction and restricts movement
 			if (Input.GetKeyDown (KeyCode.A) && rigidBody.isKinematic == true && lastDirection != 1){
 				dialogFix = true;
 				collider.enabled = false;
@@ -198,10 +205,9 @@ public class PlayerScript : MonoBehaviour {
 			}
 
 			if (Input.GetKeyDown (KeyCode.D) && rigidBody.isKinematic == true && lastDirection != 2){
+				//restrict movement til collision
 				dialogFix = true;
 				collider.enabled = false;
-				Debug.Log ("right" + collider.enabled);
-
 				rigidBody.velocity = new Vector3(icyspeed, 0, 0);
 				lastDirection = 2;
 				rigidBody.isKinematic = false;
@@ -209,11 +215,10 @@ public class PlayerScript : MonoBehaviour {
 			}
 
 			if (Input.GetKeyDown (KeyCode.W) && rigidBody.isKinematic == true && lastDirection != 3){
+				//restrict movement til collision
+
 				dialogFix = true;
 				collider.enabled = false;
-		
-				Debug.Log ("up" + collider.enabled);
-
 				rigidBody.velocity = new Vector3(0, 0, icyspeed);
 				lastDirection = 3;
 				rigidBody.isKinematic = false;
@@ -222,10 +227,9 @@ public class PlayerScript : MonoBehaviour {
 			}
 
 			if (Input.GetKeyDown (KeyCode.S) && rigidBody.isKinematic == true && lastDirection != 4){
+				//restrict movement til collision
 				dialogFix = true;
 				collider.enabled = false;
-				Debug.Log ("down" + collider.enabled);
-
 				rigidBody.velocity = new Vector3(0, 0, -icyspeed);
 				lastDirection = 4;
 				rigidBody.isKinematic = false;
@@ -234,6 +238,7 @@ public class PlayerScript : MonoBehaviour {
 
 			}
 		}  else if (icy == false) {
+			//normal movement
 			movement = Camera.main.transform.TransformDirection(movement);
 
 			movement = movement.normalized * speed * Time.deltaTime;
