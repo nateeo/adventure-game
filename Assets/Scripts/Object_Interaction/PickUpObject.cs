@@ -37,9 +37,7 @@ public class PickUpObject : MonoBehaviour {
 	}
 
 	void carry(GameObject o) {
-		Debug.Log (playerCharacter.transform.position);
 		o.transform.position = playerCharacter.transform.position + new Vector3(1,0,1);
-		Debug.Log (o.transform.position);
 		o.transform.rotation = Quaternion.identity;
 	}
 

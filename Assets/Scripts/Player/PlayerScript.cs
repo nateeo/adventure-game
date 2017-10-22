@@ -15,6 +15,9 @@ public class PlayerScript : MonoBehaviour {
 	Animator anim;
 	public int forceConst;
 
+	// tooltip for various notifications
+	public Text toolTip;
+
 	private CharacterController controller;
 
 	private float verticalVelocity;
@@ -44,6 +47,7 @@ public class PlayerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		toolTip.enabled = false;
 		journal.SetActive (false);
 		journalEnabled = false;
 
@@ -143,6 +147,18 @@ public class PlayerScript : MonoBehaviour {
 		}
 	}
 
+	// handle bounty notifications
+	public void notifyBounty(bool enabled) {
+		if (toolTip.enabled != enabled) {
+			toolTip.enabled = enabled;
+		}
+		if (enabled) {
+			toolTip.text = "Press 'F' to capture the fugitive!";
+		} else {
+			toolTip.text = "";
+		}
+	}
+
 	void Move(float h, float v) {
 
 		// move towards the camera position
@@ -219,6 +235,8 @@ public class PlayerScript : MonoBehaviour {
         for (int i = 0; i < hits.Length; i++)
         {
             Collider rHit = hits[i];
+			Debug.Log ("HIT SOMETHING");
+			Debug.Log (rHit.GetType ());
             VIDE_Assign assigned;
             if (rHit.GetComponent<Collider>().GetComponent<VIDE_Assign>() != null)
             {
