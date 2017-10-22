@@ -192,7 +192,7 @@ public class PlayerScript : MonoBehaviour {
 
 		//the mechanics for the puzzle are in this if statement
 		if (icy == true) {
-
+			Debug.Log ("IT WORKS");
 			//checks direction and restricts movement
 			if (Input.GetKeyDown (KeyCode.A) && rigidBody.isKinematic == true && lastDirection != 1){
 				dialogFix = true;
