@@ -74,16 +74,6 @@ public class SubmitHighScore : MonoBehaviour {
 		submitsection.SetActive (false);
 	}
 
-	//TODO
-	void clearScores() {
-		PlayerPrefs.DeleteKey ("HighScore1");
-		PlayerPrefs.DeleteKey ("HighScore2");
-		PlayerPrefs.DeleteKey ("HighScore3");
-		PlayerPrefs.DeleteKey ("HighScoreName1");
-		PlayerPrefs.DeleteKey ("HighScoreName2");
-		PlayerPrefs.DeleteKey ("HighScoreName3");
-	}
-
 
 	// A helper function that sets the first two inputs based on the values saved in the player
 	// prefs.
