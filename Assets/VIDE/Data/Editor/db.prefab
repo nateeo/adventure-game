@@ -40,19 +40,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268dc70b105993846a123be43345df63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileIndex: 14
+  fileIndex: 17
   loadTag: 
   startID: 0
   curFocusID: 0
-  currentID: 22454
+  currentID: 910
   autosave: 1
   previewPanning: 0
-  currentDiag: 14
+  currentDiag: 17
   locEdit: 0
   S_playerDiags:
   - commentCount: 1
     s_comment:
-    - text: Hi there.
+    - text: You might need some help getting around!
       extraData: ExtraData
       inputSetIndex: 0
       outputNodeIndex: 1
@@ -70,10 +70,10 @@ MonoBehaviour:
     ID: 0
     rect:
       serializedVersion: 2
-      x: 30
-      y: 100
+      x: 110
+      y: 200
       width: 316
-      height: 99
+      height: 110
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -82,7 +82,7 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: Can I inspect the ship? I'm looking for someone that recently landed.
+    - text: Use the WASD keys or arrow keys to walk around.
       extraData: ExtraData
       inputSetIndex: 1
       outputNodeIndex: 2
@@ -100,8 +100,8 @@ MonoBehaviour:
     ID: 1
     rect:
       serializedVersion: 2
-      x: 80
-      y: 240
+      x: 450
+      y: 40
       width: 316
       height: 110
     pTag: 
@@ -109,10 +109,10 @@ MonoBehaviour:
     sprite: {fileID: 0}
     vars: []
     varKeys: []
-    isPlayer: 1
+    isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: Sorry, no one is onboard. This ship is under repair for engine troubles.
+    - text: Press space bar to jump and hold shift to run.
       extraData: ExtraData
       inputSetIndex: 2
       outputNodeIndex: 3
@@ -130,8 +130,8 @@ MonoBehaviour:
     ID: 2
     rect:
       serializedVersion: 2
-      x: 430
-      y: 120
+      x: 860
+      y: 60
       width: 316
       height: 110
     pTag: 
@@ -142,7 +142,8 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: Do you know anything about the owner?
+    - text: You will probably come across many clues that may assist you in your quest.
+        You can store these clues in your inventory
       extraData: ExtraData
       inputSetIndex: 3
       outputNodeIndex: 4
@@ -160,8 +161,38 @@ MonoBehaviour:
     ID: 3
     rect:
       serializedVersion: 2
-      x: 390
-      y: 360
+      x: 900
+      y: 280
+      width: 316
+      height: 136
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: Open inventory by pressing 'i'. Open your journal by pressing '-'.
+      extraData: ExtraData
+      inputSetIndex: 4
+      outputNodeIndex: 5
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 4
+    rect:
+      serializedVersion: 2
+      x: 1290
+      y: 290
       width: 316
       height: 110
     pTag: 
@@ -169,12 +200,103 @@ MonoBehaviour:
     sprite: {fileID: 0}
     vars: []
     varKeys: []
-    isPlayer: 1
+    isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: She's a photographer visiting us for the week.
+    - text: press 'F' when you want to pick up an item, it will add it to your inventory.
       extraData: ExtraData
-      inputSetIndex: 4
+      inputSetIndex: 5
+      outputNodeIndex: 9
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 5
+    rect:
+      serializedVersion: 2
+      x: 1670
+      y: 290
+      width: 316
+      height: 123
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: Wait! You are a bounty hunter aren't you?
+      extraData: ExtraData
+      inputSetIndex: 6
+      outputNodeIndex: 7
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 6
+    rect:
+      serializedVersion: 2
+      x: 2720
+      y: 280
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: You might as well help us catch some fugitivies! There should be a few
+        lurking around in their space suits, hiding from the Celestial State!
+      extraData: ExtraData
+      inputSetIndex: 7
+      outputNodeIndex: 8
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 7
+    rect:
+      serializedVersion: 2
+      x: 3130
+      y: 270
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: Catch them and you will be rewarded!
+      extraData: ExtraData
+      inputSetIndex: 8
       outputNodeIndex: -1
       outActionIndex: -1
       showmore: 0
@@ -187,13 +309,104 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    ID: 4
+    ID: 8
     rect:
       serializedVersion: 2
-      x: 660
-      y: 360
+      x: 3530
+      y: 290
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: You can also interact with villagers by pressing 'F'.
+      extraData: ExtraData
+      inputSetIndex: 9
+      outputNodeIndex: 10
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 9
+    rect:
+      serializedVersion: 2
+      x: 1830
+      y: 520
       width: 316
       height: 110
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: Try talk to everyone! You never know, they might provide some useful clues
+        or information!
+      extraData: ExtraData
+      inputSetIndex: 10
+      outputNodeIndex: 11
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 10
+    rect:
+      serializedVersion: 2
+      x: 2220
+      y: 520
+      width: 300
+      height: 100
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: Some people are a bit dodgy though, so don't belive everything you hear...
+      extraData: ExtraData
+      inputSetIndex: 11
+      outputNodeIndex: 6
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 11
+    rect:
+      serializedVersion: 2
+      x: 2590
+      y: 540
+      width: 300
+      height: 100
     pTag: 
     expand: 0
     sprite: {fileID: 0}

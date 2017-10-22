@@ -2265,8 +2265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 896a0edcac2304d13966e6c42b477be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstName: {fileID: 1843931503}
-  secondName: {fileID: 1673985470}
+  firstName: {fileID: 71939074}
+  secondName: {fileID: 761621269}
   thirdName: {fileID: 750234539}
   firstStar: {fileID: 324487762}
   secondStar: {fileID: 501450258}
