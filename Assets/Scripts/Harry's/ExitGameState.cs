@@ -7,6 +7,7 @@ public class ExitGameState : MonoBehaviour {
     private bool room2 = false;
     private bool room3 = false;
     private bool room4 = false;
+    private bool overall = false;
 
 	public void setRoom1State(bool state)
     {
@@ -46,5 +47,15 @@ public class ExitGameState : MonoBehaviour {
     public bool getRoom4State()
     {
         return room4;
+    }
+
+    public void setOverallRoomState(bool state)
+    {
+        overall = state;
+    }
+
+    public bool getOverallRoomState()
+    {
+        return overall;
     }
 }

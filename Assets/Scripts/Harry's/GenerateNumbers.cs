@@ -33,8 +33,7 @@ public class GenerateNumbers : MonoBehaviour {
 
         passcode = createPasscode(numbers, isPassCode);
         plotWalls(walls, numbers, isPassCode);
-
-        Debug.Log(passcode);
+        
         passcodeButton.GetComponent<SubmitPasscode>().setPasscode(passcode);
 	}
 

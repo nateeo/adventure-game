@@ -6,7 +6,9 @@ using System.Collections.Generic;
 public class SubmitExitPuzzle : MonoBehaviour {
 
     public GameObject canvas;
+    public GameObject UIManager;
     public GameObject submitButton;
+    public GameObject exitPuzzle;
     public Text responseText;
     public Text answer1;
     public Text answer2;
@@ -18,7 +20,15 @@ public class SubmitExitPuzzle : MonoBehaviour {
 	void Start () {
         generateAnswers();
 	}
-	
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Return))
+        {
+            checkAnswer();
+        }
+    }
+
     private void generateAnswers()
     {
         answers.Add("apepi");
@@ -30,19 +40,19 @@ public class SubmitExitPuzzle : MonoBehaviour {
     public void checkAnswer()
     {
         bool correct = true;
-        if (answer1.text.ToLower().Equals(answers[0]))
+        if (!answer1.text.ToLower().Equals(answers[0].ToLower()))
         {
             correct = false;
         }
-        if (answer2.text.ToLower().Equals(answers[1]))
+        if (!answer2.text.ToLower().Equals(answers[1].ToLower()))
         {
             correct = false;
         }
-        if (answer3.text.ToLower().Equals(answers[2]))
+        if (!answer3.text.ToLower().Equals(answers[2].ToLower()))
         {
             correct = false;
         }
-        if (answer4.text.ToLower().Equals(answers[3]))
+        if (!answer4.text.ToLower().Equals(answers[3].ToLower()))
         {
             correct = false;
         }
@@ -50,9 +60,12 @@ public class SubmitExitPuzzle : MonoBehaviour {
         if (correct)
         {
             canvas.SetActive(false);
+            exitPuzzle.GetComponent<ExitGameState>().setOverallRoomState(true);
+            UIManager.GetComponent<UIManager>().interfaceClosed();
         } else
         {
             responseText.text = "Wrong, try again!";
+            UIManager.GetComponent<UIManager>().interfaceOpen();
         }
     }
 }

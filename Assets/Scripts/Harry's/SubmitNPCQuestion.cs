@@ -15,32 +15,33 @@ public class SubmitNPCQuestion : MonoBehaviour {
     public Text answerInput;
     public Text questionText;
     public Text responseText;
-    string answer;
-    int roomNumber;
 
-    private void Start()
+    private string answer;
+    private int roomNumber;
+
+    private void Update()
     {
-
+        if (Input.GetKey(KeyCode.Return))
+        {
+            onAnswerEnter();
+        }
     }
 
     public void onAnswerEnter()
     {
-        Debug.Log("Answer: " + answer);
-        Debug.Log("Your answer: " + answerInput);
         answerInput.text.ToLower();
         string userAnswer = answerInput.text.ToLower();
         if (userAnswer.Equals(answer.ToLower()))
         {
-            Debug.Log("Correct");
             if (roomNumber == 1)
             {
                 exitPuzzleState.GetComponent<ExitGameState>().setRoom1State(true);
-                door1.transform.Rotate(0, -80, 0);
+                door1.transform.Rotate(0, 80, 0);
             }
             if (roomNumber == 2)
             {
                 exitPuzzleState.GetComponent<ExitGameState>().setRoom2State(true);
-                door2.transform.Rotate(0, -80, 0);
+                door2.transform.Rotate(0, 80, 0);
             }
             if (roomNumber == 3)
             {
@@ -58,19 +59,17 @@ public class SubmitNPCQuestion : MonoBehaviour {
         else
         {
             responseText.text = "Wrong, try again!";
-            Debug.Log("Wrong");
+            UIManager.GetComponent<UIManager>().interfaceOpen();
         }
     }
 
     public void setQuestion(string NPCQuestion)
     {
-        Debug.Log("Question");
         questionText.text = NPCQuestion;
     }
 
     public void setAnswer(string NPCAnswer)
     {
-        Debug.Log("Answer");
         answer = NPCAnswer;
     }
 
