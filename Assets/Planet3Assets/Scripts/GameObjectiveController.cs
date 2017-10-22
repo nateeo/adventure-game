@@ -41,6 +41,7 @@ public class GameObjectiveController : MonoBehaviour {
 	public void disable(GameObjective objective) {
 		for (int i = 0; i < 5; i++) {
 			if (objective.Equals(markers[i])) { //Disable the objective and enable the next one
+				//If we're in the endgame
 				if (endGame && endGameMarker[i] != 1) {
 					//Trigger ending dialogue
 					if (i == 3) {
@@ -55,6 +56,11 @@ public class GameObjectiveController : MonoBehaviour {
 					}
 
 					return;
+				}
+
+				//if we're at the mine
+				if (i == 1) {
+					//change scene
 				}
 					
 				markers [i].gameObject.SetActive (false);
