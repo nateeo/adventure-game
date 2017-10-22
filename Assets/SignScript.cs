@@ -8,23 +8,28 @@ public class SignScript : MonoBehaviour {
 	public Text signText;
 	public string text;
 	public float signDistance;
+	static int inRange;
+	bool activeSelf;
 
 	void Start() {
-
+		activeSelf = false;
 	}
 
 	void Update() {
 		
 		if (Vector3.Distance (transform.position, Camera.main.transform.position) < signDistance) {
-			if (!signText.enabled) {
-				signText.enabled = true;
+			if (!activeSelf) {
+				activeSelf = true;
+				inRange++;
 				signText.text = text;
 			}
 		} else {
-			// reset and hide sign text
-			if (signText.enabled) {
-				signText.text = "";
-				signText.enabled = false;
+			if (activeSelf) {
+				activeSelf = false;
+				inRange--;
+				if (inRange == 0) {
+					signText.text = "";
+				}
 			}
 		}
 	}
