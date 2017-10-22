@@ -13,6 +13,9 @@ public class ShowRNGGame : MonoBehaviour {
     public GameObject number7;
     public GameObject number8;
     public GameObject number9;
+    public GameObject number10;
+    public GameObject number11;
+    public GameObject number12;
 
     private List<GameObject> walls;
 
@@ -33,6 +36,9 @@ public class ShowRNGGame : MonoBehaviour {
         tempWalls.Add(number7);
         tempWalls.Add(number8);
         tempWalls.Add(number9);
+        tempWalls.Add(number10);
+        tempWalls.Add(number11);
+        tempWalls.Add(number12);
         return tempWalls;
     }
 
@@ -40,7 +46,6 @@ public class ShowRNGGame : MonoBehaviour {
     {
         for (int i = 0; i < walls.Count; i++)
         {
-            Debug.Log("HEHE");
             walls[i].SetActive(true);
         }
     }
@@ -49,7 +54,6 @@ public class ShowRNGGame : MonoBehaviour {
     {
         for (int i = 0; i < walls.Count; i++)
         {
-            Debug.Log("HUH");
             walls[i].SetActive(false);
         }
     }
