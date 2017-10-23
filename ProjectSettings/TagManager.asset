@@ -23,6 +23,7 @@ TagManager:
   - Memory
   - PersistedInventory
   - InterfaceManager
+  - Audio
   layers:
   - Default
   - TransparentFX
