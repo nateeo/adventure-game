@@ -144,7 +144,10 @@ public class PlayerScore : MonoBehaviour {
 	}
 
 	private void setBonusText() {
-		bountyText.text = "Bonus fugitives: " + numberOfBonuses + "/" + maxNumberOfBonuses;
+		Debug.Log (numberOfBonuses);
+		Debug.Log (bountyText);
+		Debug.Log (bountyText.isActiveAndEnabled);
+		bountyText.text = "Fugitives collected: " + numberOfBonuses + "/" + maxNumberOfBonuses;
 	}
 
 }
