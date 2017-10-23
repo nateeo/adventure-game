@@ -22,10 +22,26 @@ public class PlayerScore : MonoBehaviour {
         //Code for initializing time and score.
         startTime = Time.time;
 		maxNumberOfBonuses = 3;
-        maxTime = maxPlayTimeInMinutes * 60;
+        maxTime = maxPlayTimeInMinutes * 60; //max time in seceonds
+		float division = maxTime / 3; //division time in seconds
+		PlayerPrefs.SetString ("TimeFor1Star", timeDisplay(division*3 / 60)); //need parameter in minutes (of float)
+		PlayerPrefs.SetString ("TimeFor2Star", timeDisplay(division*2 / 60));
+		PlayerPrefs.SetString ("TimeFor3Star", timeDisplay (division*1 / 60));
     }
 
 	void Update() {
+
+	}
+
+	string timeDisplay(float timeInMinutes) {
+		float timeinSec = timeInMinutes * 60;
+		int minutes = ((int)timeinSec / 60);
+		int seconds = (int)(timeinSec % 60);
+
+		string minToDisplay = minutes.ToString("00");
+		string secToDisplay = seconds.ToString("00");
+
+		return(minToDisplay + ":" + secToDisplay);
 
 	}
 
