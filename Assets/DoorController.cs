@@ -78,6 +78,7 @@ public class DoorController : MonoBehaviour
         doors.Add(doorE);
         doors.Add(doorF);
         doors.Add(doorG);
+
     }
 
     //Call this function when a button is being clicked
