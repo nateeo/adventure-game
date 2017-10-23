@@ -88,6 +88,11 @@ public class PlayerScript : MonoBehaviour {
 
 	void Update() {
 
+		// To disable player updates in certain conditions
+		if (shouldPlayerDisable ()) {
+			return;
+		}
+
 		diagUI.interactToolTipDisabled ();
 
 		if (SceneManager.GetActiveScene ().buildIndex == 0) {
@@ -95,12 +100,12 @@ public class PlayerScript : MonoBehaviour {
 		}
 
 		// handle journal interface, disable the rest if active
-		if (Input.GetKeyDown (KeyCode.Minus)) {
+		if (Input.GetKeyDown (KeyCode.Minus) && PlayerPrefs.GetInt("sceneIndex") != 2) {
 			toggleJournal ();
 			if (journalEnabled) {
 				input.Select ();
 				input.ActivateInputField ();
-				int length = input.text.Length < 1 ? 0 : input.text.Length;
+				int length = input.text.Length < 1 ? 0 : input.text.Length - 1;
 				input.text = input.text.Substring (0, length);
 				StartCoroutine (moveEnd ());
 			}
@@ -119,7 +124,7 @@ public class PlayerScript : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.F)) {
 			TryInteract ();
 		}
-		if (Input.GetKeyDown (KeyCode.I)) {
+		if (Input.GetKeyDown (KeyCode.I) && PlayerPrefs.GetInt("sceneIndex") != 2) {
 			if (diagUI.inventory_open) {
 				diagUI.interfaceClosed();
 			} else {
@@ -318,10 +323,12 @@ public class PlayerScript : MonoBehaviour {
 			diagUI.interfaceOpen ();
 			journal.SetActive (true);
 		} else {
-			if (!inventory.open) {
+			if (!inventory.open && !VD.isActive) {
 				diagUI.interfaceClosed ();
 			}
+			Debug.Log ("journal pls");
 			journal.SetActive (false);
+			Debug.Log ("is journal active " + journal.activeInHierarchy);
 		}
 	}
 
@@ -351,4 +358,13 @@ public class PlayerScript : MonoBehaviour {
             }
         }
     }
+
+	bool shouldPlayerDisable() {
+		int index = SceneManager.GetActiveScene ().buildIndex;
+		if (index == 2 || index == 6 || index == 7 || index == 8) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

@@ -29,3 +29,5 @@ EditorBuildSettings:
     path: Assets/PyramidPuzzle.unity
   - enabled: 1
     path: Assets/Planet3Assets/Scenes/MazePuzzle.unity
+  - enabled: 1
+    path: Assets/PlanetTwo.unity

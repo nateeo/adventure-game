@@ -10,6 +10,9 @@ public class OnLoadingScene : MonoBehaviour {
 	public GameObject fullStar3;
 	public GameObject fullStar4;
 	public GameObject fullStar5;
+	public Text time1;
+	public Text time2;
+	public Text time3;
 	private List<GameObject> listOfStars = new List<GameObject>();
 
 	public Text timeText;
@@ -78,6 +81,18 @@ public class OnLoadingScene : MonoBehaviour {
 		{
 			Debug.Log("Non Existing Key");
 			maxBonus = 0;
+		}
+
+		if (PlayerPrefs.HasKey ("TimeFor1Star")) {
+			time1.text = PlayerPrefs.GetString ("TimeFor1Star");
+		}
+
+		if (PlayerPrefs.HasKey ("TimeFor2Star")) {
+			time2.text = PlayerPrefs.GetString ("TimeFor2Star");
+		}
+
+		if (PlayerPrefs.HasKey ("TimeFor3Star")) {
+			time3.text = PlayerPrefs.GetString ("TimeFor3Star");
 		}
 
 		Debug.Log("TIME" + timeScore + "BONUS" + bonusScore);

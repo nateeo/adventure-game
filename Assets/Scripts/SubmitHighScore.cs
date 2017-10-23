@@ -13,6 +13,14 @@ public class SubmitHighScore : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		
+		if (PlayerPrefs.HasKey ("AccumulatedScore")) {
+			score = PlayerPrefs.GetInt ("AccumulatedScore");
+		} else {
+			score = 0;
+			PlayerPrefs.SetInt ("AccumulatedScore", score);
+		}
+
 		int timeScore;
 		if (PlayerPrefs.HasKey("TimeScore"))
 		{
@@ -35,7 +43,8 @@ public class SubmitHighScore : MonoBehaviour {
 			bonusScore = 0;
 		}
 
-		score = bonusScore + timeScore;
+		score += bonusScore + timeScore;
+		PlayerPrefs.SetInt ("AccumulatedScore", score);
 	}
 	
 	// This function is called to submit a score to the high score menu.

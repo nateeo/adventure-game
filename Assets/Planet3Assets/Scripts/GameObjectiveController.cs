@@ -49,8 +49,6 @@ public class GameObjectiveController : MonoBehaviour {
 				markers [i].gameObject.SetActive (false);
 			}
 		}
-
-		activateAllWaypoints ();
 	}
 
 	IEnumerator startScene() {

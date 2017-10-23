@@ -593,7 +593,7 @@ MonoBehaviour:
     itemIcon: {fileID: 0}
     itemModel: {fileID: 0}
     itemValue: 1
-    itemType: 0
+    itemType: 14
     itemWeight: 0
     maxStack: 1
     indexItemInList: 999
@@ -1834,6 +1834,7 @@ MonoBehaviour:
   xmax: 250
   zmin: -120
   zmax: -85
+  y: 15
 --- !u!114 &532042158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2290,6 +2291,8 @@ MonoBehaviour:
   anim: {fileID: 709207755}
   forceConst: 70
   toolTip: {fileID: 1938146873}
+  walkSpeed: 4
+  runSpeed: 50
   maxHeight: 3
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
@@ -2321,6 +2324,41 @@ MonoBehaviour:
   open: 0
   HPMANACanvas: {fileID: 0}
   currentHealth: 60
+--- !u!114 &709207758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 709207748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83d2b9f720964467a42f93be333351e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToSkipTo: 12
+--- !u!114 &709207759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 709207748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e113b3068f7f438b84c05495c83bf9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentIndex: 1
+--- !u!114 &709207760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 709207748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877aaefaf518340ecb43e3028a986d2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &727012464 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: eb4fdd308d7e5e6409868e9329ecf8b0, type: 3}
@@ -2788,6 +2826,7 @@ MonoBehaviour:
   dialogFix: 0
   lookAt: {fileID: 709207749}
   camTransform: {fileID: 709207749}
+  distance: 7
   sensitivityX: 30
   sensitivityY: 30
 --- !u!114 &836361856
@@ -5439,26 +5478,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diags:
+  - AMBIGUOUS
+  - Ambiguous1
+  - Ambiguous2
+  - Ambiguous3
+  - Ambiguous4
   - badclue2
   - beatenupguy
+  - Builder
+  - BuilderDave
   - cameragirl
   - Charlie
   - CommentModifier
   - CrazyCap
   - DEMO_Condition
   - dodgydude1
+  - FindBuilder
   - FrogMan
+  - IcePuzzleGuide
   - innkeeper
   - Item_LookUp
   - Laura
+  - LIE
+  - Lying1
+  - Lying2
+  - Lying3
+  - MazePuzzleInstructions
   - MrCube
   - NPCOnly
   - orange
+  - Planet3_WrongPlace
+  - PlanetThree_FinalDialogue
+  - PlanetThree_MineDialogue
+  - PlanetThree_OasisDialogue
+  - PlanetThree_StartDialogue
+  - PlanetThree_TownDialogue
   - porta
   - QuestChartDemo
+  - Season1
+  - Season2
+  - Season3
+  - Season4
+  - Season5
+  - ShipPort
+  - TRUTH
   - Tutorial
   - Witch
-  assignedIndex: 1
+  assignedIndex: 6
   assignedID: 24232
   assignedDialogue: beatenupguy
   interactionCount: 0
@@ -5654,26 +5720,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diags:
+  - AMBIGUOUS
+  - Ambiguous1
+  - Ambiguous2
+  - Ambiguous3
+  - Ambiguous4
   - badclue2
   - beatenupguy
+  - Builder
+  - BuilderDave
   - cameragirl
   - Charlie
   - CommentModifier
   - CrazyCap
   - DEMO_Condition
   - dodgydude1
+  - FindBuilder
   - FrogMan
+  - IcePuzzleGuide
   - innkeeper
   - Item_LookUp
   - Laura
+  - LIE
+  - Lying1
+  - Lying2
+  - Lying3
+  - MazePuzzleInstructions
   - MrCube
   - NPCOnly
   - orange
+  - Planet3_WrongPlace
+  - PlanetThree_FinalDialogue
+  - PlanetThree_MineDialogue
+  - PlanetThree_OasisDialogue
+  - PlanetThree_StartDialogue
+  - PlanetThree_TownDialogue
   - porta
   - QuestChartDemo
+  - Season1
+  - Season2
+  - Season3
+  - Season4
+  - Season5
+  - ShipPort
+  - TRUTH
   - Tutorial
   - Witch
-  assignedIndex: 2
+  assignedIndex: 9
   assignedID: 14412
   assignedDialogue: cameragirl
   interactionCount: 0
@@ -5927,23 +6020,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diags:
+  - AMBIGUOUS
+  - Ambiguous1
+  - Ambiguous2
+  - Ambiguous3
+  - Ambiguous4
   - badclue2
   - beatenupguy
+  - Builder
+  - BuilderDave
   - cameragirl
   - Charlie
   - CommentModifier
   - CrazyCap
   - DEMO_Condition
   - dodgydude1
+  - FindBuilder
   - FrogMan
+  - IcePuzzleGuide
   - innkeeper
   - Item_LookUp
   - Laura
+  - LIE
+  - Lying1
+  - Lying2
+  - Lying3
+  - MazePuzzleInstructions
   - MrCube
   - NPCOnly
   - orange
+  - Planet3_WrongPlace
+  - PlanetThree_FinalDialogue
+  - PlanetThree_MineDialogue
+  - PlanetThree_OasisDialogue
+  - PlanetThree_StartDialogue
+  - PlanetThree_TownDialogue
   - porta
   - QuestChartDemo
+  - Season1
+  - Season2
+  - Season3
+  - Season4
+  - Season5
+  - ShipPort
+  - TRUTH
   - Tutorial
   - Witch
   assignedIndex: 0
