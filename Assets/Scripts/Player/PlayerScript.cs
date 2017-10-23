@@ -12,8 +12,11 @@ public class PlayerScript : MonoBehaviour {
 	public Rigidbody rigidBody;
 	Vector3 movement;
 	public Vector3 jump;
-	Animator anim;
+	public Animator anim;
 	public int forceConst;
+
+	// tooltip for various notifications
+	public Text toolTip;
 
 	private CharacterController controller;
 
@@ -38,7 +41,7 @@ public class PlayerScript : MonoBehaviour {
 	public bool journalEnabled;
 	public InputField input;
 
-	private PlayerInventory inventory;
+	public PlayerInventory inventory;
 
 	public static float NPC_RANGE = 2f;
 
@@ -57,8 +60,9 @@ public class PlayerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-//		journal.SetActive (false);
-//		journalEnabled = false;
+		toolTip.enabled = false;
+		journal.SetActive (false);
+		journalEnabled = false;
 
 		Screen.lockCursor = true;
 		//jump = new Vector3 (0.0f, 0.2f, 0.0f);
@@ -97,6 +101,12 @@ public class PlayerScript : MonoBehaviour {
 				input.text = input.text.Substring (0, input.text.Length - 1);
 				StartCoroutine (moveEnd ());
 			}
+		}
+		// disable all other interaction if journal is enabled
+		if (journalEnabled && inventory.enabled) {
+			inventory.disable ();
+		} else if (inventory.disabled) {
+			inventory.enable ();
 		}
 
 		if (journalEnabled) {
@@ -178,6 +188,18 @@ public class PlayerScript : MonoBehaviour {
 		}
 	}
 
+	// handle bounty notifications
+	public void notifyBounty(bool enabled) {
+		if (toolTip.enabled != enabled) {
+			toolTip.enabled = enabled;
+		}
+		if (enabled) {
+			toolTip.text = "Press 'F' to capture the fugitive!";
+		} else {
+			toolTip.text = "";
+		}
+	}
+
 	void Move(float h, float v) {
 
 		// move towards the camera position
@@ -237,7 +259,7 @@ public class PlayerScript : MonoBehaviour {
 
 			}
 		}  else if (icy == false) {
-			
+
 			//normal movement
 			movement = Camera.main.transform.TransformDirection(movement);
 
@@ -282,41 +304,48 @@ public class PlayerScript : MonoBehaviour {
 		anim.SetBool ("IsRunning", running);
 	}
 
+	public void StopAnimating() {
+		anim.SetBool ("IsWalking", false);
+		anim.SetBool ("IsRunning", false);
+	}
+
 	void toggleJournal() {
 		journalEnabled = !journalEnabled;
 		if (journalEnabled) {
 			diagUI.interfaceOpen ();
 			journal.SetActive (true);
 		} else {
-			diagUI.interfaceClosed ();
+			if (!inventory.open) {
+				diagUI.interfaceClosed ();
+			}
 			journal.SetActive (false);
 		}
 	}
 
 	// to talk to NPCs
-	void TryInteract()
-	{
-		if (VD.isActive)
-		{
-			VD.Next();
-			return;
-		}
+    void TryInteract()
+    {
+        if (VD.isActive)
+        {
+			diagUI.CallNext ();
+            return;
+        }
 
-		Collider[] hits = Physics.OverlapSphere(transform.position, NPC_RANGE);
-		for (int i = 0; i < hits.Length; i++)
-		{
-			Collider rHit = hits[i];
-			VIDE_Assign assigned;
-			if (rHit.GetComponent<Collider>().GetComponent<VIDE_Assign>() != null)
-			{
-				assigned = rHit.GetComponent<Collider>().GetComponent<VIDE_Assign>();
-				if (!VD.isActive)
-				{
-					//... and use it to begin the conversation, look at the target
-					diagUI.Begin(rHit, assigned);
-				}
-				return;
-			}
-		}
-	}
+        Collider[] hits = Physics.OverlapSphere(transform.position, NPC_RANGE);
+        for (int i = 0; i < hits.Length; i++)
+        {
+            Collider rHit = hits[i];
+            VIDE_Assign assigned;
+            if (rHit.GetComponent<Collider>().GetComponent<VIDE_Assign>() != null)
+            {
+                assigned = rHit.GetComponent<Collider>().GetComponent<VIDE_Assign>();
+                if (!VD.isActive)
+                {
+                    //... and use it to begin the conversation, look at the target
+                    diagUI.Begin(rHit, assigned);
+                }
+                return;
+            }
+        }
+    }
 }

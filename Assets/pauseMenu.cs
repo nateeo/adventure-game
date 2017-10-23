@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using VIDE_Data;
 
 /*
  * Pause menu which stops the game and allows the player to return to the main menu
@@ -22,6 +23,10 @@ public class pauseMenu : MonoBehaviour {
 	// Update is called once per frame
 	void Update() {
 		if (Input.GetKeyDown (KeyCode.Escape)) {
+			if (VD.isActive) {
+				_diagUI.End (null);
+				return;
+			}
 			if (_paused) {
 				setPauseState (false);
 			} else {

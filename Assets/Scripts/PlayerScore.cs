@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class PlayerScore : MonoBehaviour {
     //Fields for time and score
 
-    private float startTime;
+    public float startTime;
     public int maxPlayTimeInMinutes;
-    private float maxTime;
+    public float maxTime;
 
     public int maxNumberOfBonuses;
-    private int numberOfBonuses;
+    public int numberOfBonuses;
 
     public Text bountyText;
     //Fields for time and score ends here ===============
@@ -21,14 +21,12 @@ public class PlayerScore : MonoBehaviour {
     void Start () {
         //Code for initializing time and score.
         startTime = Time.time;
+		maxNumberOfBonuses = 3;
         maxTime = maxPlayTimeInMinutes * 60;
     }
 
 	void Update() {
-		if (Input.GetKeyDown(KeyCode.L))
-		{
-			endSceneAndDisplayScore();
-		}
+
 	}
 
     int computeTimeBasedScore()
@@ -73,24 +71,26 @@ public class PlayerScore : MonoBehaviour {
     //This will switch to scene number 2 (the score screen)
     public void endSceneAndDisplayScore()
     {
-        int timeScore = computeTimeBasedScore();
-        int bonusScore = computeBonusBasedScore();
-
-        float timeInSec = Time.time - startTime;
-        int bonusPoints = numberOfBonuses;
-        int maxBonusPoints = maxNumberOfBonuses;
-
-        //PlayerPrefs is like a persistence class (database)
-        PlayerPrefs.SetFloat("Time", timeInSec);
-        PlayerPrefs.SetInt("TimeScore", timeScore);
-        PlayerPrefs.SetInt("BonusScore", bonusScore);
-        PlayerPrefs.SetInt("Bonus", numberOfBonuses);
-        PlayerPrefs.SetInt("MaxBonus", maxNumberOfBonuses);
-
+		calculateScore ();
+		resetScore ();
         SceneManager.LoadScene(2);
-
-		resetScore();
     }
+
+	public void calculateScore() {
+		int timeScore = computeTimeBasedScore();
+		int bonusScore = computeBonusBasedScore();
+
+		float timeInSec = Time.time - startTime;
+		int bonusPoints = numberOfBonuses;
+		int maxBonusPoints = maxNumberOfBonuses;
+
+		//PlayerPrefs is like a persistence class (database)
+		PlayerPrefs.SetFloat("Time", timeInSec);
+		PlayerPrefs.SetInt("TimeScore", timeScore);
+		PlayerPrefs.SetInt("BonusScore", bonusScore);
+		PlayerPrefs.SetInt("Bonus", numberOfBonuses);
+		PlayerPrefs.SetInt("MaxBonus", maxNumberOfBonuses);
+	}
 
     //private function for updating the time and the slider.
     /* TIMER REMOVED (code might be useful some time, so has been left in here!)
@@ -126,13 +126,13 @@ public class PlayerScore : MonoBehaviour {
     public void incrementBonus()
     {
         numberOfBonuses++;
-        bountyText.text = "Bonus fugitives: " + numberOfBonuses;
+		setBonusText ();
     }
     //Use this method when you want to deduct points
     public void decrementBonus()
     {
         numberOfBonuses--;
-        bountyText.text = "Bonus fugitives: " + numberOfBonuses;
+		setBonusText ();
     }
 
 	public void resetScore()
@@ -140,7 +140,11 @@ public class PlayerScore : MonoBehaviour {
 		startTime = Time.time;
 		maxTime = maxPlayTimeInMinutes * 60;
 		numberOfBonuses = 0;
-		bountyText.text = "Bonus fugitives: " + numberOfBonuses;
+		setBonusText ();
+	}
+
+	private void setBonusText() {
+		bountyText.text = "Bonus fugitives: " + numberOfBonuses + "/" + maxNumberOfBonuses;
 	}
 
 }

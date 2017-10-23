@@ -13,6 +13,8 @@ public class PlayerInventory : MonoBehaviour
     private Inventory mainInventory;
     private Inventory characterSystemInventory;
     private Tooltip toolTip;
+	public bool disabled;
+	public bool open;
 
     private InputManager inputManagerDatabase;
 
@@ -158,6 +160,7 @@ public class PlayerInventory : MonoBehaviour
 
     void Start()
     {
+		disabled = false;
         if (inputManagerDatabase == null)
             inputManagerDatabase = (InputManager)Resources.Load("InputManager");
 
@@ -262,14 +265,19 @@ public class PlayerInventory : MonoBehaviour
 
         if (Input.GetKeyDown(inputManagerDatabase.InventoryKeyCode))
         {
+			if (disabled) {
+				return;
+			}
             if (!inventory.activeSelf)
             {
+				open = true;
                 mainInventory.openInventory();
             }
             else
             {
                 if (toolTip != null)
                     toolTip.deactivateTooltip();
+				open = false;
                 mainInventory.closeInventory();
             }
         }
@@ -287,7 +295,14 @@ public class PlayerInventory : MonoBehaviour
                 craftSystemInventory.closeInventory();
             }
         }
-
     }
+
+	public void enable() {
+		disabled = false;
+	}
+
+	public void disable() {
+		disabled = true;
+	}
 
 }

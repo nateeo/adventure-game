@@ -20,7 +20,7 @@ public class MemoryScript : MonoBehaviour {
 	}
 
 	void setMemoryCount() {
-		memory.text = "Memories collected: " + count.ToString() + "/6"; 
+		memory.text = "Memories collected: " + count.ToString() + "/?"; 
 		if (count >= 6) {
 //			memory.color = Color.green;
 		}

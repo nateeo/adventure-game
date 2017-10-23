@@ -20,7 +20,7 @@ public class RandomGenBonus : MonoBehaviour {
 		items = (ItemDataBaseList)Resources.Load("Itemdatabase");
 
 		while (counter < noItems) {
-			//randomly pick the items	
+			//randomly pick the items
 			int rand = Random.Range (1, items.itemList.Count - 1);
 
 			//add to the scene

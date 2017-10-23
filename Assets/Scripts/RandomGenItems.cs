@@ -3,7 +3,7 @@ using System.Collections;
 
 public class RandomGenItems : MonoBehaviour {
 	//number of items to generate
-	public int noItems = 2;
+	public int noItems = 9;
 
 	//get the list of possible items to generate
 	static ItemDataBaseList items;
