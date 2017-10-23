@@ -205,6 +205,11 @@ public class PlayerScript : MonoBehaviour {
 		anim.SetBool ("IsRunning", running);
 	}
 
+	public void StopAnimating() {
+		anim.SetBool ("IsWalking", false);
+		anim.SetBool ("IsRunning", false);
+	}
+
 	void toggleJournal() {
 		journalEnabled = !journalEnabled;
 		if (journalEnabled) {

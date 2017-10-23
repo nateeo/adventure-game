@@ -49,6 +49,7 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public void Begin(Collider collider, VIDE_Assign conversation) {
+		playerController.StopAnimating ();
 		collider.gameObject.transform.LookAt(new Vector3 (
 			rigidBody.position.x,
 			collider.transform.position.y,
@@ -210,7 +211,7 @@ public class UIManager : MonoBehaviour {
 				builder.Append (text [charIndex]);
 				charIndex++;
 				text_NPC.text = builder.ToString ();
-				yield return new WaitForSeconds (0.02f);
+				yield return new WaitForSeconds (0.009f);
 			}
 		}
 
