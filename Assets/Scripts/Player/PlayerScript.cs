@@ -100,7 +100,7 @@ public class PlayerScript : MonoBehaviour {
 			if (journalEnabled) {
 				input.Select ();
 				input.ActivateInputField ();
-				int length = input.text.Length < 1 ? 0 : input.text.Length;
+				int length = input.text.Length < 1 ? 0 : input.text.Length - 1;
 				input.text = input.text.Substring (0, length);
 				StartCoroutine (moveEnd ());
 			}
@@ -318,10 +318,12 @@ public class PlayerScript : MonoBehaviour {
 			diagUI.interfaceOpen ();
 			journal.SetActive (true);
 		} else {
-			if (!inventory.open) {
+			if (!inventory.open && !VD.isActive) {
 				diagUI.interfaceClosed ();
 			}
+			Debug.Log ("journal pls");
 			journal.SetActive (false);
+			Debug.Log ("is journal active " + journal.activeInHierarchy);
 		}
 	}
 
