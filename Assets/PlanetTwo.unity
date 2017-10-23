@@ -6658,6 +6658,7 @@ MonoBehaviour:
   - dodgydude1
   - FindBuilder
   - FrogMan
+  - IcePuzzleGuide
   - innkeeper
   - Item_LookUp
   - Laura
@@ -6665,9 +6666,16 @@ MonoBehaviour:
   - Lying1
   - Lying2
   - Lying3
+  - MazePuzzleInstructions
   - MrCube
   - NPCOnly
   - orange
+  - Planet3_WrongPlace
+  - PlanetThree_FinalDialogue
+  - PlanetThree_MineDialogue
+  - PlanetThree_OasisDialogue
+  - PlanetThree_StartDialogue
+  - PlanetThree_TownDialogue
   - porta
   - QuestChartDemo
   - Season1
@@ -6679,7 +6687,7 @@ MonoBehaviour:
   - TRUTH
   - Tutorial
   - Witch
-  assignedIndex: 34
+  assignedIndex: 42
   assignedID: 36069
   assignedDialogue: ShipPort
   interactionCount: 0
@@ -11920,15 +11928,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400766, guid: 30e41a813405746e590988c91eb4010f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 267.63
+      value: 268.48
       objectReference: {fileID: 0}
     - target: {fileID: 400766, guid: 30e41a813405746e590988c91eb4010f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.04
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 400766, guid: 30e41a813405746e590988c91eb4010f, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 266.88
+      value: 266.85
       objectReference: {fileID: 0}
     - target: {fileID: 400766, guid: 30e41a813405746e590988c91eb4010f, type: 2}
       propertyPath: m_LocalRotation.x
@@ -11948,7 +11956,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400766, guid: 30e41a813405746e590988c91eb4010f, type: 2}
       propertyPath: m_RootOrder
-      value: 29
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 11488976, guid: 30e41a813405746e590988c91eb4010f, type: 2}
       propertyPath: inventory
@@ -12057,6 +12065,7 @@ Prefab:
     m_RemovedComponents:
     - {fileID: 11410092, guid: 30e41a813405746e590988c91eb4010f, type: 2}
     - {fileID: 11406420, guid: 30e41a813405746e590988c91eb4010f, type: 2}
+    - {fileID: 14319310, guid: 30e41a813405746e590988c91eb4010f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 30e41a813405746e590988c91eb4010f, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &1953767668 stripped
@@ -13164,6 +13173,7 @@ MonoBehaviour:
   dialogFix: 0
   lookAt: {fileID: 160952360}
   camTransform: {fileID: 160952360}
+  distance: 7
   sensitivityX: 30
   sensitivityY: 30
 --- !u!1 &2091303381
