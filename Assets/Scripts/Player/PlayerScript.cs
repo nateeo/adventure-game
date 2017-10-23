@@ -124,13 +124,6 @@ public class PlayerScript : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.F)) {
 			TryInteract ();
 		}
-		if (Input.GetKeyDown (KeyCode.I) && PlayerPrefs.GetInt("sceneIndex") != 2) {
-			if (diagUI.inventory_open) {
-				diagUI.interfaceClosed();
-			} else {
-				diagUI.interfaceOpen ();
-			}
-		}
 		Collider[] hits = Physics.OverlapSphere (transform.position, NPC_RANGE);
 		for (int i = 0; i < hits.Length; i++) {
 			Collider rHit = hits [i];
@@ -318,17 +311,16 @@ public class PlayerScript : MonoBehaviour {
 	}
 
 	void toggleJournal() {
+		if (!journalEnabled && VD.isActive) {
+			return;
+		}
 		journalEnabled = !journalEnabled;
 		if (journalEnabled) {
 			diagUI.interfaceOpen ();
 			journal.SetActive (true);
 		} else {
-			if (!inventory.open && !VD.isActive) {
-				diagUI.interfaceClosed ();
-			}
-			Debug.Log ("journal pls");
+			diagUI.interfaceClosed ();
 			journal.SetActive (false);
-			Debug.Log ("is journal active " + journal.activeInHierarchy);
 		}
 	}
 
@@ -352,6 +344,10 @@ public class PlayerScript : MonoBehaviour {
                 if (!VD.isActive)
                 {
                     //... and use it to begin the conversation, look at the target
+					// disable journal if open
+					if (journalEnabled) {
+						toggleJournal ();
+					}
                     diagUI.Begin(rHit, assigned);
                 }
                 return;

@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using VIDE_Data;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -274,14 +275,16 @@ public class PlayerInventory : MonoBehaviour
 			}
             if (!inventory.activeSelf)
             {
+				if (VD.isActive) {
+					return;
+				}
 				if (mainInventory == null) {
-					Debug.Log ("inventory tried is");
-					Debug.Log (inventory);
 					mainInventory = inventory.GetComponent<Inventory>();
 				}
 				open = true;
 				Debug.Log ("not active self");
 				Debug.Log (mainInventory);
+				GameObject.FindGameObjectWithTag ("InterfaceManager").GetComponent<InterfaceManager> ().interfaceOpen ();
                 mainInventory.openInventory();
             }
             else
@@ -289,6 +292,7 @@ public class PlayerInventory : MonoBehaviour
                 if (toolTip != null)
                     toolTip.deactivateTooltip();
 				open = false;
+				GameObject.FindGameObjectWithTag ("InterfaceManager").GetComponent<InterfaceManager> ().interfaceClose ();
                 mainInventory.closeInventory();
             }
         }
