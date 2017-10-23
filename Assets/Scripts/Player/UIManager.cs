@@ -80,6 +80,10 @@ public class UIManager : MonoBehaviour {
 				CutTextAnim ();
 				return;
 			}
+			if (VD.nodeData.isPlayer) {
+				// don't continue automatically if player
+				return;
+			}
 			VD.Next ();
 		}
 	}
