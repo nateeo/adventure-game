@@ -593,7 +593,7 @@ MonoBehaviour:
     itemIcon: {fileID: 0}
     itemModel: {fileID: 0}
     itemValue: 1
-    itemType: 0
+    itemType: 14
     itemWeight: 0
     maxStack: 1
     indexItemInList: 999
@@ -1834,6 +1834,7 @@ MonoBehaviour:
   xmax: 250
   zmin: -120
   zmax: -85
+  y: 15
 --- !u!114 &532042158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5477,26 +5478,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diags:
+  - AMBIGUOUS
+  - Ambiguous1
+  - Ambiguous2
+  - Ambiguous3
+  - Ambiguous4
   - badclue2
   - beatenupguy
+  - Builder
+  - BuilderDave
   - cameragirl
   - Charlie
   - CommentModifier
   - CrazyCap
   - DEMO_Condition
   - dodgydude1
+  - FindBuilder
   - FrogMan
+  - IcePuzzleGuide
   - innkeeper
   - Item_LookUp
   - Laura
+  - LIE
+  - Lying1
+  - Lying2
+  - Lying3
+  - MazePuzzleInstructions
   - MrCube
   - NPCOnly
   - orange
+  - Planet3_WrongPlace
+  - PlanetThree_FinalDialogue
+  - PlanetThree_MineDialogue
+  - PlanetThree_OasisDialogue
+  - PlanetThree_StartDialogue
+  - PlanetThree_TownDialogue
   - porta
   - QuestChartDemo
+  - Season1
+  - Season2
+  - Season3
+  - Season4
+  - Season5
+  - ShipPort
+  - TRUTH
   - Tutorial
   - Witch
-  assignedIndex: 1
+  assignedIndex: 6
   assignedID: 24232
   assignedDialogue: beatenupguy
   interactionCount: 0

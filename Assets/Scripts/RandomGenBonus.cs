@@ -8,6 +8,7 @@ public class RandomGenBonus : MonoBehaviour {
 	public float xmax = 250;
 	public float zmin = -120;
 	public float zmax = -85;
+	public float y = 15;
 
 	//get the list of possible items to generate
 	static ItemDataBaseList items;
@@ -51,7 +52,7 @@ public class RandomGenBonus : MonoBehaviour {
 
 
 				//put the item at a random position
-				randomItem.transform.localPosition = new Vector3(x, 15, z);
+				randomItem.transform.localPosition = new Vector3(x, y, z);
 			}
 		}
 	}
