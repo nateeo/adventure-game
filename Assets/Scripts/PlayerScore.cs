@@ -26,10 +26,7 @@ public class PlayerScore : MonoBehaviour {
     }
 
 	void Update() {
-		if (Input.GetKeyDown(KeyCode.L))
-		{
-			endSceneAndDisplayScore();
-		}
+
 	}
 
     int computeTimeBasedScore()
