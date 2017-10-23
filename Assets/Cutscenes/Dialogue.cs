@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Text))]
 public class Dialogue : MonoBehaviour
 {
-	private Text _textComponent;
+	protected Text _textComponent;
+	public int sceneToLoad;
 
 	[TextArea(3, 10)]
 	public string[] DialogueStrings;
@@ -16,9 +17,9 @@ public class Dialogue : MonoBehaviour
 
 	public KeyCode DialogueInput = KeyCode.F;
 
-	private bool _isStringBeingRevealed = false;
-	private bool _isDialoguePlaying = false;
-	private bool _isEndOfDialogue = false;
+	protected bool _isStringBeingRevealed = false;
+	protected bool _isDialoguePlaying = false;
+	protected bool _isEndOfDialogue = false;
 
 	public GameObject blackOutScreen;
 
@@ -43,11 +44,11 @@ public class Dialogue : MonoBehaviour
 			}
 
 		} else if (Input.GetKeyDown (KeyCode.Space)) {
-			SceneManager.LoadScene (1);
+			SceneManager.LoadScene (sceneToLoad);
 		}
 	}
 
-	private IEnumerator StartDialogue()
+	public virtual IEnumerator StartDialogue()
 	{
 		int dialogueLength = DialogueStrings.Length;
 		int currentDialogueIndex = 0;
@@ -81,11 +82,10 @@ public class Dialogue : MonoBehaviour
 		HideIcons();
 		_isEndOfDialogue = false;
 		_isDialoguePlaying = false;
-		Debug.Log ("Is this the end of the script? fucking ded");
-		SceneManager.LoadScene (1);
+		SceneManager.LoadScene (sceneToLoad);
 	}
 
-	private IEnumerator DisplayString(string stringToDisplay)
+	public IEnumerator DisplayString(string stringToDisplay)
 	{
 		int stringLength = stringToDisplay.Length;
 		int currentCharacterIndex = 0;
@@ -136,12 +136,12 @@ public class Dialogue : MonoBehaviour
 
 	}
 
-	private void HideIcons()
+	public void HideIcons()
 	{
 		ContinueIcon.SetActive(false);
 	}
 
-	private void ShowIcon()
+	public void ShowIcon()
 	{
 		if (_isEndOfDialogue)
 		{

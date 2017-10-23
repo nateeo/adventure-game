@@ -69,7 +69,7 @@ public class GameObjectiveController : MonoBehaviour {
 				if (endGame && endGameMarker[i] != 1) {
 					//Trigger ending dialogue
 					if (i == 3) {
-						//Change to ending scene
+						SceneManager.LoadScene (8);
 					}
 
 					endGameMarker [i] = 1;

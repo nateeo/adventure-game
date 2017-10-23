@@ -85,6 +85,8 @@ public class OnLoadingScene : MonoBehaviour {
 		changeStar(timeScore, bonusScore);
 		changeValues(time, bonus, maxBonus);
 
+		Debug.Log ("total score" + (timeScore + bonusScore));
+
 	}
 
 	//private helper method for changing number of stars (score).
