@@ -1744,6 +1744,9 @@ MonoBehaviour:
   fullStar3: {fileID: 695991193}
   fullStar4: {fileID: 1478269043}
   fullStar5: {fileID: 850265848}
+  time1: {fileID: 283305429}
+  time2: {fileID: 286237966}
+  time3: {fileID: 768076602}
   timeText: {fileID: 1086134363}
   bonusText: {fileID: 1527136898}
 --- !u!1001 &1915007037
