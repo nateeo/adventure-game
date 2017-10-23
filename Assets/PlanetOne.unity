@@ -1366,6 +1366,14 @@ Prefab:
       propertyPath: m_Name
       value: dialogCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 22481502, guid: 2b4b78d465c8d43ec9f74917a6c86148, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 22457914, guid: 2b4b78d465c8d43ec9f74917a6c86148, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b4b78d465c8d43ec9f74917a6c86148, type: 2}
   m_IsPrefabParent: 0

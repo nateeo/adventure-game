@@ -88,6 +88,8 @@ public class PlayerScript : MonoBehaviour {
 
 	void Update() {
 
+		diagUI.interactToolTipDisabled ();
+
 		if (SceneManager.GetActiveScene ().buildIndex == 0) {
 			Destroy(gameObject);
 		}
