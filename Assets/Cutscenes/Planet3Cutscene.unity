@@ -283,6 +283,83 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef64394643102e8408f7dfc7b779c6f4, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &100623259
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 137152, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 100623260}
+  - 222: {fileID: 100623262}
+  - 114: {fileID: 100623261}
+  m_Layer: 5
+  m_Name: Continue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &100623260
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22410162, guid: c38f12a014cea4e1bb4423b48cf813fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 100623259}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1418298626}
+  m_RootOrder: 1
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -18, y: 43.5}
+  m_SizeDelta: {x: 200, y: 29}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &100623261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11497326, guid: c38f12a014cea4e1bb4423b48cf813fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 100623259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: f to continue...
+--- !u!222 &100623262
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22289512, guid: c38f12a014cea4e1bb4423b48cf813fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 100623259}
 --- !u!1 &110700171
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,211 +682,6 @@ Transform:
   - {fileID: 812146656}
   m_Father: {fileID: 1594165498}
   m_RootOrder: 1
---- !u!1001 &573583713
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: DialogueStrings.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 22451372, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22451372, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22451372, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22451372, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22451372, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22451372, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22451372, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 22451372, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 22451372, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22451372, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22451372, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22451372, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22451372, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22451372, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22451372, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22451372, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22451372, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22451372, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: DialogueStrings.Array.data[2]
-      value: 'Udo:
-
-        You got it boss.
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: DialogueStrings.Array.data[3]
-      value: "Revior:\n I\u2019m sorry but we\u2019ll need to cut your holiday short.
-        It\u2019s code red, and you\u2019re the best bounty hunter we have. I need
-        you out there.\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: DialogueStrings.Array.data[4]
-      value: "Udo: \nUh\u2026"
-      objectReference: {fileID: 0}
-    - target: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: DialogueStrings.Array.data[5]
-      value: "Revior: \nOkay so here\u2019s the situation. Remember the crucial plans
-        the Celestial State had to upgrade our planet? \n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: DialogueStrings.Array.data[6]
-      value: "Udo: \nWho were the Celestial State again..?\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: DialogueStrings.Array.data[7]
-      value: "Revior: \nOur government! The government you love so much! From our
-        home-planet!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: DialogueStrings.Array.data[8]
-      value: "Udo: \nOh right. Sorry I had a rough night and it\u2019s way too early
-        in the morning."
-      objectReference: {fileID: 0}
-    - target: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: DialogueStrings.Array.data[9]
-      value: "Revior: \nThey\u2019ve been stolen. And we need it back now. If we don\u2019t
-        get these back, we know what will happen to our planet! We\u2019ll be a millennial
-        behind the other galaxies!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: DialogueStrings.Array.data[10]
-      value: "Revior: \nAnyway, I\u2019ll give you a quick run-down. His name is Klepto
-        Darryl, a spy from the planet of Khaloof. I\u2019ll send through documentation
-        of his profile,"
-      objectReference: {fileID: 0}
-    - target: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: DialogueStrings.Array.data[11]
-      value: "Revior: \nplease have a good look at it before starting your chase,
-        the information I\u2019ve given you is minimal but crucial. He was last spotted
-        on the planet you\u2019re staying! "
-      objectReference: {fileID: 0}
-    - target: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: DialogueStrings.Array.data[12]
-      value: "Revior: \nSo see if there\u2019s anyone you can talk to to get some
-        more information, because our knowledge is limited at this stage.\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: DialogueStrings.Array.data[13]
-      value: "Revior: \nI believe in you Udo, and I know how much you love the Celestial
-        State and our planet. Be the hero again. Remember what your parents did for
-        you. "
-      objectReference: {fileID: 0}
-    - target: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: DialogueStrings.Array.data[14]
-      value: "Revior: \nMake them proud."
-      objectReference: {fileID: 0}
-    - target: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: DialogueStrings.Array.data[15]
-      value: "Udo: \nThanks, I\u2019ll get him like I do with any other. I\u2019ll
-        get back to you soon don\u2019t worry. \n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: DialogueStrings.Array.data[16]
-      value: "Revior: \nI\u2019ll keep you updated. Good luck out there.\n\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 11423960, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_FontData.m_RichText
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: DialogueStrings.Array.data[0]
-      value: "Revoir:\nUdo, we\u2019ve tracked him to Khaloof and have satellite coverage
-        of the planet. We should be able to provide you with his location every so
-        often as the satellite passes over that side of the planet."
-      objectReference: {fileID: 0}
-    - target: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: DialogueStrings.Array.data[1]
-      value: "Revior: \nYou just need to get to the blue markers on time to catch
-        him. He\u2019s just landed on the planet so you shouldn\u2019t be too far
-        behind him.\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 22461756, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 22461756, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -133
-      objectReference: {fileID: 0}
-    - target: {fileID: 22461756, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_SizeDelta.x
-      value: -280
-      objectReference: {fileID: 0}
-    - target: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: blackOutScreen
-      value: 
-      objectReference: {fileID: 1122758608}
-    - target: {fileID: 11484596, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-      propertyPath: sceneToLoad
-      value: 5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &723964781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,6 +1497,79 @@ Transform:
   - {fileID: 1577201062}
   m_Father: {fileID: 1118745446}
   m_RootOrder: 1
+--- !u!1 &1418298625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 171570, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1418298626}
+  - 222: {fileID: 1418298628}
+  - 114: {fileID: 1418298627}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1418298626
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22414230, guid: c38f12a014cea4e1bb4423b48cf813fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1418298625}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1782352286}
+  - {fileID: 100623260}
+  m_Father: {fileID: 1768273306}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 8, y: 46}
+  m_SizeDelta: {x: 8, y: 90}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1418298627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11462512, guid: c38f12a014cea4e1bb4423b48cf813fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1418298625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 01b99b346f6db422b8bf239d1455ca57, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1418298628
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22264866, guid: c38f12a014cea4e1bb4423b48cf813fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1418298625}
 --- !u!1 &1439774045
 GameObject:
   m_ObjectHideFlags: 0
@@ -1933,6 +1878,210 @@ Transform:
   m_Children: []
   m_Father: {fileID: 303222141}
   m_RootOrder: 0
+--- !u!1 &1768273302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 111280, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1768273306}
+  - 223: {fileID: 1768273305}
+  - 114: {fileID: 1768273304}
+  - 114: {fileID: 1768273303}
+  m_Layer: 5
+  m_Name: Cutscene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1768273303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11412700, guid: c38f12a014cea4e1bb4423b48cf813fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1768273302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1768273304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11417488, guid: c38f12a014cea4e1bb4423b48cf813fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1768273302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1768273305
+Canvas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22302590, guid: c38f12a014cea4e1bb4423b48cf813fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1768273302}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1768273306
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22451372, guid: c38f12a014cea4e1bb4423b48cf813fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1768273302}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1418298626}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!1 &1782352285
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 130876, guid: c38f12a014cea4e1bb4423b48cf813fe, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1782352286}
+  - 222: {fileID: 1782352289}
+  - 114: {fileID: 1782352288}
+  - 114: {fileID: 1782352287}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1782352286
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22461756, guid: c38f12a014cea4e1bb4423b48cf813fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1782352285}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1418298626}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -133, y: -73}
+  m_SizeDelta: {x: -280, y: 130}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1782352287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11418344, guid: c38f12a014cea4e1bb4423b48cf813fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1782352285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a725abe40bd1a4d968c5ad201914edbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: 5
+  DialogueStrings:
+  - "Revoir:\nUdo, we\u2019ve tracked him to Khaloof and have satellite coverage of
+    the planet. We should be able to provide you with his location every so often
+    as the satellite passes over that side of the planet."
+  - "Revior: \nYou just need to get to the blue markers on time to catch him. He\u2019s
+    just landed on the planet so you shouldn\u2019t be too far behind him.\n"
+  - 'Udo:
+
+    You got it boss.
+
+'
+  SecondsBetweenCharacters: 0.05
+  CharacterRateMultiplier: 0.01
+  DialogueInput: 13
+  blackOutScreen: {fileID: 1122758608}
+  ContinueIcon: {fileID: 100623259}
+--- !u!114 &1782352288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11423960, guid: c38f12a014cea4e1bb4423b48cf813fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1782352285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 18
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 1
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1782352289
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22266950, guid: c38f12a014cea4e1bb4423b48cf813fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1782352285}
 --- !u!1 &1854916476
 GameObject:
   m_ObjectHideFlags: 0

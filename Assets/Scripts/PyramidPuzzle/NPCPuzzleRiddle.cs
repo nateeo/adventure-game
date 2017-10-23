@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 /**
@@ -15,6 +16,7 @@ public class NPCPuzzleRiddle : MonoBehaviour {
     public string question;
     public string answer;
     public int roomNumber;
+	public InputField userInput; 
 
     private int moveCount = 0;
     private bool hasAnswered = false;
@@ -35,6 +37,7 @@ public class NPCPuzzleRiddle : MonoBehaviour {
      */
     private void OnTriggerEnter(Collider other)
     {
+		userInput.text = "";
         setCanvasFields();
         // Shows the canvas depending on the room number that corresponds to the NPC
         if (roomNumber == 1)

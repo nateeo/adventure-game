@@ -156,7 +156,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'The 4 Pharaohs, Apepi, Shebitku, Takelot, and Tutankhamen all reigned Egypt.
+  m_Text: 'The 4 Pharaohs, Neheb, Wazner, Takelot, and Khayu all reigned Egypt.
 
     Use the clues inside the rooms to see who reigned the longest (in order).
 
@@ -4866,6 +4866,7 @@ MonoBehaviour:
     $9, and sold it for $10. How much profit did he make?
   answer: 2
   roomNumber: 3
+  userInput: {fileID: 570449052}
 --- !u!4 &393434415 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400206, guid: be742b6581405c244b53d89dcc8787dc, type: 3}
@@ -12443,6 +12444,7 @@ MonoBehaviour:
     Say the numbers aloud!'
   answer: 312211
   roomNumber: 1
+  userInput: {fileID: 570449052}
 --- !u!4 &1181292972 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400206, guid: be742b6581405c244b53d89dcc8787dc, type: 3}
@@ -13899,6 +13901,7 @@ MonoBehaviour:
   question: How many months have 28 days?
   answer: 12
   roomNumber: 2
+  userInput: {fileID: 570449052}
 --- !u!4 &1341308755 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400206, guid: be742b6581405c244b53d89dcc8787dc, type: 3}
@@ -14071,6 +14074,7 @@ MonoBehaviour:
     What is the fifth daughters name?"
   answer: Sam
   roomNumber: 4
+  userInput: {fileID: 570449052}
 --- !u!1001 &1380004065
 Prefab:
   m_ObjectHideFlags: 0
@@ -15965,7 +15969,7 @@ Prefab:
       objectReference: {fileID: 374557663}
     - target: {fileID: 11493192, guid: 5bf084aef213e9947bf7c9cee2bcc0da, type: 2}
       propertyPath: runSpeed
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5bf084aef213e9947bf7c9cee2bcc0da, type: 2}

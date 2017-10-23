@@ -35,11 +35,11 @@ public class SubmitExitPuzzle : MonoBehaviour {
      * Generates the list of final answers for the puzzle
      */
     private void generateAnswers()
-    {
-        answers.Add("apepi");
-        answers.Add("shebitku");
-        answers.Add("takelot");
-        answers.Add("tutankhamen");
+	{
+		answers.Add("takelot");
+		answers.Add("khayu");
+		answers.Add("neheb");
+        answers.Add("wazner");
     }
 
     /**
@@ -50,28 +50,20 @@ public class SubmitExitPuzzle : MonoBehaviour {
         bool correct = true;
         if (!answer1.text.ToLower().Trim().Equals(answers[0].ToLower()))
         {
-            Debug.Log("wrong");
             correct = false;
         }
         if (!answer2.text.ToLower().Trim().Equals(answers[1].ToLower()))
         {
-            Debug.Log("wrong");
             correct = false;
         }
         if (!answer3.text.ToLower().Trim().Equals(answers[2].ToLower()))
         {
-            Debug.Log("wrong");
             correct = false;
         }
         if (!answer4.text.ToLower().Trim().Equals(answers[3].ToLower()))
         {
-            Debug.Log("wrong");
             correct = false;
         }
-        Debug.Log(answer1.text.ToLower() + " - " + answers[0]);
-        Debug.Log(answer2.text.ToLower() + " - " + answers[1]);
-        Debug.Log(answer3.text.ToLower() + " - " + answers[2]);
-        Debug.Log(answer4.text.ToLower() + " - " + answers[3]);
         // If it's clue, open the door for the player to exit the puzzle map
         if (correct)
         {

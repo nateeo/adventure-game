@@ -58,15 +58,15 @@ public class ExitPuzzle : MonoBehaviour
         clues.Add(room4);
 
         // Adding a list of true and false clues
-        trueClueList.Add("Tutankhamen < Takelot");
-        trueClueList.Add("Shebitku < Apepi");
-        trueClueList.Add("Tutankhamen < Shebitku");
-        trueClueList.Add("Takelot < Shebitku");
+        trueClueList.Add("Neheb < Takelot");
+        trueClueList.Add("Wazner < Khayu");
+        trueClueList.Add("Neheb < Khayu");
+        trueClueList.Add("Wazner < Takelot");
 
-        falseClueList.Add("Takelot < Tutankhamen");
-        falseClueList.Add("Shebitku < Takelot");
-        falseClueList.Add("Apepi < Shebitku");
-        falseClueList.Add("Shebitku < Tutankhamen");
+        falseClueList.Add("Takelot < Wazner");
+        falseClueList.Add("Khayu < Wazner");
+        falseClueList.Add("Takelot < Neheb");
+        falseClueList.Add("Khayu < Neheb");
     }
 
     /**
