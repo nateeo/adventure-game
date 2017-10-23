@@ -599,7 +599,7 @@ MonoBehaviour:
     indexItemInList: 999
     rarity: 0
     itemAttributes: []
-  _memoryScript: {fileID: 0}
+  _memoryScript: {fileID: 469263363}
 --- !u!1 &188692081
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,6 +1377,22 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b4b78d465c8d43ec9f74917a6c86148, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &469263362 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 150748, guid: 2b4b78d465c8d43ec9f74917a6c86148, type: 2}
+  m_PrefabInternal: {fileID: 469263361}
+--- !u!114 &469263363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 469263362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d145852a6b5a42ea99a5553bbe8cea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  memory: {fileID: 492935185}
 --- !u!1 &481492804 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 44d5a16e059aef84b864c5ddf0ebcdde, type: 3}
