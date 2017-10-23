@@ -140,7 +140,6 @@ public class PlayerScore : MonoBehaviour {
 		startTime = Time.time;
 		maxTime = maxPlayTimeInMinutes * 60;
 		numberOfBonuses = 0;
-		setBonusText ();
 	}
 
 	private void setBonusText() {
@@ -148,6 +147,7 @@ public class PlayerScore : MonoBehaviour {
 		Debug.Log (bountyText);
 		Debug.Log (bountyText.isActiveAndEnabled);
 		bountyText.text = "Fugitives collected: " + numberOfBonuses + "/" + maxNumberOfBonuses;
+		calculateScore ();
 	}
 
 }

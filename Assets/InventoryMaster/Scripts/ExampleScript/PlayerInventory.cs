@@ -263,7 +263,7 @@ public class PlayerInventory : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(inputManagerDatabase.InventoryKeyCode))
+		if (Input.GetKeyDown(inputManagerDatabase.InventoryKeyCode) && PlayerPrefs.GetInt("sceneIndex") != 2)
         {
 			if (disabled) {
 				return;
