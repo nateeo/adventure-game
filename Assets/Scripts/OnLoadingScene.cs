@@ -21,6 +21,8 @@ public class OnLoadingScene : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Cursor.lockState = CursorLockMode.Confined;
+		Cursor.visible = true;
 		listOfStars.Add(fullStar0);
 		listOfStars.Add(fullStar1);
 		listOfStars.Add(fullStar2);

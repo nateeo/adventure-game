@@ -18,24 +18,17 @@ public class ComputerTrigger : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider collider) {
-		playerController.dialogFix = true;
-		playerCamera.dialogFix = true;
-		Cursor.visible = true;
-		Cursor.lockState = CursorLockMode.Confined;
+		GameObject.FindGameObjectWithTag ("InterfaceManager").GetComponent<InterfaceManager>().interfaceOpen();
 		computer.SetActive (true);
 		computerscreen.enabled = true;
 		cancel = false;
-
 	}
 
 	void Update(){
 		// For cancel
 		if (cancel) {
 			Debug.Log ("Cancel");
-			playerController.dialogFix = false;
-			playerCamera.dialogFix = false;
-			Cursor.visible = false;
-			Cursor.lockState = CursorLockMode.Locked;
+			GameObject.FindGameObjectWithTag ("InterfaceManager").GetComponent<InterfaceManager>().interfaceClose();
 			computer.SetActive (false);
 			computerscreen.enabled = false;
 		}

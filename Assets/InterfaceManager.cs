@@ -40,6 +40,8 @@ public class InterfaceManager : MonoBehaviour {
 			lockCursor ();
 		} else if (lockCount < 0) {
 			Debug.Log ("lockCount less than 0!");
+			lockCount = 0;
+			lockCursor ();
 		} else {
 			unlockCursor ();
 		}
@@ -57,5 +59,9 @@ public class InterfaceManager : MonoBehaviour {
 		camera.dialogFix = true;
 		Cursor.visible = true;
 		Cursor.lockState = CursorLockMode.Confined;
+	}
+
+	public void reset() {
+		lockCount = 0;
 	}
 }

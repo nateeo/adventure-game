@@ -846,15 +846,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 413794, guid: 024878416813e4d4584ce0b722a07abd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 44.65
+      value: 46.35
       objectReference: {fileID: 0}
     - target: {fileID: 413794, guid: 024878416813e4d4584ce0b722a07abd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 90.15
+      value: 89.46
       objectReference: {fileID: 0}
     - target: {fileID: 413794, guid: 024878416813e4d4584ce0b722a07abd, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 24.51
+      value: 22.97
       objectReference: {fileID: 0}
     - target: {fileID: 413794, guid: 024878416813e4d4584ce0b722a07abd, type: 2}
       propertyPath: m_LocalRotation.x
@@ -932,6 +932,19 @@ MonoBehaviour:
     rarity: 0
     itemAttributes: []
   _memoryScript: {fileID: 158636456}
+--- !u!114 &84328884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 84328882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70f639b2184d476786537494b771dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: {fileID: 2081735440}
+  text: Press 'F' to pick up
 --- !u!1001 &109716869
 Prefab:
   m_ObjectHideFlags: 0
@@ -2701,7 +2714,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22481502, guid: 2b4b78d465c8d43ec9f74917a6c86148, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 22493226, guid: 2b4b78d465c8d43ec9f74917a6c86148, type: 2}
       propertyPath: m_RootOrder
@@ -13870,15 +13883,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: f9ec2f5b43ac0204199acdb66395048b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 25.240002
+      value: 30.24
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f9ec2f5b43ac0204199acdb66395048b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 87.21
+      value: 87.29
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f9ec2f5b43ac0204199acdb66395048b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 41.22
+      value: 35.61
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f9ec2f5b43ac0204199acdb66395048b, type: 2}
       propertyPath: m_LocalRotation.x
@@ -13906,15 +13919,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f9ec2f5b43ac0204199acdb66395048b, type: 2}
       propertyPath: m_LocalScale.x
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f9ec2f5b43ac0204199acdb66395048b, type: 2}
       propertyPath: m_LocalScale.y
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f9ec2f5b43ac0204199acdb66395048b, type: 2}
       propertyPath: m_LocalScale.z
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f9ec2f5b43ac0204199acdb66395048b, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13960,6 +13973,19 @@ MonoBehaviour:
     rarity: 0
     itemAttributes: []
   _memoryScript: {fileID: 0}
+--- !u!114 &1999536767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1999536765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70f639b2184d476786537494b771dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: {fileID: 2081735440}
+  text: Press 'F' to pick up
 --- !u!1001 &2002678839
 Prefab:
   m_ObjectHideFlags: 0
@@ -14307,6 +14333,7 @@ GameObject:
   - 33: {fileID: 2069833887}
   - 65: {fileID: 2069833886}
   - 23: {fileID: 2069833885}
+  - 114: {fileID: 2069833888}
   m_Layer: 0
   m_Name: Cube (11)
   m_TagString: Untagged
@@ -14375,6 +14402,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2069833883}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2069833888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2069833883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70f639b2184d476786537494b771dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: {fileID: 2081735440}
+  text: I'm not sure it's safe to go in here... maybe I should ask around
 --- !u!1 &2081735438
 GameObject:
   m_ObjectHideFlags: 0
@@ -14404,7 +14444,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2129694040}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 56}
@@ -14442,7 +14482,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: I'm not sure it's safe to go in here... maybe I should ask around
+  m_Text: 
 --- !u!222 &2081735441
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ public class submitDestinationScript : MonoBehaviour {
 		string userInput = "";
 		userInput = destinationInput.text;
 
-		if(userInput.Equals("Khaloof") || userInput.Equals("khaloof")) 
+		if(userInput.Trim().Equals("Khaloof") || userInput.Trim().Equals("khaloof")) 
 		{
 			responseText.text = "Lift off in 10 seconds...";
 				// They can leave the planet
