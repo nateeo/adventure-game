@@ -679,7 +679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a725abe40bd1a4d968c5ad201914edbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 0
+  sceneToLoad: 9
   DialogueStrings:
   - "Udo: \n I\u2019ve caught you Klepto, hand over the plans."
   - 'Klepto:

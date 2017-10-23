@@ -7,11 +7,14 @@ public class MakeDecision : MonoBehaviour {
 	// Decision text that will be referenced for setting visibility.
 	public GameObject decisionText;
 	public GameObject decisionCanvas;
+	public GameObject rejectText;
 	public GameObject cutsceneCanvas;
 
 	public void displayText() {
+		Debug.Log ("display Text");
 		cutsceneCanvas.SetActive(false);
-		decisionText.SetActive(true);
 		decisionCanvas.SetActive(true);
+		decisionText.SetActive(true);
+		rejectText.SetActive (false);
 	}
 }
