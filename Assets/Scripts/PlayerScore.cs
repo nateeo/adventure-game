@@ -91,6 +91,7 @@ public class PlayerScore : MonoBehaviour {
     {
 		calculateScore ();
 		resetScore ();
+		Time.timeScale = 1;
         SceneManager.LoadScene(2);
     }
 

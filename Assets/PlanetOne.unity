@@ -1416,6 +1416,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11427108, guid: 2b4b78d465c8d43ec9f74917a6c86148, type: 2}
+      propertyPath: m_Text
+      value: 'Memories collected: 0/2'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b4b78d465c8d43ec9f74917a6c86148, type: 2}
   m_IsPrefabParent: 0
@@ -1434,6 +1438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d145852a6b5a42ea99a5553bbe8cea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalMemories: 2
   memory: {fileID: 492935185}
 --- !u!1 &481492804 stripped
 GameObject:
@@ -2292,6 +2297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d145852a6b5a42ea99a5553bbe8cea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalMemories: 2
   memory: {fileID: 492935185}
 --- !u!54 &709207753 stripped
 Rigidbody:
@@ -2333,9 +2339,9 @@ MonoBehaviour:
   anim: {fileID: 709207755}
   forceConst: 70
   toolTip: {fileID: 1938146873}
-  walkSpeed: 4
-  runSpeed: 50
-  maxHeight: 3
+  walkSpeed: 10
+  runSpeed: 20
+  maxHeight: 5
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
   diagUI: {fileID: 2083324953}

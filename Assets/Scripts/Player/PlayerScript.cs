@@ -64,7 +64,10 @@ public class PlayerScript : MonoBehaviour {
 
 		// bind to the inventory manager
 		_audio = GameObject.FindGameObjectWithTag ("Audio").GetComponent<PersistAudioManager>();
-		GameObject.FindGameObjectWithTag("InterfaceManager").GetComponent<InterfaceManager>().player = this;
+		InterfaceManager manager = GameObject.FindGameObjectWithTag("InterfaceManager").GetComponent<InterfaceManager>();
+		manager.player = this;
+		manager.reset();
+
 
 		toolTip.enabled = false;
 		journal.SetActive (false);

@@ -16,7 +16,7 @@ public class submitDestinationScript : MonoBehaviour {
 		if(userInput.Trim().Equals("Khaloof") || userInput.Trim().Equals("khaloof")) 
 		{
 			responseText.text = "Lift off in 10 seconds...";
-				// They can leave the planet
+
 		} else 
 		{
 			responseText.text = "Sorry, this is not a valid destination! Enter a destination...";
