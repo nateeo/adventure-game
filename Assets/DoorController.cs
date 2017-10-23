@@ -45,6 +45,9 @@ public class DoorController : MonoBehaviour
     //This field is an indicator to if there is any doors that are opened.
     private bool hasOpenDoors = false;
 
+    //fields for developers only (CHEAT CODE)
+    private int cheatCount;
+
 
     // Use this for initialization
     void Start()
@@ -97,6 +100,16 @@ public class DoorController : MonoBehaviour
         //Reset button pressed, clear all buttons pressed, close all doors.
         if (nameOfButton.Equals("Reset"))
         {
+            //Code for cheating .... developers only
+            //Press reset 10 times and all doors will open.
+            cheatCount++;
+            if (cheatCount == 10)
+            {
+                cheatCount = 0;
+                doors.ForEach(d => d.openDoor());
+                return;
+            }
+
             //First, clear all the numbers pressed, unhighlight all buttons.
             pressedList.Clear();
             updateText();
@@ -112,6 +125,7 @@ public class DoorController : MonoBehaviour
         }
         else if (nameOfButton.Equals("Ok")) //OK button pressed, open doors.
         {
+            cheatCount = 0; //reset cheat if OK is pressed.
             if (pressedList.Count == 3)//If now three buttons are pressed, open the doors.
             {
                 openDoors();
