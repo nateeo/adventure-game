@@ -18,13 +18,15 @@ public class finishScene : MonoBehaviour {
 	
 	// Update is called once per frame
 	void OnTriggerStay(Collider col) {
-		Debug.Log("hoym iasdnf");
 		if (col == player.GetComponent<Collider> ()) {
 			text.SetActive (true);
 			if(Input.GetKeyDown(KeyCode.F)) {
 				Cursor.lockState = CursorLockMode.Confined;
 				Cursor.visible = true;
                 ps.endSceneAndDisplayScore();
+				text.SetActive (false);
+				Destroy (text);
+				Destroy (this);
 			}
 		}
 	}

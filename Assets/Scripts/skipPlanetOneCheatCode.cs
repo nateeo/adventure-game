@@ -7,7 +7,7 @@ public class skipPlanetOneCheatCode : MonoBehaviour {
 	public int sceneToSkipTo;
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey (KeyCode.DownArrow)) {
+		if (Input.GetKey (KeyCode.Backslash)) {
 			SceneManager.LoadScene (sceneToSkipTo);
 		}
 	}
