@@ -305,12 +305,12 @@ TextMesh:
   m_GameObject: {fileID: 36587235}
   m_Text: Room 3
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 8
+  m_FontSize: 300
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -996,12 +996,12 @@ TextMesh:
   m_GameObject: {fileID: 94104556}
   m_Text: 50
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 0
+  m_FontSize: 400
   m_FontStyle: 1
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -1288,12 +1288,12 @@ TextMesh:
   m_GameObject: {fileID: 118794706}
   m_Text: 16
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 0
+  m_FontSize: 400
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -2080,12 +2080,12 @@ TextMesh:
   m_GameObject: {fileID: 173985293}
   m_Text: "Room 4\t"
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 8
+  m_FontSize: 300
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -2904,7 +2904,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10000, y: 2.9}
+  m_AnchoredPosition: {x: 0, y: 2.9}
   m_SizeDelta: {x: 300, y: 290}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &249892681
@@ -3489,7 +3489,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
 --- !u!1001 &288290956
 Prefab:
   m_ObjectHideFlags: 0
@@ -4061,12 +4061,12 @@ TextMesh:
   m_GameObject: {fileID: 334681213}
   m_Text: Room 2
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 8
+  m_FontSize: 250
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -4216,12 +4216,12 @@ TextMesh:
   m_GameObject: {fileID: 359728258}
   m_Text: 50
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 0
+  m_FontSize: 400
   m_FontStyle: 1
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -4293,12 +4293,12 @@ TextMesh:
   m_GameObject: {fileID: 361351209}
   m_Text: 16
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 0
+  m_FontSize: 400
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -4909,12 +4909,12 @@ TextMesh:
   m_GameObject: {fileID: 402442892}
   m_Text: 16
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 0
+  m_FontSize: 400
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -6189,12 +6189,12 @@ TextMesh:
   m_GameObject: {fileID: 592309497}
   m_Text: 50
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 0
+  m_FontSize: 400
   m_FontStyle: 1
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -7148,12 +7148,12 @@ TextMesh:
   m_GameObject: {fileID: 715610255}
   m_Text: Room 1
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
-  m_TabSize: 4
-  m_FontSize: 8
+  m_TabSize: 0
+  m_FontSize: 300
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -8838,12 +8838,12 @@ TextMesh:
   m_GameObject: {fileID: 897888215}
   m_Text: 16
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 0
+  m_FontSize: 400
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -8893,6 +8893,7 @@ GameObject:
   - 124: {fileID: 904726515}
   - 81: {fileID: 904726514}
   - 114: {fileID: 904726519}
+  - 45: {fileID: 904726520}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8984,6 +8985,14 @@ MonoBehaviour:
   camTransform: {fileID: 1719268959}
   sensitivityX: 30
   sensitivityY: 30
+--- !u!45 &904726520
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 904726513}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 34919d227b451314eba4efee9092dd8d, type: 2}
 --- !u!1001 &908893091
 Prefab:
   m_ObjectHideFlags: 0
@@ -9441,12 +9450,12 @@ TextMesh:
   m_GameObject: {fileID: 942641334}
   m_Text: Room 1
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 8
+  m_FontSize: 250
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -12691,12 +12700,12 @@ TextMesh:
   m_GameObject: {fileID: 1226488524}
   m_Text: Room 2
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 8
+  m_FontSize: 250
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -12889,12 +12898,12 @@ TextMesh:
   m_GameObject: {fileID: 1242695511}
   m_Text: Room 3
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 8
+  m_FontSize: 250
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -13311,12 +13320,12 @@ TextMesh:
   m_GameObject: {fileID: 1294302079}
   m_Text: 16
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 0
+  m_FontSize: 400
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -14154,12 +14163,12 @@ TextMesh:
   m_GameObject: {fileID: 1420429768}
   m_Text: Room 3
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 8
+  m_FontSize: 250
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -15344,12 +15353,12 @@ TextMesh:
   m_GameObject: {fileID: 1614480097}
   m_Text: 16
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 0
+  m_FontSize: 400
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -15425,12 +15434,12 @@ TextMesh:
   m_GameObject: {fileID: 1617579987}
   m_Text: 16
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 0
+  m_FontSize: 400
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -15476,7 +15485,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 479612, guid: 5bf084aef213e9947bf7c9cee2bcc0da, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.05
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 479612, guid: 5bf084aef213e9947bf7c9cee2bcc0da, type: 2}
       propertyPath: m_LocalPosition.z
@@ -15500,7 +15509,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 479612, guid: 5bf084aef213e9947bf7c9cee2bcc0da, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 11434026, guid: 5bf084aef213e9947bf7c9cee2bcc0da, type: 2}
       propertyPath: playerCamera
@@ -15723,12 +15732,12 @@ TextMesh:
   m_GameObject: {fileID: 1630112350}
   m_Text: "Room 4\t"
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 8
+  m_FontSize: 250
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -16366,12 +16375,12 @@ TextMesh:
   m_GameObject: {fileID: 1699482996}
   m_Text: Room 1
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 8
+  m_FontSize: 250
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -16992,12 +17001,12 @@ TextMesh:
   m_GameObject: {fileID: 1775490630}
   m_Text: 16
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 0
+  m_FontSize: 400
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -17701,6 +17710,30 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 6448770, guid: ce73a35450ff20d4ab05c1f0c3cec2dc, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319412, guid: ce73a35450ff20d4ab05c1f0c3cec2dc, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319412, guid: ce73a35450ff20d4ab05c1f0c3cec2dc, type: 2}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319412, guid: ce73a35450ff20d4ab05c1f0c3cec2dc, type: 2}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319412, guid: ce73a35450ff20d4ab05c1f0c3cec2dc, type: 2}
+      propertyPath: m_UseLightProbes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319412, guid: ce73a35450ff20d4ab05c1f0c3cec2dc, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e89225b392fe33a40b702f214f6ca007, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce73a35450ff20d4ab05c1f0c3cec2dc, type: 2}
   m_IsPrefabParent: 0
@@ -18308,12 +18341,12 @@ TextMesh:
   m_GameObject: {fileID: 1883899362}
   m_Text: "Room 4\t"
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 8
+  m_FontSize: 250
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -18803,12 +18836,12 @@ TextMesh:
   m_GameObject: {fileID: 1978104913}
   m_Text: Room 2
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 8
+  m_FontSize: 300
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -19423,12 +19456,12 @@ TextMesh:
   m_GameObject: {fileID: 2036437477}
   m_Text: 16
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 0
+  m_FontSize: 400
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
@@ -19794,6 +19827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3d8c5fdbc9df045b77cd5c16ec4ecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameState: {fileID: 997348576}
 --- !u!4 &2080342712 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 5159352fcf0d4a04dad031cb9cd61793, type: 2}
@@ -19876,12 +19910,12 @@ TextMesh:
   m_GameObject: {fileID: 2091526584}
   m_Text: Room 3
   m_OffsetZ: 0
-  m_CharacterSize: 1
+  m_CharacterSize: 0.03
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
   m_TabSize: 4
-  m_FontSize: 8
+  m_FontSize: 300
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
