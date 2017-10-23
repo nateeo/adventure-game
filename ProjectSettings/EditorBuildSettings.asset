@@ -15,3 +15,17 @@ EditorBuildSettings:
     path: Assets/Cutscenes/Introduction.unity
   - enabled: 1
     path: Assets/TestWorld.unity
+  - enabled: 1
+    path: Assets/Planet3.unity
+  - enabled: 1
+    path: Assets/Cutscenes/Planet3Cutscene.unity
+  - enabled: 1
+    path: Assets/Cutscenes/Planet3Decision.unity
+  - enabled: 1
+    path: Assets/Cutscenes/Planet3FinalDialogue.unity
+  - enabled: 1
+    path: Assets/MemoryPuzzle.unity
+  - enabled: 1
+    path: Assets/PyramidPuzzle.unity
+  - enabled: 1
+    path: Assets/Planet3Assets/Scenes/MazePuzzle.unity

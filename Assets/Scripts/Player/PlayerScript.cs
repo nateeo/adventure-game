@@ -23,8 +23,8 @@ public class PlayerScript : MonoBehaviour {
 	private float verticalVelocity;
 	private float gravity = 14.0f;
 	private float jumpForce = 20.0f;
-	private float walkSpeed = 4.0f;
-	private float runSpeed = 10.0f;
+	public float walkSpeed = 4.0f;
+	public float runSpeed = 50.0f;
 	private float leftGround = 0f; // y height of ground before a jump
 	public float maxHeight;
 
