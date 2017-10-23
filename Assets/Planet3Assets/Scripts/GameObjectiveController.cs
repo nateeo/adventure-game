@@ -85,7 +85,7 @@ public class GameObjectiveController : MonoBehaviour {
 				//if we're at the mine
 				if (i == 1) {
 					if (PlayerPrefs.HasKey ("SpawnMine")) {
-						SceneManager.LoadScene (6);
+						SceneManager.LoadScene (10);
 						return;
 					}
 				}
