@@ -106,7 +106,6 @@ public class UIManager : MonoBehaviour {
 					text_choices [i].transform.parent.gameObject.SetActive (false);
 				}
 			}
-			text_choices [0].transform.parent.GetComponent<Button> ().Select ();
 		} else {
 			bool activated = false;
 			container_NPC.SetActive (true);
@@ -128,7 +127,6 @@ public class UIManager : MonoBehaviour {
 				}
 			}
 			if (!activated) {
-				Debug.Log ("Wops");
 				previous_text = data.comments [0];
 				npcTextAnimator = AnimateText (data);
 				StartCoroutine (npcTextAnimator);
