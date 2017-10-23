@@ -90,7 +90,8 @@ public class UIManager : MonoBehaviour {
 	}
 
 	void UpdateUI(VD.NodeData data) {
-		Debug.Log (data.comments[0]);
+		Debug.Log ("update with");
+		Debug.Log (data.comments [0]);
 		container_NPC.SetActive (false);
 		container_PLAYER.SetActive (false);
 		if (data.isPlayer) {
@@ -214,8 +215,9 @@ public class UIManager : MonoBehaviour {
 				yield return new WaitForSeconds (0.009f);
 			}
 		}
-
+		Debug.Log ("A");
 		text_NPC.text = data.comments[data.commentIndex]; //Now just copy full text
+		Debug.Log ("B");
 		animatingText = false;
 	}
 
