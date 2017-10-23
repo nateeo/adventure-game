@@ -43,7 +43,7 @@ public class UIManager : MonoBehaviour {
 			dataStore = GetComponent<DataStore> ();
 		}
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 	}
@@ -134,7 +134,7 @@ public class UIManager : MonoBehaviour {
 			}
 		}
 	}
-		
+
 	public void End(VD.NodeData data) {
 		nameBackground.enabled = false;
 		npcName.enabled = false;
@@ -215,14 +215,14 @@ public class UIManager : MonoBehaviour {
 			}
 		}
 
-		text_NPC.text = data.comments[data.commentIndex]; //Now just copy full text		
+		text_NPC.text = data.comments[data.commentIndex]; //Now just copy full text
 		animatingText = false;
 	}
 
 	void CutTextAnim()
 	{
 		StopCoroutine(npcTextAnimator);
-		text_NPC.text = previous_text; //Now just copy full text		
+		text_NPC.text = previous_text; //Now just copy full text
 		animatingText = false;
 	}
 }

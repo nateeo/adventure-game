@@ -40,22 +40,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268dc70b105993846a123be43345df63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileIndex: 17
+  fileIndex: 15
   loadTag: 
   startID: 0
   curFocusID: 0
-  currentID: 910
+  currentID: 66532
   autosave: 1
   previewPanning: 0
-  currentDiag: 17
+  currentDiag: 15
   locEdit: 0
   S_playerDiags:
   - commentCount: 1
     s_comment:
-    - text: You might need some help getting around!
+    - text: OH! Now that you mention it, I do remember something being built with
+        great secrecy a long time ago
       extraData: ExtraData
       inputSetIndex: 0
-      outputNodeIndex: 1
+      outputNodeIndex: 5
       outActionIndex: -1
       showmore: 0
       outRect:
@@ -70,99 +71,84 @@ MonoBehaviour:
     ID: 0
     rect:
       serializedVersion: 2
-      x: 110
-      y: 200
+      x: 980
+      y: -230
       width: 316
-      height: 110
+      height: 123
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
     isPlayer: 0
-  - commentCount: 1
+  - commentCount: 2
     s_comment:
-    - text: Use the WASD keys or arrow keys to walk around.
+    - text: Do you know anything about a base around here?
       extraData: ExtraData
       inputSetIndex: 1
-      outputNodeIndex: 2
+      outputNodeIndex: 3
       outActionIndex: -1
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Can you tell me anything about the seasons of this planet?
+      extraData: ExtraData
+      inputSetIndex: 1
+      outputNodeIndex: 4
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 1
     rect:
       serializedVersion: 2
-      x: 450
-      y: 40
-      width: 316
-      height: 110
+      x: 290
+      y: -20
+      width: 300
+      height: 100
     pTag: 
     expand: 0
     sprite: {fileID: 0}
     vars: []
     varKeys: []
-    isPlayer: 0
+    isPlayer: 1
   - commentCount: 1
     s_comment:
-    - text: Press space bar to jump and hold shift to run.
+    - text: I'm not too sure builder Dave's whereabouts this year. I only know that
+        his house was in the pink season last year.
       extraData: ExtraData
       inputSetIndex: 2
-      outputNodeIndex: 3
+      outputNodeIndex: -1
       outActionIndex: -1
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 2
-    rect:
-      serializedVersion: 2
-      x: 860
-      y: 60
-      width: 316
-      height: 110
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: You will probably come across many clues that may assist you in your quest.
-        You can store these clues in your inventory
-      extraData: ExtraData
-      inputSetIndex: 3
-      outputNodeIndex: 4
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 3
     rect:
       serializedVersion: 2
-      x: 900
-      y: 280
+      x: 1520
+      y: -240
       width: 316
       height: 136
     pTag: 
@@ -173,40 +159,10 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: Open inventory by pressing 'i'. Open your journal by pressing '-'.
+    - text: A base...?
       extraData: ExtraData
-      inputSetIndex: 4
-      outputNodeIndex: 5
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 281
-        y: 49
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 4
-    rect:
-      serializedVersion: 2
-      x: 1290
-      y: 290
-      width: 316
-      height: 110
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: press 'F' when you want to pick up an item, it will add it to your inventory.
-      extraData: ExtraData
-      inputSetIndex: 5
-      outputNodeIndex: 9
+      inputSetIndex: 3
+      outputNodeIndex: 0
       outActionIndex: -1
       showmore: 0
       outRect:
@@ -221,10 +177,10 @@ MonoBehaviour:
     ID: 5
     rect:
       serializedVersion: 2
-      x: 1670
-      y: 290
+      x: 630
+      y: -220
       width: 316
-      height: 123
+      height: 99
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -233,101 +189,11 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: Wait! You are a bounty hunter aren't you?
+    - text: Hmmmm... sorry I can't remember much apart from the fact that the seasons
+        rotate at the beginning of the every year
       extraData: ExtraData
-      inputSetIndex: 6
-      outputNodeIndex: 7
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 6
-    rect:
-      serializedVersion: 2
-      x: 2720
-      y: 280
-      width: 300
-      height: 100
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: You might as well help us catch some fugitivies! There should be a few
-        lurking around in their space suits, hiding from the Celestial State!
-      extraData: ExtraData
-      inputSetIndex: 7
-      outputNodeIndex: 8
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 7
-    rect:
-      serializedVersion: 2
-      x: 3130
-      y: 270
-      width: 300
-      height: 100
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: Catch them and you will be rewarded!
-      extraData: ExtraData
-      inputSetIndex: 8
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 8
-    rect:
-      serializedVersion: 2
-      x: 3530
-      y: 290
-      width: 300
-      height: 100
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: You can also interact with villagers by pressing 'F'.
-      extraData: ExtraData
-      inputSetIndex: 9
-      outputNodeIndex: 10
+      inputSetIndex: 4
+      outputNodeIndex: 1
       outActionIndex: -1
       showmore: 0
       outRect:
@@ -339,74 +205,43 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    ID: 9
+    ID: 6
     rect:
       serializedVersion: 2
-      x: 1830
-      y: 520
+      x: 590
+      y: 190
+      width: 316
+      height: 136
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: I recall builder Dave was involved in that project...
+      extraData: ExtraData
+      inputSetIndex: 5
+      outputNodeIndex: 2
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 2
+    rect:
+      serializedVersion: 2
+      x: 1230
+      y: 0
       width: 316
       height: 110
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: Try talk to everyone! You never know, they might provide some useful clues
-        or information!
-      extraData: ExtraData
-      inputSetIndex: 10
-      outputNodeIndex: 11
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 10
-    rect:
-      serializedVersion: 2
-      x: 2220
-      y: 520
-      width: 300
-      height: 100
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: Some people are a bit dodgy though, so don't belive everything you hear...
-      extraData: ExtraData
-      inputSetIndex: 11
-      outputNodeIndex: 6
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 11
-    rect:
-      serializedVersion: 2
-      x: 2590
-      y: 540
-      width: 300
-      height: 100
     pTag: 
     expand: 0
     sprite: {fileID: 0}
