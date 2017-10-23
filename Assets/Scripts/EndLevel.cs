@@ -11,8 +11,7 @@ public class EndLevel : MonoBehaviour {
 		if (Input.GetKey (KeyCode.RightBracket)) {
 			Cursor.visible = true;
 			Cursor.lockState = CursorLockMode.Confined;
-			ps.calculateScore ();
-			SceneManager.LoadScene (2);
+			ps.endSceneAndDisplayScore ();
 		}
 	}
 }
