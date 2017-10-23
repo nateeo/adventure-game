@@ -180,12 +180,21 @@ public class UIManager : MonoBehaviour {
 
 	public void interfaceOpen() {
 		interfaceManager.interfaceOpen ();
-		inventory_open = true;
+
 	}
 
 	public void interfaceClosed() {
 		interfaceManager.interfaceClose ();
+	}
+
+	public void inventoryOpen() {
+		inventory_open = true;
+		interfaceOpen();
+	}
+
+	public void inventoryClosed() {
 		inventory_open = false;
+		interfaceClosed();
 	}
 
 	// animating text functions:

@@ -35,6 +35,7 @@ public class InterfaceManager : MonoBehaviour {
 
 	// check if anything else needs the cursor lock, otherwise change state
 	private void checkLock() {
+		Debug.Log ("lockCount " + lockCount);
 		if (lockCount == 0) {
 			lockCursor ();
 		} else if (lockCount < 0) {
