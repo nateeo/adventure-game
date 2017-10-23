@@ -1747,7 +1747,7 @@ Transform:
   - {fileID: 295022850}
   - {fileID: 1339285893}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!4 &157944287 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ce73a35450ff20d4ab05c1f0c3cec2dc, type: 2}
@@ -3489,7 +3489,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
 --- !u!1001 &288290956
 Prefab:
   m_ObjectHideFlags: 0
@@ -4677,7 +4677,7 @@ Transform:
   - {fileID: 1368273568}
   - {fileID: 830477449}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &393303395 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ce73a35450ff20d4ab05c1f0c3cec2dc, type: 2}
@@ -12110,8 +12110,9 @@ MonoBehaviour:
   UIManager: {fileID: 284322041}
   questionButton: {fileID: 833577125}
   exitPuzzleState: {fileID: 1666233683}
-  question: What's your name?
-  answer: Harry
+  question: 'What is the next number in the seqence? 1, 11, 21, 1211, 111221, ...?    Hint:
+    Say the numbers aloud!'
+  answer: 312211
   roomNumber: 1
 --- !u!4 &1181292972 stripped
 Transform:
