@@ -1294,6 +1294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d145852a6b5a42ea99a5553bbe8cea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalMemories: 2
   memory: {fileID: 242268224}
 --- !u!1001 &160156481
 Prefab:
@@ -1441,7 +1442,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 37
 --- !u!23 &178559609
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2463,55 +2464,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diags:
-  - 414d424947554f5553
-  - 416d626967756f757331
-  - 416d626967756f757332
-  - 416d626967756f757333
-  - 416d626967756f757334
-  - 626164636c756532
-  - 62656174656e7570677579
-  - 4275696c646572
-  - 4275696c64657244617665
-  - 63616d6572616769726c
-  - 436861726c6965
-  - 436f6d6d656e744d6f646966696572
-  - 4372617a79436170
-  - 44454d4f5f436f6e646974696f6e
-  - 646f6467796475646531
-  - 46696e644275696c646572
-  - 46726f674d616e
-  - 49636550757a7a6c654775696465
-  - 696e6e6b6565706572
-  - 4974656d5f4c6f6f6b5570
-  - 4c61757261
-  - 4c4945
-  - 4c79696e6731
-  - 4c79696e6732
-  - 4c79696e6733
-  - 4d617a6550757a7a6c65496e737472756374696f6e73
-  - 4d7243756265
-  - 4e50434f6e6c79
-  - 6f72616e6765
-  - 506c616e6574335f57726f6e67506c616365
-  - 506c616e657454687265655f46696e616c4469616c6f677565
-  - 506c616e657454687265655f4d696e654469616c6f677565
-  - 506c616e657454687265655f4f617369734469616c6f677565
-  - 506c616e657454687265655f53746172744469616c6f677565
-  - 506c616e657454687265655f546f776e4469616c6f677565
-  - 706f727461
-  - 5175657374436861727444656d6f
-  - 536561736f6e31
-  - 536561736f6e32
-  - 536561736f6e33
-  - 536561736f6e34
-  - 536561736f6e35
-  - 53686970506f7274
-  - 5452555448
-  - 5475746f7269616c
-  - 5769746368
+  - AMBIGUOUS
+  - Ambiguous1
+  - Ambiguous2
+  - Ambiguous3
+  - Ambiguous4
+  - badclue2
+  - beatenupguy
+  - Builder
+  - BuilderDave
+  - cameragirl
+  - Charlie
+  - CommentModifier
+  - CrazyCap
+  - DEMO_Condition
+  - dodgydude1
+  - FindBuilder
+  - FrogMan
+  - IcePuzzleGuide
+  - innkeeper
+  - Item_LookUp
+  - Laura
+  - LIE
+  - Lying1
+  - Lying2
+  - Lying3
+  - MazePuzzleInstructions
+  - MrCube
+  - NPCOnly
+  - orange
+  - Planet3_WrongPlace
+  - PlanetThree_FinalDialogue
+  - PlanetThree_MineDialogue
+  - PlanetThree_OasisDialogue
+  - PlanetThree_StartDialogue
+  - PlanetThree_TownDialogue
+  - porta
+  - QuestChartDemo
+  - Season1
+  - Season2
+  - Season3
+  - Season4
+  - Season5
+  - ShipPort
+  - TRUTH
+  - Tutorial
+  - Witch
   assignedIndex: 43
   assignedID: 89372
-  assignedDialogue: 5452555448
+  assignedDialogue: TRUTH
   interactionCount: 0
   alias: 
   overrideStartNode: -1
@@ -3150,55 +3151,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diags:
-  - 414d424947554f5553
-  - 416d626967756f757331
-  - 416d626967756f757332
-  - 416d626967756f757333
-  - 416d626967756f757334
-  - 626164636c756532
-  - 62656174656e7570677579
-  - 4275696c646572
-  - 4275696c64657244617665
-  - 63616d6572616769726c
-  - 436861726c6965
-  - 436f6d6d656e744d6f646966696572
-  - 4372617a79436170
-  - 44454d4f5f436f6e646974696f6e
-  - 646f6467796475646531
-  - 46696e644275696c646572
-  - 46726f674d616e
-  - 49636550757a7a6c654775696465
-  - 696e6e6b6565706572
-  - 4974656d5f4c6f6f6b5570
-  - 4c61757261
-  - 4c4945
-  - 4c79696e6731
-  - 4c79696e6732
-  - 4c79696e6733
-  - 4d617a6550757a7a6c65496e737472756374696f6e73
-  - 4d7243756265
-  - 4e50434f6e6c79
-  - 6f72616e6765
-  - 506c616e6574335f57726f6e67506c616365
-  - 506c616e657454687265655f46696e616c4469616c6f677565
-  - 506c616e657454687265655f4d696e654469616c6f677565
-  - 506c616e657454687265655f4f617369734469616c6f677565
-  - 506c616e657454687265655f53746172744469616c6f677565
-  - 506c616e657454687265655f546f776e4469616c6f677565
-  - 706f727461
-  - 5175657374436861727444656d6f
-  - 536561736f6e31
-  - 536561736f6e32
-  - 536561736f6e33
-  - 536561736f6e34
-  - 536561736f6e35
-  - 53686970506f7274
-  - 5452555448
-  - 5475746f7269616c
-  - 5769746368
+  - AMBIGUOUS
+  - Ambiguous1
+  - Ambiguous2
+  - Ambiguous3
+  - Ambiguous4
+  - badclue2
+  - beatenupguy
+  - Builder
+  - BuilderDave
+  - cameragirl
+  - Charlie
+  - CommentModifier
+  - CrazyCap
+  - DEMO_Condition
+  - dodgydude1
+  - FindBuilder
+  - FrogMan
+  - IcePuzzleGuide
+  - innkeeper
+  - Item_LookUp
+  - Laura
+  - LIE
+  - Lying1
+  - Lying2
+  - Lying3
+  - MazePuzzleInstructions
+  - MrCube
+  - NPCOnly
+  - orange
+  - Planet3_WrongPlace
+  - PlanetThree_FinalDialogue
+  - PlanetThree_MineDialogue
+  - PlanetThree_OasisDialogue
+  - PlanetThree_StartDialogue
+  - PlanetThree_TownDialogue
+  - porta
+  - QuestChartDemo
+  - Season1
+  - Season2
+  - Season3
+  - Season4
+  - Season5
+  - ShipPort
+  - TRUTH
+  - Tutorial
+  - Witch
   assignedIndex: 15
   assignedID: 61375
-  assignedDialogue: 46696e644275696c646572
+  assignedDialogue: FindBuilder
   interactionCount: 0
   alias: 
   overrideStartNode: 1
@@ -5625,7 +5626,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 40
 --- !u!1 &779376573 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 238b6ece4046048fc97dcebdc5ef3eaf, type: 3}
@@ -7341,57 +7342,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diags:
-  - 414d424947554f5553
-  - 416d626967756f757331
-  - 416d626967756f757332
-  - 416d626967756f757333
-  - 416d626967756f757334
-  - 626164636c756532
-  - 62656174656e7570677579
-  - 4275696c646572
-  - 4275696c64657244617665
-  - 63616d6572616769726c
-  - 436861726c6965
-  - 436f6d6d656e744d6f646966696572
-  - 4372617a79436170
-  - 44454d4f5f436f6e646974696f6e
-  - 646f6467796475646531
-  - 46696e644275696c646572
-  - 46726f674d616e
-  - 49636550757a7a6c654775696465
-  - 696e6e6b6565706572
-  - 4974656d5f4c6f6f6b5570
-  - 4c61757261
-  - 4c4945
-  - 4c79696e6731
-  - 4c79696e6732
-  - 4c79696e6733
-  - 4d617a6550757a7a6c65496e737472756374696f6e73
-  - 4d7243756265
-  - 4e50434f6e6c79
-  - 6f72616e6765
-  - 506c616e6574335f57726f6e67506c616365
-  - 506c616e657454687265655f46696e616c4469616c6f677565
-  - 506c616e657454687265655f4d696e654469616c6f677565
-  - 506c616e657454687265655f4f617369734469616c6f677565
-  - 506c616e657454687265655f53746172744469616c6f677565
-  - 506c616e657454687265655f546f776e4469616c6f677565
-  - 706f727461
-  - 5175657374436861727444656d6f
-  - 536561736f6e31
-  - 536561736f6e32
-  - 536561736f6e33
-  - 536561736f6e34
-  - 536561736f6e35
-  - 53686970506f7274
-  - 5452555448
-  - 5475746f7269616c
-  - 5769746368
+  - AMBIGUOUS
+  - Ambiguous1
+  - Ambiguous2
+  - Ambiguous3
+  - Ambiguous4
+  - badclue2
+  - beatenupguy
+  - Builder
+  - BuilderDave
+  - cameragirl
+  - Charlie
+  - CommentModifier
+  - CrazyCap
+  - DEMO_Condition
+  - dodgydude1
+  - FindBuilder
+  - FrogMan
+  - IcePuzzleGuide
+  - innkeeper
+  - Item_LookUp
+  - Laura
+  - LIE
+  - Lying1
+  - Lying2
+  - Lying3
+  - MazePuzzleInstructions
+  - MrCube
+  - NPCOnly
+  - orange
+  - Planet3_WrongPlace
+  - PlanetThree_FinalDialogue
+  - PlanetThree_MineDialogue
+  - PlanetThree_OasisDialogue
+  - PlanetThree_StartDialogue
+  - PlanetThree_TownDialogue
+  - porta
+  - QuestChartDemo
+  - Season1
+  - Season2
+  - Season3
+  - Season4
+  - Season5
+  - ShipPort
+  - TRUTH
+  - Tutorial
+  - Witch
   assignedIndex: 42
   assignedID: 36069
-  assignedDialogue: 53686970506f7274
+  assignedDialogue: ShipPort
   interactionCount: 0
-  alias: 5368697020706f7274206d616e61676572
+  alias: 
   overrideStartNode: -1
   defaultNPCSprite: {fileID: 0}
   defaultPlayerSprite: {fileID: 0}
@@ -9678,7 +9679,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 423188, guid: 6a2b68ff5ecf6094fb09fe44c8dc98a5, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 323.2
+      value: 329.08
       objectReference: {fileID: 0}
     - target: {fileID: 423188, guid: 6a2b68ff5ecf6094fb09fe44c8dc98a5, type: 2}
       propertyPath: m_LocalPosition.y
@@ -9686,7 +9687,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 423188, guid: 6a2b68ff5ecf6094fb09fe44c8dc98a5, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 162.15005
+      value: 164.71
       objectReference: {fileID: 0}
     - target: {fileID: 423188, guid: 6a2b68ff5ecf6094fb09fe44c8dc98a5, type: 2}
       propertyPath: m_LocalRotation.x
@@ -9694,7 +9695,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 423188, guid: 6a2b68ff5ecf6094fb09fe44c8dc98a5, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.34202018
       objectReference: {fileID: 0}
     - target: {fileID: 423188, guid: 6a2b68ff5ecf6094fb09fe44c8dc98a5, type: 2}
       propertyPath: m_LocalRotation.z
@@ -9702,7 +9703,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 423188, guid: 6a2b68ff5ecf6094fb09fe44c8dc98a5, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9396926
       objectReference: {fileID: 0}
     - target: {fileID: 423188, guid: 6a2b68ff5ecf6094fb09fe44c8dc98a5, type: 2}
       propertyPath: m_RootOrder
@@ -9714,7 +9715,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 423188, guid: 6a2b68ff5ecf6094fb09fe44c8dc98a5, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a2b68ff5ecf6094fb09fe44c8dc98a5, type: 2}
@@ -9748,48 +9749,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diags:
-  - 414d424947554f5553
-  - 416d626967756f757331
-  - 416d626967756f757332
-  - 416d626967756f757333
-  - 416d626967756f757334
-  - 626164636c756532
-  - 62656174656e7570677579
-  - 4275696c646572
-  - 4275696c64657244617665
-  - 63616d6572616769726c
-  - 436861726c6965
-  - 436f6d6d656e744d6f646966696572
-  - 4372617a79436170
-  - 44454d4f5f436f6e646974696f6e
-  - 646f6467796475646531
-  - 46696e644275696c646572
-  - 46726f674d616e
-  - 49636550757a7a6c654775696465
-  - 696e6e6b6565706572
-  - 4974656d5f4c6f6f6b5570
-  - 4c61757261
-  - 4c4945
-  - 4c79696e6731
-  - 4c79696e6732
-  - 4c79696e6733
-  - 4d7243756265
-  - 4e50434f6e6c79
-  - 6f72616e6765
-  - 706f727461
-  - 5175657374436861727444656d6f
-  - 536561736f6e31
-  - 536561736f6e32
-  - 536561736f6e33
-  - 536561736f6e34
-  - 536561736f6e35
-  - 53686970506f7274
-  - 5452555448
-  - 5475746f7269616c
-  - 5769746368
+  - AMBIGUOUS
+  - Ambiguous1
+  - Ambiguous2
+  - Ambiguous3
+  - Ambiguous4
+  - badclue2
+  - beatenupguy
+  - Builder
+  - BuilderDave
+  - cameragirl
+  - Charlie
+  - CommentModifier
+  - CrazyCap
+  - DEMO_Condition
+  - dodgydude1
+  - FindBuilder
+  - FrogMan
+  - IcePuzzleGuide
+  - innkeeper
+  - Item_LookUp
+  - Laura
+  - LIE
+  - Lying1
+  - Lying2
+  - Lying3
+  - MazePuzzleInstructions
+  - MrCube
+  - NPCOnly
+  - orange
+  - Planet3_WrongPlace
+  - PlanetThree_FinalDialogue
+  - PlanetThree_MineDialogue
+  - PlanetThree_OasisDialogue
+  - PlanetThree_StartDialogue
+  - PlanetThree_TownDialogue
+  - porta
+  - QuestChartDemo
+  - Season1
+  - Season2
+  - Season3
+  - Season4
+  - Season5
+  - ShipPort
+  - TRUTH
+  - Tutorial
+  - Witch
   assignedIndex: 17
   assignedID: 61426
-  assignedDialogue: 49636550757a7a6c654775696465
+  assignedDialogue: IcePuzzleGuide
   interactionCount: 0
   alias: 
   overrideStartNode: -1
@@ -10564,7 +10572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTime: 0
-  maxPlayTimeInMinutes: 0
+  maxPlayTimeInMinutes: 25
   maxTime: 0
   maxNumberOfBonuses: 3
   numberOfBonuses: 0
@@ -10590,6 +10598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d145852a6b5a42ea99a5553bbe8cea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalMemories: 2
   memory: {fileID: 242268224}
 --- !u!114 &1484074183
 MonoBehaviour:
@@ -10644,6 +10653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 877aaefaf518340ecb43e3028a986d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ps: {fileID: 1484074179}
 --- !u!114 &1484074188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13243,6 +13253,7 @@ Prefab:
     m_RemovedComponents:
     - {fileID: 11410092, guid: 30e41a813405746e590988c91eb4010f, type: 2}
     - {fileID: 11406420, guid: 30e41a813405746e590988c91eb4010f, type: 2}
+    - {fileID: 14319310, guid: 30e41a813405746e590988c91eb4010f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 30e41a813405746e590988c91eb4010f, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &1953767668 stripped
@@ -14311,7 +14322,7 @@ Transform:
   m_GameObject: {fileID: 2069833883}
   m_LocalRotation: {x: 0, y: -0.5052026, z: 0, w: 0.8630008}
   m_LocalPosition: {x: 66.32, y: 89.75686, z: -6.08}
-  m_LocalScale: {x: 5.9106817, y: 26.87297, z: 1.6615602}
+  m_LocalScale: {x: 15, y: 30, z: 1.6615602}
   m_LocalEulerAnglesHint: {x: 0, y: -60.689598, z: 0}
   m_Children: []
   m_Father: {fileID: 1226631042}
@@ -14364,6 +14375,80 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2069833883}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2081735438
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 2081735439}
+  - 222: {fileID: 2081735441}
+  - 114: {fileID: 2081735440}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2081735439
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2081735438}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 2129694040}
+  m_RootOrder: 10
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 56}
+  m_SizeDelta: {x: 160, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2081735440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2081735438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: I'm not sure it's safe to go in here... maybe I should ask around
+--- !u!222 &2081735441
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2081735438}
 --- !u!1001 &2087857968
 Prefab:
   m_ObjectHideFlags: 0
@@ -14494,7 +14579,7 @@ Transform:
   m_Children:
   - {fileID: 372923030}
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 24
 --- !u!114 &2087859620
 MonoBehaviour:
   m_ObjectHideFlags: 0

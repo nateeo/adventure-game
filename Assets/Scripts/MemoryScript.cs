@@ -6,6 +6,7 @@ public class MemoryScript : MonoBehaviour {
 
 	private int count;
 	private int max_count;
+	public int totalMemories = 2;
 	public Text memory;
 
 	// Use this for initialization
@@ -20,7 +21,7 @@ public class MemoryScript : MonoBehaviour {
 	}
 
 	void setMemoryCount() {
-		memory.text = "Memories collected: " + count.ToString() + "/?";
+		memory.text = "Memories collected: " + count.ToString() + "/" + totalMemories;
 		if (count >= 6) {
 //			memory.color = Color.green;
 		}
