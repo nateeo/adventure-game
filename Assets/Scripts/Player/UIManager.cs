@@ -47,7 +47,8 @@ public class UIManager : MonoBehaviour {
 		// clean data
 		previous_text = null;
 		text_NPC.text = "";
-
+		Debug.Log ("HESG");
+		Debug.Log (conversation.assignedDialogue);
 		VD.BeginDialogue (conversation);
 	}
 

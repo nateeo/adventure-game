@@ -40,25 +40,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268dc70b105993846a123be43345df63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileIndex: 32
+  fileIndex: 15
   loadTag: 
   startID: 0
   curFocusID: 0
-  currentID: 36069
+  currentID: 66532
   autosave: 1
   previewPanning: 0
-  currentDiag: 32
+  currentDiag: 15
   locEdit: 0
   S_playerDiags:
   - commentCount: 1
     s_comment:
-    - text: 446964206120626c61636b20736869702074686174206c6f6f6b73206c6f6f6b73206c696b652074686973206c616e64206f6e2074686520706c616e657420726563656e746c793f0a2a73686f777320706963747572652a
-      extraData: 457874726144617461
+    - text: OH! Now that you mention it, I do remember something being built with
+        great secrecy a long time ago
+      extraData: ExtraData
       inputSetIndex: 0
-      outputNodeIndex: 1
+      outputNodeIndex: 5
       outActionIndex: -1
       showmore: 0
       outRect:
+        serializedVersion: 2
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 0
+    rect:
+      serializedVersion: 2
+      x: 980
+      y: -230
+      width: 316
+      height: 123
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Do you know anything about a base around here?
+      extraData: ExtraData
+      inputSetIndex: 1
+      outputNodeIndex: 3
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
         x: 0
         y: 0
         width: 0
@@ -66,27 +98,14 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    ID: 0
-    rect:
-      x: 20
-      y: 170
-      width: 300
-      height: 100
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 1
-  - commentCount: 1
-    s_comment:
-    - text: 536f7272792c2049277665206e65766572207365656e20746861742073686970206265666f7265
-      extraData: 457874726144617461
+    - text: Can you tell me anything about the seasons of this planet?
+      extraData: ExtraData
       inputSetIndex: 1
-      outputNodeIndex: 2
+      outputNodeIndex: 4
       outActionIndex: -1
       showmore: 0
       outRect:
+        serializedVersion: 2
         x: 0
         y: 0
         width: 0
@@ -96,38 +115,11 @@ MonoBehaviour:
       visible: 1
     ID: 1
     rect:
-      x: 400
-      y: 170
+      serializedVersion: 2
+      x: 290
+      y: -20
       width: 300
       height: 100
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: 4f682074686174277320737472616e67652c204920737765617220746865207368697020776173206865616465642068657265
-      extraData: 457874726144617461
-      inputSetIndex: 2
-      outputNodeIndex: 3
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        x: 281
-        y: 49
-        width: 30
-        height: 18
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 2
-    rect:
-      x: 780
-      y: 170
-      width: 316
-      height: 110
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -136,24 +128,27 @@ MonoBehaviour:
     isPlayer: 1
   - commentCount: 1
     s_comment:
-    - text: 536f7272792c2063616e27742068656c7020796f752074686572652e2049276c6c2073656520746f2072656675656c696e6720796f75722073686970206e6f772c20796f75206d696768742061732077656c6c2074616b652061206c6f6f6b2061726f756e642074686520706c616e65742e
-      extraData: 457874726144617461
-      inputSetIndex: 3
-      outputNodeIndex: 4
+    - text: I'm not too sure builder Dave's whereabouts this year. I only know that
+        his house was in the pink season last year.
+      extraData: ExtraData
+      inputSetIndex: 2
+      outputNodeIndex: -1
       outActionIndex: -1
       showmore: 0
       outRect:
-        x: 281
-        y: 49
-        width: 30
-        height: 18
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 3
     rect:
-      x: 1150
-      y: 160
+      serializedVersion: 2
+      x: 1520
+      y: -240
       width: 316
       height: 136
     pTag: 
@@ -164,13 +159,14 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: 4265206361726566756c2074686f7567682e2e2e5468697320706c616e65742069732073706c697420696e746f203320636f6d6d756e69746965732e204f6e6520636f6d6d756e69747920616c776179732074656c6c207468652074727574683b206f6e6520616c77617973206c6965733b20616e64206f6e65206c696573206f722074656c6c732074686520747275746820646570656e64696e67206f6e207768617420796f752061736b
-      extraData: 457874726144617461
-      inputSetIndex: 4
-      outputNodeIndex: 5
+    - text: A base...?
+      extraData: ExtraData
+      inputSetIndex: 3
+      outputNodeIndex: 0
       outActionIndex: -1
       showmore: 0
       outRect:
+        serializedVersion: 2
         x: 281
         y: 49
         width: 30
@@ -178,12 +174,13 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    ID: 4
+    ID: 5
     rect:
-      x: 1520
-      y: 160
+      serializedVersion: 2
+      x: 630
+      y: -220
       width: 316
-      height: 149
+      height: 99
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -192,26 +189,59 @@ MonoBehaviour:
     isPlayer: 0
   - commentCount: 1
     s_comment:
-    - text: 45616368206f6620746865206f746865722074687265652070656f706c65207374616e64696e67206f6e20746865207368697020706f727420726570726573656e74206f6e6520636f6d6d756e6974792e20596f752073686f756c64207472792074616c6b696e6720746f207468656d20746f20666967757265206f757420776869636820636f6d6d756e6974792074656c6c7320746865207472757468206f72206c696573
-      extraData: 457874726144617461
-      inputSetIndex: 5
-      outputNodeIndex: -1
+    - text: Hmmmm... sorry I can't remember much apart from the fact that the seasons
+        rotate at the beginning of the every year
+      extraData: ExtraData
+      inputSetIndex: 4
+      outputNodeIndex: 1
       outActionIndex: -1
       showmore: 0
       outRect:
-        x: 0
-        y: 0
-        width: 0
-        height: 0
+        serializedVersion: 2
+        x: 281
+        y: 49
+        width: 30
+        height: 18
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
     ID: 6
     rect:
-      x: 1910
-      y: 160
-      width: 300
-      height: 100
+      serializedVersion: 2
+      x: 590
+      y: 190
+      width: 316
+      height: 136
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: I recall builder Dave was involved in that project...
+      extraData: ExtraData
+      inputSetIndex: 5
+      outputNodeIndex: 2
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 281
+        y: 49
+        width: 30
+        height: 18
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 2
+    rect:
+      serializedVersion: 2
+      x: 1230
+      y: 0
+      width: 316
+      height: 110
     pTag: 
     expand: 0
     sprite: {fileID: 0}
