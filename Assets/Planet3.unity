@@ -17528,7 +17528,7 @@ MonoBehaviour:
   forceConst: 0
   toolTip: {fileID: 0}
   walkSpeed: 10
-  runSpeed: 50
+  runSpeed: 20
   maxHeight: 0
   fallMultiplier: 2.5
   lowJumpMultiplier: 2

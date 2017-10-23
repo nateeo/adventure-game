@@ -689,7 +689,9 @@ MonoBehaviour:
   - "Klepto:\nDo you know what\u2019s in the plans?"
   - "Udo: \nSomething that\u2019s going to put the Celestial State decades ahead in
     terms of technology which is why you\u2019re trying to sell it!"
-  - "Klepto: \nDid you pick up the memories I\u2019ve been dropping?"
+  - "Klepto: \nDid you pick up the memories I\u2019ve been dropping? Here's the last
+    one"
+  - 'Udo: What do these mean?'
   SecondsBetweenCharacters: 0.05
   CharacterRateMultiplier: 0.01
   DialogueInput: 13
