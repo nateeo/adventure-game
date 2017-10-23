@@ -4,6 +4,10 @@ using System.Collections;
 public class RandomGenBonus : MonoBehaviour {
 	//number of items to generate
 	public int noItems = 1;
+	public float xmin = 211;
+	public float xmax = 250;
+	public float zmin = -120;
+	public float zmax = -85;
 
 	//get the list of possible items to generate
 	static ItemDataBaseList items;
@@ -26,8 +30,8 @@ public class RandomGenBonus : MonoBehaviour {
 				Terrain terrain = Terrain.activeTerrain;
 
 				//pick random coodinates within the area
-				float x = Random.Range(211, 250);
-				float z = Random.Range (-120, -85	);
+				float x = Random.Range(xmin, xmax);
+				float z = Random.Range (zmin, zmax	);
 
 				Debug.Log ("coord" + x + ", " + z);
 
