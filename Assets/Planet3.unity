@@ -1212,7 +1212,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Memories collected: 0/?'
+  m_Text: 'Memories collected: 0/0'
 --- !u!114 &101625928
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ public class MemoryScript : MonoBehaviour {
 
 	private int count;
 	private int max_count;
-	public int totalMemories = 2;
+	public int totalMemories;
 	public Text memory;
 
 	// Use this for initialization

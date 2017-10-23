@@ -2307,7 +2307,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22428348, guid: 7af0a38116c4b4cf5b6c0e4b0ace1aab, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 101
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 22428348, guid: 7af0a38116c4b4cf5b6c0e4b0ace1aab, type: 2}
       propertyPath: m_SizeDelta.x
@@ -2341,6 +2341,18 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 22451954, guid: 7af0a38116c4b4cf5b6c0e4b0ace1aab, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 22451954, guid: 7af0a38116c4b4cf5b6c0e4b0ace1aab, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 22428592, guid: 7af0a38116c4b4cf5b6c0e4b0ace1aab, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7af0a38116c4b4cf5b6c0e4b0ace1aab, type: 2}
   m_IsPrefabParent: 0
@@ -2369,12 +2381,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 469263362}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d145852a6b5a42ea99a5553bbe8cea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalMemories: 2
+  totalMemories: 1
   memory: {fileID: 492935185}
 --- !u!224 &469263364
 RectTransform:
@@ -2565,7 +2577,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Memories collected: 0/2'
+  m_Text: 'Memories collected: 0/1'
 --- !u!1 &497755461
 GameObject:
   m_ObjectHideFlags: 0
@@ -3766,7 +3778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d145852a6b5a42ea99a5553bbe8cea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalMemories: 2
+  totalMemories: 1
   memory: {fileID: 492935185}
 --- !u!54 &709207753 stripped
 Rigidbody:
@@ -3808,8 +3820,8 @@ MonoBehaviour:
   anim: {fileID: 709207755}
   forceConst: 70
   toolTip: {fileID: 1938146873}
-  walkSpeed: 10
-  runSpeed: 20
+  walkSpeed: 8
+  runSpeed: 15
   maxHeight: 5
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
@@ -8276,7 +8288,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 48, y: 24}
+  m_AnchoredPosition: {x: 48, y: 15}
   m_SizeDelta: {x: 150, y: 30}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &1475235859
