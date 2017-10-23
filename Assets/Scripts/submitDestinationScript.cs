@@ -4,7 +4,8 @@ using UnityEngine.UI;
 
 public class submitDestinationScript : MonoBehaviour {
 
-	public GameObject UIManager;
+	public UIManager manager;
+	public PlayerScore ps;
 	public Text destinationInput;
 	public Text responseText;
 
@@ -15,7 +16,8 @@ public class submitDestinationScript : MonoBehaviour {
 
 		if(userInput.Trim().Equals("Khaloof") || userInput.Trim().Equals("khaloof")) 
 		{
-			responseText.text = "Lift off in 10 seconds...";
+			manager.interfaceClosed ();
+			ps.endSceneAndDisplayScore ();
 
 		} else 
 		{

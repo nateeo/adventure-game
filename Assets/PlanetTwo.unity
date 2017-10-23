@@ -850,7 +850,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413794, guid: 024878416813e4d4584ce0b722a07abd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 89.46
+      value: 88.415
       objectReference: {fileID: 0}
     - target: {fileID: 413794, guid: 024878416813e4d4584ce0b722a07abd, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2734,6 +2734,10 @@ Prefab:
     - target: {fileID: 22457914, guid: 2b4b78d465c8d43ec9f74917a6c86148, type: 2}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11427108, guid: 2b4b78d465c8d43ec9f74917a6c86148, type: 2}
+      propertyPath: m_Text
+      value: 'Memories collected: 0/2'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b4b78d465c8d43ec9f74917a6c86148, type: 2}
@@ -7731,7 +7735,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ecb6e1670d16473d9c7ac4e43172bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UIManager: {fileID: 1919555127}
+  manager: {fileID: 1919555129}
+  ps: {fileID: 1484074179}
   destinationInput: {fileID: 41676795}
   responseText: {fileID: 878202536}
 --- !u!1 &1077385252
