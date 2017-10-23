@@ -45,6 +45,19 @@ public class PlayerScript : MonoBehaviour {
 
 	public static float NPC_RANGE = 2f;
 
+	//fields for the puzzle planet two
+	public bool icyMovement = true;
+	bool icy = false;
+	int lastDirection;
+	public int icyspeed = 20;
+	float drag;
+	GameObject playerCharacter;
+	PhysicMaterial physics;
+	public CapsuleCollider collider;
+	public SphereCollider colIcy;
+	public bool icyPuzzle = false;
+
+
 	// Use this for initialization
 	void Start () {
 		toolTip.enabled = false;
@@ -52,10 +65,18 @@ public class PlayerScript : MonoBehaviour {
 		journalEnabled = false;
 
 		Screen.lockCursor = true;
-		rigidBody = GetComponent<Rigidbody> ();
 		//jump = new Vector3 (0.0f, 0.2f, 0.0f);
 		anim = GetComponent<Animator> ();
 		controller = GetComponent<CharacterController> ();
+		rigidBody = GetComponent<Rigidbody> ();
+		inventory = GetComponent<PlayerInventory> ();
+		drag = rigidBody.drag;
+
+		colIcy = GetComponent<SphereCollider> ();
+	}
+
+	void Awake() {
+		DontDestroyOnLoad (transform.gameObject);
 	}
 
 	// force text selection to end so journal is preserved
@@ -67,6 +88,8 @@ public class PlayerScript : MonoBehaviour {
 
 	void Update() {
 
+		diagUI.interactToolTipDisabled ();
+
 		if (SceneManager.GetActiveScene ().buildIndex == 0) {
 			Destroy(gameObject);
 		}
@@ -77,21 +100,22 @@ public class PlayerScript : MonoBehaviour {
 			if (journalEnabled) {
 				input.Select ();
 				input.ActivateInputField ();
-				input.text = input.text.Substring (0, input.text.Length - 1);
+				int length = input.text.Length < 1 ? 0 : input.text.Length;
+				input.text = input.text.Substring (0, length);
 				StartCoroutine (moveEnd ());
 			}
 		}
 		// disable all other interaction if journal is enabled
 		if (journalEnabled && inventory.enabled) {
 			inventory.disable ();
-		} else if (!inventory.enabled) {
+		} else if (inventory.disabled) {
 			inventory.enable ();
 		}
 
 		if (journalEnabled) {
 			return;
 		}
-		
+
 		if (Input.GetKeyDown (KeyCode.F)) {
 			TryInteract ();
 		}
@@ -102,7 +126,6 @@ public class PlayerScript : MonoBehaviour {
 				diagUI.interfaceOpen ();
 			}
 		}
-		diagUI.interactToolTipDisabled();
 		Collider[] hits = Physics.OverlapSphere (transform.position, NPC_RANGE);
 		for (int i = 0; i < hits.Length; i++) {
 			Collider rHit = hits [i];
@@ -110,6 +133,33 @@ public class PlayerScript : MonoBehaviour {
 				diagUI.interactToolTipEnabled();
 				break;
 			}
+		}
+
+		//if icyPuzzle is true must start puzzle
+		if (icyPuzzle == true && icy == false) {
+
+			//set everything to true and set the corrent mechanics for the puzzle
+			icy = true;
+			icyMovement = true;
+			lastDirection = 0;
+
+			rigidBody.isKinematic = true;
+
+			//collider to stop player from falling through the ground
+			colIcy.enabled = true;
+			diagUI.playerCamera.dialogFix = true;
+
+		}  else if (icyPuzzle == false && icy == true) {
+
+			//set all mechanics and settings back to normal
+			colIcy.enabled = false;
+			collider.enabled = true;
+			rigidBody.isKinematic = false;
+			icy = false;
+
+			//unlock camera
+			diagUI.playerCamera.dialogFix = false;
+
 		}
 	}
 
@@ -136,7 +186,7 @@ public class PlayerScript : MonoBehaviour {
 		if (!isGrounded && rigidBody.position.y > leftGround + maxHeight && rigidBody.velocity.y > 0) {
 			Debug.Log("MAX REACHED");
 			GetComponent<Rigidbody>().velocity = Vector3.zero;
-			GetComponent<Rigidbody>().angularVelocity = Vector3.zero; 
+			GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 			rigidBody.AddForce(0, -3 * forceConst, 0, ForceMode.Impulse);
 		}
 	}
@@ -158,7 +208,6 @@ public class PlayerScript : MonoBehaviour {
 		// move towards the camera position
 
 		Vector3 movement = new Vector3(h, 0.0f, v);
-		movement = Camera.main.transform.TransformDirection(movement);
 
 		if (Input.GetKey (KeyCode.LeftShift)) {
 			speed = runSpeed;
@@ -166,9 +215,62 @@ public class PlayerScript : MonoBehaviour {
 			speed = walkSpeed;
 		}
 
-		movement = movement.normalized * speed * Time.deltaTime;
-			
-		rigidBody.MovePosition (transform.position + movement);
+		//the mechanics for the puzzle are in this if statement
+		if (icy == true) {
+			//checks direction and restricts movement
+			if (Input.GetKeyDown (KeyCode.A) && rigidBody.isKinematic == true && lastDirection != 1){
+				dialogFix = true;
+				collider.enabled = false;
+				rigidBody.isKinematic = false;
+
+				//direction to go in
+				rigidBody.velocity = new Vector3 (-icyspeed, 0, 0);
+				lastDirection = 1;
+
+			}
+			if (Input.GetKeyDown (KeyCode.D) && rigidBody.isKinematic == true && lastDirection != 2){
+				//restrict movement til collision
+				dialogFix = true;
+				collider.enabled = false;
+				rigidBody.isKinematic = false;
+
+				//direction to go in
+				rigidBody.velocity = new Vector3(icyspeed, 0, 0);
+				lastDirection = 2;
+
+			}
+			if (Input.GetKeyDown (KeyCode.W) && rigidBody.isKinematic == true && lastDirection != 3){
+				//restrict movement til collision
+				dialogFix = true;
+				collider.enabled = false;
+				rigidBody.isKinematic = false;
+
+				//direction to go in
+				rigidBody.velocity = new Vector3(0, 0, icyspeed);
+				lastDirection = 3;
+
+			}
+			if (Input.GetKeyDown (KeyCode.S) && rigidBody.isKinematic == true && lastDirection != 4){
+				//restrict movement til collision
+				dialogFix = true;
+				collider.enabled = false;
+				rigidBody.isKinematic = false;
+
+				//direction to go in
+				rigidBody.velocity = new Vector3(0, 0, -icyspeed);
+				lastDirection = 4;
+
+			}
+		}  else if (icy == false) {
+
+			//normal movement
+			movement = Camera.main.transform.TransformDirection(movement);
+
+			movement = movement.normalized * speed * Time.deltaTime;
+
+			rigidBody.MovePosition (transform.position + movement);
+
+		}
 
 		if (movement != Vector3.zero) {
 			rigidBody.MoveRotation (Quaternion.LookRotation (new Vector3(movement.x, 0.0f, movement.z)));
@@ -205,13 +307,20 @@ public class PlayerScript : MonoBehaviour {
 		anim.SetBool ("IsRunning", running);
 	}
 
+	public void StopAnimating() {
+		anim.SetBool ("IsWalking", false);
+		anim.SetBool ("IsRunning", false);
+	}
+
 	void toggleJournal() {
 		journalEnabled = !journalEnabled;
 		if (journalEnabled) {
 			diagUI.interfaceOpen ();
 			journal.SetActive (true);
 		} else {
-			diagUI.interfaceClosed ();
+			if (!inventory.open) {
+				diagUI.interfaceClosed ();
+			}
 			journal.SetActive (false);
 		}
 	}

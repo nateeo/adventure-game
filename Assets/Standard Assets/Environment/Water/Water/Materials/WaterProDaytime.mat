@@ -31,13 +31,6 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _ReflectionTex
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
           name: _Fresnel
         second:
           m_Texture: {fileID: 2800000, guid: 5b5c5575fd4c74abd9f7b30862fb76a3, type: 3}
@@ -48,6 +41,13 @@ Material:
           name: _ReflectiveColor
         second:
           m_Texture: {fileID: 2800000, guid: ab97f9ab7c2ce724ebc9446060a819a4, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ReflectionTex
+        second:
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -88,28 +88,28 @@ Material:
         second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
-          name: _ReflectionTex_ST
-        second: {r: 1, g: 1, b: 0, a: 0}
+          name: WaveSpeed
+        second: {r: 9, g: 4.5, b: -8, a: -3.5}
       data:
         first:
           name: _RefrColor
         second: {r: 0.9372549, g: 0.9372549, b: 0.9372549, a: 1}
       data:
         first:
-          name: _Fresnel_ST
-        second: {r: 1, g: 1, b: 0, a: 0}
+          name: _HorizonColor
+        second: {r: 0.13575952, g: 0.22810712, b: 0.3810788, a: 0}
       data:
         first:
-          name: WaveSpeed
-        second: {r: 9, g: 4.5, b: -8, a: -3.5}
+          name: _Fresnel_ST
+        second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
           name: _ReflectiveColor_ST
         second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
-          name: _HorizonColor
-        second: {r: 0.13575952, g: 0.22810712, b: 0.3810788, a: 0}
+          name: _ReflectionTex_ST
+        second: {r: 1, g: 1, b: 0, a: 0}
       data:
         first:
           name: _RefractionTex_ST

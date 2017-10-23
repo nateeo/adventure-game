@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour {
 
 	public PlayerScript playerController;
 	public Rigidbody rigidBody;
+	public DataStore dataStore;
 	public CameraThirdPerson playerCamera;
 	public GameObject container_NPC;
 	public GameObject container_PLAYER;
@@ -37,13 +38,18 @@ public class UIManager : MonoBehaviour {
 		container_NPC.SetActive (false);
 		container_PLAYER.SetActive (false);
 		nameBackground.enabled = false;
+		npcName.enabled = false;
+		if (dataStore == null) {
+			dataStore = GetComponent<DataStore> ();
+		}
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 	}
 
 	public void Begin(Collider collider, VIDE_Assign conversation) {
+		playerController.StopAnimating ();
 		collider.gameObject.transform.LookAt(new Vector3 (
 			rigidBody.position.x,
 			collider.transform.position.y,
@@ -58,14 +64,14 @@ public class UIManager : MonoBehaviour {
 
 		// clean data
 		nameBackground.enabled = false;
-		npcName.text = "";
-		previous_text = null;
+		previous_text = "";
 		text_NPC.text = "";
+		VD.BeginDialogue (conversation);
 		if (conversation.alias != null && conversation.alias != "") {
 			nameBackground.enabled = true;
+			npcName.enabled = true;
 			npcName.text = conversation.alias;
 		}
-		VD.BeginDialogue (conversation);
 	}
 
 	public void CallNext() {
@@ -75,15 +81,21 @@ public class UIManager : MonoBehaviour {
 				CutTextAnim ();
 				return;
 			}
+			if (VD.nodeData.isPlayer) {
+				// don't continue automatically if player
+				return;
+			}
 			VD.Next ();
 		}
 	}
 
 	void UpdateUI(VD.NodeData data) {
+		Debug.Log ("update with");
+		Debug.Log (data.comments [0]);
 		container_NPC.SetActive (false);
 		container_PLAYER.SetActive (false);
 		if (data.isPlayer) {
-			if (previous_text != null && previous_text != "") {
+			if (previous_text != null) {
 				container_NPC.SetActive (true);
 				text_NPC.text = previous_text;
 			}
@@ -96,17 +108,37 @@ public class UIManager : MonoBehaviour {
 					text_choices [i].transform.parent.gameObject.SetActive (false);
 				}
 			}
-			text_choices [0].transform.parent.GetComponent<Button> ().Select ();
 		} else {
+			bool activated = false;
 			container_NPC.SetActive (true);
-			previous_text = data.comments [0];
-			npcTextAnimator = AnimateText(data);
-			StartCoroutine(npcTextAnimator);
+			// check if previous actions have been completed
+			if (data.extraVars != null) {
+				if (data.extraVars.ContainsKey("data")) {
+					string value = (string)data.extraVars["data"];
+					if (dataStore.get (value) != null) { // action completed
+						if (data.extraVars.ContainsKey("text")) {
+							string text = (string)data.extraVars ["text"];
+							activated = true;
+							previous_text = text;
+							npcTextAnimator = AnimateText (data, text);
+							StartCoroutine (npcTextAnimator);
+						}
+					} else { // action not completed
+						dataStore.add (value, "true");
+					}
+				}
+			}
+			if (!activated) {
+				previous_text = data.comments [0];
+				npcTextAnimator = AnimateText (data);
+				StartCoroutine (npcTextAnimator);
+			}
 		}
 	}
-		
+
 	public void End(VD.NodeData data) {
 		nameBackground.enabled = false;
+		npcName.enabled = false;
 		VD.OnNodeChange -= UpdateUI;
 		VD.OnEnd -= End;
 		VD.EndDialogue ();
@@ -161,7 +193,16 @@ public class UIManager : MonoBehaviour {
 	// animating text functions:
 
 	public IEnumerator AnimateText(VD.NodeData data) {
-		string text = data.comments [data.commentIndex];
+		return AnimateText(data, "");
+	}
+
+	public IEnumerator AnimateText(VD.NodeData data, string customText) {
+		string text;
+		if (customText == "") {
+			text = data.comments [0];
+		} else {
+			text = customText;
+		}
 		animatingText = true;
 
 		if (!data.isPlayer) {
@@ -171,18 +212,19 @@ public class UIManager : MonoBehaviour {
 				builder.Append (text [charIndex]);
 				charIndex++;
 				text_NPC.text = builder.ToString ();
-				yield return new WaitForSeconds (0.02f);
+				yield return new WaitForSeconds (0.009f);
 			}
 		}
-
-		text_NPC.text = data.comments[data.commentIndex]; //Now just copy full text		
+		Debug.Log ("A");
+		text_NPC.text = data.comments[data.commentIndex]; //Now just copy full text
+		Debug.Log ("B");
 		animatingText = false;
 	}
 
 	void CutTextAnim()
 	{
 		StopCoroutine(npcTextAnimator);
-		text_NPC.text = VD.nodeData.comments[VD.nodeData.commentIndex]; //Now just copy full text		
+		text_NPC.text = previous_text; //Now just copy full text
 		animatingText = false;
 	}
 }
