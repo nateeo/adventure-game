@@ -169,8 +169,12 @@ public class PlayerInventory : MonoBehaviour
 
         if (GameObject.FindGameObjectWithTag("Tooltip") != null)
             toolTip = GameObject.FindGameObjectWithTag("Tooltip").GetComponent<Tooltip>();
-        if (inventory != null)
-            mainInventory = inventory.GetComponent<Inventory>();
+		if (inventory != null) {
+			Debug.Log ("Null inventory");
+			Debug.Log ("but inventory is");
+			Debug.Log (inventory);
+			mainInventory = inventory.GetComponent<Inventory> ();
+		}
         if (characterSystem != null)
             characterSystemInventory = characterSystem.GetComponent<Inventory>();
         if (craftSystem != null)
@@ -270,7 +274,14 @@ public class PlayerInventory : MonoBehaviour
 			}
             if (!inventory.activeSelf)
             {
+				if (mainInventory == null) {
+					Debug.Log ("inventory tried is");
+					Debug.Log (inventory);
+					mainInventory = inventory.GetComponent<Inventory>();
+				}
 				open = true;
+				Debug.Log ("not active self");
+				Debug.Log (mainInventory);
                 mainInventory.openInventory();
             }
             else

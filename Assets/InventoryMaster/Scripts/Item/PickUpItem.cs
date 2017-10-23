@@ -24,6 +24,9 @@ public class PickUpItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		if (_inventory == null) {
+			_inventory = _playerObj.GetComponent<PlayerInventory>().inventory.GetComponent<Inventory>();
+		}
 		float distance = Vector3.Distance(this.gameObject.transform.position, _player.transform.position);
 
 		// handle tooltips based on distance

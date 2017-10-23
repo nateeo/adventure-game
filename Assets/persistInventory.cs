@@ -19,8 +19,6 @@ public class persistInventory : MonoBehaviour {
 	void Update () {
 		if (SceneManager.GetActiveScene ().buildIndex == 0) {
 			Destroy (gameObject);
-		} else if (SceneManager.GetActiveScene ().buildIndex == 2) {
-			childGameObject.SetActive (false);
 		} else {
 			childGameObject.SetActive (true);
 		}

@@ -60,6 +60,10 @@ public class PlayerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		// bind to the inventory manager
+		GameObject.FindGameObjectWithTag("InterfaceManager").GetComponent<InterfaceManager>().player = this;
+
 		toolTip.enabled = false;
 		journal.SetActive (false);
 		journalEnabled = false;
@@ -73,10 +77,6 @@ public class PlayerScript : MonoBehaviour {
 		drag = rigidBody.drag;
 
 		colIcy = GetComponent<SphereCollider> ();
-	}
-
-	void Awake() {
-		DontDestroyOnLoad (transform.gameObject);
 	}
 
 	// force text selection to end so journal is preserved

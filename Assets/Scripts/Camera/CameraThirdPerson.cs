@@ -22,6 +22,8 @@ public class CameraThirdPerson : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		GameObject.FindGameObjectWithTag("InterfaceManager").GetComponent<InterfaceManager>().camera = this;
 		camTransform = transform;
 		cam = Camera.main;
 		Cursor.visible = false;

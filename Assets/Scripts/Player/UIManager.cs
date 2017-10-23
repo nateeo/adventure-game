@@ -29,6 +29,9 @@ public class UIManager : MonoBehaviour {
 	IEnumerator npcTextAnimator;
 	private bool animatingText;
 
+	// for handling the interface windows
+	private InterfaceManager interfaceManager;
+
 	Vector3 original;
 
 
@@ -37,6 +40,7 @@ public class UIManager : MonoBehaviour {
 		inventory_open = false;
 		container_NPC.SetActive (false);
 		container_PLAYER.SetActive (false);
+		interfaceManager = GameObject.FindGameObjectWithTag ("InterfaceManager").GetComponent<InterfaceManager> ();
 		nameBackground.enabled = false;
 		npcName.enabled = false;
 		if (dataStore == null) {
@@ -175,18 +179,12 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public void interfaceOpen() {
-		playerController.dialogFix = true;
-		playerCamera.dialogFix = true;
-		Cursor.visible = true;
-		Cursor.lockState = CursorLockMode.Confined;
+		interfaceManager.interfaceOpen ();
 		inventory_open = true;
 	}
 
 	public void interfaceClosed() {
-		playerController.dialogFix = false;
-		playerCamera.dialogFix = false;
-		Cursor.visible = false;
-		Cursor.lockState = CursorLockMode.Locked;
+		interfaceManager.interfaceClose ();
 		inventory_open = false;
 	}
 

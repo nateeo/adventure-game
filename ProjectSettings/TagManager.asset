@@ -21,6 +21,8 @@ TagManager:
   - MainInventory
   - Timer
   - Memory
+  - PersistedInventory
+  - InterfaceManager
   layers:
   - Default
   - TransparentFX
