@@ -9,11 +9,13 @@ public class PickUpItem : MonoBehaviour
 	private GameObject _playerObj;
 	private PlayerScript _player;
 	public MemoryScript _memoryScript;
+	private PersistAudioManager _audio;
 
 	private bool enabled;
 
     void Start()
     {
+		_audio = GameObject.FindGameObjectWithTag ("Audio").GetComponent<PersistAudioManager>();
 		enabled = false;
 		_playerObj = GameObject.FindGameObjectWithTag("Player");
 		if (_playerObj != null)
@@ -48,6 +50,7 @@ public class PickUpItem : MonoBehaviour
 					ps.incrementBonus ();
 					// remove tooltip
 					_player.notifyBounty(false);
+					_audio.playBonusPickUp ();
 					//destory the object once counter has been incremented
 					Destroy (this.gameObject);
 
@@ -59,6 +62,7 @@ public class PickUpItem : MonoBehaviour
 					if (check)
 						Destroy (this.gameObject);
 					else if (_inventory.ItemsInInventory.Count < (_inventory.width * _inventory.height)) {
+						_audio.playPickUp ();
 						_inventory.addItemToInventory (item.itemID, item.itemValue);
 						_inventory.updateItemList ();
 						_inventory.stackableSettings ();

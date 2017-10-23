@@ -57,11 +57,13 @@ public class PlayerScript : MonoBehaviour {
 	public SphereCollider colIcy;
 	public bool icyPuzzle = false;
 
+	private PersistAudioManager _audio;
 
 	// Use this for initialization
 	void Start () {
 
 		// bind to the inventory manager
+		_audio = GameObject.FindGameObjectWithTag ("Audio").GetComponent<PersistAudioManager>();
 		GameObject.FindGameObjectWithTag("InterfaceManager").GetComponent<InterfaceManager>().player = this;
 
 		toolTip.enabled = false;
@@ -348,6 +350,7 @@ public class PlayerScript : MonoBehaviour {
 					if (journalEnabled) {
 						toggleJournal ();
 					}
+					_audio.playNPCSound ();
                     diagUI.Begin(rHit, assigned);
                 }
                 return;
