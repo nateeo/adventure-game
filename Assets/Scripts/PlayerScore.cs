@@ -78,8 +78,10 @@ public class PlayerScore : MonoBehaviour {
         }
         else if (numberOfBonuses > 0)
         {
+			Debug.Log ("Score is 1");
             return 1;
         }
+		Debug.Log ("Score is 0");
         return 0;
     }
 

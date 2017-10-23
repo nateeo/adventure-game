@@ -43,6 +43,7 @@ public class OnLoadingScene : MonoBehaviour {
 		if (PlayerPrefs.HasKey("BonusScore"))
 		{
 			bonusScore = PlayerPrefs.GetInt("BonusScore");
+			Debug.Log ("What is the bonnus Score "+bonusScore);
 		}
 		else
 		{
