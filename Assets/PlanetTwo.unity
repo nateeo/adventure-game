@@ -1441,7 +1441,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 37
 --- !u!23 &178559609
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5625,7 +5625,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 40
 --- !u!1 &779376573 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 238b6ece4046048fc97dcebdc5ef3eaf, type: 3}
@@ -10564,7 +10564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTime: 0
-  maxPlayTimeInMinutes: 0
+  maxPlayTimeInMinutes: 25
   maxTime: 0
   maxNumberOfBonuses: 3
   numberOfBonuses: 0
@@ -10644,6 +10644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 877aaefaf518340ecb43e3028a986d2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ps: {fileID: 1484074179}
 --- !u!114 &1484074188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14494,7 +14495,7 @@ Transform:
   m_Children:
   - {fileID: 372923030}
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 27
 --- !u!114 &2087859620
 MonoBehaviour:
   m_ObjectHideFlags: 0

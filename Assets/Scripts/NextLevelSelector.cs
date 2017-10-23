@@ -20,6 +20,10 @@ public class NextLevelSelector : MonoBehaviour {
 				sceneIndex = 6;
 				PlayerPrefs.SetString ("SpawnMine","false");
 			}
+
+			if (lastPlayedSceneIndex == 7) {
+				gameObject.SetActive (false);
+			}
 		} else {
 			Debug.Log ("no scene index");
 		}

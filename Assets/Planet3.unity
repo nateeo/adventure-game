@@ -755,6 +755,7 @@ MonoBehaviour:
   oasis: {fileID: 375840745}
   tower: {fileID: 930648767}
   ship: {fileID: 585046926}
+  ps: {fileID: 1710928088}
   diagUI: {fileID: 1173730393}
 --- !u!65 &68928047
 BoxCollider:
@@ -19264,7 +19265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTime: 0
-  maxPlayTimeInMinutes: 0
+  maxPlayTimeInMinutes: 30
   maxTime: 0
   maxNumberOfBonuses: 3
   numberOfBonuses: 0

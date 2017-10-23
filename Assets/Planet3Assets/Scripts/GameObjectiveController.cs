@@ -13,6 +13,7 @@ public class GameObjectiveController : MonoBehaviour {
 	public GameObjective oasis;
 	public GameObjective tower;
 	public GameObjective ship;
+	public PlayerScore ps;
 
 	public UIManager diagUI;
 
@@ -69,6 +70,7 @@ public class GameObjectiveController : MonoBehaviour {
 				if (endGame && endGameMarker[i] != 1) {
 					//Trigger ending dialogue
 					if (i == 3) {
+						ps.calculateScore ();
 						SceneManager.LoadScene (8);
 					}
 
