@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//This script is used to open and close doors. It is attached to all of the movable doors.
+//Author: Daniel Wong
 public class PuzzleDoors : MonoBehaviour {
 	private static int MOVE_DOWN = 8; //How many times to move down
 

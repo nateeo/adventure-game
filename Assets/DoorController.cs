@@ -42,6 +42,12 @@ public class DoorController : MonoBehaviour
     List<int> mappings = new List<int>(new int[] { 1, 2, 3, 4, 5, 6, 7 });
     List<int> pressedList = new List<int>();
 
+    //This field is an indicator to if there is any doors that are opened.
+    private bool hasOpenDoors = false;
+
+    //fields for developers only (CHEAT CODE)
+    private int cheatCount;
+
 
     // Use this for initialization
     void Start()
@@ -94,25 +100,42 @@ public class DoorController : MonoBehaviour
         //Reset button pressed, clear all buttons pressed, close all doors.
         if (nameOfButton.Equals("Reset"))
         {
+            //Code for cheating .... developers only
+            //Press reset 10 times and all doors will open.
+            cheatCount++;
+            if (cheatCount == 10)
+            {
+                cheatCount = 0;
+                doors.ForEach(d => d.openDoor());
+                return;
+            }
+
             //First, clear all the numbers pressed, unhighlight all buttons.
             pressedList.Clear();
             updateText();
             buttons.ForEach(b => b.GetComponent<Image>().color = Color.white);
             doors.ForEach(d => d.closeDoor());
+
+            if (!audio.isPlaying && hasOpenDoors) //if there is an open door that is closing, play sound.
+            {
+                audio.Play();
+            }
+
+            hasOpenDoors = false;
         }
         else if (nameOfButton.Equals("Ok")) //OK button pressed, open doors.
         {
+            cheatCount = 0; //reset cheat if OK is pressed.
             if (pressedList.Count == 3)//If now three buttons are pressed, open the doors.
             {
                 openDoors();
+            } else
+            {
+                return;
             }
 
 			//Close the keypad overlay
 			trigger.closeOverlay ();
-
-			if (!audio.isPlaying) {
-				audio.Play ();
-			}
 
             return;
         }
@@ -160,6 +183,12 @@ public class DoorController : MonoBehaviour
         //Then call open door on each of these indexes.
         List<int> indexesOfDoors = pressedList.Select(p => mappings.IndexOf(p)).ToList();
         indexesOfDoors.ForEach(i => doors[i].openDoor());
+        if (!audio.isPlaying && !hasOpenDoors) //if there is no open door, then play sound (because doors will be opening).
+        {
+            audio.Play();
+        }
+
+        hasOpenDoors = true;
     }
 
     //private helper function to check if the randomized mapping array gives a simple solution 123.

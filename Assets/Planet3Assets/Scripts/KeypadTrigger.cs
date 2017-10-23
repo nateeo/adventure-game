@@ -21,6 +21,7 @@ public class KeypadTrigger : MonoBehaviour {
 		Cursor.lockState = CursorLockMode.Locked;
 	}
 
+
 	public void closeOverlay() {
 		if (overlayDisplayed) {
 			overlayDisplayed = false;
@@ -53,7 +54,12 @@ public class KeypadTrigger : MonoBehaviour {
 			//Lock character movement
 			player.GetComponent<FPSInputController>().enabled = false;
 		}
-	}
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            closeOverlay();
+        }
+    }
 
 	void OnTriggerExit(Collider collide) {
 		canvas2.SetActive (false);
