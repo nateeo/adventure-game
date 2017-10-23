@@ -2463,55 +2463,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diags:
-  - 414d424947554f5553
-  - 416d626967756f757331
-  - 416d626967756f757332
-  - 416d626967756f757333
-  - 416d626967756f757334
-  - 626164636c756532
-  - 62656174656e7570677579
-  - 4275696c646572
-  - 4275696c64657244617665
-  - 63616d6572616769726c
-  - 436861726c6965
-  - 436f6d6d656e744d6f646966696572
-  - 4372617a79436170
-  - 44454d4f5f436f6e646974696f6e
-  - 646f6467796475646531
-  - 46696e644275696c646572
-  - 46726f674d616e
-  - 49636550757a7a6c654775696465
-  - 696e6e6b6565706572
-  - 4974656d5f4c6f6f6b5570
-  - 4c61757261
-  - 4c4945
-  - 4c79696e6731
-  - 4c79696e6732
-  - 4c79696e6733
-  - 4d617a6550757a7a6c65496e737472756374696f6e73
-  - 4d7243756265
-  - 4e50434f6e6c79
-  - 6f72616e6765
-  - 506c616e6574335f57726f6e67506c616365
-  - 506c616e657454687265655f46696e616c4469616c6f677565
-  - 506c616e657454687265655f4d696e654469616c6f677565
-  - 506c616e657454687265655f4f617369734469616c6f677565
-  - 506c616e657454687265655f53746172744469616c6f677565
-  - 506c616e657454687265655f546f776e4469616c6f677565
-  - 706f727461
-  - 5175657374436861727444656d6f
-  - 536561736f6e31
-  - 536561736f6e32
-  - 536561736f6e33
-  - 536561736f6e34
-  - 536561736f6e35
-  - 53686970506f7274
-  - 5452555448
-  - 5475746f7269616c
-  - 5769746368
+  - AMBIGUOUS
+  - Ambiguous1
+  - Ambiguous2
+  - Ambiguous3
+  - Ambiguous4
+  - badclue2
+  - beatenupguy
+  - Builder
+  - BuilderDave
+  - cameragirl
+  - Charlie
+  - CommentModifier
+  - CrazyCap
+  - DEMO_Condition
+  - dodgydude1
+  - FindBuilder
+  - FrogMan
+  - IcePuzzleGuide
+  - innkeeper
+  - Item_LookUp
+  - Laura
+  - LIE
+  - Lying1
+  - Lying2
+  - Lying3
+  - MazePuzzleInstructions
+  - MrCube
+  - NPCOnly
+  - orange
+  - Planet3_WrongPlace
+  - PlanetThree_FinalDialogue
+  - PlanetThree_MineDialogue
+  - PlanetThree_OasisDialogue
+  - PlanetThree_StartDialogue
+  - PlanetThree_TownDialogue
+  - porta
+  - QuestChartDemo
+  - Season1
+  - Season2
+  - Season3
+  - Season4
+  - Season5
+  - ShipPort
+  - TRUTH
+  - Tutorial
+  - Witch
   assignedIndex: 43
   assignedID: 89372
-  assignedDialogue: 5452555448
+  assignedDialogue: TRUTH
   interactionCount: 0
   alias: 
   overrideStartNode: -1
@@ -3150,55 +3150,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diags:
-  - 414d424947554f5553
-  - 416d626967756f757331
-  - 416d626967756f757332
-  - 416d626967756f757333
-  - 416d626967756f757334
-  - 626164636c756532
-  - 62656174656e7570677579
-  - 4275696c646572
-  - 4275696c64657244617665
-  - 63616d6572616769726c
-  - 436861726c6965
-  - 436f6d6d656e744d6f646966696572
-  - 4372617a79436170
-  - 44454d4f5f436f6e646974696f6e
-  - 646f6467796475646531
-  - 46696e644275696c646572
-  - 46726f674d616e
-  - 49636550757a7a6c654775696465
-  - 696e6e6b6565706572
-  - 4974656d5f4c6f6f6b5570
-  - 4c61757261
-  - 4c4945
-  - 4c79696e6731
-  - 4c79696e6732
-  - 4c79696e6733
-  - 4d617a6550757a7a6c65496e737472756374696f6e73
-  - 4d7243756265
-  - 4e50434f6e6c79
-  - 6f72616e6765
-  - 506c616e6574335f57726f6e67506c616365
-  - 506c616e657454687265655f46696e616c4469616c6f677565
-  - 506c616e657454687265655f4d696e654469616c6f677565
-  - 506c616e657454687265655f4f617369734469616c6f677565
-  - 506c616e657454687265655f53746172744469616c6f677565
-  - 506c616e657454687265655f546f776e4469616c6f677565
-  - 706f727461
-  - 5175657374436861727444656d6f
-  - 536561736f6e31
-  - 536561736f6e32
-  - 536561736f6e33
-  - 536561736f6e34
-  - 536561736f6e35
-  - 53686970506f7274
-  - 5452555448
-  - 5475746f7269616c
-  - 5769746368
+  - AMBIGUOUS
+  - Ambiguous1
+  - Ambiguous2
+  - Ambiguous3
+  - Ambiguous4
+  - badclue2
+  - beatenupguy
+  - Builder
+  - BuilderDave
+  - cameragirl
+  - Charlie
+  - CommentModifier
+  - CrazyCap
+  - DEMO_Condition
+  - dodgydude1
+  - FindBuilder
+  - FrogMan
+  - IcePuzzleGuide
+  - innkeeper
+  - Item_LookUp
+  - Laura
+  - LIE
+  - Lying1
+  - Lying2
+  - Lying3
+  - MazePuzzleInstructions
+  - MrCube
+  - NPCOnly
+  - orange
+  - Planet3_WrongPlace
+  - PlanetThree_FinalDialogue
+  - PlanetThree_MineDialogue
+  - PlanetThree_OasisDialogue
+  - PlanetThree_StartDialogue
+  - PlanetThree_TownDialogue
+  - porta
+  - QuestChartDemo
+  - Season1
+  - Season2
+  - Season3
+  - Season4
+  - Season5
+  - ShipPort
+  - TRUTH
+  - Tutorial
+  - Witch
   assignedIndex: 15
   assignedID: 61375
-  assignedDialogue: 46696e644275696c646572
+  assignedDialogue: FindBuilder
   interactionCount: 0
   alias: 
   overrideStartNode: 1
@@ -7341,57 +7341,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diags:
-  - 414d424947554f5553
-  - 416d626967756f757331
-  - 416d626967756f757332
-  - 416d626967756f757333
-  - 416d626967756f757334
-  - 626164636c756532
-  - 62656174656e7570677579
-  - 4275696c646572
-  - 4275696c64657244617665
-  - 63616d6572616769726c
-  - 436861726c6965
-  - 436f6d6d656e744d6f646966696572
-  - 4372617a79436170
-  - 44454d4f5f436f6e646974696f6e
-  - 646f6467796475646531
-  - 46696e644275696c646572
-  - 46726f674d616e
-  - 49636550757a7a6c654775696465
-  - 696e6e6b6565706572
-  - 4974656d5f4c6f6f6b5570
-  - 4c61757261
-  - 4c4945
-  - 4c79696e6731
-  - 4c79696e6732
-  - 4c79696e6733
-  - 4d617a6550757a7a6c65496e737472756374696f6e73
-  - 4d7243756265
-  - 4e50434f6e6c79
-  - 6f72616e6765
-  - 506c616e6574335f57726f6e67506c616365
-  - 506c616e657454687265655f46696e616c4469616c6f677565
-  - 506c616e657454687265655f4d696e654469616c6f677565
-  - 506c616e657454687265655f4f617369734469616c6f677565
-  - 506c616e657454687265655f53746172744469616c6f677565
-  - 506c616e657454687265655f546f776e4469616c6f677565
-  - 706f727461
-  - 5175657374436861727444656d6f
-  - 536561736f6e31
-  - 536561736f6e32
-  - 536561736f6e33
-  - 536561736f6e34
-  - 536561736f6e35
-  - 53686970506f7274
-  - 5452555448
-  - 5475746f7269616c
-  - 5769746368
+  - AMBIGUOUS
+  - Ambiguous1
+  - Ambiguous2
+  - Ambiguous3
+  - Ambiguous4
+  - badclue2
+  - beatenupguy
+  - Builder
+  - BuilderDave
+  - cameragirl
+  - Charlie
+  - CommentModifier
+  - CrazyCap
+  - DEMO_Condition
+  - dodgydude1
+  - FindBuilder
+  - FrogMan
+  - IcePuzzleGuide
+  - innkeeper
+  - Item_LookUp
+  - Laura
+  - LIE
+  - Lying1
+  - Lying2
+  - Lying3
+  - MazePuzzleInstructions
+  - MrCube
+  - NPCOnly
+  - orange
+  - Planet3_WrongPlace
+  - PlanetThree_FinalDialogue
+  - PlanetThree_MineDialogue
+  - PlanetThree_OasisDialogue
+  - PlanetThree_StartDialogue
+  - PlanetThree_TownDialogue
+  - porta
+  - QuestChartDemo
+  - Season1
+  - Season2
+  - Season3
+  - Season4
+  - Season5
+  - ShipPort
+  - TRUTH
+  - Tutorial
+  - Witch
   assignedIndex: 42
   assignedID: 36069
-  assignedDialogue: 53686970506f7274
+  assignedDialogue: ShipPort
   interactionCount: 0
-  alias: 5368697020706f7274206d616e61676572
+  alias: 
   overrideStartNode: -1
   defaultNPCSprite: {fileID: 0}
   defaultPlayerSprite: {fileID: 0}
@@ -9748,48 +9748,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diags:
-  - 414d424947554f5553
-  - 416d626967756f757331
-  - 416d626967756f757332
-  - 416d626967756f757333
-  - 416d626967756f757334
-  - 626164636c756532
-  - 62656174656e7570677579
-  - 4275696c646572
-  - 4275696c64657244617665
-  - 63616d6572616769726c
-  - 436861726c6965
-  - 436f6d6d656e744d6f646966696572
-  - 4372617a79436170
-  - 44454d4f5f436f6e646974696f6e
-  - 646f6467796475646531
-  - 46696e644275696c646572
-  - 46726f674d616e
-  - 49636550757a7a6c654775696465
-  - 696e6e6b6565706572
-  - 4974656d5f4c6f6f6b5570
-  - 4c61757261
-  - 4c4945
-  - 4c79696e6731
-  - 4c79696e6732
-  - 4c79696e6733
-  - 4d7243756265
-  - 4e50434f6e6c79
-  - 6f72616e6765
-  - 706f727461
-  - 5175657374436861727444656d6f
-  - 536561736f6e31
-  - 536561736f6e32
-  - 536561736f6e33
-  - 536561736f6e34
-  - 536561736f6e35
-  - 53686970506f7274
-  - 5452555448
-  - 5475746f7269616c
-  - 5769746368
+  - AMBIGUOUS
+  - Ambiguous1
+  - Ambiguous2
+  - Ambiguous3
+  - Ambiguous4
+  - badclue2
+  - beatenupguy
+  - Builder
+  - BuilderDave
+  - cameragirl
+  - Charlie
+  - CommentModifier
+  - CrazyCap
+  - DEMO_Condition
+  - dodgydude1
+  - FindBuilder
+  - FrogMan
+  - IcePuzzleGuide
+  - innkeeper
+  - Item_LookUp
+  - Laura
+  - LIE
+  - Lying1
+  - Lying2
+  - Lying3
+  - MazePuzzleInstructions
+  - MrCube
+  - NPCOnly
+  - orange
+  - Planet3_WrongPlace
+  - PlanetThree_FinalDialogue
+  - PlanetThree_MineDialogue
+  - PlanetThree_OasisDialogue
+  - PlanetThree_StartDialogue
+  - PlanetThree_TownDialogue
+  - porta
+  - QuestChartDemo
+  - Season1
+  - Season2
+  - Season3
+  - Season4
+  - Season5
+  - ShipPort
+  - TRUTH
+  - Tutorial
+  - Witch
   assignedIndex: 17
   assignedID: 61426
-  assignedDialogue: 49636550757a7a6c654775696465
+  assignedDialogue: IcePuzzleGuide
   interactionCount: 0
   alias: 
   overrideStartNode: -1
@@ -13244,6 +13251,7 @@ Prefab:
     m_RemovedComponents:
     - {fileID: 11410092, guid: 30e41a813405746e590988c91eb4010f, type: 2}
     - {fileID: 11406420, guid: 30e41a813405746e590988c91eb4010f, type: 2}
+    - {fileID: 14319310, guid: 30e41a813405746e590988c91eb4010f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 30e41a813405746e590988c91eb4010f, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &1953767668 stripped
@@ -14495,7 +14503,7 @@ Transform:
   m_Children:
   - {fileID: 372923030}
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 24
 --- !u!114 &2087859620
 MonoBehaviour:
   m_ObjectHideFlags: 0
