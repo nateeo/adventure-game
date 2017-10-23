@@ -310,7 +310,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: -40, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 48
+  m_RootOrder: 46
 --- !u!1 &18688935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,7 +1441,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 39
 --- !u!23 &178559609
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2378,7 +2378,7 @@ MonoBehaviour:
   xmax: 330
   zmin: 160
   zmax: 220
-  height: 1
+  y: 1
 --- !u!1001 &328428780
 Prefab:
   m_ObjectHideFlags: 0
@@ -2649,7 +2649,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 50
+  m_RootOrder: 48
 --- !u!4 &372923030 stripped
 Transform:
   m_PrefabParentObject: {fileID: 407014, guid: ac83504eac48642fc97f00a01d243159, type: 2}
@@ -4085,7 +4085,7 @@ RectTransform:
   m_Children:
   - {fileID: 2075309614}
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 35
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -4236,7 +4236,7 @@ RectTransform:
   - {fileID: 1064016093}
   - {fileID: 1898016848}
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 36
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -4466,72 +4466,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 86eaf3e09e3af124ebc9592de50e0578, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &589095947
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 234.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.4067593
-      objectReference: {fileID: 0}
-    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 249.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0.95048434
-      objectReference: {fileID: 0}
-    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: -0.31077254
-      objectReference: {fileID: 0}
-    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: m_RootOrder
-      value: 23
-      objectReference: {fileID: 0}
-    - target: {fileID: 118258, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: m_Name
-      value: HappyGuy planet2 (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -216.2116
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: assignedIndex
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: assignedID
-      value: 16263
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: assignedDialogue
-      value: Season4
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: interactionCount
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &597964211
 GameObject:
   m_ObjectHideFlags: 0
@@ -4600,6 +4534,260 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 597964211}
+--- !u!1001 &599958686
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.size
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 231
+      objectReference: {fileID: 0}
+    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.4067593
+      objectReference: {fileID: 0}
+    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 231.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.95048434
+      objectReference: {fileID: 0}
+    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -0.31077254
+      objectReference: {fileID: 0}
+    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: m_RootOrder
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 118258, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: m_Name
+      value: HappyGuy planet2 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -216.2116
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: assignedIndex
+      value: 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: assignedID
+      value: 85946
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: assignedDialogue
+      value: Season5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: interactionCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[0]
+      value: AMBIGUOUS
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[1]
+      value: Ambiguous1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[2]
+      value: Ambiguous2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[3]
+      value: Ambiguous3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[4]
+      value: Ambiguous4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[5]
+      value: badclue2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[6]
+      value: beatenupguy
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[7]
+      value: Builder
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[8]
+      value: BuilderDave
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[9]
+      value: cameragirl
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[10]
+      value: Charlie
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[11]
+      value: CommentModifier
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[12]
+      value: CrazyCap
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[13]
+      value: DEMO_Condition
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[14]
+      value: dodgydude1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[15]
+      value: FindBuilder
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[16]
+      value: FrogMan
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[17]
+      value: IcePuzzleGuide
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[18]
+      value: innkeeper
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[19]
+      value: Item_LookUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[20]
+      value: Laura
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[21]
+      value: LIE
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[22]
+      value: Lying1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[23]
+      value: Lying2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[24]
+      value: Lying3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[25]
+      value: MazePuzzleInstructions
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[26]
+      value: MrCube
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[27]
+      value: NPCOnly
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[28]
+      value: orange
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[29]
+      value: Planet3_WrongPlace
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[30]
+      value: PlanetThree_FinalDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[31]
+      value: PlanetThree_MineDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[32]
+      value: PlanetThree_OasisDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[33]
+      value: PlanetThree_StartDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[34]
+      value: PlanetThree_TownDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[35]
+      value: porta
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[36]
+      value: QuestChartDemo
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[37]
+      value: Season1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[38]
+      value: Season2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[39]
+      value: Season3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[40]
+      value: Season4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[41]
+      value: Season5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[42]
+      value: ShipPort
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[43]
+      value: TRUTH
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[44]
+      value: Tutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[45]
+      value: Witch
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &602101982 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 108142, guid: cc05c3e29b3319444aeeca588e9f3511, type: 2}
@@ -4981,76 +5169,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 648510904}
   m_Mesh: {fileID: 4300002, guid: 17b3da85c5ad4164e823dfb0ebe8d549, type: 3}
---- !u!1001 &662371564
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 230.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.63
-      objectReference: {fileID: 0}
-    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 226.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0.020345256
-      objectReference: {fileID: 0}
-    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0.6618467
-      objectReference: {fileID: 0}
-    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.03182093
-      objectReference: {fileID: 0}
-    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: -0.7486872
-      objectReference: {fileID: 0}
-    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: m_RootOrder
-      value: 26
-      objectReference: {fileID: 0}
-    - target: {fileID: 118258, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: m_Name
-      value: HappyGuy planet2 (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -277.0709
-      objectReference: {fileID: 0}
-    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.66789997
-      objectReference: {fileID: 0}
-    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -4.2773
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: assignedIndex
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: assignedID
-      value: 85946
-      objectReference: {fileID: 0}
-    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-      propertyPath: assignedDialogue
-      value: Season5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &662516170
 GameObject:
   m_ObjectHideFlags: 0
@@ -5487,7 +5605,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 46
+  m_RootOrder: 44
 --- !u!1 &696122429
 GameObject:
   m_ObjectHideFlags: 0
@@ -5663,7 +5781,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 90}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_RootOrder: 37
 --- !u!1001 &702340187
 Prefab:
   m_ObjectHideFlags: 0
@@ -6099,7 +6217,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 44
+  m_RootOrder: 42
 --- !u!1 &779376573 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 238b6ece4046048fc97dcebdc5ef3eaf, type: 3}
@@ -8779,7 +8897,7 @@ Transform:
   - {fileID: 696122433}
   - {fileID: 1440391601}
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 34
 --- !u!114 &1137965253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9512,7 +9630,7 @@ Transform:
   - {fileID: 618229600}
   - {fileID: 2140788977}
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 33
 --- !u!1 &1245254513
 GameObject:
   m_ObjectHideFlags: 0
@@ -11481,6 +11599,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   memory: {fileID: 242268224}
+--- !u!114 &1484074183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1484074175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e113b3068f7f438b84c05495c83bf9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentIndex: 12
 --- !u!114 &1484074184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11511,6 +11641,17 @@ Animator:
   m_PrefabParentObject: {fileID: 9516936, guid: 30e41a813405746e590988c91eb4010f,
     type: 2}
   m_PrefabInternal: {fileID: 1953767667}
+--- !u!114 &1484074187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1484074175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877aaefaf518340ecb43e3028a986d2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1490656012 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 111754, guid: 17588218e83c24a53b7fbaff63d6e1bd, type: 2}
@@ -12961,7 +13102,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: -30, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 49
+  m_RootOrder: 47
 --- !u!1001 &1675641392
 Prefab:
   m_ObjectHideFlags: 0
@@ -13982,7 +14123,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 47
+  m_RootOrder: 45
 --- !u!1001 &1903348067
 Prefab:
   m_ObjectHideFlags: 0
@@ -14662,7 +14803,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 45
+  m_RootOrder: 43
 --- !u!1001 &1982665987
 Prefab:
   m_ObjectHideFlags: 0
@@ -14830,6 +14971,260 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2e28a0fcb0434bf0a6cb714ce938b14, type: 3}
+  m_IsPrefabParent: 0
+--- !u!1001 &1989565108
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.size
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 235.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.4067593
+      objectReference: {fileID: 0}
+    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 250.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.95048434
+      objectReference: {fileID: 0}
+    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -0.31077254
+      objectReference: {fileID: 0}
+    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: m_RootOrder
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 118258, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: m_Name
+      value: HappyGuy planet2 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 423520, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -216.2116
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: assignedIndex
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: assignedID
+      value: 16263
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: assignedDialogue
+      value: Season4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: interactionCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[0]
+      value: AMBIGUOUS
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[1]
+      value: Ambiguous1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[2]
+      value: Ambiguous2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[3]
+      value: Ambiguous3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[4]
+      value: Ambiguous4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[5]
+      value: badclue2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[6]
+      value: beatenupguy
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[7]
+      value: Builder
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[8]
+      value: BuilderDave
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[9]
+      value: cameragirl
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[10]
+      value: Charlie
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[11]
+      value: CommentModifier
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[12]
+      value: CrazyCap
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[13]
+      value: DEMO_Condition
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[14]
+      value: dodgydude1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[15]
+      value: FindBuilder
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[16]
+      value: FrogMan
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[17]
+      value: IcePuzzleGuide
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[18]
+      value: innkeeper
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[19]
+      value: Item_LookUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[20]
+      value: Laura
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[21]
+      value: LIE
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[22]
+      value: Lying1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[23]
+      value: Lying2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[24]
+      value: Lying3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[25]
+      value: MazePuzzleInstructions
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[26]
+      value: MrCube
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[27]
+      value: NPCOnly
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[28]
+      value: orange
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[29]
+      value: Planet3_WrongPlace
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[30]
+      value: PlanetThree_FinalDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[31]
+      value: PlanetThree_MineDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[32]
+      value: PlanetThree_OasisDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[33]
+      value: PlanetThree_StartDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[34]
+      value: PlanetThree_TownDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[35]
+      value: porta
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[36]
+      value: QuestChartDemo
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[37]
+      value: Season1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[38]
+      value: Season2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[39]
+      value: Season3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[40]
+      value: Season4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[41]
+      value: Season5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[42]
+      value: ShipPort
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[43]
+      value: TRUTH
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[44]
+      value: Tutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432008, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
+      propertyPath: diags.Array.data[45]
+      value: Witch
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: edbb8f8f8c1a44e1c9b115e0b2754401, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1997133185
 Prefab:
@@ -15817,7 +16212,7 @@ Transform:
   m_Children:
   - {fileID: 372923030}
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 31
 --- !u!114 &2087859620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15832,6 +16227,7 @@ MonoBehaviour:
   dialogFix: 0
   lookAt: {fileID: 160952360}
   camTransform: {fileID: 160952360}
+  distance: 7
   sensitivityX: 30
   sensitivityY: 30
 --- !u!1 &2091303381
@@ -15929,7 +16325,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 40
 --- !u!1001 &2100563368
 Prefab:
   m_ObjectHideFlags: 0
