@@ -19,6 +19,10 @@ public class PlayerScore : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+		if (PlayerPrefs.HasKey ("Persist") && (PlayerPrefs.GetInt("Persist")) == 1) {
+			PlayerPrefs.SetInt ("Persist",0);
+			return;
+		}
         //Code for initializing time and score.
         startTime = Time.time;
 		maxNumberOfBonuses = 3;

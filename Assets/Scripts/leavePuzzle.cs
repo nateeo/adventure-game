@@ -24,6 +24,7 @@ public class leavePuzzle : MonoBehaviour {
 	void OnCollisionEnter ( Collision collision) {
 		//populate fields
 		playerCharacter = GameObject.FindWithTag ("Player");
+		playerCharacter.GetComponent<hideoutScript> ().found();
 		player = playerCharacter.GetComponent<PlayerScript> ();
 		rb = playerCharacter.GetComponent<Rigidbody> ();
 		collider = playerCharacter.GetComponent<CapsuleCollider> ();

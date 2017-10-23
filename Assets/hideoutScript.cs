@@ -29,7 +29,6 @@ public class hideoutScript : MonoBehaviour {
 				}
 			}
 		}
-		Debug.Log (Vector3.Distance (wall.transform.position, player.transform.position));
 		if (wall != null && Vector3.Distance (wall.transform.position, player.transform.position) <= 5) {
 			pickupTooltip.enabled = true;
 			pickupTooltip.text = "I don't know if this is safe... I think I should ask around first.";
@@ -38,5 +37,9 @@ public class hideoutScript : MonoBehaviour {
 		if (pickupTooltip.enabled) {
 			pickupTooltip.enabled = false;
 		}
+	}
+
+	public void found() {
+		wall = null;
 	}
 }
