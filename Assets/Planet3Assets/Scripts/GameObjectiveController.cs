@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using VIDE_Data;
+using UnityEngine.SceneManagement;
 
 /**
  * This class is the Controller for the GameObjectives.
@@ -29,13 +30,36 @@ public class GameObjectiveController : MonoBehaviour {
 		markers [3] = tower;
 		markers [4] = ship;
 
-		//Disable all markers except for the first one
-		for (int i = 1; i < 5; i++) {
-			markers [i].gameObject.SetActive (false);
-		}
+		Debug.Log("Player prefs value in gamecontroller: "+PlayerPrefs.GetString("SpawnMine"));
+		// If the Player has to spawn in mine set way point markers to shack.
+		if (PlayerPrefs.HasKey ("SpawnMine") && PlayerPrefs.GetString ("SpawnMine").Equals ("true")) {
 
-		activateAllWaypoints ();
+			Debug.Log ("in the gameobjectivecontroller it is claiming that spawnmine is true");
+			for (int i = 0; i < 5; i++) {
+				markers [i].gameObject.SetActive (false);
+			}
+
+			markers [2].gameObject.SetActive (true);
+			StartCoroutine (startScene ());
+
+		} else {
+			Debug.Log ("in the gameobjectivecontroller it is claiming that spawnmine is false");
+			//Disable all markers except for the first one
+			for (int i = 1; i < 5; i++) {
+				markers [i].gameObject.SetActive (false);
+			}
+		}
 	}
+
+	IEnumerator startScene() {
+		VIDE_Assign mineD = markers[2].GetComponent<VIDE_Assign> ();
+		yield return new WaitForSeconds (1);
+		if (!VD.isActive) {
+			Debug.Log ("start dialgoued");
+			diagUI.Begin (markers[2].GetComponent<Collider>(), mineD);
+		}
+	}
+
 
 	//This is called when the player enters the triggered area
 	public void disable(GameObjective objective) {
@@ -60,7 +84,10 @@ public class GameObjectiveController : MonoBehaviour {
 
 				//if we're at the mine
 				if (i == 1) {
-					//change scene
+					if (PlayerPrefs.HasKey ("SpawnMine")) {
+						SceneManager.LoadScene (6);
+						return;
+					}
 				}
 					
 				markers [i].gameObject.SetActive (false);

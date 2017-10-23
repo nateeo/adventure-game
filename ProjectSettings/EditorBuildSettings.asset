@@ -17,3 +17,5 @@ EditorBuildSettings:
     path: Assets/Planet3Assets/Scenes/MazePuzzle.unity
   - enabled: 1
     path: Assets/Planet3.unity
+  - enabled: 1
+    path: Assets/testScene.unity
