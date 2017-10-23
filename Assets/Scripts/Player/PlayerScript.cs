@@ -98,7 +98,8 @@ public class PlayerScript : MonoBehaviour {
 			if (journalEnabled) {
 				input.Select ();
 				input.ActivateInputField ();
-				input.text = input.text.Substring (0, input.text.Length - 1);
+				int length = input.text.Length < 1 ? 0 : input.text.Length;
+				input.text = input.text.Substring (0, length);
 				StartCoroutine (moveEnd ());
 			}
 		}

@@ -64,7 +64,7 @@ public class UIManager : MonoBehaviour {
 
 		// clean data
 		nameBackground.enabled = false;
-		previous_text = null;
+		previous_text = "";
 		text_NPC.text = "";
 		VD.BeginDialogue (conversation);
 		if (conversation.alias != null && conversation.alias != "") {
@@ -94,7 +94,7 @@ public class UIManager : MonoBehaviour {
 		container_NPC.SetActive (false);
 		container_PLAYER.SetActive (false);
 		if (data.isPlayer) {
-			if (previous_text != null && previous_text != "") {
+			if (previous_text != null) {
 				container_NPC.SetActive (true);
 				text_NPC.text = previous_text;
 			}
